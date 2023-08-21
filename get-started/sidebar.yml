@@ -1,0 +1,16 @@
+---
+section: get-started
+title: はじめに
+entries:
+- title: BlueXPディザスタリカバリの詳細
+  url: "/get-started/dr-intro.html"
+- title: 前提条件
+  url: "/get-started/dr-prerequisites.html"
+- title: クイックスタート
+  url: "/get-started/dr-quick-start.html"
+- title: BlueXPディザスタリカバリのセットアップ
+  url: "/get-started/dr-setup.html"
+- title: BlueXPディザスタリカバリへのアクセス
+  url: "/get-started/dr-login.html"
+- title: よく寄せられる質問
+  url: "/get-started/dr-faq.html"

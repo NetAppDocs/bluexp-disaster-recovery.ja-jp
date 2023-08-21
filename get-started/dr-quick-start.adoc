@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-quick-start.html 
+keywords: how to get started with bluexp disaster recovery, disaster recovery quick start, failover, failback 
+summary: NetApp BlueXPディザスタリカバリサービスは、わずかなステップで開始できます。 
+---
+= BlueXPディザスタリカバリのクイックスタートガイド
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+ここでは、BlueXPのディザスタリカバリを開始するために必要な手順の概要を示します。各ステップ内のリンクから、詳細が記載されたページに移動できます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"] 前提条件を確認する
+[role="quick-margin-para"]
+link:../get-started/dr-prerequisites.html["環境がこれらの要件を満たしていることを確認します"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2 つ"] ディザスタリカバリサービスをセットアップする
+[role="quick-margin-para"]
+link:../get-started/dr-setup.html["サービスをセットアップする手順を実行します"]。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] 次の手順
+[role="quick-margin-para"]
+サービスを設定した後、次に行うべきことは次のとおりです。
+
+[role="quick-margin-list"]
+* link:../use/sites-add.html["vCenterサイトを追加"]。
+* link:../use/drplan-create.html["ディザスタリカバリ計画の作成"]。
+* link:../use/replicate.html["アプリケーションを別のサイトにレプリケート"]。
+* link:../use/failover.html["リモートサイトへのアプリケーションのフェイルオーバー"]。
+* link:../use/failback.html["アプリケーションを元のソースサイトにフェイルバック"]。
+* link:../use/manage.html["サイト、計画、データストア、仮想マシンの情報を管理する"]。
+* link:../use/monitor-jobs.html["ディザスタリカバリ処理の監視"]。
+

@@ -1,0 +1,15 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+permalink: index.html 
+summary: VMware向けBlueXPディザスタリカバリでは、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined Data Centerにレプリケートできます。 
+---
+= BlueXPディザスタリカバリ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

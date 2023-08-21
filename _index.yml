@@ -1,0 +1,42 @@
+---
+indexpage:
+  lead: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータの破損（ランサムウェアなど）からワークロードを保護します。BlueXP
+    for VMwareベータ版では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined
+    Data Centerにレプリケートできます。
+  tiles:
+  - title: はじめに
+    links:
+    - title: BlueXPディザスタリカバリの詳細
+      url: "/get-started/dr-intro.html"
+    - title: BlueXPディザスタリカバリの新機能
+      url: "/release-notes/dr-whats-new.html"
+    - title: クイックスタート
+      url: "/get-started/dr-quick-start.html"
+    - title: 前提条件
+      url: "/get-started/dr-prerequisites.html"
+    - title: BlueXPディザスタリカバリへのアクセス
+      url: "/get-started/dr-login.html"
+    - title: よく寄せられる質問
+      url: "/get-started/dr-faq.html"
+  - title: BlueXPディザスタリカバリの活用
+    links:
+    - title: vCenterサイトを追加
+      url: "/use/sites-add.html"
+    - title: ディザスタリカバリ計画の作成
+      url: "/use/drplan-create.html"
+    - title: アプリケーションを別のサイトに複製する
+      url: "/use/replicate.html"
+    - title: リモートサイトへのアプリのフェイルオーバー
+      url: "/use/failover.html"
+    - title: 元のソースサイトへのアプリのフェイルバック
+      url: "/use/failback.html"
+    - title: サイト、計画、データストア、仮想マシンの情報を管理する
+      url: "/use/manage.html"
+    - title: ディザスタリカバリジョブを監視する
+      url: "/use/monitor-jobs.html"
+  - title: ブログとコミュニティ
+    links:
+    - title: ネットアップコミュニティ
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: クラウドに関する Web セミナー
+      url: https://bluexp.netapp.com/events

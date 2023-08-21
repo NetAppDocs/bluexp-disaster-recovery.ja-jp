@@ -1,0 +1,20 @@
+---
+section: use
+title: BlueXPディザスタリカバリの活用
+entries:
+- title: BlueXPディザスタリカバリの概要を使用
+  url: "/use/use-overview.html"
+- title: vCenterサイトを追加
+  url: "/use/sites-add.html"
+- title: ディザスタリカバリ計画の作成
+  url: "/use/drplan-create.html"
+- title: 別のサイトへの複製
+  url: "/use/replicate.html"
+- title: リモートサイトへのフェイルオーバー
+  url: "/use/failover.html"
+- title: アプリケーションを元のソースサイトにフェイルバック
+  url: "/use/failback.html"
+- title: サイト、計画、データストア、仮想マシンの情報を管理する
+  url: "/use/manage.html"
+- title: ディザスタリカバリジョブを監視する
+  url: "/use/monitor-jobs.html"

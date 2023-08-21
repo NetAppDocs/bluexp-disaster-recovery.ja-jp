@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: use/monitor-jobs.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。 
+---
+= ディザスタリカバリジョブを監視する
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+すべてのディザスタリカバリジョブを監視し、進捗状況を確認できます。
+
+.手順
+. BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
+. トップメニューから*ジョブ監視*を選択します。
+. 処理に関連するすべてのジョブを確認し、タイムスタンプとステータスを確認します。
+. 特定のジョブの詳細を表示するには、その行を選択します。
+. 情報を更新するには、*[更新]*を選択します。
+

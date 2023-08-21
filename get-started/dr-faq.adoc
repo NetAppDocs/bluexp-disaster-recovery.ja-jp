@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-faq.html 
+keywords: disaster recovery faq, disaster recovery frequently asked questions 
+summary: この FAQ は、質問に対する簡単な回答を探している場合に役立ちます。 
+---
+= BlueXPディザスタリカバリに関するFAQ
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+この FAQ は、質問に対する簡単な回答を探している場合に役立ちます。
+
+* BlueXPのディザスタリカバリURLとは？*
+URLの場合は、ブラウザで次のように入力します。 https://console.bluexp.netapp.com/["https://console.bluexp.netapp.com/"^] をクリックしてBlueXPコンソールにアクセスします。
+
+* BlueXPディザスタリカバリを使用するにはライセンスが必要ですか？*
+ネットアップライセンスファイル（NLF）は必要ありません。
+
+* BlueXPを使用するには、どうすればよいですか？*
+BlueXPのディザスタリカバリを有効にする必要はありません。ディザスタリカバリオプションは、BlueXPの左側のナビゲーションに自動的に表示されます。

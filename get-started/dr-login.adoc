@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-login.html 
+keywords: bluexp login, disaster recovery log in 
+summary: BlueXPのサービスにアクセスして、BlueXPのディザスタリカバリを開始しましょう。 
+---
+= BlueXPディザスタリカバリへのアクセス
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+NetApp BlueXPを使用して、BlueXPディザスタリカバリサービスにログインします。
+
+BlueXPにログインするには、NetApp Support Site のクレデンシャルを使用するか、Eメールとパスワードを使用してネットアップクラウドへのログインにサインアップします。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["ログインの詳細については、こちらをご覧ください"^]。
+
+.手順
+. Webブラウザを開き、にアクセスします https://console.bluexp.netapp.com/["BlueXPコンソール"^]。
++
+NetApp BlueXPのログインページが表示されます。
+
+. BlueXPにログインします。
+. BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
++
+このサービスに初めてログインする場合は、ランディングページが表示されます。
+
++
+image:draas-landing.png["BlueXPディザスタリカバリのランディングページのスクリーンショット"]
+
++
+それ以外の場合は、BlueXPディザスタリカバリのダッシュボードが表示されます。
+
++
+** BlueXPコネクタをお持ちでない場合や、このベータ版に対応していない場合は、NetAppサポートに連絡するか、メッセージに従ってこのベータ版に登録する必要があります。
+** BlueXPを初めて使用し、コネクタを使用したことがない場合は、[ディザスタリカバリ]を選択すると、サインアップに関するメッセージが表示されます。フォームを送信してください。ベータ版のリクエストについては、NetAppからご連絡を差し上げます。
+** 既存のコネクタを使用しているBlueXPユーザは、[ディザスタリカバリ]を選択すると、サインアップに関するメッセージが表示されます。
+** すでにベータ版に参加している場合は、「ディザスタリカバリ」を選択すると、サービスを続行できます。
+
+
+

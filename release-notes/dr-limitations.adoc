@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: release-notes/dr-limitations.html 
+keywords: disaster recovery, bluexp 
+summary: ここでは、このリリースのサービスでサポートされていない、またはサービスと正常に相互運用できないプラットフォーム、デバイス、または機能について説明します。 
+---
+= 制限
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+ここでは、このリリースのサービスでサポートされていない、またはサービスと正常に相互運用できないプラットフォーム、デバイス、または機能について説明します。
+
+
+
+== BlueXPでAmazon FSx for NetApp ONTAPが検出されない場合がある
+
+Amazon FSx for NetApp ONTAPクラスタがBlueXPで検出されないことがあります。これは、FSxのクレデンシャルが正しくないことが原因である可能性があります。
+
+*回避策*：BlueXPでAmazon FSx for NetApp ONTAPクラスタを追加し、クラスタを定期的に更新して変更を表示します。
+
+BlueXPディザスタリカバリサービスからONTAP FSxクラスタを削除する必要がある場合は、次の手順を実行します。
+
+. BlueXPコネクタで、クラウドプロバイダの接続オプションを使用し、コネクタが実行されているLinux VMに接続し、 `docker restart occm` コマンドを実行します
++
+を参照してください https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html#connect-to-the-linux-vm["既存のコネクタを管理します"^]。
+
+. BlueXPキャンバスで、Amazon FSx for ONTAP環境を再度追加し、FSxクレデンシャルを入力します。
++
+を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["Amazon FSx for NetApp ONTAPファイルシステムの作成"^]。
+
+. BlueXPディザスタリカバリで*[Sites]*を選択し、[vCenter]行で*[Actions]*オプションを選択します。 image:../use/icon-vertical-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"]をクリックし、[Actions]メニューから*[Refresh]*を選択して、BlueXPディザスタリカバリでのFSx検出を更新します。
++
+これにより、データストア、その仮想マシン、およびデスティネーション関係が再検出されます。
+
+

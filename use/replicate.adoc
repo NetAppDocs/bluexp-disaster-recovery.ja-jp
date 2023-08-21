@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: use/replicate.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。 
+---
+= アプリケーションを別のサイトにレプリケート
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+SnapMirrorレプリケーションを使用して、ソースサイトのVMwareアプリケーションをクラウドのディザスタリカバリリモートサイトにレプリケートします。
+
+
+TIP: ディザスタリカバリプランを作成し、ウィザードでその繰り返しを特定し、ディザスタリカバリサイトへのレプリケーションを開始したら、30分ごとにBlueXPのディザスタリカバリによって、計画どおりにレプリケーションが実際に実行されているかどうかが検証されます。チェックは[Job Monitor]ページで監視できます。
+
+.手順
+. BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
+. トップメニューから*レプリケーションプラン*を選択します。
+. ディザスタリカバリプランを選択します。
+. 右側で、*アクション*オプションを選択します。 image:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"] [Replicate]*を選択します。
+
