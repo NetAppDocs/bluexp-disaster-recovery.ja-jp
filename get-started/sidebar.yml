@@ -8,9 +8,9 @@ entries:
   url: "/get-started/dr-prerequisites.html"
 - title: クイックスタート
   url: "/get-started/dr-quick-start.html"
-- title: BlueXPディザスタリカバリのセットアップ
-  url: "/get-started/dr-setup.html"
 - title: BlueXPディザスタリカバリへのアクセス
   url: "/get-started/dr-login.html"
+- title: BlueXPディザスタリカバリのセットアップ
+  url: "/get-started/dr-setup.html"
 - title: よく寄せられる質問
   url: "/get-started/dr-faq.html"

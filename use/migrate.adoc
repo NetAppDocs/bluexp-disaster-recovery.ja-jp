@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: use/migrate.html 
+keywords: disaster recovery, bluexp disaster recovery, migrate, vmware, vcenter 
+summary: BlueXPディザスタリカバリを使用すると、ソースサイトのVMwareアプリケーションを別のサイトに移行できます。 
+---
+= 別のサイトへのアプリケーションの移行
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+BlueXPディザスタリカバリを使用すると、ソースサイトのVMwareアプリケーションを別のサイトに移行できます。
+
+
+TIP: レプリケーション計画を作成し、ウィザードで繰り返し実行するスケジュールを特定して移行を開始したら、30分ごとにBlueXPディザスタリカバリによって、計画に従って移行が実際に実行されているかどうかが検証されます。進捗状況は[Job Monitor]ページで監視できます。
+
+.作業を開始する前に
+移行を開始する前に、レプリケーション計画を作成し、アプリケーションの移行を選択しておく必要があります。次に、[アクション]メニューに*[移行]*オプションが表示されます。
+
+.手順
+. BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
+. トップメニューから*レプリケーションプラン*を選択します。
+. レプリケーションプランを選択します。
+. 右側で、*アクション*オプションを選択します。 image:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"] をクリックし、*[移行]*を選択します。
+

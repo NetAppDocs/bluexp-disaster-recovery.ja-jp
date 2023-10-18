@@ -4,12 +4,16 @@ title: BlueXPディザスタリカバリの活用
 entries:
 - title: BlueXPディザスタリカバリの概要を使用
   url: "/use/use-overview.html"
+- title: ダッシュボードでディザスタリカバリプランの健全性を表示する
+  url: "/use/dashboard-view.html"
 - title: vCenterサイトを追加
   url: "/use/sites-add.html"
-- title: ディザスタリカバリ計画の作成
+- title: レプリケーション計画の作成
   url: "/use/drplan-create.html"
 - title: 別のサイトへの複製
   url: "/use/replicate.html"
+- title: 別のサイトへの移行
+  url: "/use/migrate.html"
 - title: リモートサイトへのフェイルオーバー
   url: "/use/failover.html"
 - title: アプリケーションを元のソースサイトにフェイルバック

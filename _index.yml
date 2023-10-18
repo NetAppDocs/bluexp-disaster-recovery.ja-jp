@@ -1,8 +1,8 @@
 ---
 indexpage:
-  lead: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータの破損（ランサムウェアなど）からワークロードを保護します。BlueXP
-    for VMwareベータ版では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined
-    Data Centerにレプリケートできます。
+  lead: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータの破損（ランサムウェアなど）からワークロードを保護します。『BlueXP
+    Disaster Recovery for VMware Preview』では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、パブリッククラウド内のVMware
+    Software-Defined Data Centerや、ディザスタリカバリサイトとしての別のオンプレミスサイトにレプリケートできます。
   tiles:
   - title: はじめに
     links:
@@ -26,6 +26,8 @@ indexpage:
       url: "/use/drplan-create.html"
     - title: アプリケーションを別のサイトに複製する
       url: "/use/replicate.html"
+    - title: アプリケーションを別のサイトに移行
+      url: "/use/migrate.html"
     - title: リモートサイトへのアプリのフェイルオーバー
       url: "/use/failover.html"
     - title: 元のソースサイトへのアプリのフェイルバック
@@ -40,3 +42,5 @@ indexpage:
       url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
     - title: クラウドに関する Web セミナー
       url: https://bluexp.netapp.com/events
+    - title: BlueXPディザスタリカバリブログ
+      url: https://community.netapp.com/t5/Tech-ONTAP-Blogs/BlueXP-disaster-recovery-service-for-BC-with-VMware-Cloud-on-AWS-and-FSx-for/ba-p/447066

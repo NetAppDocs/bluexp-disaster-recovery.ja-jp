@@ -14,11 +14,13 @@ summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバ�
 [role="lead"]
 BlueXPのディザスタリカバリを使用すると、次のような目標を達成できます。
 
+* link:../use/dashboard-view.html["ディザスタリカバリ計画の健全性の表示"]
 * link:../use/sites-add.html["vCenterサイトを追加"]。
 * link:../use/drplan-create.html["ディザスタリカバリ計画の作成"]。
 * link:../use/replicate.html["VMwareアプリケーションのレプリケーション"] SnapMirrorレプリケーションを使用して、プライマリサイトからクラウドのディザスタリカバリリモートサイトへ。
+* link:../use/migrate.html["VMwareアプリケーションの移行"] プライマリサイトから別のサイトへ。
 * link:../use/failover.html["フェイルオーバーのテスト"] 元の仮想マシンを中断することなく、
 * 災害が発生した場合、 link:../use/failover.html["プライマリサイトのフェイルオーバー"] VMware Cloud on AWSとFSx for NetApp ONTAPを統合しました。
 * 災害が解決された後、 link:../use/failback.html["フェイルバック"] ディザスタリカバリサイトからプライマリサイトへ。
-* link:../use/monitor.html["ディザスタリカバリ処理の監視"] [Job Monitoring]ページ。
+* link:../use/monitor-jobs.html["ディザスタリカバリ処理の監視"] [Job Monitoring]ページ。
 

@@ -4,7 +4,7 @@ permalink: get-started/dr-intro.html
 keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back 
 summary: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。VMware向けBlueXPディザスタリカバリでは、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined Data Centerにレプリケートできます。 
 ---
-= BlueXP Disaster Recovery for VMware（ベータ版）の詳細
+= VMware向けBlueXPディザスタリカバリプレビューの詳細
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,21 +12,23 @@ summary: クラウドへのディザスタリカバリは、耐障害性に優�
 
 
 [role="lead"]
-クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。BlueXP for VMwareベータ版では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined Data Centerにレプリケートできます。
+クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。『BlueXP Disaster Recovery for VMware Preview』では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウドのVMware Software-Defined Data Centerにレプリケートしたり、ONTAPストレージを使用した別のオンプレミスのVMware環境をディザスタリカバリサイトとしてレプリケートしたりできます。
 
-BlueXPディザスタリカバリベータ版は、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。当初は、BlueXPディザスタリカバリベータ版を使用して、NetAppストレージを実行するオンプレミスのNFSベースのVMwareワークロードを、Amazon FSx for NetApp ONTAPを使用してAWS上のVMware Cloud（VMC）に保護できます。
+BlueXPディザスタリカバリプレビューは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。当初は、BlueXPディザスタリカバリのプレビュー版で、NetAppストレージを実行するオンプレミスのNFSベースのVMwareワークロードを次のいずれかに保護できます。
 
-BlueXPのディザスタリカバリ（ベータ版）では、クラウドへのレプリケーション転送にONTAP SnapMirrorテクノロジを使用しています。これにより、プライマリサイトとセカンダリサイトで業界最高レベルのストレージ効率（圧縮と重複排除）を実現できます。
-
-ベータ版では、オンプレミスのワークロードからクラウドへのディザスタリカバリをサポートしています。
-
-image:draas-onprem-to-cloud.png["BlueXPのVMware向けディザスタリカバリのコンポーネントを示す図"]
+* AWS上のVMware Cloud（VMC）とAmazon FSx for NetApp ONTAPまたは
+* ONTAPストレージを使用した、もう1つのオンプレミスNFSベースのVMware環境
 
 
+BlueXPのディザスタリカバリプレビューでは、ディザスタリカバリサイトへのレプリケーション転送にONTAP SnapMirrorテクノロジを使用しています。これにより、プライマリサイトとセカンダリサイトで業界最高レベルのストレージ効率（圧縮と重複排除）を実現できます。
 
-== BlueXP Disaster Recovery for VMware（ベータ版）を使用するメリット
+image:draas-onprem-to-cloud-onprem.png["BlueXPのVMware向けディザスタリカバリのコンポーネントを示す図"]
 
-BlueXPディザスタリカバリ（ベータ版）には、次のようなメリットがあります。
+
+
+== BlueXPディザスタリカバリをVMwareプレビューに使用するメリット
+
+BlueXPディザスタリカバリプレビューには、次のようなメリットがあります。
 
 * 複数のポイントインタイムリカバリ処理により、vCenterによるアプリケーションの検出とリカバリを簡易化 
 * 運用コストを削減し、最小限のリソースでディザスタリカバリ計画を作成および調整できるため、総所有コストを削減できます。
@@ -36,16 +38,15 @@ BlueXPディザスタリカバリ（ベータ版）には、次のようなメ�
 
 
 
-== BlueXP Disaster Recovery for VMwareベータ版でできること
+== BlueXP Disaster Recovery for VMwareプレビューでできること
 
-BlueXPディザスタリカバリ（ベータ版）では、いくつかのNetAppテクノロジをフルに活用して、次の目標を達成できます。
+BlueXPディザスタリカバリプレビューでは、いくつかのNetAppテクノロジをフル活用して次の目標を達成できます。
 
-* SnapMirrorレプリケーションを使用して、本番用サイトのVMwareアプリケーションをクラウドのディザスタリカバリリモートサイトにレプリケートします。
-* 災害が発生した場合は、プライマリサイトをVMware Cloud on AWSのNetAppクラウドボリュームにオンデマンドでフェイルオーバーします。
+* SnapMirrorレプリケーションを使用して、オンプレミスの本番用サイト上のVMwareアプリケーションをクラウドまたはオンプレミスのディザスタリカバリリモートサイトにレプリケートします。
+* VMwareワークロードを元のサイトから別のサイトに移行します。
+* 災害が発生した場合は、プライマリサイトをオンデマンドでディザスタリカバリサイトにフェイルオーバーします。このサイトには、VMware Cloud on AWSとFSx for NetApp ONTAP、またはONTAPを使用したオンプレミスのVMware環境があります。
 * 災害が解決されたら、ディザスタリカバリサイトからプライマリサイトにオンデマンドでフェイルバックします。
 
-
-NetApp SnapMirrorテクノロジを使用すると、オンプレミスのVMwareワークロード（NFS向け）を、AWSで実行されるFSx for NetApp ONTAPにレプリケートできます。
 
 
 NOTE: vSphereサーバの設定は、vSphere ServerのBlueXPディザスタリカバリの外部で行います。
@@ -54,21 +55,25 @@ NOTE: vSphereサーバの設定は、vSphere ServerのBlueXPディザスタリ�
 
 == コスト
 
-NetAppでは、BlueXPディザスタリカバリのベータ版を使用した場合に料金が請求されることはありません。
+プレビュー版のBlueXPディザスタリカバリを使用した場合、NetAppから料金が請求されることはありません。
 
 BlueXPディザスタリカバリサービスの一般提供が開始されると、従量課金制または年間サブスクリプションベースのプランが提供される予定です。
 
 
 
-== BlueXPディザスタリカバリ（ベータ版）の仕組み
+== BlueXPディザスタリカバリプレビューの仕組み
 
-BlueXPディザスタリカバリベータ版では、オンプレミスからAmazon FSx for ONTAPにレプリケートされたワークロードをリカバリできます。SnapMirrorレベルからのリカバリ、仮想マシンのVirtual Machine Cloud（VMC）への登録、およびVMwareのネットワーク仮想化およびセキュリティプラットフォームであるNSX-T上のネットワークマッピングを自動化します。この機能は、すべてのVirtual Machine Cloud環境に含まれています。
+BlueXPディザスタリカバリプレビューでは、オンプレミスサイトからAmazon FSx for ONTAPまたは別のオンプレミスサイトにレプリケートされたワークロードをリカバリできます。SnapMirrorレベルからのリカバリ、仮想マシンのVirtual Machine Cloud（VMC）への登録、およびVMwareのネットワーク仮想化およびセキュリティプラットフォームであるNSX-T上のネットワークマッピングを自動化します。この機能は、すべてのVirtual Machine Cloud環境に含まれています。
 
-BlueXPディザスタリカバリ（ベータ版）では、ONTAP SnapMirrorテクノロジが使用されています。このテクノロジは、非常に効率的なレプリケーションを提供し、ONTAPの永久増分バックアップによるSnapshotの効率性を維持します。SnapMirrorレプリケーションにより、アプリケーションと整合性のあるSnapshotコピーが常に同期され、フェイルオーバー後すぐにデータを使用できるようになります。
+BlueXPのディザスタリカバリプレビューには、ONTAP SnapMirrorテクノロジが使用されています。このテクノロジは、効率性に優れたレプリケーションを提供し、ONTAPの永久増分バックアップによるSnapshotの効率性を維持します。SnapMirrorレプリケーションにより、アプリケーションと整合性のあるSnapshotコピーが常に同期され、フェイルオーバー後すぐにデータを使用できるようになります。
 
 image:dr-architecture-diagram-70.png["VMwareサービスインフラ向けBlueXPディザスタリカバリのアーキテクチャを示す図"]
 
-災害が発生した場合は、SnapMirror関係を解除してデスティネーションサイトをアクティブにすることで、VMC内の仮想マシンのリカバリに役立ちます。
+次の図は、オンプレミスからオンプレミスへのディザスタリカバリ計画のアーキテクチャを示しています。
+
+image:dr-architecture-diagram-onprem-to-onprem.png["VMwareサービスインフラ向けBlueXPディザスタリカバリのアーキテクチャを示す図"]
+
+災害が発生した場合にこのサービスを使用すると、SnapMirror関係を解除してデスティネーションサイトをアクティブにすることで、他のオンプレミスのVMware環境またはVMCの仮想マシンをリカバリできます。
 
 * このサービスでは、仮想マシンを元のソースの場所にフェイルバックすることもできます。
 * 元の仮想マシンを中断することなく、ディザスタリカバリフェイルオーバープロセスをテストできます。このテストでは、ボリュームのFlexCloneを作成して、分離されたネットワークに仮想マシンをリカバリします。
