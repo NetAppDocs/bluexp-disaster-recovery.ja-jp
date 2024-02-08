@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: BlueXPディザスタリカバリドキュメント
+  summary: VMware向けBlueXPディザスタリカバリでは、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined
+    Data Centerにレプリケートできます。
+  keywords: disaster, disaster recovery, bluexp, replicate, replication, cloud storage
   lead: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータの破損（ランサムウェアなど）からワークロードを保護します。『BlueXP
     Disaster Recovery for VMware Preview』では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、パブリッククラウド内のVMware
     Software-Defined Data Centerや、ディザスタリカバリサイトとしての別のオンプレミスサイトにレプリケートできます。

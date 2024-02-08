@@ -1,0 +1,430 @@
+---
+sidebar: sidebar 
+permalink: get-started/dr-licensing.html 
+keywords: bluexp license, disaster recovery licensing 
+summary: BlueXPディザスタリカバリでは、無償トライアル、従量課金制サブスクリプション、お客様所有のライセンスを使用するなど、さまざまなライセンスプランを使用できます。 
+---
+= BlueXPディザスタリカバリのライセンスを設定
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+BlueXPディザスタリカバリでは、無償トライアル、従量課金制サブスクリプション、お客様所有のライセンスを使用するなど、さまざまなライセンスプランを使用できます。
+
+次のいずれかのライセンスタイプを使用できます。
+
+* 90日間の無償トライアルにサインアップしてください。
+* Amazon Web Services（AWS）Marketplaceで従量課金制（PAYGO）サブスクリプションを1年、2年、3年で購入
+* お客様所有のライセンスを使用（BYOL）：NetApp営業担当またはNetApp Support Site（NSS）から取得するNetAppライセンスファイル（NLF）です。NLFはBlueXPデジタルウォレットで直接アップロードすることも、ライセンスのシリアル番号を使用してBlueXPデジタルウォレットでBYOLをアクティブ化することもできます。
+
+
+
+NOTE: BlueXPディザスタリカバリの料金は、レプリケーション計画のあるVMが1つ以上ある場合にソースサイトでプロビジョニングされたデータストアの容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするか、AWSでサブスクリプションを購入するまで、サービスの処理が制限されます。AWSサブスクリプションを選択した場合、契約の上限を超えて使用された容量は、AWS Marketplaceのプランに基づいて課金されます。
+
+BYOLをセットアップするか、AWSでサブスクリプションを購入すると、BlueXPデジタルウォレット*[Data service Licenses]タブでライセンスを確認するか、BlueXPデジタルウォレット*[Subscriptions]タブでアクティブなサブスクリプションを確認できます。
+
+無償トライアルの終了後、またはライセンスまたはAWSサブスクリプションの有効期限が切れた後も、サービスで次の操作を実行できます。
+
+* ワークロードやレプリケーション計画などのリソースを表示します。
+* ワークロードやレプリケーション計画などのリソースを削除します。
+* 試用期間、ライセンス、またはサブスクリプション中に作成されたすべてのスケジュール済み操作を実行します。
+
+
+
+
+== 90日間の無償トライアルでお試しください
+
+BlueXPのディザスタリカバリは、90日間の無償トライアルでお試しいただけます。
+
+
+NOTE: 試用期間中は容量制限は適用されません。
+
+ライセンスを取得するか、いつでもサブスクライブすることができ、90日間の試用期間が終了するまで請求されることはありません。90日間の試用期間の終了後も継続するには、BYOLライセンスまたはPAYGO AWSサブスクリプションを購入する必要があります。
+
+試用期間中は、すべての機能を利用できます。
+
+.手順
+. にアクセスします https://console.bluexp.netapp.com/["BlueXPコンソール"^]。
+. BlueXPにログインします。
+. BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
++
+このサービスに初めてログインする場合は、ランディングページが表示されます。
+
++
+image:draas-landing.png["BlueXPディザスタリカバリのランディングページのスクリーンショット"]
+
+. 他のサービス用のコネクタをまだ追加していない場合は、コネクタを追加します。
++
+コネクタを追加するには、を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["コネクタについて説明します"^]。
+
+. コネクタのセットアップが完了したら、BlueXPディザスタリカバリランディングページで*[Start free trial]*を選択します。
++
+image:draas-landing-trial.png["BlueXPディザスタリカバリのランディングページのスクリーンショット"]
+
+. 無償トライアルの情報を確認し、* Let's go *を選択します。
+
+
+
+
+=== トライアル期間が終了したら、AWS Marketplaceでサブスクライブ
+
+無償トライアルの終了後は、NetAppからライセンスを購入するか、AWS Marketplaceで登録できます。この手順では、AWS Marketplaceで直接サブスクライブする方法の概要を説明します。
+
+.手順
+. BlueXPディザスタリカバリに、無償トライアルの有効期限が近づいていることを示すメッセージが表示されます。メッセージで、*[ライセンスの購読または購入]*を選択します。
++
+image:draas-license-subscribe.png["BlueXPディザスタリカバリライセンスの登録または購入ページ"]
+
+. [Subscribe or purchase license]ページで、*[Subscribe in AWS Marketplace]*を選択します。
+. AWS Marketplaceで、*購入オプションを表示*を選択します。
+. AWS Marketplaceを使用して、BlueXPディザスタリカバリにサブスクライブします。
+. BlueXPディザスタリカバリに戻ると、登録したことを示すメッセージが表示されます。BlueXPデジタルウォレットでサブスクリプションの詳細を表示するには、*[サブスクリプションの詳細を表示]*を選択し、*[サブスクリプション]*ページでアクティブなサブスクリプションを確認します。
++
+image:digital-wallet-subscriptions.png["BlueXPのデジタルウォレットサブスクリプションタブ"]
+
+
+
+
+
+=== 試用期間が終了したら、NetAppからBYOLライセンスを購入
+
+試用版の終了後は、NetApp営業担当またはテクニカルサポートからライセンスを購入できます。
+
+.手順
+. ライセンスの購入については、NetAppの営業担当者またはNetAppサポートにお問い合わせください。
+. ライセンスを取得したら、BlueXPディザスタリカバリに戻り、無償トライアルの有効期限が近づいているというメッセージが表示されたら、*[サブスクリプションまたはライセンスの購入]*を選択します。
++
+Subscribe or purchase licenseページが表示されます。
+
++
+image:draas-license-subscribe-NetApp-option.png["BlueXPディザスタリカバリライセンスの登録または購入ページ"]
+
+. [ライセンスをBlueXPに追加]*を選択します。BlueXPのデジタルウォレットが表示されます。
++
+image:digital-wallet-data-services-licenses-tab.png["BlueXPディザスタリカバリライセンスの登録または購入ページ"]
+
+. BlueXPデジタルウォレットで、*[データサービスライセンス]*タブで*[ライセンスの追加]*を選択します。
+. [Add License]ページで、シリアル番号を入力するか、NetAppライセンスファイル（NLF）をアップロードします。
++
+image:byol-digital-wallet-license-add.png["BlueXPデジタルウォレットの[Add License]ページ"]
+
+
+
+
+
+=== 無償トライアルを終了する
+
+無料トライアルはいつでも停止することも、有効期限が切れるまで待つこともできます。
+
+.手順
+. BlueXPのディザスタリカバリで、右上の*無償トライアル-詳細を表示*を選択します。
+. ドロップダウンの詳細で*[End free trial]*を選択します。
++
+image:draas-trial-end.png["無償トライアルの終了ページ"]
+
+. すべてのデータを削除する場合は、[試用期間終了時にすべてのデータを削除する]をオンにします。
++
+これにより、すべてのスケジュール、レプリケーションプラン、リソースグループ、vCenter、およびサイトが削除されます。監査データ、処理ログ、およびジョブ履歴は、製品の寿命が終わるまで保持されます。
+
++
+
+NOTE: 無償トライアルを終了してもデータの削除を求められず、ライセンスやサブスクリプションを購入していない場合、無償トライアルの終了から60日後にBlueXPディザスタリカバリによってすべてのデータが削除されます。
+
+. テキストボックスに「end trial」と入力します。
+. [終了]*を選択します。
+
+
+
+
+== AWSの従量課金制（PAYGO）サブスクリプションを使用
+
+AWS MarketplaceのPAYGOサブスクリプションを使用する場合は、まずAWSでセットアップしてからBlueXPでセットアップする必要があります。
+
+AWSでPAYGOサブスクリプションを設定するには、次の手順を実行します。
+
+* <<パート1 AWSでPAYGOサブスクリプションを設定する>>
+* <<パート2 BlueXPでPAYGOサブスクリプションを設定する>>
+* <<Part 3a Associate the new SaaS Marketplace subscription with AWS credentials>> または
++
+<<Part 3b Associate the new SaaS Marketplace subscription with AWS credentials for annual contracts>>。
+
+
+
+
+
+==== パート1 AWSでPAYGOサブスクリプションを設定する
+
+AWSでPAYGOサブスクリプションを設定する手順の概要を次に示します。
+
+詳細については、を参照してください。 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["BlueXPのAWSクレデンシャルとマーケットプレイスサブスクリプションを管理"^]。
+
+.作業を開始する前に
+NetAppセールスチームと連携し、オファーのリンクを取得しておく必要があります。また、次の説明に従って、オファーを承諾する権限を持っている必要があります。 https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html["AWS Marketplaceサブスクリプションへのアクセスの制御"^]。
+
+.手順
+. AWSコンソールでNetApp BlueXP向けAWS Marketplaceプライベートオファーに同意します。
++
+次の情報を参照してください。
+
++
+** https://aws.amazon.com/blogs/awsmarketplace/access-your-private-offers-aws-marketplace-console/["AWS Marketplaceコンソールからプライベートオファーにアクセス"^]。
+** https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-offers-page.html#private-offers-page-permissions["プライベートオファーページを表示するために必要な権限"^]。
+
+
+. プライベートオファーの詳細を確認し、契約内容と一致することを確認します。
++
+
+CAUTION: [サブスクライブ]*をクリックすると請求が開始されるため、情報に誤りがある場合は、プライベートオファーに同意せずにNetApp販売担当者に連絡してください。
+
+. オファー情報が正しいことを確認したら、* Subscribe *を選択します。
++
+オファーが契約リストを使用している場合は、サービスごとのユニット数も入力します。次に、*契約の作成*を選択してプライベートオファーを受け入れることができます。
+
+. ポップアップで*[アカウントのセットアップ]*を選択すると、NetApp BlueXPコンソールにリダイレクトされ、BlueXP Marketplaceサブスクリプションの設定が完了します。
++
+オファーに契約リストが使用されている場合は、*購入オプションの表示*を選択し、*アカウントの設定*を選択します。
+
+
+
+
+
+==== パート2 BlueXPでPAYGOサブスクリプションを設定する
+
+AWSコンソールでプライベートオファーを承諾すると、BlueXPコンソールに移動します。
+
+.手順
+. BlueXPコンソールで、次の手順を実行します。
++
+.. SaaS Marketplaceサブスクリプションの表示名を入力します。
+.. このMarketplaceサブスクリプションへのアクセス権を持つNetApp BlueXPアカウントを選択します。
+.. 1つのNetApp BlueXPアカウントの既存のSaaS Marketplaceサブスクリプションを、新しく作成したサブスクリプションに置き換えるには、[既存のサブスクリプションを置き換える]*を選択します。BlueXPは、アカウント内のすべてのクラウドクレデンシャルの既存のサブスクリプションを、この新しいサブスクリプションに置き換えます。
++
+
+NOTE: 置き換えオプションは、1つのNetApp BlueXPアカウントに限定されます。複数のBlueXPアカウントを同じSaaS Marketplaceサブスクリプションに関連付ける場合は、アカウントを個別に設定する必要があります。
+
++
+
+NOTE: SaaS Marketplaceサブスクリプションに一度もクラウドクレデンシャルが関連付けられていない場合は、この手順の次のパートに従ってクラウドクレデンシャルを設定する必要があります。
+
+
+
+. [保存]*と[完了]*を選択します。
+. 次のパート3に進みます。
++
+** <<パート3a新しいMarketplaceサブスクリプションをAWSクレデンシャルに関連付ける>>
+** <<パート3b新しいMarketplaceサブスクリプションとAWSクレデンシャルを関連付ける（年間契約）>>。
+
+
+
+
+
+
+==== パート3a新しいMarketplaceサブスクリプションをAWSクレデンシャルに関連付ける
+
+このパート3では、AWSでのライセンスのセットアップについて説明します。
+
+
+NOTE: 年間契約の場合は、こちらをクリックしてください。
+<<Part 3b Associate the new SaaS Marketplace subscription with AWS credentials for annual contracts>>。
+
+.手順
+. にアクセスします https://console.bluexp.netapp.com["NetApp BlueXPコンソール"]。
+. サブスクリプションの詳細を確認します。
++
+.. 左側のペインで、* Governance *>* Digital Wallet *を選択します。
+.. [サブスクリプション]タブを選択します。
++
+image:paygo-digitalwallet-subscriptions.png["BlueXPデジタルウォレットサブスクリプションページ"]
+
+.. パート1で追加したSaaS Marketplaceサブスクリプションを探し、これが正しいプランであることを確認します。
+
+
+. AWSサブスクリプションの行を探し、行を展開して詳細を表示し、プライベートオファーがBlueXPアカウントに正常に関連付けられたことを確認します。
++
+AWS Marketplaceの制限により、AWSコンソール以外では利用できないサービスの詳細があります。いずれかのフィールドに「N/A」と表示されている場合は、AWSコンソールから情報を取得できず、間違いではありません。AWSコンソールで情報を確認することもできます。
+
+. BlueXPコンソールの右上にある*[設定]*歯車を選択し、*[クレデンシャル]*を選択します。
++
+image:paygo-digitalwallet-settings.png["BlueXPデジタルウォレットの[Settings]メニュー"]
+
+. 新しいSaaS Marketplaceサブスクリプションに関連付ける一連のクレデンシャルを探します。
++
+
+TIP: これらが正しいことを確認するには、上の*[表示]*をクリックします。
+
+. [アクション]*オプションを選択し、*[サブスクリプションの関連付け]*を選択します。
+. [Marketplace Subscription]ドロップダウンメニューでプライベートオファーを選択し、*[Associate]*を選択します。
++
+
+NOTE: AWSクレデンシャルに関連するMarketplaceの料金は、関連付けたSaaS Marketplaceサブスクリプションで請求されるようになりました。年間契約を使用する場合は、これらのAWSクレデンシャルに関連するインフラコストが年間契約の使用量としてカウントされます。
+
+. このSaaS Marketplaceサブスクリプションに関連付けるBlueXPアカウントの他のAWSクレデンシャルについて、上記の手順を繰り返します。
++
+.. 他のBlueXPアカウントのAWSクレデンシャルを使用する場合は、BlueXPコンソールの上部にある*[Account]*オプションを使用してアカウントを切り替え、同じ手順を繰り返します。
+.. 他のBlueXPコネクタに関連するAWSクレデンシャルを使用する場合は、BlueXPコンソール上部の* connector *オプションを使用してコネクタを切り替え、同じ手順を繰り返します。
+
+
+
+
+
+
+==== パート3b新しいMarketplaceサブスクリプションとAWSクレデンシャルを関連付ける（年間契約）
+
+年間契約を使用している場合、BlueXPデジタルウォレットの情報は多少異なります。
+
+. にアクセスします https://console.bluexp.netapp.com["NetApp BlueXPコンソール"]。
+. サブスクリプションの詳細を確認します。
++
+.. 左側のペインで、* Governance *>* Digital Wallet *を選択します。
+.. [サブスクリプション]タブを選択します。
++
+image:paygo-digitalwallet-subscriptions-annualcontract.png["年間契約を示すBlueXPデジタルウォレットサブスクリプションページ"]
+
+.. パート1で追加したSaaS Marketplaceサブスクリプションを探し、これが正しいプランであることを確認します。
+
+
+. AWS年間契約サブスクリプションの行を探し、行を展開して詳細を表示し、プライベートオファーがBlueXPアカウントに正常に関連付けられたことを確認します。
++
+image:paygo-digitalwallet-subscriptions-annualcontract-associate.png["BlueXPデジタルウォレットサブスクリプションページ（年間契約）"]
+
+. その行の*アクション...*オプションを選択し、*サブスクリプションの関連付け*を選択します。
++
+image:paygo-digitalwallet-subscriptions-annualcontract-associate-dialog.png["BlueXPデジタルウォレットサブスクリプションページ（年間契約）"]
+
+. サブスクリプションに関連付けるアカウントを選択し、*[適用]*を選択します。
++
+
+NOTE: AWSクレデンシャルに関連するMarketplaceの料金は、関連付けたSaaS Marketplaceサブスクリプションで請求されるようになりました。年間契約を使用する場合は、これらのAWSクレデンシャルに関連するインフラコストが年間契約の使用量としてカウントされます。
+
+. このSaaS Marketplaceサブスクリプションに関連付けるBlueXPアカウントの他のAWSクレデンシャルについて、上記の手順を繰り返します。
++
+.. 他のBlueXPアカウントのAWSクレデンシャルを使用する場合は、BlueXPコンソールの上部にある*[Account]*オプションを使用してアカウントを切り替え、同じ手順を繰り返します。
+.. 他のBlueXPコネクタに関連するAWSクレデンシャルを使用する場合は、BlueXPコンソール上部の* connector *オプションを使用してコネクタを切り替え、同じ手順を繰り返します。
+
+
+
+
+
+
+==== BlueXPのDigital Wallet Subscriptionsビューの表示内容をカスタマイズ
+
+[サブスクリプション]ページに表示される列をカスタマイズできます。たとえば、用語の情報を表示する場合に使用します。
+
+.手順
+. BlueXPデジタルウォレットサブスクリプションページで、右側のテーブルアイコンを選択します。
+. 表示される列のリストで、テーブルに表示する列を選択します。
+. * 適用 * を選択します。
+
+
+
+
+== お客様所有のライセンスを使用（BYOL）
+
+お客様所有のライセンスを使用（BYOL）する場合は、ライセンスの購入、NetAppライセンスファイル（NLF）の取得、BlueXPデジタルウォレットへのライセンスの追加が含まれます。
+
+
+
+=== BlueXPディザスタリカバリライセンスを購入
+
+BlueXPディザスタリカバリライセンスをお持ちでない場合は、ネットアップまでお問い合わせください。
+
+. 次のいずれかを実行します。
++
+** ライセンスの購入については、NetApp営業担当までお問い合わせください。
+** ライセンスをリクエストするには、BlueXPの右下にあるチャットアイコンをクリックします。
+
+
+
+
+
+
+=== BlueXPディザスタリカバリライセンスファイルの入手
+
+BlueXPディザスタリカバリライセンスを購入したら、BlueXPディザスタリカバリのシリアル番号とNetApp Support Site（NSS）アカウントを入力するか、NetAppライセンスファイル（NLF）をアップロードしてライセンスをアクティブ化します。
+
+NLFは、NetApp営業担当者またはNetApp Support Siteから入手できます。
+
+.作業を開始する前に
+開始する前に、次の情報が必要です。
+
+* BlueXPディザスタリカバリのシリアル番号
++
+この番号は、SOから確認するか、アカウントチームにお問い合わせください。
+
+* BlueXPアカウントID
++
+BlueXPアカウントIDを確認するには、BlueXPの上部にある*[アカウント]*ドロップダウンを選択し、アカウントの横にある*[アカウントの管理]*を選択します。アカウント ID は、 [ 概要 ] タブにあります。インターネットにアクセスできないプライベートモードのサイトでは、* account-DARKSITE1*を使用します。
+
+
+
+.サポートサイトからNLFライセンスファイルを取得する手順
+. にサインインします https://mysupport.netapp.com["NetApp Support Site"^]  をクリックし、* Systems *>* Software Licenses *を選択します。
++
+image:byol-nss-licenses.png["NetApp Support Siteの[Software Licenses]ページ"]
+
+. BlueXPディザスタリカバリライセンスのシリアル番号を入力します。
+. [License Key]列で、[Get NetApp License File]*を選択します。
++
+image:byol-nss-licenses-get.png["NetApp Support Siteの[Software Licenses]ページ"]
+
+. BlueXPアカウントID（サポートサイトではテナントIDと呼ばれています）を入力し、*[送信]*を選択してライセンスファイルをダウンロードします。
+
+
+
+
+=== BlueXPのデジタルウォレットにBlueXPディザスタリカバリライセンスを追加
+
+BlueXPアカウント用のBlueXPディザスタリカバリライセンスを購入したら、BlueXPのデジタルウォレットにライセンスを追加する必要があります。
+
+.手順
+. BlueXPのメニューで、* Governance *>* Digital Wallet *>* Data Services Licenses *を選択します。
++
+image:byol-digital-wallet-dataserviceslicenses-tab.png["NetApp BlueXPデジタルウォレットデータサービスの[ライセンス]タブ"]
+
+. 「 * ライセンスの追加 * 」を選択します。
++
+image:byol-digital-wallet-license-add.png["NetApp BlueXPデジタルウォレットの[Add License]ページ"]
+
+. [Add License]ページで、ライセンス情報を入力し、*[Add License]*を選択します。
++
+** BlueXPライセンスのシリアル番号があり、NSSアカウントがわかっている場合は、*[シリアル番号の入力]*オプションを選択してその情報を入力します。
++
+お使いのNetApp Support Siteのアカウントがドロップダウンリストにない場合は、 https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["NSSアカウントをBlueXPに追加します"^]。
+
+** BlueXPライセンスファイル（ダークサイトにインストールされている場合に必要）がある場合は、*[ライセンスファイルのアップロード]*オプションを選択し、プロンプトに従ってファイルを添付します。
+
+
+
+
+.結果
+BlueXPデジタルウォレットに、ライセンスがあればディザスタリカバリが表示されるようになりました。
+
+image:byol-digital-wallet-licenses-added.png["NetApp BlueXPデジタルウォレット"]
+
+
+
+=== 有効期限が切れたときにBlueXPライセンスを更新する
+
+ライセンス期間が有効期限に近づいている場合や、ライセンス容量が上限に近づいている場合は、BlueXPのディザスタリカバリUIに通知されます。有効期限が切れる前にBlueXPディザスタリカバリライセンスを更新することで、スキャンしたデータへのアクセスが中断されることがありません。
+
+
+TIP: このメッセージは、BlueXPのデジタルウォレットと https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
+
+.手順
+. BlueXPの右下にあるチャットアイコンを選択して、特定のシリアル番号について契約期間の延長やライセンスの容量の追加をリクエストします。また、電子メールを送信して、ライセンスの更新をリクエストすることもできます。
++
+ライセンスの料金を支払ってNetApp Support Site に登録すると、BlueXPデジタルウォレット内のライセンスが自動的に更新され、[Data Services Licenses]ページに5~10分後に変更が反映されます。
+
+. BlueXPがライセンスを自動的に更新できない場合(たとえば、ダークサイトにインストールされている場合)、ライセンスファイルを手動でアップロードする必要があります。
++
+.. ライセンスファイルはNetApp Support Siteから取得できます。
+.. BlueXPのデジタルウォレットページの[Data Services Licenses]タブで、更新するサービスシリアル番号の*[Actions...*アイコンを選択し、*[Update License]*を選択します。
++
+image:digital-wallet-licenses-expired.png["期限切れのライセンスが表示されているNetApp BlueXPデジタルウォレット"]
+
+
+
+

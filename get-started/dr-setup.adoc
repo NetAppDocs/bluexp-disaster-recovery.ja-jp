@@ -75,3 +75,9 @@ BlueXPオンプレミスコネクタまたはBlueXP AWSコネクタを使用し�
 . BlueXPでは、SnapMirrorをFSx for NetApp ONTAPに導入します。
 . BlueXPでは、AWSインスタンス上でプロビジョニングされたFSx for NetApp ONTAPを検出し、指定したデータストアボリュームをオンプレミス環境からFSx for NetApp ONTAPにレプリケートし、適切な頻度でNetApp Snapshotコピーを保持します。
 
+
+
+
+=== ライセンスをセットアップする
+
+BlueXPディザスタリカバリでは、90日間の無償トライアルに登録できます。

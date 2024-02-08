@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: release-notes/dr-whats-new.html 
-keywords: disaster recovery faq, bluexp, disaster recovery frequently asked questions, vmware, vcenter 
-summary: BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。 
+keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter 
+summary: BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。VMware向けBlueXPディザスタリカバリでは、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined Data Centerにレプリケートできます。 
 ---
 = 新機能
 :hardbreaks:
@@ -13,6 +13,54 @@ summary: BlueXPのディザスタリカバリは、ディザスタリカバリ�
 
 [role="lead"]
 BlueXPディザスタリカバリプレビューの新機能をご紹介します。
+
+
+
+== 2024年2月1日
+
+このBlueXPディザスタリカバリリリースには、次の更新が含まれています。
+
+* *ネットワークの強化*：このリリースでは、VMのCPU値とRAM値のサイズを変更できるようになりました。VMのネットワークDHCPまたは静的IPアドレスを選択することもできます。
++
+** DHCP：このオプションを選択した場合は、VMのクレデンシャルを指定します。
+** 静的IP：ソースVMと同じ情報または異なる情報を選択できます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、IPアドレス、サブネットマスク、DNS、およびゲートウェイの情報を指定できます。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。
+
+
+
+* *フェイルオーバー後のプロセスとしてカスタムスクリプト*を含めることができるようになりました。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["リモートサイトへのフェイルオーバー"]。
+
+* * SnapMirror関係*：レプリケーション計画の作成時にSnapMirror関係を作成できるようになりました。以前は、BlueXPのディザスタリカバリ以外で関係を作成する必要がありました。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。
+
+* *整合グループ*：レプリケーション計画を作成する際に、異なるボリュームや異なるSVMのVMを含めることができます。BlueXPディザスタリカバリでは、すべてのボリュームを含めて整合グループSnapshotを作成し、すべてのセカンダリサイトを更新します。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。
+
+* * VM電源投入遅延オプション*：レプリケーション計画を作成するときに、リソースグループにVMを追加できます。リソースグループを使用すると、各VMに遅延を設定して、遅延シーケンスで電源を投入することができます。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。
+
+* *アプリケーションと整合性のあるSnapshotコピー*：アプリケーションと整合性のあるSnapshotコピーを作成するように指定できます。サービスはアプリケーションを休止し、Snapshotを作成してアプリケーションの整合性のある状態を取得します。
++
+詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。
+
+
+
+
+
+== 2024年1月11日
+
+このリリースのBlueXPディザスタリカバリには、次の更新が含まれています。
+
+* このリリースでは、ダッシュボードから他のページの情報にすばやくアクセスできます。
+
+
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["BlueXPディザスタリカバリの詳細"]。
 
 
 
