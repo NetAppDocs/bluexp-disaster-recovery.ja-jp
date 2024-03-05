@@ -43,6 +43,6 @@ image:draas-landing2.png["BlueXPディザスタリカバリのランディング
 
 
 +
-image:dr-dashboard-preview.png["BlueXPディザスタリカバリダッシュボード"]
+image:dr-dashboard.png["BlueXPディザスタリカバリダッシュボード"]
 
 

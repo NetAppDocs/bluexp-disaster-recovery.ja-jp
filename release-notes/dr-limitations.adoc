@@ -16,6 +16,12 @@ summary: ここでは、このリリースのサービスでサポートされ�
 
 
 
+== フェイルバックで最新のSnapshotコピーを使用
+
+現在のリリースでは、フェイルバックプロセスで常に最新のSnapshotコピーが使用されます。これは、特定のSnapshotコピーを使用するように選択した場合でも発生します。
+
+
+
 == BlueXPでAmazon FSx for NetApp ONTAPが検出されない場合がある
 
 Amazon FSx for NetApp ONTAPクラスタがBlueXPで検出されないことがあります。これは、FSxのクレデンシャルが正しくないことが原因である可能性があります。

@@ -29,7 +29,7 @@ vCenterサイト名とサイトタイプ（オンプレミスまたはAWS）を�
 
 .手順
 . トップメニューから*[サイト]*を選択します。
-. [アクション]オプションを選択します。 image:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"]  をクリックし、*[編集]*を選択します。
+. [アクション]オプションを選択します。 image:../use/icon-vertical-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"]  をクリックし、*[編集]*を選択します。
 . vCenterサイトの名前と場所を編集します。
 
 
@@ -45,6 +45,9 @@ vCenterサイト名とサイトタイプ（オンプレミスまたはAWS）を�
 
 .手順
 . トップメニューから*レプリケーションプラン*を選択します。
++
+image:../use/dr-plan-list2.png["レプリケーションプランリスト"]
+
 . 計画の詳細を表示するには、* Actions *オプションを選択します。 image:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"] [View plan details]*を選択します。
 . 次のいずれかを実行します。
 +

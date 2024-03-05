@@ -21,3 +21,33 @@ summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバ�
 . 特定のジョブの詳細を表示するには、その行を選択します。
 . 情報を更新するには、*[更新]*を選択します。
 
+
+
+
+== ジョブをキャンセルします
+
+進行中のジョブを続行したくない場合は、ジョブをキャンセルできます。ジョブが同じ状態で停止し、キュー内の次の処理を解放したい場合は、ジョブをキャンセルできます。タイムアウトになる前にジョブをキャンセルすることもできます。
+
+ジョブをキャンセルするには、Swaggerを使用します。
+
+.作業を開始する前に
+ジョブをキャンセルするには、アカウントIDが必要です。
+
+.手順
+. BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
+. トップメニューから*ジョブ監視*を選択します。
+. [Job monitor]ページで、キャンセルするジョブのIDをメモします。
+. BlueXPディザスタリカバリSwaggerのURLにアクセスします。 https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/Jobs/put_jobmanager_v2_jobs__jobId_["スワガー"^]。
++
+"https://snapcenter.cloudmanager.cloud.netapp.com/api-doc/#/Jobs/put_jobmanager_v2_jobs__jobId_"[]
+
++
+image:dr-swagger-job-cancel.png["ジョブをキャンセルする方法を示すSwaggerページ"]
+
++
+Swaggerの詳細については、を参照してください。 https://swagger.io/docs/["Swaggerドキュメント"^]。
+
+. Swaggerで、Authorizeオプションからセキュリティトークン（_bearer token_とも呼ばれます）を取得します。
+. [Account ID]と[Job ID]を入力します。
+. [* 試してみてください * ] を選択します。
+

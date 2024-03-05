@@ -209,7 +209,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="7fc964519860ed011389afb142e2370e" category="list-text">BlueXPの場合：</block>
   <block id="322e46cbec275f2740ec8387b6dd48fd" category="list-text">オンプレミスのONTAPストレージ作業環境をBlueXPに追加これはソースONTAPクラスタです。</block>
   <block id="24b72cf7b78b1dabbeedc0e25ff165f8" category="list-text">BlueXPアカウントを追加し、作業環境にFSxNを追加し、FSx for ONTAP用のAWSクレデンシャルを追加します。</block>
-  <block id="b8df0b164b6257ea461d9fe9bafba4a0" category="section-title">AWSテノセツトアツフ</block>
   <block id="832d5bf67a66aafc3f8182b31c2c8086" category="paragraph">AWSでは、次の手順を実行する必要があります。</block>
   <block id="824ad2eb4e12f7e91aa345fe67fa3e20" category="list-text">VMware Cloudの導入</block>
   <block id="4dab2f9796b0af6304d00e21e2b9dfb4" category="inline-link">AWS 上の VMware Cloud</block>
@@ -218,7 +217,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="fd14ed73e21c2af5ff119a635c30df95" category="paragraph">AWSでVMC環境を設定するには、次の手順を実行します<block ref="2482e32457e6109d0aff0016bbcce7d1" category="inline-link-rx"></block>。パイロットライトクラスタは、ディザスタリカバリにも使用できます。</block>
   <block id="813470cfb6b19cf55033bfb89dad5bc3" category="section-title">Amazon FSx for NetApp ONTAPを設定</block>
   <block id="eb394b51d4a778c72332db5d64a1960b" category="paragraph">Amazon FSX for NetApp ONTAP はフルマネージドサービスで、広く普及しているNetApp ONTAP ファイルシステムを基盤に、信頼性、拡張性、パフォーマンス、機能豊富なファイルストレージを提供します。この手順を実行します<block ref="551566e1b64bc66251dbfe6d546a4bef" category="inline-link-rx"></block> FSx for NetApp ONTAPのプロビジョニングと設定を行います。</block>
-  <block id="a92a4e415b5c7d3fb9b1ef84a6a978ee" category="section-title">BlueXPテノセツトアツフ</block>
   <block id="496692430255798782df4a20f93d0e46" category="paragraph">次のステップは、BlueXPでディザスタリカバリをセットアップすることです。</block>
   <block id="ccaaa0b1fdb9afd84865d38039f74d41" category="section-title">BlueXPでコネクタを作成します</block>
   <block id="d29bda09bea50f3d6b0e9d9d61015179" category="inline-link">コネクタの作成方法</block>
@@ -269,12 +267,10 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="09a3b2146f5bb00d0655706877fb4488" category="list-text">BlueXPの左側のナビゲーションで、*[保護]*&gt;*[ディザスタリカバリ]*を選択します。</block>
   <block id="04f45bf7defd11ead0b4c56cf8c3f371" category="paragraph">このサービスに初めてログインする場合は、ランディングページが表示されます。</block>
   <block id="c6c7eb2270b5edb5f8ecf37392db8b4b" category="inline-image-macro">BlueXPディザスタリカバリのランディングページのスクリーンショット</block>
-  <block id="834a404d8022b5474595ce6643b8c962" category="paragraph"><block ref="834a404d8022b5474595ce6643b8c962" category="inline-image-macro-rx" type="image"></block></block>
   <block id="674a6bb0fdee8ed1d2d68faddc33d5e6" category="paragraph">それ以外の場合は、BlueXPディザスタリカバリのダッシュボードが表示されます。</block>
   <block id="e1d24b3118270d4224a54337f1f63f2c" category="summary">環境のサポート、ネットワークアクセス、ログイン、Webブラウザを確認して、BlueXPのディザスタリカバリを開始しましょう。</block>
   <block id="ccf3c2f4a4ab48adb4cc5352e480655c" category="doc">BlueXPディザスタリカバリの前提条件</block>
   <block id="84804abf3404a430e85ae3299587a6b0" category="paragraph">まず、運用環境、ログイン、ネットワークアクセス、Webブラウザの準備状況を確認します。</block>
-  <block id="0a671277a8e95e13cd4ada589094d401" category="list-text">オンプレミスのVMware作業環境とNetAppストレージ</block>
   <block id="e3bc55f0abc82785380fd56b902bf803" category="list-text">AWSの場合：</block>
   <block id="9ff73081ad3af348b09105664054c18f" category="inline-link">利用を開始するには</block>
   <block id="308d77673e39dd171579985cc8579f92" category="list-text">Amazon FSx for NetApp ONTAPファイルシステムAmazon FSx for ONTAPに関するドキュメント<block ref="db982a545763422931a00c332a8601c2" category="inline-link-rx"></block>。</block>
@@ -283,7 +279,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="045482367f3cc5727ae8f097479439ee" category="list-text">SDDCをAmazon FSx for NetApp ONTAPにリンクします。を参照してください<block ref="02b70b195fcb534ea97ab3bf74203889" category="inline-link-rx"></block>。</block>
   <block id="69b085a23d3ed85c84455b9288792bf2" category="inline-link">BlueXPクイックスタート</block>
   <block id="45e7f38a8238b36c23e85bbe6436ba0b" category="inline-link">BlueXPのネットワーク情報</block>
-  <block id="9d59690aa454d56946e79da0ccf17dcd" category="list-text">Amazon FSx for ONTAPとAWSのクレデンシャルをBlueXP作業環境に追加</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">著作権に関する声明、商標、特許などにアクセスできます。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
@@ -337,7 +332,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="0acfc5a5ce6523c8fad77ea0b4d65862" category="section-title">vCenterサイトの管理</block>
   <block id="f6384b4b10f3ca7cfac8402cfb23ef7f" category="paragraph">vCenterサイト名とサイトタイプ（オンプレミスまたはAWS）を編集できます。</block>
   <block id="c59beae96d46d2c9b38ce64663e3d9d0" category="list-text">トップメニューから*[サイト]*を選択します。</block>
-  <block id="63488dc67b3dd9f79eef8f84ef97e5a1" category="list-text">[アクション]オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  をクリックし、*[編集]*を選択します。</block>
   <block id="c4b621211240f640df1e2cfcc6cc5bec" category="list-text">vCenterサイトの名前と場所を編集します。</block>
   <block id="07851e0287e57a794c18de627c09e0e7" category="section-title">レプリケーション計画の管理</block>
   <block id="5fc6ce3a162e9142e8d530e890bcf33c" category="paragraph">レプリケーションプランは、無効化、有効化、および削除できます。</block>
@@ -473,7 +467,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">クラウドプロバイダのファイルサービスのサポート</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">クラウドプロバイダのファイルサービスとそのインフラ、またはサービスを使用する解決策に関連するテクニカルサポートについては、該当する製品のBlueXPドキュメントの「困ったときは」を参照してください。</block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">BlueXPおよびそのストレージソリューションとサービスに固有のテクニカルサポートを受けるには、以下に記載されているサポートオプションを使用してください。</block>
-  <block id="5390078526cd7c5bbf99260f6968b5ec" category="paragraph">BlueXPディザスタリカバリプレビューの新機能をご紹介します。</block>
   <block id="2971377ab46c11db3998ef23731b52cf" category="section-title">2023年10月20日</block>
   <block id="b56e223e6fc7ca1dfacb6233ed47b35e" category="paragraph">今回のBlueXPディザスタリカバリプレビューリリースには、次の更新が含まれています。</block>
   <block id="af242308972c98cd4207cc26ee6edaa9" category="paragraph">BlueXPディザスタリカバリを使用すると、オンプレミスのNFSベースのVMwareワークロードを、パブリッククラウドに加えてオンプレミスのNFSベースのVMware環境への災害から保護できます。BlueXPディザスタリカバリは、ディザスタリカバリ計画の完成をオーケストレーションします。</block>
@@ -514,7 +507,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="798f01bc27c71f62fd4a64e0bb155f2f" category="paragraph">このプロセスでは、オンプレミスのONTAPストレージやAWSのFSx for NetApp ONTAPストレージの物理容量が追加で消費されることはありません。元のソースボリュームは変更されず、ディザスタリカバリ中もレプリカジョブを続行できます。</block>
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">災害が発生した場合は、プライマリオンプレミスVMwareサイトをオンデマンドで別のオンプレミスVMwareサイトにフェイルオーバーするか、FSx for NetApp ONTAPを使用してVMware Cloud on AWSにフェイルオーバーします。</block>
   <block id="0e4406e2f319d2b24ab99a69613fbf47" category="list-text">レプリケーション計画でキャプチャされた情報に基づいて、データストアが作成され、VMwareまたはVMCのクラスタまたはホストにマウントされます。</block>
-  <block id="f34bf212e5f50a4e5ff41c4313b507d9" category="admonition">フェイルオーバーが開始されると、リカバリされたVMがディザスタリカバリサイトのvCenter（仮想マシン、ネットワーク、データストア）に表示されます。デフォルトでは、仮想マシンはWorkloadフォルダにリカバリされます。</block>
   <block id="f806e093eb7de418336ba62747d0d9ab" category="list-text">[Test failover]ページで、確認するレプリケーション計画の名前を入力し、*[Fail over]*を選択します。</block>
   <block id="48b7a229446624a8bba6bae8e801d0ab" category="list-text">左上のブレッドクラムで[Replication plans]を選択して、計画のリストに戻ります。</block>
   <block id="2ebea8fe68e78bc0ff591a0dfab2033d" category="list-text">プランでアクションを実行するには、レプリケーションプランのリストから* Actions *オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  をクリックし、*スケジュールの編集*、*テストフェイルオーバー*、*フェイルオーバー*、*フェイルバック*、*無効*などのオプションを選択します。 *有効*または*削除*。</block>
@@ -523,9 +515,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="deddd86c6a5897bccccb85b43b4b28da" category="list-text">BlueXPディザスタリカバリのトップメニューで、*[ダッシュボード]*を選択します。</block>
   <block id="04edaa59dc99bd9193a5ad37083cc900" category="list-text">ダッシュボードで次の情報を確認します。</block>
   <block id="b845a02ab309809100805f1256a064e8" category="list-text">*サイト*:サイトの正常性を表示します。サイトのステータスは次のいずれかになります。</block>
-  <block id="61e18cf8d6f0ea0411c78989c9db7a39" category="list-text">*正常*：vCenterは接続されて実行されています。</block>
-  <block id="946f03b5b54177213c34641ddacb28d9" category="list-text">*切断*：vCenterに到達できないか、接続に問題があります。</block>
-  <block id="20a720399ff6873fe761ee1db856af10" category="list-text">*デグレード*：vCenterに到達できないか、接続に問題があります。</block>
   <block id="e2438a3d730fa8490b06524ee1d8b0ed" category="paragraph">サイトの詳細を表示するには、ステータスについては*[すべて表示]*を選択し、すべてを表示するには*[サイトの表示]*を選択します。</block>
   <block id="18c8e34abace1973ab5a4468dba74870" category="list-text">*レプリケーションプラン*:プランの正常性を表示します。計画のステータスは次のいずれかになります。</block>
   <block id="ddc1e4c30a24a09d9ea40b7e332147a4" category="list-text">*準備完了*</block>
@@ -559,23 +548,16 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="69c0c55ea8cce1b3cc74ab21345b0989" category="list-text">*データストア*：選択した仮想マシンに基づいて、データストアマッピングが自動的に選択されます。</block>
   <block id="7fceed43db5d7f111f8ef8f9351ffecd" category="paragraph">データを別のターゲットに移行する（1回限りの移動）か、SnapMirror頻度でレプリケートするかを選択します。</block>
   <block id="a6263fdec62a2bd89f463f2208f79331" category="paragraph">レプリケートする場合は、データをミラーリングする頻度を特定します。</block>
-  <block id="774a603b6a7ee18d47215ca2f4362c80" category="admonition">このプレビューでは、BlueXPディザスタリカバリサービス以外の頻度を設定します。</block>
   <block id="901540dd7e45eaf2226327527c8d78b4" category="list-text">*ソース*：*[Discover vCenter servers（vCenterサーバーの検出）]*を選択して、ソースvCenterサイトに関する情報を入力します。</block>
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*ターゲット*：</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">[Sites]ページのスクリーンショット</block>
   <block id="28f8c0c78028f2e899f7af50ce138e1b" category="paragraph"><block ref="28f8c0c78028f2e899f7af50ce138e1b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b3dbeaf2ef270574ab4299c7f3ca04fc" category="paragraph">BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してAWSとBlueXPの両方でセットアップします。</block>
   <block id="1835d0517fe4ffa8b6a639fa95e369ad" category="list-text">BlueXPでコネクタを作成します。</block>
   <block id="25cb0baf366c7202daaabd5e60c16293" category="list-text">Amazon FSx for NetApp ONTAP向けSnapMirrorを導入、設定</block>
-  <block id="97101746d98d1f7232439a75fd3b33ee" category="paragraph">このサービスを試すには、プレビューにサインアップするか、NetApp営業担当者に連絡する必要があります。BlueXP Connectorを使用すると、ディザスタリカバリサービスに適した機能が含まれます。</block>
   <block id="2a1f2380d9e50746902517055340629f" category="paragraph">BlueXPオンプレミスコネクタまたはBlueXP AWSコネクタを使用します。BlueXP AWSコネクタは、ソースのオンプレミスvCenterとデスティネーションのオンプレミスvCenterにアクセスできます。</block>
-  <block id="3abca5fc9f26906e4b32323c7e019f0d" category="doc">VMware向けBlueXPディザスタリカバリプレビューの詳細</block>
-  <block id="4589fa3716efb487281f1d798a3f1ba0" category="paragraph">クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。『BlueXP Disaster Recovery for VMware Preview』では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウドのVMware Software-Defined Data Centerにレプリケートしたり、ONTAPストレージを使用した別のオンプレミスのVMware環境をディザスタリカバリサイトとしてレプリケートしたりできます。</block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">AWS上のVMware Cloud（VMC）とAmazon FSx for NetApp ONTAPまたは</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">ONTAPストレージを使用した、もう1つのオンプレミスNFSベースのVMware環境</block>
-  <block id="6e59ee76c6f7c9c37b00ca09ba980203" category="paragraph">BlueXPのディザスタリカバリプレビューでは、ディザスタリカバリサイトへのレプリケーション転送にONTAP SnapMirrorテクノロジを使用しています。これにより、プライマリサイトとセカンダリサイトで業界最高レベルのストレージ効率（圧縮と重複排除）を実現できます。</block>
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="382e6c225343455c11628109eb882e15" category="section-title">BlueXP Disaster Recovery for VMwareプレビューでできること</block>
   <block id="add8d69a5f7975ffd43124657fc5030d" category="list-text">SnapMirrorレプリケーションを使用して、オンプレミスの本番用サイト上のVMwareアプリケーションをクラウドまたはオンプレミスのディザスタリカバリリモートサイトにレプリケートします。</block>
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">VMwareワークロードを元のサイトから別のサイトに移行します。</block>
   <block id="2aefc74ac286c583100431f62049590d" category="list-text">災害が発生した場合は、プライマリサイトをオンデマンドでディザスタリカバリサイトにフェイルオーバーします。このサイトには、VMware Cloud on AWSとFSx for NetApp ONTAP、またはONTAPを使用したオンプレミスのVMware環境があります。</block>
@@ -583,15 +565,11 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="11ee533cc4ce7135332d0b64a9e82e51" category="paragraph"><block ref="11ee533cc4ce7135332d0b64a9e82e51" category="inline-image-macro-rx" type="image"></block></block>
   <block id="20099229ad21726312a6ff50740b0b57" category="paragraph">災害が発生した場合にこのサービスを使用すると、SnapMirror関係を解除してデスティネーションサイトをアクティブにすることで、他のオンプレミスのVMware環境またはVMCの仮想マシンをリカバリできます。</block>
   <block id="a675a2edc95f7fca650a735944e38f96" category="paragraph">BlueXPディザスタリカバリを使用するには、環境が次の要件を満たしている必要があります。</block>
-  <block id="aa82bbc3168bf1967b0b9989d3f08515" category="list-text">AWS上のSoftware-Defined Data Center（SDDC）を所有するVMwareアカウント。仮想マシンクラウドとも呼ばれます。VMware Cloud Consoleで、VMware Cloud on AWSの場合は、管理者とNSX Cloud管理者のサービスロールを使用します。また、OrganizationロールにはOrganizationオーナーを使用します。を参照してください<block ref="e0529c1c92608a25886bf41835abea27" category="inline-link-rx"></block>。</block>
-  <block id="26c0c642341e386b5fb2162798efefc7" category="list-text">NetApp BlueXPでBlueXPコネクタをセットアップする必要があります。BlueXP AWSコネクタを使用します。このコネクタは、オンプレミスのvCenterとクラウドの両方にアクセスできます。BlueXP Connectorには、ソースとターゲットの両方のvCenterサーバのクレデンシャルが必要です。を参照してください<block ref="4b1866f17dc6bd66f88d9d6839084df6" category="inline-link-rx"></block> および<block ref="8b2e3c99c244ff11d22f3c561bd167b2" category="inline-link-rx"></block>。</block>
-  <block id="7895930f9a8243b9222b0bf7463d1dbd" category="sidebar">クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータの破損（ランサムウェアなど）からワークロードを保護します。『BlueXP Disaster Recovery for VMware Preview』では、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、パブリッククラウド内のVMware Software-Defined Data Centerや、ディザスタリカバリサイトとしての別のオンプレミスサイトにレプリケートできます。</block>
   <block id="96ed64c294e585324853f8f980f9d78e" category="sidebar">アプリケーションを別のサイトに移行</block>
   <block id="36a7330c410600f4393af365b3d66e29" category="sidebar">BlueXPディザスタリカバリブログ</block>
   <block id="ad80d6168dc288f4361413eeca80dc5f" category="sidebar">別のサイトへの移行</block>
   <block id="610937dc327c640656a75f6464a91433" category="summary">BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。VMware向けBlueXPディザスタリカバリでは、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined Data Centerにレプリケートできます。</block>
   <block id="578e9059da07f7d858d4746bbf9af55a" category="section-title">2024年2月1日</block>
-  <block id="9df62cb4d6f151b560e84723841bd523" category="paragraph">このBlueXPディザスタリカバリリリースには、次の更新が含まれています。</block>
   <block id="c61970ed6417395a368e95032dbce932" category="list-text">*ネットワークの強化*：このリリースでは、VMのCPU値とRAM値のサイズを変更できるようになりました。VMのネットワークDHCPまたは静的IPアドレスを選択することもできます。</block>
   <block id="bb3e5e687ab316872aaebfbeeb4a6605" category="list-text">DHCP：このオプションを選択した場合は、VMのクレデンシャルを指定します。</block>
   <block id="302dd2d13eb7b51a95fccbe2fc1ba0b8" category="list-text">静的IP：ソースVMと同じ情報または異なる情報を選択できます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、IPアドレス、サブネットマスク、DNS、およびゲートウェイの情報を指定できます。</block>
@@ -603,7 +581,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="ed38b69c5713d5b42f77e9c3ec5872a8" category="list-text">* VM電源投入遅延オプション*：レプリケーション計画を作成するときに、リソースグループにVMを追加できます。リソースグループを使用すると、各VMに遅延を設定して、遅延シーケンスで電源を投入することができます。</block>
   <block id="193634e2d37697e73e8a9d15d4dca73d" category="list-text">*アプリケーションと整合性のあるSnapshotコピー*：アプリケーションと整合性のあるSnapshotコピーを作成するように指定できます。サービスはアプリケーションを休止し、Snapshotを作成してアプリケーションの整合性のある状態を取得します。</block>
   <block id="17c3c89f25f7684516a883f30f10b747" category="section-title">2024年1月11日</block>
-  <block id="498bbebab4456541af3524b2dbb2f6c9" category="paragraph">このリリースのBlueXPディザスタリカバリには、次の更新が含まれています。</block>
   <block id="77a292951e2cd7ee0d1bc7d3db0020ec" category="list-text">このリリースでは、ダッシュボードから他のページの情報にすばやくアクセスできます。</block>
   <block id="0f354958858456370fa7b64c5f2a913c" category="paragraph"><block ref="929628a652068d14da23775529f8803b" category="inline-link-rx"></block>。</block>
   <block id="2c1f345ff21d3c1b339c0919d325adfc" category="paragraph">次の手順では、必要な仮想マシンを機能リソースグループにグループ化します。リソースグループを使用すると、依存する仮想マシンのセットを、要件を満たす論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
@@ -617,7 +594,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="a185f33799a71b88cd6698b98b6a24ba" category="paragraph"><block ref="24a9c3a30da07f8741b28abb153be52b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">これは、大規模な環境を小規模なターゲットクラスタにリカバリする場合や、1対1の物理VMwareインフラストラクチャをプロビジョニングせずにディザスタリカバリテストを実行する場合に非常に役立ちます。</block>
   <block id="968b5e826ff04540f18ce0baa3466400" category="list-text">*アプリケーションと整合性のあるレプリカ*：アプリケーションと整合性のあるSnapshotコピーを作成するかどうかを指定します。サービスはアプリケーションを休止し、Snapshotを作成してアプリケーションの整合性のある状態を取得します。</block>
-  <block id="ec99466f38bdb41d26e8d8c41d59dcac" category="list-text">* RPO *：リカバリするデータの量（時間で測定）を示す目標復旧時点（RPO）を入力します。たとえば、RPOを2時間と入力した場合は、常に2時間以内のデータがリカバリに含まれている必要があります。災害が発生した場合、最大2時間のデータ損失が許容されます。また、すべてのデータストアに対して保持するSnapshotコピーの数も入力します。</block>
   <block id="a0a39a6cc9b29c2c12820ee4ef86be49" category="list-text">* SnapMirror関係*：ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアを選択できます。SnapMirror関係のないボリュームを選択した場合は、作業環境とそのピアSVMを選択して作成できます。</block>
   <block id="4c77d41c045300d2cacb091f19b6d9a5" category="list-text">*整合グループ*：レプリケーション計画を作成する際に、異なるボリュームや異なるSVMのVMを含めることができます。BlueXPディザスタリカバリで整合グループSnapshotが作成されます。</block>
   <block id="436f3832b32bfb2d3cb66d6298a71245" category="list-text">Recovery Point Objective（RPO；目標復旧時点）を指定すると、RPOに基づいてプライマリバックアップがスケジュールされ、セカンダリデスティネーションが更新されます。</block>
@@ -628,139 +604,32 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetAppでは、サポートとライセンスに固有の認証サービスのIDプロバイダとしてMicrosoftエントラIDを使用します。</block>
   <block id="7fda53563ff8ebfe855a3a79f568f396" category="summary">BlueXPディザスタリカバリでは、無償トライアル、従量課金制サブスクリプション、お客様所有のライセンスを使用するなど、さまざまなライセンスプランを使用できます。</block>
   <block id="a7193edb26a4b1bca4b7b82254e6dd4b" category="doc">BlueXPディザスタリカバリのライセンスを設定</block>
-  <block id="487e188799d200e50a0b10ecfcf71c29" category="paragraph">次のいずれかのライセンスタイプを使用できます。</block>
   <block id="06cda8527230b64a09b1c568fbd2a80e" category="list-text">90日間の無償トライアルにサインアップしてください。</block>
-  <block id="562d634497091dd1cf780c100a3b407a" category="list-text">Amazon Web Services（AWS）Marketplaceで従量課金制（PAYGO）サブスクリプションを1年、2年、3年で購入</block>
-  <block id="a70dde4c33e782ae5fe27d750ac67840" category="list-text">お客様所有のライセンスを使用（BYOL）：NetApp営業担当またはNetApp Support Site（NSS）から取得するNetAppライセンスファイル（NLF）です。NLFはBlueXPデジタルウォレットで直接アップロードすることも、ライセンスのシリアル番号を使用してBlueXPデジタルウォレットでBYOLをアクティブ化することもできます。</block>
-  <block id="64b0d9155985d2dd6eeb6028b95e61f9" category="admonition">BlueXPディザスタリカバリの料金は、レプリケーション計画のあるVMが1つ以上ある場合にソースサイトでプロビジョニングされたデータストアの容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするか、AWSでサブスクリプションを購入するまで、サービスの処理が制限されます。AWSサブスクリプションを選択した場合、契約の上限を超えて使用された容量は、AWS Marketplaceのプランに基づいて課金されます。</block>
-  <block id="f162f6ba04d470090d59c95f43d89df4" category="paragraph">BYOLをセットアップするか、AWSでサブスクリプションを購入すると、BlueXPデジタルウォレット*[Data service Licenses]タブでライセンスを確認するか、BlueXPデジタルウォレット*[Subscriptions]タブでアクティブなサブスクリプションを確認できます。</block>
-  <block id="038d93ce13a2896c1d35fb3fc2f5fd57" category="paragraph">無償トライアルの終了後、またはライセンスまたはAWSサブスクリプションの有効期限が切れた後も、サービスで次の操作を実行できます。</block>
   <block id="9a0514da0283645471837a7dd9cdd00a" category="list-text">ワークロードやレプリケーション計画などのリソースを表示します。</block>
   <block id="1868701c43ed8ccfa46dc8fe93f4252f" category="list-text">ワークロードやレプリケーション計画などのリソースを削除します。</block>
-  <block id="c07e8b2cbedb447cec03e974351874da" category="list-text">試用期間、ライセンス、またはサブスクリプション中に作成されたすべてのスケジュール済み操作を実行します。</block>
   <block id="d687b9bb1fc0385150b07b1a9aaae7d3" category="section-title">90日間の無償トライアルでお試しください</block>
   <block id="1863514dc4e2f913207e4b5eacc1a0a8" category="paragraph">BlueXPのディザスタリカバリは、90日間の無償トライアルでお試しいただけます。</block>
   <block id="88c474e49a0cbbc7ef17d052040cd008" category="admonition">試用期間中は容量制限は適用されません。</block>
-  <block id="48147384453590f1039b45c52cc9eca5" category="paragraph">ライセンスを取得するか、いつでもサブスクライブすることができ、90日間の試用期間が終了するまで請求されることはありません。90日間の試用期間の終了後も継続するには、BYOLライセンスまたはPAYGO AWSサブスクリプションを購入する必要があります。</block>
   <block id="f37d436fdc8600ce24709a8f4435ec79" category="paragraph">試用期間中は、すべての機能を利用できます。</block>
   <block id="39c87728ab108f5ab751a40319f03bc8" category="list-text">にアクセスします<block ref="4d9841a08a6f1c082f5ba73c5d87fcc1" category="inline-link-rx"></block>。</block>
   <block id="771e1ea643a8723d0d0dfad6c2b70ace" category="list-text">他のサービス用のコネクタをまだ追加していない場合は、コネクタを追加します。</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">コネクタについて説明します</block>
   <block id="7530875db6f7eceea689fdfeb6a12778" category="paragraph">コネクタを追加するには、を参照してください。<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block>。</block>
-  <block id="ac04f975264c50a52d2f6cc638afb39f" category="list-text">コネクタのセットアップが完了したら、BlueXPディザスタリカバリランディングページで*[Start free trial]*を選択します。</block>
-  <block id="be0511671b1a06d12a8abb3e1a528ddd" category="paragraph"><block ref="be0511671b1a06d12a8abb3e1a528ddd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9aac5cf8ab754f13e3926b6983853bec" category="list-text">無償トライアルの情報を確認し、* Let's go *を選択します。</block>
-  <block id="ad7911fdd21ff5752d10300d0446de95" category="section-title">トライアル期間が終了したら、AWS Marketplaceでサブスクライブ</block>
-  <block id="e1186eb5e41d3a9e96827c9ab4aef684" category="paragraph">無償トライアルの終了後は、NetAppからライセンスを購入するか、AWS Marketplaceで登録できます。この手順では、AWS Marketplaceで直接サブスクライブする方法の概要を説明します。</block>
-  <block id="acce4a6c25bc51b4930085d68e3cb0cd" category="list-text">BlueXPディザスタリカバリに、無償トライアルの有効期限が近づいていることを示すメッセージが表示されます。メッセージで、*[ライセンスの購読または購入]*を選択します。</block>
   <block id="1584158e2068ac8b1f79bfc70eb2775d" category="inline-image-macro">BlueXPディザスタリカバリライセンスの登録または購入ページ</block>
-  <block id="3d4db8763fbd87ecc7a4f8101cbec83a" category="paragraph"><block ref="3d4db8763fbd87ecc7a4f8101cbec83a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="115e74c3b43a13f1983597e5b4ae81a4" category="list-text">[Subscribe or purchase license]ページで、*[Subscribe in AWS Marketplace]*を選択します。</block>
-  <block id="a06442e94af0d31f4eee679c83de7779" category="list-text">AWS Marketplaceで、*購入オプションを表示*を選択します。</block>
-  <block id="266c58f74740e96b35f10409d3036f8f" category="list-text">AWS Marketplaceを使用して、BlueXPディザスタリカバリにサブスクライブします。</block>
-  <block id="44ff26969211cf5f760425e5016afa73" category="list-text">BlueXPディザスタリカバリに戻ると、登録したことを示すメッセージが表示されます。BlueXPデジタルウォレットでサブスクリプションの詳細を表示するには、*[サブスクリプションの詳細を表示]*を選択し、*[サブスクリプション]*ページでアクティブなサブスクリプションを確認します。</block>
-  <block id="0a504e78221db1ccaf51b7ad21bc16ce" category="inline-image-macro">BlueXPのデジタルウォレットサブスクリプションタブ</block>
-  <block id="b8318893a2b8f639b74d86e371957c0e" category="paragraph"><block ref="b8318893a2b8f639b74d86e371957c0e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee6d03e51dd7b0fc10c6b3c8fcab3718" category="section-title">試用期間が終了したら、NetAppからBYOLライセンスを購入</block>
-  <block id="09df6e80d7c4ba090cf66cd7701a1c4c" category="paragraph">試用版の終了後は、NetApp営業担当またはテクニカルサポートからライセンスを購入できます。</block>
-  <block id="d290f0e91ae809782a7b9ccd5dd8157a" category="list-text">ライセンスの購入については、NetAppの営業担当者またはNetAppサポートにお問い合わせください。</block>
-  <block id="597d0190b11ec0257a1f5198f97f9a2b" category="list-text">ライセンスを取得したら、BlueXPディザスタリカバリに戻り、無償トライアルの有効期限が近づいているというメッセージが表示されたら、*[サブスクリプションまたはライセンスの購入]*を選択します。</block>
-  <block id="180dedb526e274f91d60858c5c4a3860" category="paragraph">Subscribe or purchase licenseページが表示されます。</block>
-  <block id="32bbb007372ce4b973626330548ca221" category="paragraph"><block ref="32bbb007372ce4b973626330548ca221" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b11106bafac141be455d28549bfe177d" category="list-text">[ライセンスをBlueXPに追加]*を選択します。BlueXPのデジタルウォレットが表示されます。</block>
-  <block id="1128484aa2dddb1a13c46430bcfc4f8c" category="paragraph"><block ref="1128484aa2dddb1a13c46430bcfc4f8c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5de6fcf96fdf4957fd1e6d3fb44caf43" category="list-text">BlueXPデジタルウォレットで、*[データサービスライセンス]*タブで*[ライセンスの追加]*を選択します。</block>
-  <block id="9dda386ae07131acd9cdd775b4c604fb" category="list-text">[Add License]ページで、シリアル番号を入力するか、NetAppライセンスファイル（NLF）をアップロードします。</block>
   <block id="d2ec998008b95e1189b9d8f3dbc6ed64" category="inline-image-macro">BlueXPデジタルウォレットの[Add License]ページ</block>
-  <block id="57aee2bea99630804d4ce4577e4d3848" category="paragraph"><block ref="57aee2bea99630804d4ce4577e4d3848" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d4d6551ee286317b2a4f297766952f5" category="section-title">無償トライアルを終了する</block>
   <block id="859b0ef2563ddd8c6712d419656bde38" category="paragraph">無料トライアルはいつでも停止することも、有効期限が切れるまで待つこともできます。</block>
   <block id="d940bc2868fa1d10a5c804aa0df8fd1b" category="list-text">BlueXPのディザスタリカバリで、右上の*無償トライアル-詳細を表示*を選択します。</block>
   <block id="2c6b9011807f7d1e8a37a31be26bb7c0" category="list-text">ドロップダウンの詳細で*[End free trial]*を選択します。</block>
   <block id="fc145d0284ba4e60c3b5f315355ac505" category="inline-image-macro">無償トライアルの終了ページ</block>
-  <block id="587e300d205e423949127c7c6e81f5c0" category="paragraph"><block ref="587e300d205e423949127c7c6e81f5c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3c90e08e219b34e50a8fec5640b6f2e8" category="list-text">すべてのデータを削除する場合は、[試用期間終了時にすべてのデータを削除する]をオンにします。</block>
   <block id="cb4cbd8ce32849060814e41e57e5db7f" category="paragraph">これにより、すべてのスケジュール、レプリケーションプラン、リソースグループ、vCenter、およびサイトが削除されます。監査データ、処理ログ、およびジョブ履歴は、製品の寿命が終わるまで保持されます。</block>
   <block id="fd4452ba53d2010757fb183f23851efd" category="admonition">無償トライアルを終了してもデータの削除を求められず、ライセンスやサブスクリプションを購入していない場合、無償トライアルの終了から60日後にBlueXPディザスタリカバリによってすべてのデータが削除されます。</block>
   <block id="c3964fe08c9dd95815cc67d8aaee9323" category="list-text">テキストボックスに「end trial」と入力します。</block>
   <block id="44a320573c319d1f30b840c2d11a4e26" category="list-text">[終了]*を選択します。</block>
-  <block id="03d76a2a858f58b49cbf5318ea7fae89" category="section-title">AWSの従量課金制（PAYGO）サブスクリプションを使用</block>
-  <block id="b54118937870b2a29883c827835c5d7b" category="paragraph">AWS MarketplaceのPAYGOサブスクリプションを使用する場合は、まずAWSでセットアップしてからBlueXPでセットアップする必要があります。</block>
-  <block id="7ea992af35479c98a59ce5b5bbf5b467" category="paragraph">AWSでPAYGOサブスクリプションを設定するには、次の手順を実行します。</block>
-  <block id="7958e0b07aaf6b218402641474a31396" category="list-text"><block ref="e121033f1b5893d6baef892ad6791e78" category="inline-xref-macro-rx"></block></block>
-  <block id="142c7a85b86d51aacb13711eace86b8f" category="list-text"><block ref="b008b5211c1dc1b9e62320810ea2d12b" category="inline-xref-macro-rx"></block></block>
-  <block id="9e9f62e3e7a076cd3479b52d57adc152" category="list-text"><block ref="070345c883c9e12d8d07a6bc3199fa56" category="inline-xref-macro-rx"></block> または</block>
-  <block id="36597d70ec9bb901e3556096167fab19" category="paragraph"><block ref="3951058806656057a6e70b7ce0e7db12" category="inline-xref-macro-rx"></block>。</block>
-  <block id="1797a05f2f9f21102c18c5d694c4c787" category="section-title">パート1 AWSでPAYGOサブスクリプションを設定する</block>
-  <block id="71059c267704f257a71846b38b2d3c27" category="paragraph">AWSでPAYGOサブスクリプションを設定する手順の概要を次に示します。</block>
-  <block id="a0b5de080d56bb71b1a6a7c72fd88757" category="inline-link">BlueXPのAWSクレデンシャルとマーケットプレイスサブスクリプションを管理</block>
-  <block id="2d3ab30e64f116127b23613f3890a941" category="paragraph">詳細については、を参照してください。<block ref="19fe580609a1e652d0ab66d2ddde6588" category="inline-link-rx"></block>。</block>
-  <block id="fe9a83cc653d523afe5e4eba7ef3505d" category="inline-link">AWS Marketplaceサブスクリプションへのアクセスの制御</block>
-  <block id="fa7c2a10a866e331284ef3e62fc62f7f" category="paragraph">NetAppセールスチームと連携し、オファーのリンクを取得しておく必要があります。また、次の説明に従って、オファーを承諾する権限を持っている必要があります。<block ref="b3e8332268f9a285ff69c1a6128887eb" category="inline-link-rx"></block>。</block>
-  <block id="1a6212b88cf9173f8b160dac03acb2f8" category="list-text">AWSコンソールでNetApp BlueXP向けAWS Marketplaceプライベートオファーに同意します。</block>
-  <block id="940a5318d59fd0b8397886ae775c7a24" category="paragraph">次の情報を参照してください。</block>
-  <block id="254b97c87fecf1c94b73d6fa9984f5d2" category="inline-link">AWS Marketplaceコンソールからプライベートオファーにアクセス</block>
-  <block id="38ca94fa97df0771a81ddfa231152ffc" category="list-text"><block ref="97696286d6c4c1feb27501e7ae44ea4f" category="inline-link-rx"></block>。</block>
-  <block id="f1683b33b8337beb2e1a264bdf05fe3e" category="inline-link">プライベートオファーページを表示するために必要な権限</block>
-  <block id="90d08fd4b2b506e276b88ea2f0f11c6a" category="list-text"><block ref="0fba40e968c99d0904b96353ca748fd5" category="inline-link-rx"></block>。</block>
-  <block id="be778ac8ea4459f3690f40ef2999cc37" category="list-text">プライベートオファーの詳細を確認し、契約内容と一致することを確認します。</block>
-  <block id="604384a772b2e87a191f5b771dfb5a48" category="admonition">[サブスクライブ]*をクリックすると請求が開始されるため、情報に誤りがある場合は、プライベートオファーに同意せずにNetApp販売担当者に連絡してください。</block>
-  <block id="bb19155ccaa161e1a06c7624d967c788" category="list-text">オファー情報が正しいことを確認したら、* Subscribe *を選択します。</block>
-  <block id="4550f447d5f279d11a5ab35c44ad8931" category="paragraph">オファーが契約リストを使用している場合は、サービスごとのユニット数も入力します。次に、*契約の作成*を選択してプライベートオファーを受け入れることができます。</block>
-  <block id="c4eed6864e856fcf16af8951b7d5d928" category="list-text">ポップアップで*[アカウントのセットアップ]*を選択すると、NetApp BlueXPコンソールにリダイレクトされ、BlueXP Marketplaceサブスクリプションの設定が完了します。</block>
-  <block id="830afba629e1306d5d9562520239014c" category="paragraph">オファーに契約リストが使用されている場合は、*購入オプションの表示*を選択し、*アカウントの設定*を選択します。</block>
-  <block id="008faa9bf02793ec80dd22802324e7a8" category="section-title">パート2 BlueXPでPAYGOサブスクリプションを設定する</block>
-  <block id="3cf4897c65d7180a2547df31556faf36" category="paragraph">AWSコンソールでプライベートオファーを承諾すると、BlueXPコンソールに移動します。</block>
-  <block id="a34c709a45984bcd5ef80347d96295f3" category="list-text">BlueXPコンソールで、次の手順を実行します。</block>
-  <block id="0cfdbbeff2c2c1a3b7cc8f03c29d3ed8" category="list-text">SaaS Marketplaceサブスクリプションの表示名を入力します。</block>
-  <block id="63828798bd1230f9846eb53c0f428075" category="list-text">このMarketplaceサブスクリプションへのアクセス権を持つNetApp BlueXPアカウントを選択します。</block>
-  <block id="01db4744f6def2fba5458cd9649a04c6" category="list-text">1つのNetApp BlueXPアカウントの既存のSaaS Marketplaceサブスクリプションを、新しく作成したサブスクリプションに置き換えるには、[既存のサブスクリプションを置き換える]*を選択します。BlueXPは、アカウント内のすべてのクラウドクレデンシャルの既存のサブスクリプションを、この新しいサブスクリプションに置き換えます。</block>
-  <block id="1f1c5e7358dc4b8dd0f0e08d305922f0" category="admonition">置き換えオプションは、1つのNetApp BlueXPアカウントに限定されます。複数のBlueXPアカウントを同じSaaS Marketplaceサブスクリプションに関連付ける場合は、アカウントを個別に設定する必要があります。</block>
-  <block id="7d07a551e8dd304b958fbc6981b73339" category="admonition">SaaS Marketplaceサブスクリプションに一度もクラウドクレデンシャルが関連付けられていない場合は、この手順の次のパートに従ってクラウドクレデンシャルを設定する必要があります。</block>
-  <block id="ce2f1b02050aa24eb599cd0ed025ebaf" category="list-text">[保存]*と[完了]*を選択します。</block>
-  <block id="c2ae9406b3d9ee82ed8df853c5d603f0" category="list-text">次のパート3に進みます。</block>
-  <block id="bba06a422953f8a83263cf0521437723" category="list-text"><block ref="e53fbcd40f298359a8d18f7c77c07e73" category="inline-xref-macro-rx"></block></block>
-  <block id="379d8532291451fe1d148068b1d24ef5" category="list-text"><block ref="78411b4f0b47e9549f1651901a1acb65" category="inline-xref-macro-rx"></block>。</block>
-  <block id="9d59028ce6f4747a18b6838a6f09a117" category="section-title">パート3a新しいMarketplaceサブスクリプションをAWSクレデンシャルに関連付ける</block>
-  <block id="ebb3379e145480ac6ca3d8e4029db7b1" category="paragraph">このパート3では、AWSでのライセンスのセットアップについて説明します。</block>
-  <block id="d3cde1b881639a665a90ac695ae575a0" category="admonition">年間契約の場合は、こちらをクリックしてください。
-<block ref="3951058806656057a6e70b7ce0e7db12" category="inline-xref-macro-rx"></block>。</block>
-  <block id="52aadb7994c5f362fa0f7a83f87dc86c" category="inline-link">NetApp BlueXPコンソール</block>
-  <block id="9f1c8017d556a2aef8e6075190b62192" category="list-text">にアクセスします<block ref="64efe90ec09bb66157eb6145101787fe" category="inline-link-rx"></block>。</block>
-  <block id="b341a3d298535291adc28f4788d6bda4" category="list-text">サブスクリプションの詳細を確認します。</block>
-  <block id="4e5427e3b406d2b0de29fb0b8534c769" category="list-text">左側のペインで、* Governance *&gt;* Digital Wallet *を選択します。</block>
-  <block id="beb9eb3a3d65f3bfd740e1118980f58f" category="list-text">[サブスクリプション]タブを選択します。</block>
-  <block id="f64e9c342f1c729967c3dc578f118af5" category="inline-image-macro">BlueXPデジタルウォレットサブスクリプションページ</block>
-  <block id="80b5fc2e9b9ec77d4259fcb518114912" category="paragraph"><block ref="80b5fc2e9b9ec77d4259fcb518114912" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0ee383b8371095886935f57cc0efb405" category="list-text">パート1で追加したSaaS Marketplaceサブスクリプションを探し、これが正しいプランであることを確認します。</block>
-  <block id="5b1d7a2b43ecc604d05b4893ae87b59a" category="list-text">AWSサブスクリプションの行を探し、行を展開して詳細を表示し、プライベートオファーがBlueXPアカウントに正常に関連付けられたことを確認します。</block>
-  <block id="5c5e2e0499bc7f7fecdde6f95f40c1e3" category="paragraph">AWS Marketplaceの制限により、AWSコンソール以外では利用できないサービスの詳細があります。いずれかのフィールドに「N/A」と表示されている場合は、AWSコンソールから情報を取得できず、間違いではありません。AWSコンソールで情報を確認することもできます。</block>
-  <block id="a0f95a743b2775b8fba7b5a924f76baa" category="list-text">BlueXPコンソールの右上にある*[設定]*歯車を選択し、*[クレデンシャル]*を選択します。</block>
-  <block id="90645583b7cd588fe3443deb803837ac" category="inline-image-macro">BlueXPデジタルウォレットの[Settings]メニュー</block>
-  <block id="0668ffb1c899644153199c5f324aa49a" category="paragraph"><block ref="0668ffb1c899644153199c5f324aa49a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="26dbffa561c5a4edb53660827d7e7706" category="list-text">新しいSaaS Marketplaceサブスクリプションに関連付ける一連のクレデンシャルを探します。</block>
-  <block id="7a8b6ea04d251b8c4b172d2d023344b3" category="admonition">これらが正しいことを確認するには、上の*[表示]*をクリックします。</block>
-  <block id="edec357d0d2cfaa2150bcb333c1fd2ef" category="list-text">[アクション]*オプションを選択し、*[サブスクリプションの関連付け]*を選択します。</block>
-  <block id="5d8e98d15a078287f83c7b70eba894b0" category="list-text">[Marketplace Subscription]ドロップダウンメニューでプライベートオファーを選択し、*[Associate]*を選択します。</block>
-  <block id="3182f5d22d492f786e8fcab91fd9feb9" category="admonition">AWSクレデンシャルに関連するMarketplaceの料金は、関連付けたSaaS Marketplaceサブスクリプションで請求されるようになりました。年間契約を使用する場合は、これらのAWSクレデンシャルに関連するインフラコストが年間契約の使用量としてカウントされます。</block>
-  <block id="f540d742161049a0c3808e1dd7df679d" category="list-text">このSaaS Marketplaceサブスクリプションに関連付けるBlueXPアカウントの他のAWSクレデンシャルについて、上記の手順を繰り返します。</block>
-  <block id="184ea8133c93c8c6b9959e07a778d612" category="list-text">他のBlueXPアカウントのAWSクレデンシャルを使用する場合は、BlueXPコンソールの上部にある*[Account]*オプションを使用してアカウントを切り替え、同じ手順を繰り返します。</block>
-  <block id="e7ecf0e2187417bb80965e261f3d687a" category="list-text">他のBlueXPコネクタに関連するAWSクレデンシャルを使用する場合は、BlueXPコンソール上部の* connector *オプションを使用してコネクタを切り替え、同じ手順を繰り返します。</block>
-  <block id="37ba0d00ba7eb6590dc502a31b233ba0" category="section-title">パート3b新しいMarketplaceサブスクリプションとAWSクレデンシャルを関連付ける（年間契約）</block>
-  <block id="ea336ec3d892f674d934a8abce41005d" category="paragraph">年間契約を使用している場合、BlueXPデジタルウォレットの情報は多少異なります。</block>
-  <block id="fccce5e3f1af2f8b7ad561e91d4b23dc" category="inline-image-macro">年間契約を示すBlueXPデジタルウォレットサブスクリプションページ</block>
-  <block id="b55cf2fdb4bb0ed0219814859edac78e" category="paragraph"><block ref="b55cf2fdb4bb0ed0219814859edac78e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="47df556c07e34b92767e15124f334364" category="list-text">AWS年間契約サブスクリプションの行を探し、行を展開して詳細を表示し、プライベートオファーがBlueXPアカウントに正常に関連付けられたことを確認します。</block>
-  <block id="882b24b1c144518d9b63aa336fd80830" category="inline-image-macro">BlueXPデジタルウォレットサブスクリプションページ（年間契約）</block>
-  <block id="7199274914d6d189e642a1bc776a6ece" category="paragraph"><block ref="7199274914d6d189e642a1bc776a6ece" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a59b15d69a0a5639add7b662e566f795" category="list-text">その行の*アクション...*オプションを選択し、*サブスクリプションの関連付け*を選択します。</block>
-  <block id="92385d728bb39452ba6c20c6ad1d1c89" category="paragraph"><block ref="92385d728bb39452ba6c20c6ad1d1c89" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0c3c921710f2b76a43243e9ec50c48ed" category="list-text">サブスクリプションに関連付けるアカウントを選択し、*[適用]*を選択します。</block>
-  <block id="b695d8dfb120f12e55e72fcb3ab0b334" category="section-title">BlueXPのDigital Wallet Subscriptionsビューの表示内容をカスタマイズ</block>
-  <block id="4b78ade7feb11b930c6c73c65e8b8fab" category="paragraph">[サブスクリプション]ページに表示される列をカスタマイズできます。たとえば、用語の情報を表示する場合に使用します。</block>
-  <block id="ffe4097399bcf2ccd6ce57a75a5e95cc" category="list-text">BlueXPデジタルウォレットサブスクリプションページで、右側のテーブルアイコンを選択します。</block>
-  <block id="c12ac0fd20f9e6821f1832580cecfeb1" category="list-text">表示される列のリストで、テーブルに表示する列を選択します。</block>
-  <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">* 適用 * を選択します。</block>
   <block id="c584f4f2a6193ac47ece196c84d506a1" category="section-title">お客様所有のライセンスを使用（BYOL）</block>
   <block id="3906249fde1cef9339402436007bb4f7" category="paragraph">お客様所有のライセンスを使用（BYOL）する場合は、ライセンスの購入、NetAppライセンスファイル（NLF）の取得、BlueXPデジタルウォレットへのライセンスの追加が含まれます。</block>
   <block id="4eb472761579fcb29aec7dae0dedc791" category="section-title">BlueXPディザスタリカバリライセンスを購入</block>
@@ -769,30 +638,16 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="14149621358a55a2bcbcb304322f2bdd" category="list-text">ライセンスの購入については、NetApp営業担当までお問い合わせください。</block>
   <block id="6193e62acb4a86204633b2d093e49546" category="list-text">ライセンスをリクエストするには、BlueXPの右下にあるチャットアイコンをクリックします。</block>
   <block id="bb5400afe237282fdad364a407fc147b" category="section-title">BlueXPディザスタリカバリライセンスファイルの入手</block>
-  <block id="b8d2cd6868dbe77b895c0b303b84e606" category="paragraph">BlueXPディザスタリカバリライセンスを購入したら、BlueXPディザスタリカバリのシリアル番号とNetApp Support Site（NSS）アカウントを入力するか、NetAppライセンスファイル（NLF）をアップロードしてライセンスをアクティブ化します。</block>
-  <block id="c282acfcc5cf6fe87597852e0ff14861" category="paragraph">NLFは、NetApp営業担当者またはNetApp Support Siteから入手できます。</block>
   <block id="e3286b69a705d4ed944e904722ab7c8f" category="paragraph">開始する前に、次の情報が必要です。</block>
   <block id="43ae1d792e09f6126441ea0d91d847c7" category="list-text">BlueXPディザスタリカバリのシリアル番号</block>
   <block id="079aeecf06b109e4316b0a68ea943f2b" category="paragraph">この番号は、SOから確認するか、アカウントチームにお問い合わせください。</block>
   <block id="bcbbd9a155e07caa8b31001adc835c79" category="list-text">BlueXPアカウントID</block>
   <block id="98d8dec8ea6912e160aa222c8e6f76c7" category="paragraph">BlueXPアカウントIDを確認するには、BlueXPの上部にある*[アカウント]*ドロップダウンを選択し、アカウントの横にある*[アカウントの管理]*を選択します。アカウント ID は、 [ 概要 ] タブにあります。インターネットにアクセスできないプライベートモードのサイトでは、* account-DARKSITE1*を使用します。</block>
-  <block id="9bc0fb5986e9fa8a78b9b7288116f843" category="list-title">サポートサイトからNLFライセンスファイルを取得する手順</block>
-  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp Support Site</block>
-  <block id="01673ca951af19981bd5d3822934694b" category="list-text">にサインインします<block ref="fcc52edac3ce57829c48ee35d97a295d" category="inline-link-rx"></block>  をクリックし、* Systems *&gt;* Software Licenses *を選択します。</block>
-  <block id="3e2174d13b7a4d1ca02e9d5b0d5a3d1b" category="inline-image-macro">NetApp Support Siteの[Software Licenses]ページ</block>
-  <block id="a67b5312cf5e01964e72479ba84c4a4d" category="paragraph"><block ref="a67b5312cf5e01964e72479ba84c4a4d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0d4d3fc0b07c5afe649f868f4fc4ee2d" category="list-text">BlueXPディザスタリカバリライセンスのシリアル番号を入力します。</block>
-  <block id="a4627bae6c374481d2758f672760e92c" category="list-text">[License Key]列で、[Get NetApp License File]*を選択します。</block>
-  <block id="0dc88bd9e39309759dc3141ddbf53109" category="paragraph"><block ref="0dc88bd9e39309759dc3141ddbf53109" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3a9ab049ef9711b68ac94e0bc034cb30" category="list-text">BlueXPアカウントID（サポートサイトではテナントIDと呼ばれています）を入力し、*[送信]*を選択してライセンスファイルをダウンロードします。</block>
   <block id="4642741ba5bc33f3309c8ec5bab06682" category="section-title">BlueXPのデジタルウォレットにBlueXPディザスタリカバリライセンスを追加</block>
   <block id="ba8afb5484c287f1ace20840bc94d916" category="paragraph">BlueXPアカウント用のBlueXPディザスタリカバリライセンスを購入したら、BlueXPのデジタルウォレットにライセンスを追加する必要があります。</block>
   <block id="7caa9eb74f44350c8dde29c8267cdf24" category="list-text">BlueXPのメニューで、* Governance *&gt;* Digital Wallet *&gt;* Data Services Licenses *を選択します。</block>
-  <block id="f26c55f7e4c7acaff40b2d001a526d9c" category="inline-image-macro">NetApp BlueXPデジタルウォレットデータサービスの[ライセンス]タブ</block>
-  <block id="bc3b77b089ceea19e1301877f60f58ff" category="paragraph"><block ref="bc3b77b089ceea19e1301877f60f58ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c8508c0ce4da6dc634b7c66b1df15681" category="list-text">「 * ライセンスの追加 * 」を選択します。</block>
   <block id="021d7e94275fbce0d19f7cf686aabd40" category="inline-image-macro">NetApp BlueXPデジタルウォレットの[Add License]ページ</block>
-  <block id="3542d90d77f3ae0f9bc8997ba29978b3" category="paragraph"><block ref="3542d90d77f3ae0f9bc8997ba29978b3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5fe793b25da4bb065137c8c34e98d41f" category="list-text">[Add License]ページで、ライセンス情報を入力し、*[Add License]*を選択します。</block>
   <block id="b628341a05a2d315b4789aadc3fd8caa" category="list-text">BlueXPライセンスのシリアル番号があり、NSSアカウントがわかっている場合は、*[シリアル番号の入力]*オプションを選択してその情報を入力します。</block>
   <block id="bae190eec3db4a0dd635ae72756acde8" category="inline-link">NSSアカウントをBlueXPに追加します</block>
@@ -810,13 +665,8 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="b23b97d3c26b0f7e2265329756cea9ca" category="paragraph">ライセンスの料金を支払ってNetApp Support Site に登録すると、BlueXPデジタルウォレット内のライセンスが自動的に更新され、[Data Services Licenses]ページに5~10分後に変更が反映されます。</block>
   <block id="5810a6765696da7b12979cf90b9b287c" category="list-text">BlueXPがライセンスを自動的に更新できない場合(たとえば、ダークサイトにインストールされている場合)、ライセンスファイルを手動でアップロードする必要があります。</block>
   <block id="147b35ab5352426bba38d99d810db4ed" category="list-text">ライセンスファイルはNetApp Support Siteから取得できます。</block>
-  <block id="5fa1887d1557b966123ae9233170a0be" category="list-text">BlueXPのデジタルウォレットページの[Data Services Licenses]タブで、更新するサービスシリアル番号の*[Actions...*アイコンを選択し、*[Update License]*を選択します。</block>
-  <block id="4e6cb11bb43a7c0a0a5afccdbed4bdc7" category="inline-image-macro">期限切れのライセンスが表示されているNetApp BlueXPデジタルウォレット</block>
-  <block id="baae92f53a7bd68d60019afb4c90ff25" category="paragraph"><block ref="baae92f53a7bd68d60019afb4c90ff25" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="fa2b0a8f4c50ac4f17fe89c0def5dd7a" category="paragraph">BlueXPディザスタリカバリプレビューは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。当初は、BlueXPディザスタリカバリサービスを使用することで、NetAppストレージを実行するオンプレミスのNFSベースのVMwareワークロードを次のいずれかに対して保護できます。</block>
   <block id="3a46f989d3db91bd2030de32947cd608" category="section-title">VMwareにBlueXPディザスタリカバリを使用するメリット</block>
   <block id="cce8630c08ede8fc88504929ae963b37" category="paragraph">BlueXPのディザスタリカバリには、次のようなメリットがあります。</block>
-  <block id="c9ddf88e1cb9859bd6aa2d140746ddb6" category="paragraph">BlueXPディザスタリカバリプレビューでは、いくつかのNetAppテクノロジをフル活用して次の目標を達成できます。</block>
   <block id="208ae1835c38717d827d78f2184f1eb8" category="paragraph">BlueXPディザスタリカバリの試用版を使用した場合、NetAppから料金が請求されることはありません。</block>
   <block id="81a21047304ceb1b7bc762627cb29998" category="section-title">90日間の無償トライアル</block>
   <block id="c26aa1f4734bee87e527e8b6fd399ff1" category="paragraph">BlueXPのディザスタリカバリは、90日間の無償トライアルでお試しいただけます。</block>
@@ -831,6 +681,120 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="9aea41391b3a188365a351addd6cf6fc" category="list-text">既存のコネクタを使用しているBlueXPユーザは、[ディザスタリカバリ]を選択すると、サインアップに関するメッセージが表示されます。</block>
   <block id="8f333bfde48f31b2cfcf04c153782963" category="list-text">すでにサービスを使用している場合は、[ディザスタリカバリ]を選択すると続行できます。</block>
   <block id="cbef5af23561d0ec620e5d275e7c8eb5" category="inline-image-macro">BlueXPディザスタリカバリダッシュボード</block>
-  <block id="20846f04d592426362d2217701aadcc0" category="paragraph"><block ref="20846f04d592426362d2217701aadcc0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b044111e167403664c9e3432eca1f25a" category="sidebar">BlueXPディザスタリカバリドキュメント</block>
+  <block id="4aca0b59a2fa7d9e86368a58f1e869c9" category="list-text">[アクション]オプションを選択します。 <block ref="e282bbe0f95615c6416d0f1c92efdcdd" category="inline-image-macro-rx" type="image"></block>  をクリックし、*[編集]*を選択します。</block>
+  <block id="f2461bdb5195b41a112c405c95584734" category="inline-image-macro">レプリケーションプランリスト</block>
+  <block id="cfff02ce3a45ebd0c9288d1fb7097cca" category="paragraph"><block ref="cfff02ce3a45ebd0c9288d1fb7097cca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c68217420a685b93e20f298ae3ea72c8" category="paragraph">フェイルオーバー後のプロセスとして、.sh、.bat、または.ps1形式のカスタムスクリプトを含めることができます。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。</block>
+  <block id="8b4399d7029673ba83df4f916514230b" category="paragraph">テストフェイルオーバー処理では、本番環境のワークロード、テストサイトで使用されているSnapMirror関係、および正常に動作し続ける必要がある保護対象のワークロードに_not_の影響があります。</block>
+  <block id="22d1d4bc51673707e71b38cb5d9f8053" category="admonition">フェイルオーバーが開始されると、リカバリされたVMがディザスタリカバリサイトのvCenter（仮想マシン、ネットワーク、データストア）に表示されます。デフォルトでは、仮想マシンはWorkloadフォルダにリカバリされます。</block>
+  <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">ジョブをキャンセルします</block>
+  <block id="0f6fb16278c8db9e7104435d2ca9b98f" category="paragraph">進行中のジョブを続行したくない場合は、ジョブをキャンセルできます。ジョブが同じ状態で停止し、キュー内の次の処理を解放したい場合は、ジョブをキャンセルできます。タイムアウトになる前にジョブをキャンセルすることもできます。</block>
+  <block id="22b7400444d76583bfa01ad371bebbc5" category="paragraph">ジョブをキャンセルするには、Swaggerを使用します。</block>
+  <block id="90fcc3b3a806bdba15ead6130adbd9a9" category="paragraph">ジョブをキャンセルするには、アカウントIDが必要です。</block>
+  <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">[Job monitor]ページで、キャンセルするジョブのIDをメモします。</block>
+  <block id="336ff1e9aa6177ea7a71984fa8c241b9" category="inline-link">スワガー</block>
+  <block id="5273316399077a35494eb5acbbcf7801" category="list-text">BlueXPディザスタリカバリSwaggerのURLにアクセスします。<block ref="9e4854fddaa37e1b0c806d7c99538b64" category="inline-link-rx"></block>。</block>
+  <block id="cfe384e99d913d27036c11c367a847da" category="paragraph"><block ref="cfe384e99d913d27036c11c367a847da" category="inline-link-rx"></block></block>
+  <block id="7a01c0f2bb049f0040198121da3c115e" category="inline-image-macro">ジョブをキャンセルする方法を示すSwaggerページ</block>
+  <block id="3c54383fbe7b935cfc38e6a4118698cb" category="paragraph"><block ref="3c54383fbe7b935cfc38e6a4118698cb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5f8add33c48ab0f59f2908faa8d36196" category="inline-link">Swaggerドキュメント</block>
+  <block id="e124a230be11158b2df2a4490b5bc010" category="paragraph">Swaggerの詳細については、を参照してください。<block ref="851cca880157b178ca93e5f9f752f929" category="inline-link-rx"></block>。</block>
+  <block id="ae46b3f9f499c97dfc5b7c1e327aeea1" category="list-text">Swaggerで、Authorizeオプションからセキュリティトークン（_bearer token_とも呼ばれます）を取得します。</block>
+  <block id="d46acb5ac038cd8e0a5d3f7165605907" category="list-text">[Account ID]と[Job ID]を入力します。</block>
+  <block id="b1f85b610b71ac9db3be3c5efe00f9a4" category="list-text">[* 試してみてください * ] を選択します。</block>
+  <block id="7133b9cf238828da0a287b89ce855ec3" category="paragraph"><block ref="7133b9cf238828da0a287b89ce855ec3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0e17ce70dd39a8a056cb5ca0081d4526" category="list-text">*実行中*：vCenterは接続され、正常に動作しています。</block>
+  <block id="ed4bdaafb191f860f256d0b1e88eb50e" category="list-text">* Down *：vCenterに到達できないか、接続に問題があります。</block>
+  <block id="45fa526b7f7589c94a8a5911f187838f" category="list-text">*問題*：vCenterにアクセスできないか、接続に問題があります。</block>
+  <block id="f1b3d2c036cfab036f34533fa19f954e" category="paragraph">レプリケーション計画を作成し、コンプライアンスとテストのスケジュールを編集することもできます。</block>
+  <block id="89dd75b1f79276c7e30e794e1c739f04" category="section-title">計画の作成</block>
+  <block id="abe3a973462c3c328672dbc95e640218" category="paragraph">このサービスでSnapMirror関係を作成する場合は、クラスタとそのSVMピアリングがBlueXPディザスタリカバリ以外ですでにセットアップされている必要があります。</block>
+  <block id="d5033e157b5ff5f902d411ea87245351" category="list-text">* RPO *：リカバリするデータの量（時間で測定）を示す目標復旧時点（RPO）を入力します。たとえば、RPOを60分と入力した場合、常に60分以内のデータがリカバリに含まれている必要があります。災害が発生した場合は、最大60分分のデータが失われます。また、すべてのデータストアに対して保持するSnapshotコピーの数も入力します。</block>
+  <block id="d97200be5ae32d344d6cc35c5789517d" category="section-title">スケジュールを編集してコンプライアンスをテストし、フェイルオーバーテストが機能することを確認</block>
+  <block id="e670d26caed2e49f16fe367f74a57f21" category="paragraph">コンプライアンスおよびフェイルオーバーテストをテストするスケジュールを設定して、必要に応じて正しく動作することを確認できます。</block>
+  <block id="0c9133d8bb2cba28a02319fd78380fa9" category="list-text">*コンプライアンス時間への影響*：レプリケーション計画が作成されると、サービスはデフォルトでコンプライアンススケジュールを作成します。デフォルトの準拠時間は30分です。この時間を変更するには、レプリケーションプランのスケジュールの編集を使用します。</block>
+  <block id="f1b5b1b3eb29f73ad308b990489fa377" category="list-text">*フェイルオーバーの影響をテスト*：フェイルオーバープロセスをオンデマンドでテストすることも、スケジュールに従ってテストすることもできます。これにより、レプリケーション計画で指定されたデスティネーションへの仮想マシンのフェイルオーバーをテストできます。</block>
+  <block id="ab2752a523dd44fcb8640d76a0e117d3" category="paragraph">テストフェイルオーバーでは、FlexCloneボリュームを作成し、データストアをマウントして、そのデータストアのワークロードを移動します。テストフェイルオーバー処理では、本番環境のワークロード、テストサイトで使用されているSnapMirror関係、および正常に動作し続ける必要がある保護対象のワークロードに_not_の影響があります。</block>
+  <block id="74af4bc99691d529b32e88a3fd49a4f9" category="paragraph">スケジュールに基づいてフェイルオーバーテストが実行され、レプリケーション計画で指定されたデスティネーションにワークロードが移動していることが確認されます。</block>
+  <block id="3637e54ce6a2873442d292031c4510ac" category="inline-image-macro">レプリケーションプランのリストを示すスクリーンショット</block>
+  <block id="c68e9c6f6cc379f688813c5c5dd9964a" category="paragraph"><block ref="c68e9c6f6cc379f688813c5c5dd9964a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="49ff95b6dcd137f59a6acecf04a4c3b1" category="inline-image-macro">水平ドット[アクション]メニュー</block>
+  <block id="4feceaff4e5d197335e4db8ef5a3caa3" category="list-text">[アクション]*を選択します。 <block ref="6b4b871445179eda383c81faf6cf5a92" category="inline-image-macro-rx" type="image"></block> アイコンをクリックし、*[スケジュールの編集]*を選択します。</block>
+  <block id="82f6ffc6da6b694c0ab3c66fb6de3d70" category="list-text">BlueXPディザスタリカバリでテストへの準拠をチェックする頻度を分単位で入力します。</block>
+  <block id="624d6b88f7d5d30d488d6dd3a51f4781" category="list-text">フェイルオーバーテストに問題がないことを確認するには、*[毎月のスケジュールでフェイルオーバーを実行する]*をオンにします。</block>
+  <block id="4e305fe14ce90c5da1d1d11ea08f5fe4" category="list-text">テストを実行する日にちと時刻を選択します。</block>
+  <block id="294642716409ca930af5721f2db940c1" category="list-text">テストを開始する日付をyyyy-mm-dd形式で入力します。</block>
+  <block id="e3afddca17ec740a7556918c2bbdc013" category="inline-image-macro">スケジュールを編集できる場所を示すスクリーンショット</block>
+  <block id="380f2a79a88b8118529d87c864cff3d8" category="paragraph"><block ref="380f2a79a88b8118529d87c864cff3d8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0a003809d85acf4d6a198955e5780ac3" category="list-text">フェイルオーバーテスト終了後にテスト環境をクリーンアップするには、*[Automatically clean up after test failover]*をオンにします。</block>
+  <block id="20ace5d6661ce95df08950b97c500ddc" category="admonition">このプロセスでは、テスト用の場所から一時VMの登録が解除され、作成されたFlexCloneボリュームが削除され、一時データストアがアンマウントされます。</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">[ 保存（ Save ） ] を選択します。</block>
+  <block id="8f6793a82f1110a347dbefe3c3758178" category="section-title">フェイルバックで最新のSnapshotコピーを使用</block>
+  <block id="9ee4d1cdb3c09e86e561a895a7ab9345" category="paragraph">現在のリリースでは、フェイルバックプロセスで常に最新のSnapshotコピーが使用されます。これは、特定のSnapshotコピーを使用するように選択した場合でも発生します。</block>
+  <block id="4d519f9cb24d082270f8f88ccccd42e3" category="paragraph">BlueXPディザスタリカバリの新機能をご紹介します。</block>
+  <block id="592997dde366d5775e7e052816854f74" category="section-title">2024年3月5日</block>
+  <block id="23f1adcf87ca650c2ac077f4be520c97" category="paragraph">これはBlueXPディザスタリカバリのGeneral Availabilityリリースであり、次の更新が含まれています。</block>
+  <block id="5751cbd481f2486866a7e6d4339df621" category="list-text">*ライセンスの更新*：BlueXPディザスタリカバリを利用すると、90日間の無償トライアルにサインアップするか、NetApp営業担当から入手したNetAppライセンスファイル（NLF）であるお客様所有のライセンスを使用（BYOL）できます。ライセンスのシリアル番号を使用して、BlueXPデジタルウォレットでBYOLをアクティブ化できます。BlueXPディザスタリカバリの料金は、データストアのプロビジョニング済み容量に基づいて計算されます。</block>
+  <block id="cba500373ea886a2bb3e508440756918" category="paragraph">BlueXPディザスタリカバリ用のライセンスのセットアップの詳細については、を参照してください。<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
+  <block id="c32aede135606fbfc51d8bd7581b4201" category="inline-link">すべてのBlueXPサービスのライセンスを管理します。</block>
+  <block id="4d2e644b683b6f34426a63ff3961ea9d" category="paragraph">すべての* BlueXPサービスのライセンス管理の詳細については、<block ref="834374a0b207d980c4d47827175a6637" category="inline-link-rx"></block>。</block>
+  <block id="5938c93734fbca9c12e3827aa5218ed8" category="list-text">*スケジュールの編集*：このリリースでは、コンプライアンステストとフェイルオーバーテストをテストするスケジュールを設定できるようになりました。これにより、必要に応じて正しく動作することを確認できます。</block>
+  <block id="4b2bfa262e877a668b7102f58d207f63" category="inline-link">レプリケーション計画の作成</block>
+  <block id="976dcedce9d4c9dc14db60abc49c5867" category="paragraph">詳細については、を参照してください<block ref="8026234d3eaba16fdffb266108c2804b" category="inline-link-rx"></block>。</block>
+  <block id="0468e5ced7eddf7112cb542d124a006f" category="paragraph">このBlueXPディザスタリカバリプレビューリリースには、次の更新が含まれています。</block>
+  <block id="c35429358a46b999fafa3eb39893122c" category="inline-link-macro">ライセンスをセットアップする手順を実行</block>
+  <block id="c46b74d8fea462e40a3a35bd54771989" category="paragraph"><block ref="3d00f62ff93b742ed767a11952d4b89c" category="inline-link-macro-rx"></block>。</block>
+  <block id="5f6035a41d2be8c5780281ca63dc230a" category="paragraph">* BlueXPディザスタリカバリを使用するにはライセンスが必要ですか？*
+すべての機能にアクセスするには、BlueXPディザスタリカバリライセンスが必要です。ただし、無料トライアルで試すことができます。</block>
+  <block id="65b8710d9a2596e72f3f9c24620b97a3" category="inline-link-macro">BlueXPディザスタリカバリライセンスをセットアップ</block>
+  <block id="a4812a60b42128cc371c18f06197d9ab" category="paragraph">BlueXPディザスタリカバリ用のライセンスのセットアップの詳細については、を参照してください。 <block ref="0ba47d7cccc1dc28f47670d48274167c" category="inline-link-macro-rx"></block>。</block>
+  <block id="78a065b9fb649a31c2037ac8b6adf208" category="paragraph">BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してAmazon Web Services（AWS）とBlueXPの両方でセットアップします。</block>
+  <block id="456948be6cc17bd9f797492f175ff847" category="section-title">AWSをセットアップ</block>
+  <block id="724c7536b89d0d851109ea9f7868da08" category="paragraph">このサービスをお試しいただくには、NetApp営業担当者にお問い合わせください。BlueXP Connectorを使用すると、ディザスタリカバリサービスに適した機能が含まれます。</block>
+  <block id="0bf14c9d518db90372ef9c78dc9638b2" category="paragraph">NetAppライセンスファイル（NLF）である、お客様所有のライセンスを使用（BYOL）できます。</block>
+  <block id="878214f294066da0bab8a3693a1f802a" category="doc">VMware向けBlueXPディザスタリカバリの詳細</block>
+  <block id="e04cb1e00b4f2d764efe09d0b22a6b43" category="paragraph">クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。VMware向けのBlueXPディザスタリカバリを使用すると、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウドのVMware Software-Defined Data Centerにレプリケートしたり、ONTAPストレージを使用した別のオンプレミスのVMware環境をディザスタリカバリサイトとしてレプリケートしたりできます。</block>
+  <block id="81cd6d5889a00f3187d6e30af0f9838e" category="paragraph">BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。当初は、BlueXPディザスタリカバリサービスを使用することで、NetAppストレージを実行するオンプレミスのNFSベースのVMwareワークロードを次のいずれかに対して保護できます。</block>
+  <block id="fbec25bffbcdefa11c9ca28adb0b824c" category="paragraph">BlueXPのディザスタリカバリでは、ディザスタリカバリサイトへのレプリケーション転送にONTAP SnapMirrorテクノロジを使用します。これにより、プライマリサイトとセカンダリサイトで業界最高レベルのストレージ効率（圧縮と重複排除）を実現できます。</block>
+  <block id="3c524eb32d863a57c821ef5ffecb96ee" category="section-title">BlueXPのVMware向けディザスタリカバリの機能</block>
+  <block id="0ad83d5f52e2b8f6dfc6ec26ef91aa38" category="paragraph">BlueXPのディザスタリカバリでは、複数のNetAppテクノロジをフルに活用して次の目標を達成できます。</block>
+  <block id="2020a15d2254ab61244fd58956ac0150" category="paragraph">BlueXPディザスタリカバリサービスのフルバージョンは、NetAppライセンスで使用できます。</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">ライセンス</block>
+  <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">次のライセンスタイプを使用できます。</block>
+  <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">お客様所有のライセンスを使用（BYOL）：NetApp営業担当から入手するNetAppライセンスファイル（NLF）です。ライセンスのシリアル番号を使用して、BlueXPデジタルウォレットでBYOLをアクティブ化できます。</block>
+  <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">すべてのBlueXPサービスのライセンスは、BlueXPデジタルウォレットサービスで管理されます。BYOLを設定すると、BlueXPのデジタルウォレットでサービスのアクティブなライセンスを確認できます。</block>
+  <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">BlueXPディザスタリカバリの料金は、レプリケーション計画のあるVMが1つ以上ある場合にソースサイトでプロビジョニングされたデータストアの容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするまで、サービスの処理が制限されます。</block>
+  <block id="5ae84730ec695b46a67c1692274ccaf3" category="paragraph">90日間の試用期間の終了後も継続するには、NetAppからBYOLライセンスを購入する必要があります。</block>
+  <block id="27be91c80d5e97799bb6e73e37370e5d" category="paragraph">ライセンスはいつでも購入でき、90日間の試用期間が終了するまで請求されることはありません。</block>
+  <block id="da329ee75f8833283c259789372600f6" category="list-text">オンプレミスのVMware作業環境とNetAppストレージ</block>
+  <block id="0f5757c2302ddb1a6b48cf01d0fe295d" category="list-text">AWS上のSoftware-Defined Data Center（SDDC）を所有するVMwareアカウント。仮想マシンクラウドとも呼ばれます。VMware Cloud Consoleで、管理者とNSXクラウド管理者のサービスロールを使用します。また、組織ロールに組織オーナーを使用します。を参照してください<block ref="e0529c1c92608a25886bf41835abea27" category="inline-link-rx"></block>。</block>
+  <block id="10158aa869cd2a07a9e35313b86f48f8" category="list-text">Amazon FSx for ONTAPとAWSのクレデンシャルがBlueXP作業環境に追加されました。</block>
+  <block id="fce90829059c8b31e3882fa3db9f644c" category="list-text">BlueXPコネクタはBlueXPでセットアップする必要があります。オンプレミスとクラウドコネクタは、ESXisを使用してオンプレミスとVMware Cloud（VMC）vCenterの両方に接続する必要があります。これにより、バックアップ、フェイルオーバー、フェイルバック、および移行の機能が、必要なネットワーク機能とスクリプト機能で適切に動作するようになります。</block>
+  <block id="54acd3bad890d9cacb0dd0970cbf3cd4" category="paragraph">BlueXP Connectorには、ソースとターゲットの両方のvCenterサーバのクレデンシャルが必要です。を参照してください<block ref="4b1866f17dc6bd66f88d9d6839084df6" category="inline-link-rx"></block> および<block ref="8b2e3c99c244ff11d22f3c561bd167b2" category="inline-link-rx"></block>。</block>
+  <block id="4b23440b522693ef465ede54b1e9df88" category="list-text">アプリケーション整合性プロセスを正常に実行するには、次の前提条件を満たしていることを確認します。</block>
+  <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">保護対象のVMでVMwareツール（またはOpen VMツール）が実行されていることを確認します。</block>
+  <block id="7c480d19e9a60d89cc5b027f95938aa8" category="list-text">Windows VMでSQL、Oracle、またはその両方を実行している場合は、データベースのVSS Writerを有効にし、データベースを安定した状態にする必要があります。</block>
+  <block id="af77ac64a97a80925dee7dc916344004" category="list-text">Linuxオペレーティングシステムで実行されているOracleデータベースでは、OracleデータベースSYSDBAロールに対してオペレーティングシステムユーザ認証を有効にする必要があります。</block>
+  <block id="952d5792e20104bd51e61d359faac899" category="paragraph">BlueXPディザスタリカバリでは、このサービスを無償トライアルで使用することも、お客様所有のライセンスを使用することもできます。</block>
+  <block id="dd6dd33362dbc70a36edb35890647f3c" category="paragraph">BYOLをセットアップすると、BlueXPデジタルウォレット*[Data Service Licenses]タブでライセンスを確認できます。</block>
+  <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">無償トライアルが終了した後、またはライセンスの有効期限が切れた後も、サービスで次の操作を実行できます。</block>
+  <block id="1594f78ebbb281f7b5359eb6d2b89912" category="list-text">試用期間中またはライセンスの下で作成されたすべてのスケジュール済み操作を実行します。</block>
+  <block id="a14b332e4d6b9ee17b484a7fb805179f" category="paragraph">ライセンスはいつでも取得でき、90日間の試用期間が終了するまで請求されることはありません。90日間の試用期間の終了後も継続するには、BYOLライセンスを購入する必要があります。</block>
+  <block id="01c014f2e37e5bf6d3ce893bea0197cb" category="list-text">コネクタのセットアップが完了すると、BlueXPディザスタリカバリランディングページで、コネクタを追加するボタンが無償トライアルを開始するためのボタンに変わります。[Start free trial]*を選択します。</block>
+  <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">試用版の終了後は、NetApp営業担当からライセンスを購入できます。</block>
+  <block id="ecfbb42aa9e2f3b94bd289d87aaf5ea3" category="list-text">ライセンスの購入については、NetApp営業担当者にお問い合わせください。</block>
+  <block id="9bdfa376bcb2fa79aff92c39d0b24fcd" category="list-text">ライセンスを取得したら、BlueXPディザスタリカバリに戻ります。右上の*支払い方法を表示*オプションを選択します。または、無料トライアルの有効期限が近づいているというメッセージで、*[ライセンスの登録または購入]*を選択します。</block>
+  <block id="97bcf0f36d751871efb4e9140f54f17d" category="paragraph"><block ref="97bcf0f36d751871efb4e9140f54f17d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2a39678e393e2b473354681a2c1e5f4" category="inline-image-macro">BlueXPデジタルウォレットの[Data Services Licenses]タブ</block>
+  <block id="e220d51686433f8f5a05d755bc58c162" category="paragraph"><block ref="e220d51686433f8f5a05d755bc58c162" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3585ef220efaa70fe392bb8e133b54e" category="list-text">BlueXPデジタルウォレットで、*[データサービスライセンス]*タブで*[ライセンスの追加]*を選択します。</block>
+  <block id="7578ebad24c71aee2f2992e5efe1118d" category="list-text">[Add License]ページで、シリアル番号とNetApp Support Siteアカウント情報を入力します。</block>
+  <block id="c6711fc66daa9915490ca9f9bdc7f08f" category="paragraph"><block ref="c6711fc66daa9915490ca9f9bdc7f08f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="be94b7e6fbf892064754b145ecdeb994" category="paragraph"><block ref="be94b7e6fbf892064754b145ecdeb994" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="17456408ade135981b9345bc87881dc3" category="paragraph">NetApp営業担当からBlueXPディザスタリカバリライセンスを購入したら、BlueXPディザスタリカバリのシリアル番号とNetApp Support Site（NSS）アカウント情報を入力してライセンスをアクティブ化します。</block>
+  <block id="c9b34ae6e6872c8ec153a41cea722706" category="paragraph"><block ref="c9b34ae6e6872c8ec153a41cea722706" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9fc7e8cb24850b1f0912cebc8da32620" category="list-text">BlueXPのデジタルウォレットにアクセスします。</block>
+  <block id="7b6dca09bf0ef612bac047a313d66cbf" category="list-text">[データサービスライセンス]*タブを選択し、更新するサービスシリアル番号の*[アクション...]*アイコンを選択して、*[ライセンスの更新]*を選択します。</block>
+  <block id="be976ba4e18c887ae57e14f6ebfbbab3" category="sidebar">クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータの破損（ランサムウェアなど）からワークロードを保護します。VMware向けBlueXPディザスタリカバリを使用すると、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、パブリッククラウド内のVMware Software-Defined Data Centerや、ディザスタリカバリサイトとしての別のオンプレミスサイトにレプリケートできます。</block>
 </blocks>

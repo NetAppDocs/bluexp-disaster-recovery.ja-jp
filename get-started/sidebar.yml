@@ -12,5 +12,7 @@ entries:
   url: "/get-started/dr-login.html"
 - title: BlueXPディザスタリカバリのセットアップ
   url: "/get-started/dr-setup.html"
+- title: ライセンスをセットアップする
+  url: "/get-started/dr-licensing.html"
 - title: よく寄せられる質問
   url: "/get-started/dr-faq.html"

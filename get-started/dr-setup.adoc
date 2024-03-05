@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-setup.html 
-keywords: bluexp, disaster recovery, 
+keywords: bluexp, disaster recovery, aws, amazon web services 
 summary: BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してセットアップします。 
 ---
 = BlueXPディザスタリカバリのセットアップ
@@ -12,14 +12,14 @@ summary: BlueXPディザスタリカバリを使用するには、いくつか�
 
 
 [role="lead"]
-BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してAWSとBlueXPの両方でセットアップします。
+BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してAmazon Web Services（AWS）とBlueXPの両方でセットアップします。
 
 
 TIP: レビュー link:../get-started/dr-prerequisites.html["前提条件"] 環境の準備が整っていることを確認します。
 
 
 
-== AWSテノセツトアツフ
+== AWSをセットアップ
 
 AWSでは、次の手順を実行する必要があります。
 
@@ -44,7 +44,7 @@ Amazon FSX for NetApp ONTAP はフルマネージドサービスで、広く普�
 
 
 
-== BlueXPテノセツトアツフ
+== BlueXPディザスタリカバリのセットアップ
 
 次のステップは、BlueXPでディザスタリカバリをセットアップすることです。
 
@@ -58,7 +58,7 @@ Amazon FSX for NetApp ONTAP はフルマネージドサービスで、広く普�
 
 === BlueXPでコネクタを作成します
 
-このサービスを試すには、プレビューにサインアップするか、NetApp営業担当者に連絡する必要があります。BlueXP Connectorを使用すると、ディザスタリカバリサービスに適した機能が含まれます。
+このサービスをお試しいただくには、NetApp営業担当者にお問い合わせください。BlueXP Connectorを使用すると、ディザスタリカバリサービスに適した機能が含まれます。
 
 サービスを使用する前にBlueXPでコネクタを作成する方法については、該当するBlueXPのドキュメントを参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["コネクタの作成方法"^]。
 
@@ -81,3 +81,7 @@ BlueXPオンプレミスコネクタまたはBlueXP AWSコネクタを使用し�
 === ライセンスをセットアップする
 
 BlueXPディザスタリカバリでは、90日間の無償トライアルに登録できます。
+
+NetAppライセンスファイル（NLF）である、お客様所有のライセンスを使用（BYOL）できます。
+
+BlueXPディザスタリカバリ用のライセンスのセットアップの詳細については、を参照してください。 link:../get-started/dr-licensing.html["BlueXPディザスタリカバリライセンスをセットアップ"]。

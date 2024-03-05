@@ -20,15 +20,24 @@ BlueXPディザスタリカバリを使用するには、環境が次の要件�
 * AWSの場合：
 +
 ** Amazon FSx for NetApp ONTAPファイルシステムAmazon FSx for ONTAPに関するドキュメント https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["利用を開始するには"^]。
-** AWS上のSoftware-Defined Data Center（SDDC）を所有するVMwareアカウント。仮想マシンクラウドとも呼ばれます。VMware Cloud Consoleで、VMware Cloud on AWSの場合は、管理者とNSX Cloud管理者のサービスロールを使用します。また、OrganizationロールにはOrganizationオーナーを使用します。を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["仮想マシンクラウドのドキュメント"^]。
+** AWS上のSoftware-Defined Data Center（SDDC）を所有するVMwareアカウント。仮想マシンクラウドとも呼ばれます。VMware Cloud Consoleで、管理者とNSXクラウド管理者のサービスロールを使用します。また、組織ロールに組織オーナーを使用します。を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["仮想マシンクラウドのドキュメント"^]。
 ** SDDCをAmazon FSx for NetApp ONTAPにリンクします。を参照してください https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWSとAmazon FSx for NetApp ONTAPの統合"^]。
 
 
 * BlueXPの場合：
 +
-** NetApp BlueXPでBlueXPコネクタをセットアップする必要があります。BlueXP AWSコネクタを使用します。このコネクタは、オンプレミスのvCenterとクラウドの両方にアクセスできます。BlueXP Connectorには、ソースとターゲットの両方のvCenterサーバのクレデンシャルが必要です。を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-standard-mode.html["BlueXPクイックスタート"^] および https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-saas-console.html["BlueXPのネットワーク情報"^]。
-** BlueXPオンプレミスコネクタまたはBlueXP AWSコネクタを使用します。BlueXP AWSコネクタは、ソースのオンプレミスvCenterとデスティネーションのオンプレミスvCenterにアクセスできます。
-** Amazon FSx for ONTAPとAWSのクレデンシャルをBlueXP作業環境に追加
+** Amazon FSx for ONTAPとAWSのクレデンシャルがBlueXP作業環境に追加されました。
+** BlueXPコネクタはBlueXPでセットアップする必要があります。オンプレミスとクラウドコネクタは、ESXisを使用してオンプレミスとVMware Cloud（VMC）vCenterの両方に接続する必要があります。これにより、バックアップ、フェイルオーバー、フェイルバック、および移行の機能が、必要なネットワーク機能とスクリプト機能で適切に動作するようになります。
++
+BlueXP Connectorには、ソースとターゲットの両方のvCenterサーバのクレデンシャルが必要です。を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-standard-mode.html["BlueXPクイックスタート"^] および https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-saas-console.html["BlueXPのネットワーク情報"^]。
+
+** アプリケーション整合性プロセスを正常に実行するには、次の前提条件を満たしていることを確認します。
++
+*** 保護対象のVMでVMwareツール（またはOpen VMツール）が実行されていることを確認します。
+*** Windows VMでSQL、Oracle、またはその両方を実行している場合は、データベースのVSS Writerを有効にし、データベースを安定した状態にする必要があります。
+*** Linuxオペレーティングシステムで実行されているOracleデータベースでは、OracleデータベースSYSDBAロールに対してオペレーティングシステムユーザ認証を有効にする必要があります。
+
+
 
 
 
