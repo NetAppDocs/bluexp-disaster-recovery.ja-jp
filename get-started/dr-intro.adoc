@@ -98,7 +98,7 @@ image:dr-architecture-diagram-70.png["VMwareサービスインフラ向けBlueXP
 
 次の図は、オンプレミスからオンプレミスへのディザスタリカバリ計画のアーキテクチャを示しています。
 
-image:dr-architecture-diagram-onprem-to-onprem.png["VMwareサービスインフラ向けBlueXPディザスタリカバリのアーキテクチャを示す図"]
+image:dr-architecture-diagram-onprem-to-onprem2.png["VMwareサービスインフラ向けBlueXPディザスタリカバリのアーキテクチャを示す図"]
 
 災害が発生した場合にこのサービスを使用すると、SnapMirror関係を解除してデスティネーションサイトをアクティブにすることで、他のオンプレミスのVMware環境またはVMCの仮想マシンをリカバリできます。
 

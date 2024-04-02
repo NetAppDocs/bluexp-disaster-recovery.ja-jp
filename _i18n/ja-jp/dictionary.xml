@@ -562,7 +562,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">VMwareワークロードを元のサイトから別のサイトに移行します。</block>
   <block id="2aefc74ac286c583100431f62049590d" category="list-text">災害が発生した場合は、プライマリサイトをオンデマンドでディザスタリカバリサイトにフェイルオーバーします。このサイトには、VMware Cloud on AWSとFSx for NetApp ONTAP、またはONTAPを使用したオンプレミスのVMware環境があります。</block>
   <block id="a6a42e8e3070730d19bfd86d6a1d66fe" category="paragraph">次の図は、オンプレミスからオンプレミスへのディザスタリカバリ計画のアーキテクチャを示しています。</block>
-  <block id="11ee533cc4ce7135332d0b64a9e82e51" category="paragraph"><block ref="11ee533cc4ce7135332d0b64a9e82e51" category="inline-image-macro-rx" type="image"></block></block>
   <block id="20099229ad21726312a6ff50740b0b57" category="paragraph">災害が発生した場合にこのサービスを使用すると、SnapMirror関係を解除してデスティネーションサイトをアクティブにすることで、他のオンプレミスのVMware環境またはVMCの仮想マシンをリカバリできます。</block>
   <block id="a675a2edc95f7fca650a735944e38f96" category="paragraph">BlueXPディザスタリカバリを使用するには、環境が次の要件を満たしている必要があります。</block>
   <block id="96ed64c294e585324853f8f980f9d78e" category="sidebar">アプリケーションを別のサイトに移行</block>
@@ -797,4 +796,5 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="9fc7e8cb24850b1f0912cebc8da32620" category="list-text">BlueXPのデジタルウォレットにアクセスします。</block>
   <block id="7b6dca09bf0ef612bac047a313d66cbf" category="list-text">[データサービスライセンス]*タブを選択し、更新するサービスシリアル番号の*[アクション...]*アイコンを選択して、*[ライセンスの更新]*を選択します。</block>
   <block id="be976ba4e18c887ae57e14f6ebfbbab3" category="sidebar">クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータの破損（ランサムウェアなど）からワークロードを保護します。VMware向けBlueXPディザスタリカバリを使用すると、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、パブリッククラウド内のVMware Software-Defined Data Centerや、ディザスタリカバリサイトとしての別のオンプレミスサイトにレプリケートできます。</block>
+  <block id="67d87f62e2f6294a12829113edfa11b8" category="paragraph"><block ref="67d87f62e2f6294a12829113edfa11b8" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
