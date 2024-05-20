@@ -82,6 +82,6 @@ BlueXPオンプレミスコネクタまたはBlueXP AWSコネクタを使用し�
 
 BlueXPディザスタリカバリでは、90日間の無償トライアルに登録できます。
 
-NetAppライセンスファイル（NLF）である、お客様所有のライセンスを使用（BYOL）できます。
+AWS Marketplaceで従量課金制（PAYGO）サブスクリプションを購入するか、NetAppライセンスファイル（NLF）であるお客様所有のライセンスを使用（BYOL）することができます。
 
 BlueXPディザスタリカバリ用のライセンスのセットアップの詳細については、を参照してください。 link:../get-started/dr-licensing.html["BlueXPディザスタリカバリライセンスをセットアップ"]。

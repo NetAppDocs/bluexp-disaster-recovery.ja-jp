@@ -16,6 +16,21 @@ BlueXPディザスタリカバリの新機能をご紹介します。
 
 
 
+== 2024年5月15日
+
+このBlueXPディザスタリカバリリリースには、次の更新が含まれています。
+
+* * VMwareワークロードのオンプレミスからオンプレミスへのレプリケーション*が、一般提供機能としてリリースされました。以前は、機能が制限されたテクノロジプレビューでした。
+* *ライセンスの更新*： BlueXPディザスタリカバリでは、90日間の無償トライアルに登録するか、Amazon Marketplaceで従量課金制（PAYGO）サブスクリプションを購入するか、NetApp営業担当またはNetApp Support Site（NSS）から取得したNetAppライセンスファイル（NLF）であるお客様所有のライセンスを使用（BYOL）することができます。
++
+BlueXPディザスタリカバリ用のライセンスのセットアップの詳細については、を参照してください。 link:../get-started/dr-licensing.html["ライセンスをセットアップする"]。
+
+
+
+https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-intro.html["BlueXPディザスタリカバリの詳細"]。
+
+
+
 == 2024年3月5日
 
 これはBlueXPディザスタリカバリのGeneral Availabilityリリースであり、次の更新が含まれています。
