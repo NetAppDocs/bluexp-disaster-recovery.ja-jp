@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-prerequisites.html 
-keywords: what are bluexp disaster recovery requirements, disaster recovery prerequisites 
-summary: 環境のサポート、ネットワークアクセス、ログイン、Webブラウザを確認して、BlueXPのディザスタリカバリを開始しましょう。 
+keywords: what are bluexp disaster recovery requirements, disaster recovery prerequisites, bluexp disaster recovery 
+summary: BlueXPディザスタリカバリを使用する前に、ONTAPストレージ、VMware vCenterクラスタ、およびBlueXPの要件を環境が満たしていることを確認する必要があります。 
 ---
 = BlueXPディザスタリカバリの前提条件
 :hardbreaks:
@@ -12,32 +12,101 @@ summary: 環境のサポート、ネットワークアクセス、ログイン�
 
 
 [role="lead"]
-まず、運用環境、ログイン、ネットワークアクセス、Webブラウザの準備状況を確認します。
+BlueXPディザスタリカバリを使用する前に、ONTAPストレージ、VMware vCenterクラスタ、およびBlueXPの要件を環境が満たしていることを確認する必要があります。
 
-BlueXPディザスタリカバリを使用するには、環境が次の要件を満たしている必要があります。
 
-* オンプレミスのVMware作業環境とNetAppストレージ
-* AWSの場合：
+
+== ONTAPストレージの前提条件
+
+これらの前提条件は、ONTAPまたはAmazon FSx for NetApp ONTAPのインスタンスに適用されます。
+
+* ソースクラスタとデスティネーションクラスタのピア関係が確立されている必要があります。
+* ディザスタリカバリボリュームをホストするSVMがデスティネーションクラスタに存在している必要があります。
+* ソースSVMとデスティネーションSVMのピア関係が確立されている必要があります。
 +
-** Amazon FSx for NetApp ONTAPファイルシステムAmazon FSx for ONTAPに関するドキュメント https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["利用を開始するには"^]。
-** AWS上のSoftware-Defined Data Center（SDDC）を所有するVMwareアカウント。仮想マシンクラウドとも呼ばれます。VMware Cloud Consoleで、管理者とNSXクラウド管理者のサービスロールを使用します。また、組織ロールに組織オーナーを使用します。を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["仮想マシンクラウドのドキュメント"^]。
-** SDDCをAmazon FSx for NetApp ONTAPにリンクします。を参照してください https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWSとAmazon FSx for NetApp ONTAPの統合"^]。
 
+NOTE: デスティネーションSVMにディザスタリカバリボリュームを事前に作成しないでください。BlueXPディザスタリカバリでは、レプリケーション計画に必要に応じてデスティネーションボリュームが作成されます。
 
-* BlueXPの場合：
+* Amazon FSx for NetApp ONTAPを導入する場合は、次の前提条件が適用されます。
 +
-** Amazon FSx for ONTAPとAWSのクレデンシャルがBlueXP作業環境に追加されました。
-** BlueXPコネクタはBlueXPでセットアップする必要があります。オンプレミスとクラウドコネクタは、ESXisを使用してオンプレミスとVMware Cloud（VMC）vCenterの両方に接続する必要があります。これにより、バックアップ、フェイルオーバー、フェイルバック、および移行の機能が、必要なネットワーク機能とスクリプト機能で適切に動作するようになります。
+** VPCには、VMware DRデータストアをホストするAmazon FSx for NetApp ONTAPインスタンスが存在している必要があります。Amazon FSx for ONTAPに関するドキュメントを参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started-step1.html["利用を開始するには"^]。
+
+
+
+
+
+
+== VMware vCenterクラスタの前提条件
+
+これらの前提条件は、オンプレミスのvCenterクラスタとVMware Cloud for AWS Software-Defined Data Center（SDDC）の両方に適用されます。
+
+* BlueXPディザスタリカバリで管理するすべてのVMwareクラスタがONTAPボリュームでホストされている必要があります。
+* BlueXPのディザスタリカバリで管理するすべてのVMwareデータストアでは、次のいずれかのプロトコルを使用する必要があります。
 +
-BlueXP Connectorには、ソースとターゲットの両方のvCenterサーバのクレデンシャルが必要です。を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-standard-mode.html["BlueXPクイックスタート"^] および https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-networking-saas-console.html["BlueXPのネットワーク情報"^]。
+** NFS
+** iSCSIプロトコルを使用するVMFS（現在テクノロジプレビュー中）
 
-** アプリケーション整合性プロセスを正常に実行するには、次の前提条件を満たしていることを確認します。
+
+* VMware Cloud SDDCを使用している場合は、次の前提条件が適用されます。
 +
-*** 保護対象のVMでVMwareツール（またはOpen VMツール）が実行されていることを確認します。
-*** Windows VMでSQL、Oracle、またはその両方を実行している場合は、データベースのVSS Writerを有効にし、データベースを安定した状態にする必要があります。
-*** Linuxオペレーティングシステムで実行されているOracleデータベースでは、OracleデータベースSYSDBAロールに対してオペレーティングシステムユーザ認証を有効にする必要があります。
+** VMware Cloud Consoleで、管理者とNSXクラウド管理者のサービスロールを使用します。また、組織ロールに組織オーナーを使用します。を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["ドキュメント『Using VMware Cloud Foundations with AWS FSx for NetApp ONTAP』"^]。
+** VMware Cloud SDDCとAmazon FSx for NetApp ONTAPインスタンスをリンクします。を参照してください https://vmc.techzone.vmware.com/fsx-guide#overview["VMware Cloud on AWSとAmazon FSx for NetApp ONTAPの統合の導入情報"^]。
 
 
 
 
+
+
+== BlueXPの前提条件
+
+
+
+=== ONTAPとVMwareのクレデンシャルを収集する
+
+* Amazon FSx for ONTAPとAWSのクレデンシャルは、BlueXPのディザスタリカバリの管理に使用するBlueXPワークスペース内の作業環境に追加する必要があります。
+* BlueXPディザスタリカバリにはvCenterクレデンシャルが必要です。BlueXPディザスタリカバリでサイトを追加するときにvCenterクレデンシャルを入力します。
++
+必要なvCenter権限の一覧については、を参照してください link:../reference/vcenter-privileges.html["BlueXPのディザスタリカバリに必要なvCenter権限"]。サイトの追加方法については、を参照してください link:../use/sites-add.html["サイトの追加"]。
+
+
+
+
+
+=== BlueXPアカウントを追加
+
+BlueXPでアカウントをまだお持ちでない場合は、アカウントを追加する必要があります。を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["アカウントの追加方法に関するBlueXPドキュメント"^]。
+
+
+
+=== BlueXPコネクタの作成
+
+BlueXPでBlueXPコネクタがセットアップされている必要があります。BlueXP Connectorを使用すると、ディザスタリカバリサービスに適した機能が含まれます。
+
+* BlueXPディザスタリカバリは、Standard Mode Connector環境でのみ機能します。を参照して https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["BlueXPの標準モードでの使用"^]
+* 必要なBlueXPコネクタのタイプ：
++
+** *オンプレミスからオンプレミスへのディザスタリカバリ*：ディザスタリカバリサイトにBlueXP On-Premises Connectorをインストールします。を参照してください https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["コネクタをオンプレミスにインストールしてセットアップします"^]。
+** *オンプレミスからAWSへ*：BlueXP Connector for AWSをAWS VPCにインストールします。を参照してください https://docs.netapp.com/us-en/bluexp-setup-admin/concept-install-options-aws.html["AWSでのコネクタのインストールオプション"^]。
++
+
+TIP: オンプレミスからオンプレミスへの移行には、BlueXPのオンプレミスコネクタを使用します。オンプレミスからAWSへの接続には、BlueXP AWSコネクタを使用します。このコネクタは、ソースのオンプレミスvCenterとデスティネーションのオンプレミスvCenterにアクセスできます。
+
+** インストールされているBlueXP Connectorから、BlueXPディザスタリカバリで管理するすべてのVMwareクラスタにアクセスできる必要があります。
+
+
+* BlueXPディザスタリカバリで管理するすべてのONTAPアレイを、BlueXPディザスタリカバリの管理に使用するBlueXPワークスペース内の作業環境に追加する必要があります。
++
+を参照して https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAP クラスタを検出"^]
+
+
+
+
+
+== ワークロードの前提条件
+
+アプリケーション整合性プロセスを確実に成功させるには、次の前提条件を適用します。
+
+* 保護対象のVMでVMwareツール（またはOpen VMツール）が実行されていることを確認します。
+* Microsoft SQL Server、Oracle Database、またはその両方を実行しているWindows VMの場合は、データベースのVSS Writerを有効にする必要があります。
+* Linuxオペレーティングシステムで実行されているOracleデータベースでは、OracleデータベースSYSDBAロールに対してオペレーティングシステムユーザ認証を有効にする必要があります。
 

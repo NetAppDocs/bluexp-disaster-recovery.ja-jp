@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: get-started/dr-intro.html 
 keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back 
-summary: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。VMware向けBlueXPディザスタリカバリでは、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined Data Centerにレプリケートできます。 
+summary: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。VMware向けのBlueXPディザスタリカバリを使用すると、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウドのVMware Software-Defined Data Centerにレプリケートしたり、ONTAPストレージを使用した別のオンプレミスのVMware環境をディザスタリカバリサイトとしてレプリケートしたりできます。 
 ---
 = VMware向けBlueXPディザスタリカバリの詳細
 :hardbreaks:
@@ -14,11 +14,14 @@ summary: クラウドへのディザスタリカバリは、耐障害性に優�
 [role="lead"]
 クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。VMware向けのBlueXPディザスタリカバリを使用すると、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウドのVMware Software-Defined Data Centerにレプリケートしたり、ONTAPストレージを使用した別のオンプレミスのVMware環境をディザスタリカバリサイトとしてレプリケートしたりできます。
 
-BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。当初は、BlueXPディザスタリカバリサービスを使用することで、NetAppストレージを実行するオンプレミスのNFSベースのVMwareワークロードを次のいずれかに対して保護できます。
+BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。当初は、BlueXPディザスタリカバリサービスを使用すると、オンプレミスのNFSベースのワークロードと、NetAppストレージを実行するVMware vSphere仮想マシンファイルシステム（VMFS）データストアを次のいずれかで保護できます。
 
 * AWS上のVMware Cloud（VMC）とAmazon FSx for NetApp ONTAPまたは
 * ONTAPストレージを使用した、もう1つのオンプレミスNFSベースのVMware環境
 
+
+
+IMPORTANT: このリリースでは、オンプレミスのVMwareワークロードからVMware vSphere Virtual Machine File System（VMFS）データストアを使用するオンプレミスのVMware環境へのディザスタリカバリがテクノロジプレビューでサポートされます。NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。
 
 BlueXPのディザスタリカバリでは、ディザスタリカバリサイトへのレプリケーション転送にONTAP SnapMirrorテクノロジを使用します。これにより、プライマリサイトとセカンダリサイトで業界最高レベルのストレージ効率（圧縮と重複排除）を実現できます。
 
@@ -57,7 +60,10 @@ NOTE: vSphereサーバの設定は、vSphere ServerのBlueXPディザスタリ�
 
 BlueXPディザスタリカバリの試用版を使用した場合、NetAppから料金が請求されることはありません。
 
-BlueXPディザスタリカバリサービスは、NetAppライセンスを使用するか、Amazon Web Services Marketplaceからサブスクリプションベースの年間契約で利用できます。
+BlueXPディザスタリカバリサービスは、NetAppライセンスがあれば使用することも、Amazon Web Servicesを通じてサブスクリプションベースの年間契約で利用することもできます。
+
+
+IMPORTANT: 一部のリリースにはテクノロジプレビューが含まれています。NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。最新のテクノロジプレビューの詳細については、を参照してください link:../release-notes/dr-whats-new.html["BlueXPディザスタリカバリの新機能"] 。
 
 
 

@@ -1,0 +1,6 @@
+---
+section: reference
+title: 参考文献
+entries:
+- title: BlueXPのディザスタリカバリに必要なvCenter権限
+  url: "/reference/vcenter-privileges.html"

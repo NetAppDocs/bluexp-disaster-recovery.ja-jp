@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-setup.html 
-keywords: bluexp, disaster recovery, aws, amazon web services 
+keywords: bluexp, disaster recovery, aws, amazon web services, amazon fsx for netapp ontap 
 summary: BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してセットアップします。 
 ---
-= BlueXPディザスタリカバリのセットアップ
+= BlueXPディザスタリカバリのためのインフラのセットアップ
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -19,13 +19,37 @@ TIP: レビュー link:../get-started/dr-prerequisites.html["前提条件"] 環�
 
 
 
-== AWSをセットアップ
+== BlueXPのディザスタリカバリに備えましょう
 
-AWSでは、次の手順を実行する必要があります。
+* 本番環境を確認します。
++
+** 保護するVMがNFSデータストア（ONTAP NFSボリュームを使用）またはVMFSデータストア（NetApp iSCSI LUNを使用）でホストされていることを確認します。
+** オンプレミスのONTAPアレイ、vCenter、AWSでホストされるVMwareクラウドインスタンスのクレデンシャルとアクセスキーがあることを確認します。
 
-* VMware Cloud on AWSを導入して設定
-* Amazon FSx for ONTAPファイルシステムを作成FSx for ONTAPをプロビジョニング、設定
-* VMwareアカウントを使用し、Software-Defined Data Center（SDDC）をプロビジョニングSDDCがFSx for ONTAPに接続されていることを確認します。
+
+* ディザスタリカバリサイトを作成または検証します。
++
+** Amazon FSxファイルシステムの準備が完了していることを作成または確認します。
+** ソースVMとデスティネーションVMがピア関係にあることを確認します。
+
+
+
+
+
+
+== VMware Cloud for AWS SDDCのセットアップ
+
+VMware Cloud for AWSのSoftware-Defined Data Center（SDDC）をセットアップ
+
+* Amazon FSx for ONTAPファイルシステムを作成FSx for ONTAPをプロビジョニング、設定Amazon FSX for NetApp ONTAP はフルマネージドサービスで、広く普及しているNetApp ONTAP ファイルシステムを基盤に、信頼性、拡張性、パフォーマンス、機能豊富なファイルストレージを提供します。
+* こちらとこちらの手順に従って、 https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["リンク"^] https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/task-getting-started-fsx.html["Amazon FSx for NetApp ONTAP のクイックスタートガイド"] FSx for NetApp ONTAPのプロビジョニングと設定を行います。
+* 作業環境にAmazon FSx for NetApp ONTAPを追加し、FSx for ONTAPのAWSクレデンシャルを追加します。
+* AWSでは、次の手順を実行する必要があります。
++
+** VMware Cloud on AWSを導入して設定
+** VMwareアカウントを使用してSDDCをプロビジョニングします。SDDCがFSx for ONTAPに接続されていることを確認します。
+
+
 
 
 
@@ -38,50 +62,14 @@ AWSでVMC環境を設定するには、次の手順を実行します https://do
 
 
 
-=== Amazon FSx for NetApp ONTAPを設定
-
-Amazon FSX for NetApp ONTAP はフルマネージドサービスで、広く普及しているNetApp ONTAP ファイルシステムを基盤に、信頼性、拡張性、パフォーマンス、機能豊富なファイルストレージを提供します。この手順を実行します https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-native-overview.html["リンク"^] FSx for NetApp ONTAPのプロビジョニングと設定を行います。
-
-
-
-== BlueXPディザスタリカバリのセットアップ
-
-次のステップは、BlueXPでディザスタリカバリをセットアップすることです。
-
-* BlueXPでコネクタを作成します。
-* Amazon FSx for NetApp ONTAP向けSnapMirrorを導入、設定
-* オンプレミスのONTAPストレージ作業環境をBlueXPに追加これはソースONTAPクラスタです。
-* BlueXPアカウントを追加し、作業環境にFSxNを追加し、FSx for ONTAP用のAWSクレデンシャルを追加します。
-
-
-
-
-=== BlueXPでコネクタを作成します
-
-このサービスをお試しいただくには、NetApp営業担当者にお問い合わせください。BlueXP Connectorを使用すると、ディザスタリカバリサービスに適した機能が含まれます。
-
-サービスを使用する前にBlueXPでコネクタを作成する方法については、該当するBlueXPのドキュメントを参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["コネクタの作成方法"^]。
-
-BlueXPオンプレミスコネクタまたはBlueXP AWSコネクタを使用します。BlueXP AWSコネクタは、ソースのオンプレミスvCenterとデスティネーションのオンプレミスvCenterにアクセスできます。
-
-
-
-=== Amazon FSx for NetApp ONTAP向けSnapMirrorの設定
-
-次のステップは、BlueXPでディザスタリカバリをセットアップすることです。
-
-. BlueXPでアカウントを追加します。を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["アカウントの追加方法に関するBlueXPドキュメント"^]。
-. 作業環境にAmazon FSx for NetApp ONTAPを追加します。ONTAPクラスタとのSnapMirror関係が確立されていて、FSx for NetApp ONTAPのデスティネーションが設定されていることを確認します。を参照してください https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["FSx for ONTAP作業環境の設定方法"^]。
-. BlueXPでは、SnapMirrorをFSx for NetApp ONTAPに導入します。
-. BlueXPでは、AWSインスタンス上でプロビジョニングされたFSx for NetApp ONTAPを検出し、指定したデータストアボリュームをオンプレミス環境からFSx for NetApp ONTAPにレプリケートし、適切な頻度でNetApp Snapshotコピーを保持します。
-
-
-
-
-=== ライセンスをセットアップする
+== ライセンスをセットアップする
 
 BlueXPディザスタリカバリでは、90日間の無償トライアルに登録できます。
 
-AWS Marketplaceで従量課金制（PAYGO）サブスクリプションを購入するか、NetAppライセンスファイル（NLF）であるお客様所有のライセンスを使用（BYOL）することができます。
+次のいずれかを購入できます。
 
-BlueXPディザスタリカバリ用のライセンスのセットアップの詳細については、を参照してください。 link:../get-started/dr-licensing.html["BlueXPディザスタリカバリライセンスをセットアップ"]。
+* AWS Marketplaceの従量課金制（PAYGO）サブスクリプション
+* お客様所有のライセンスを使用（BYOL）。NetAppライセンスファイル（NLF）です。
+
+
+を参照してください link:../get-started/dr-licensing.html["BlueXPディザスタリカバリライセンスをセットアップ"]。

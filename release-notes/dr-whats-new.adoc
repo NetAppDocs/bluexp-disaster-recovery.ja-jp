@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: release-notes/dr-whats-new.html 
-keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter 
+keywords: disaster recovery, bluexp, disaster recovery, vmware, vcenter, draas 
 summary: BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。VMware向けBlueXPディザスタリカバリでは、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してディザスタリカバリサイトとして、パブリッククラウドにあるVMwareのSoftware-Defined Data Centerにレプリケートできます。 
 ---
 = 新機能
@@ -13,6 +13,46 @@ summary: BlueXPのディザスタリカバリは、ディザスタリカバリ�
 
 [role="lead"]
 BlueXPディザスタリカバリの新機能をご紹介します。
+
+
+
+== 2024年7月5日
+
+このBlueXPディザスタリカバリリリースには、次の更新が含まれています。
+
+* * AFF Aシリーズのサポート*：このリリースでは、NetApp AFF Aシリーズハードウェアプラットフォームがサポートされます。
+
+
+* *オンプレミスからオンプレミスのVMware VMFSデータストアのサポート*：このリリースには、オンプレミスストレージに保護されたVMware vSphere Virtual Machine File System（VMFS）データストアにマウントされたVMのサポートの_テクノロジプレビュー_が含まれています。このリリースでは、オンプレミスのVMwareワークロードからVMFSデータストアを使用するオンプレミスのVMware環境へのディザスタリカバリがテクノロジプレビューでサポートされます。
++
+
+NOTE: NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。
+
+* *レプリケーションプランの更新*：[アプリケーション]ページでデータストアでVMをフィルタリングし、[リソースマッピング]ページでターゲットの詳細を選択することで、レプリケーションプランをより簡単に追加できます。
++
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。
+
+* *レプリケーション計画の編集*:このリリースでは、フェイルオーバーマッピングページが強化され、わかりやすくなりました。
++
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["計画の管理"]。
+
+* *仮想マシンの編集*：このリリースでは、仮想マシンの編集プロセスにUIが若干改善されました。
++
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["VMの管理"]。
+
+* *アップデートのフェイルオーバー*：フェイルオーバーを開始する前に、VMのステータスと電源がオンになっているかオフになっているかを確認できるようになりました。フェイルオーバープロセスでは、今すぐSnapshotを作成するか、またはSnapshotを選択できるようになりました。
++
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/failover.html["リモートサイトへのアプリケーションのフェイルオーバー"]。
+
+* *フェイルオーバーテストスケジュール*：フェイルオーバーテストを編集し、フェイルオーバーテストの日次、週次、月次スケジュールを設定できるようになりました。
++
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/manage.html["計画の管理"]。
+
+* *前提条件情報の更新*：BlueXPディザスタリカバリの前提条件情報が更新されました。
++
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-prerequisites.html["BlueXPディザスタリカバリの前提条件"]。
+
+
 
 
 
