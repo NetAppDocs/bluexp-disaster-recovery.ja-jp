@@ -46,7 +46,7 @@ NOTE: NetAppでは、プレビューしたワークロード容量に対して�
 
 * *フェイルオーバーテストスケジュール*：フェイルオーバーテストを編集し、フェイルオーバーテストの日次、週次、月次スケジュールを設定できるようになりました。
 +
-を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/manage.html["計画の管理"]。
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["計画の管理"]。
 
 * *前提条件情報の更新*：BlueXPディザスタリカバリの前提条件情報が更新されました。
 +
