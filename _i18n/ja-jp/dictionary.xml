@@ -872,7 +872,6 @@ BlueXPアカウント用のBlueXPディザスタリカバリライセンスを�
   <block id="51c73608632a284eecfb3fce29106b26" category="list-text">*アップデートのフェイルオーバー*：フェイルオーバーを開始する前に、VMのステータスと電源がオンになっているかオフになっているかを確認できるようになりました。フェイルオーバープロセスでは、今すぐSnapshotを作成するか、またはSnapshotを選択できるようになりました。</block>
   <block id="ab132121a366abdd7667443cc98f3a69" category="paragraph">を参照してください<block ref="1cbf59ee3e77dd0082612a21b0900f81" category="inline-link-rx"></block>。</block>
   <block id="66dacd6d538323484187ed3f8c9ef650" category="list-text">*フェイルオーバーテストスケジュール*：フェイルオーバーテストを編集し、フェイルオーバーテストの日次、週次、月次スケジュールを設定できるようになりました。</block>
-  <block id="08561693f7bc27dc5a921c72d2465300" category="paragraph">を参照してください<block ref="f45bcb4367d33ce5b8c9c6a195cb4b0a" category="inline-link-rx"></block>。</block>
   <block id="42b40c3ce2e25adae8327795c655116d" category="list-text">*前提条件情報の更新*：BlueXPディザスタリカバリの前提条件情報が更新されました。</block>
   <block id="8a62eb7f743049ce2523fe7eb67fb48f" category="paragraph">を参照してください<block ref="dfd63f4ad4adb15a66b44e212e2488b7" category="inline-link-rx"></block>。</block>
   <block id="2e57ab34890abd985ae5cff7c16db6f6" category="list-text">[Applications]ページの左側で、必要に応じてデータストアを検索します。</block>
@@ -905,4 +904,24 @@ BlueXPアカウント用のBlueXPディザスタリカバリライセンスを�
   <block id="554cfab3938e21d9270bd6b75931f96f" category="sidebar">ビデオ</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">参考文献</block>
   <block id="b80f9ccd1ed052ae2d1a95c50bd37d8b" category="sidebar">BlueXPのディザスタリカバリに必要なvCenter権限</block>
+  <block id="f4c84d2d214fb7f3e3cae921398c8e4a" category="section-title">2024年7月17日</block>
+  <block id="e96e73e43a84335e9de1d02f80f7d655" category="list-text">*フェイルオーバーテストスケジュール*：このリリースには、日次スケジュールと週次スケジュールをサポートするために必要なフェイルオーバーテストスケジュール構造の更新が含まれています。この更新では、新しい毎日および毎週のフェイルオーバーテストスケジュールを使用できるように、既存のレプリケーションプランをすべて無効にして再度有効にする必要があります。これは1回限りの要件です。</block>
+  <block id="7043d4fb27c94bc9a206c106cef9d80c" category="paragraph">その方法は次のとおりです。</block>
+  <block id="2ae04d8f24d0c8f552b0d3857c0953b3" category="list-text">計画を選択し、[Actions]アイコンを選択してドロップダウンメニューを表示します。</block>
+  <block id="dbf8ea65a71d9e2042b03a97a0da4095" category="list-text">[*Disable*] を選択します。</block>
+  <block id="9ffe587f372d96c9b0db66cfe333c0cf" category="list-text">数分後、*[有効化]*を選択します。</block>
+  <block id="dc6efda4f2a86706d886df508f873039" category="list-text">*レプリケーションプランの更新*：このリリースにはレプリケーションプランデータの更新が含まれており、「スナップショットが見つかりません」の問題を解決します。そのためには、すべてのレプリケーション計画の保持数を1に変更し、オンデマンドのSnapshotを開始する必要があります。このプロセスでは、新しいバックアップが作成され、古いバックアップがすべて削除されます。</block>
+  <block id="3d3e2652059a9417e7a9b8801e83b99d" category="list-text">レプリケーション計画を選択し、*[フェイルオーバーマッピング]*タブをクリックし、*[編集]*鉛筆アイコンをクリックします。</block>
+  <block id="f05351f8a712da4ff1e724d342c4670b" category="list-text">[Datastores]*の矢印をクリックして展開します。</block>
+  <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">[Edit failover mappings]ページ</block>
+  <block id="7cbc4647aa042fa4dbc711ee9aa94612" category="paragraph"><block ref="7cbc4647aa042fa4dbc711ee9aa94612" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0d59b78804ed5feec9399254629a60f1" category="list-text">レプリケーション計画の保持数の値をメモします。これらの手順が完了したら、この元の値を元に戻す必要があります。</block>
+  <block id="e9c686cd7f0fc0f9a24375142cf2639b" category="list-text">カウントを1に減らします。</block>
+  <block id="94eec0eecc897e0613b4dca05f1db3b5" category="list-text">オンデマンドのスナップショットを開始します。これを行うには、[Replication plan]ページでプランを選択し、[Actions]アイコンをクリックして*[Take snapshot now]*を選択します。</block>
+  <block id="4be920e5d3a5c6a1a13e6a9ed1ea0d96" category="list-text">Snapshotジョブが正常に完了したら、レプリケーションプランの数を、最初の手順でメモした元の値に戻します。</block>
+  <block id="fcf0bc475de9e6576c18ef6dcf5d7506" category="list-text">既存のすべてのレプリケーションプランについて、上記の手順を繰り返します。</block>
+  <block id="f51ae48fcef0eb66752ca677561d408c" category="section-title">フェイルオーバースケジュールの保持数を変更</block>
+  <block id="b138bbcc2a9cc6e505caed49815b326b" category="paragraph">保持するデータストアの数を変更できます。</block>
+  <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="51c600bec26d8fec2fcc4cb42728fd01" category="list-text">レプリケーションプランの保持数の値を変更します。</block>
 </blocks>
