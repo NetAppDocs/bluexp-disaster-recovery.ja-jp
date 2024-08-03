@@ -16,6 +16,23 @@ BlueXPディザスタリカバリの新機能をご紹介します。
 
 
 
+== 2024 年 8 月 2 日
+
+このBlueXPディザスタリカバリリリースには、次の更新が含まれています。
+
+* *オンプレミスからオンプレミスのFC向けVMware VMFSデータストアのサポート*：このリリースには、FCでオンプレミスストレージに保護されたVMware vSphere Virtual Machine File System（VMFS）データストアにマウントされたVMの_テクノロジプレビュー_サポートが含まれています。以前は、このサービスでは、iSCIのVMFSデータストアをサポートするテクノロジプレビューが提供されていました。このリリースでは、BlueXPディザスタリカバリで、FC用のVMFSデータストアを使用するオンプレミスのVMwareワークロードからオンプレミスのVMware環境へのテクノロジプレビューがサポートされます。
++
+
+NOTE: NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。
+
+* *ジョブのキャンセル*：このリリースでは、ジョブ監視UIでジョブをキャンセルできるようになりました。
++
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["ジョブの監視"]。
+
+
+
+
+
 == 2024年7月17日
 
 このBlueXPディザスタリカバリリリースには、次の更新が含まれています。
@@ -65,10 +82,7 @@ image:use/dr-plan-failover-edit.png["[Edit failover mappings]ページ"]
 
 NOTE: NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。
 
-* *レプリケーションプランの更新*：[アプリケーション]ページでデータストアでVMをフィルタリングし、[リソースマッピング]ページでターゲットの詳細を選択することで、レプリケーションプランをより簡単に追加できます。
-+
-を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。
-
+* *レプリケーションプランの更新*:[アプリケーション]ページのデータストアでVMをフィルタリングし、//を選択して、レプリケーションプランをより簡単に追加できます link:../use/drplan-create.html["レプリケーション計画の作成"]。を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/drplan-create.html["レプリケーション計画の作成"]。 ターゲットの詳細については、[Resource mapping]ページを参照してください。
 * *レプリケーション計画の編集*:このリリースでは、フェイルオーバーマッピングページが強化され、わかりやすくなりました。
 +
 を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/manage.html["計画の管理"]。

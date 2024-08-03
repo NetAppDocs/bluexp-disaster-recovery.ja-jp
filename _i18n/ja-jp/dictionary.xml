@@ -862,7 +862,6 @@ BlueXPアカウント用のBlueXPディザスタリカバリライセンスを�
   <block id="7ee40b46e664d0d7baaad4da422c7457" category="list-text">* AFF Aシリーズのサポート*：このリリースでは、NetApp AFF Aシリーズハードウェアプラットフォームがサポートされます。</block>
   <block id="a1961f9eb07acee12f93a3f0b929745e" category="list-text">*オンプレミスからオンプレミスのVMware VMFSデータストアのサポート*：このリリースには、オンプレミスストレージに保護されたVMware vSphere Virtual Machine File System（VMFS）データストアにマウントされたVMのサポートの_テクノロジプレビュー_が含まれています。このリリースでは、オンプレミスのVMwareワークロードからVMFSデータストアを使用するオンプレミスのVMware環境へのディザスタリカバリがテクノロジプレビューでサポートされます。</block>
   <block id="710abd7c1d5a2a3be1aa4c7dbff890cf" category="admonition">NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。</block>
-  <block id="282dc334473cc4944da587c83b4a1761" category="list-text">*レプリケーションプランの更新*：[アプリケーション]ページでデータストアでVMをフィルタリングし、[リソースマッピング]ページでターゲットの詳細を選択することで、レプリケーションプランをより簡単に追加できます。</block>
   <block id="a1975f713c38b2cbf1c095ed7dbadabe" category="list-text">*レプリケーション計画の編集*:このリリースでは、フェイルオーバーマッピングページが強化され、わかりやすくなりました。</block>
   <block id="e9558a079e21d43034f54a99b19f2ad7" category="inline-link">計画の管理</block>
   <block id="583edef1d12ac8fcf925b864da2d76c6" category="paragraph">を参照してください<block ref="a8a4a23c947d3e2e3dc169027b7cac12" category="inline-link-rx"></block>。</block>
@@ -924,4 +923,15 @@ BlueXPアカウント用のBlueXPディザスタリカバリライセンスを�
   <block id="b138bbcc2a9cc6e505caed49815b326b" category="paragraph">保持するデータストアの数を変更できます。</block>
   <block id="2aef38b97efb9369d3e496e8d062d8fd" category="paragraph"><block ref="2aef38b97efb9369d3e496e8d062d8fd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51c600bec26d8fec2fcc4cb42728fd01" category="list-text">レプリケーションプランの保持数の値を変更します。</block>
+  <block id="895b67d31a903fc743f186c56aeecff6" category="section-title">2024 年 8 月 2 日</block>
+  <block id="8bf3903af15d79402b4af83735a56d33" category="list-text">*オンプレミスからオンプレミスのFC向けVMware VMFSデータストアのサポート*：このリリースには、FCでオンプレミスストレージに保護されたVMware vSphere Virtual Machine File System（VMFS）データストアにマウントされたVMの_テクノロジプレビュー_サポートが含まれています。以前は、このサービスでは、iSCIのVMFSデータストアをサポートするテクノロジプレビューが提供されていました。このリリースでは、BlueXPディザスタリカバリで、FC用のVMFSデータストアを使用するオンプレミスのVMwareワークロードからオンプレミスのVMware環境へのテクノロジプレビューがサポートされます。</block>
+  <block id="b9dbe1e85847c069664ebe888e76d35c" category="list-text">*ジョブのキャンセル*：このリリースでは、ジョブ監視UIでジョブをキャンセルできるようになりました。</block>
+  <block id="4639d0e2e2909a747265c2f704128bca" category="inline-link">ジョブの監視</block>
+  <block id="5ef55533619d84d0298304b37a76eeff" category="paragraph">を参照してください<block ref="786959fe8223b685d5c08f8e62246672" category="inline-link-rx"></block>。</block>
+  <block id="7967654ba38c10467e0d83677de0e180" category="list-text">*レプリケーションプランの更新*:[アプリケーション]ページのデータストアでVMをフィルタリングし、//を選択して、レプリケーションプランをより簡単に追加できます <block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。を参照してください<block ref="5cf2140f2775e5f1ccc24bb836a069a3" category="inline-link-rx"></block>。 ターゲットの詳細については、[Resource mapping]ページを参照してください。</block>
+  <block id="24391a0c4e58147fa07febdb32887a1a" category="section-title">ジョブをキャンセルします</block>
+  <block id="eead8518396b0c1b849be084fbe4f31a" category="paragraph">進行中またはキューに登録された状態のジョブを続行したくない場合は、キャンセルできます。ジョブが同じ状態で停止し、キュー内の次の処理を解放したい場合は、ジョブをキャンセルできます。タイムアウトになる前にジョブをキャンセルすることもできます。</block>
+  <block id="26abc41be60bda806b144bd6ecedad10" category="list-text">[Job monitor]ページで、キャンセルするジョブのIDをメモします。</block>
+  <block id="49e474835558193a9bed54c7dadf777e" category="paragraph">ジョブの状態が「In progress」または「Queued」である必要があります。</block>
+  <block id="98d5e6f769dc6d114da618f41d9ba70d" category="list-text">[アクション]列で、*[キャンセル]*を選択します。</block>
 </blocks>

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/monitor-jobs.html 
-keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp 
 summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。すべてのディザスタリカバリジョブを監視し、進捗状況を確認できます。 
 ---
 = ディザスタリカバリジョブを監視する
@@ -20,4 +20,20 @@ summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバ�
 . 処理に関連するすべてのジョブを確認し、タイムスタンプとステータスを確認します。
 . 特定のジョブの詳細を表示するには、その行を選択します。
 . 情報を更新するには、*[更新]*を選択します。
+
+
+
+
+== ジョブをキャンセルします
+
+進行中またはキューに登録された状態のジョブを続行したくない場合は、キャンセルできます。ジョブが同じ状態で停止し、キュー内の次の処理を解放したい場合は、ジョブをキャンセルできます。タイムアウトになる前にジョブをキャンセルすることもできます。
+
+.手順
+. BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
+. トップメニューから*ジョブ監視*を選択します。
+. [Job monitor]ページで、キャンセルするジョブのIDをメモします。
++
+ジョブの状態が「In progress」または「Queued」である必要があります。
+
+. [アクション]列で、*[キャンセル]*を選択します。
 
