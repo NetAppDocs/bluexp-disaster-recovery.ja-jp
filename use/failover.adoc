@@ -84,7 +84,7 @@ TIP: フェイルオーバーが開始されると、リカバリされたVMが�
 . レプリケーションプランを選択します。
 . 右側で、*アクション*オプションを選択します。 image:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"] をクリックし、*[フェイルオーバー]*を選択します。
 +
-image:dr-plan-failover.png["フェイルオーバーページ"]
+image:dr-plan-failover2.png["フェイルオーバーページ"]
 
 . [フェイルオーバー]ページで、Snapshotを今すぐ開始するか、リカバリ元のデータストアのSnapshotを選択します。デフォルトは最新です。
 +
