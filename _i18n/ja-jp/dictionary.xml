@@ -336,9 +336,6 @@ BlueXPのディザスタリカバリを有効にする必要はありません�
   <block id="b2f702d4d241c0d53726eedc499ac784" category="paragraph">このような計画は、_ blueprints _と呼ばれることもあります。</block>
   <block id="4f27ef77939e5393adc6b44aec83a6b7" category="paragraph">ウィザードでは、次の手順を実行します。</block>
   <block id="8705d6076cb452e919a6e22862427440" category="list-text">vCenterサーバを選択</block>
-  <block id="8b89ed4b8e4a4b16d551a86114a0c361" category="list-text">レプリケートするVMを選択し、グループを割り当てます。</block>
-  <block id="0ee5515fd7a8d972a5df4c4eb08b18f2" category="list-text">再発の特定</block>
-  <block id="febc3cdab40dc222679ce1e42cce7011" category="list-text">計画をレビューする</block>
   <block id="d72f4a94d857178ae5cb1420995137e4" category="inline-image-macro">Add replication plan &amp; gt; Add planページのスクリーンショット</block>
   <block id="6961a5b80d0429840ea8a9232c79ec6f" category="paragraph"><block ref="b3b324f474892662518dcbec32158ea5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="466ea193e548e9ef8d853f2da4829a3e" category="list-text">レプリケーションプランの名前を作成します。</block>
@@ -920,8 +917,6 @@ BlueXPアカウント用のBlueXPディザスタリカバリライセンスを�
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">[Failover mappings]タブで、各リソースの右側にある下向き矢印を選択し、それぞれのリソースをマッピングします。</block>
   <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*リソースを計算*：*リソースを計算*の横にある下向き矢印を選択します。</block>
-  <block id="023cde6974e67dee3aff7c64e3290e80" category="list-text">ソース クラスタ</block>
-  <block id="221533a77747ed01c409141d8985b5fe" category="list-text">ターゲットクラスタ（オプション）</block>
   <block id="5bfe17be68350c18dc777bcfabdd7a8f" category="list-text">*仮想ネットワーク*：フェイルオーバーマッピングタブで、*仮想ネットワーク*の横にある下向き矢印を選択します。ソース仮想LANとターゲットセグメントを入力または選択します。</block>
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*仮想マシン*：[フェイルオーバーマッピング]タブで、*[仮想マシン]*の横にある下向き矢印を選択します。</block>
   <block id="909f84e264f0200a692127b28fbdbaaf" category="paragraph">適切なセグメントへのネットワークマッピングを選択します。セグメントはすでにプロビジョニングされているので、仮想マシンをマッピングする適切なセグメントを選択してください。</block>
@@ -934,4 +929,47 @@ BlueXPアカウント用のBlueXPディザスタリカバリライセンスを�
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保持数*：保持するSnapshotの数を入力します。</block>
   <block id="b23c862689b973964a4b79af3d87b2de" category="list-text">*ソースとターゲットのデータストア*：ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアを選択できます。SnapMirror関係のないボリュームを選択した場合は、作業環境とそのピアSVMを選択して作成できます。</block>
   <block id="8772d236d3c62b688c3b57224d982ee1" category="paragraph"><block ref="8772d236d3c62b688c3b57224d982ee1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1267d6fc2aff2a3372b02b4d25a9f397" category="list-text">フェイルオーバーテストを実施します。仮想マシンは一時的に作成されます。BlueXP  ディザスタリカバリでは、選択したSnapshotから新しいFlexCloneが作成され、FlexCloneボリュームの基盤となる一時的なデータストアがESXiホストにマッピングされます。このプロセスでは、オンプレミスのONTAPストレージやAWSのFSx for NetApp ONTAPストレージの物理容量が追加で消費されることはありません。元のソースボリュームは変更されず、ディザスタリカバリ中もレプリカジョブを続行できます。</block>
+  <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">BlueXP  ディザスタリカバリに役立つ用語</block>
+  <block id="b7b26d16c3d1d84d3872afa1f04c92d6" category="paragraph">ディザスタリカバリに関連する用語を理解しておくと便利です。</block>
+  <block id="7f800e59a5bd3f98ce900fa6e543f67d" category="list-text">*サイト*：通常、物理データセンターまたはクラウドプロバイダに関連付けられた論理コンテナ。</block>
+  <block id="1060a69dfe06a51ad97fdd63bb36b6c6" category="list-text">*リソースグループ*：複数のVMを1つのユニットとして管理できる論理コンテナ。</block>
+  <block id="01f306e8e2e64b0a1d39d18d7594ecf5" category="list-text">*レプリケーションプラン*：バックアップの頻度とフェイルオーバーイベントの処理方法に関する一連のルール。プランは1つ以上のリソースグループに割り当てられます。</block>
+  <block id="84c20a0b7ce2eb1001004d644d0ca57e" category="section-title">フェイルバックが完了してから検出を実行する</block>
+  <block id="a59aaedc864081e6c1a7bd46bcdf9813" category="paragraph">フェイルオーバーの完了後は、ソースvCenterで手動で検出を開始しないでください。フェイルバックが完了してから、ソースvCenterで検出を開始します。</block>
+  <block id="eaecda6db64f5346d5c63bfe0094e040" category="section-title">2024年9月20日</block>
+  <block id="ee811bd919a27bd2eb705f65ed45e4f6" category="paragraph">このBlueXP  ディザスタリカバリリリースには、次の更新が含まれています。</block>
+  <block id="b077aa4f9a421cc2e2782608fb5caf4f" category="list-text">*オンプレミスからオンプレミスのVMware VMFSデータストアのサポート*：このリリースには、VMware vSphere Virtual Machine File System（VMFS）データストアにマウントされたVMのサポートが含まれており、iSCSIおよびFCでオンプレミスのストレージに保護されています。以前は、iSCSIおよびFC用にVMFSデータストアをサポートするテクノロジpreview_supportingを提供していました。</block>
+  <block id="0eb65976c0b0c5ffa90b07d4a062e509" category="paragraph">iSCSIプロトコルとFCプロトコルの両方に関するその他の考慮事項を次に示します。</block>
+  <block id="d671bd2f503deef1e03581ce8d516507" category="list-text">FCは、レプリケーションではなく、クライアントフロントエンドプロトコルをサポートします。</block>
+  <block id="cf1967c6d778937fae37b9e43582b1b6" category="list-text">BlueXP  ディザスタリカバリでは、各ONTAPでサポートされるLUNは1つだけです。ボリュームに複数のLUNを含めることはできません。</block>
+  <block id="f3a37c3560d0027bc0f49abfab4ab0e3" category="list-text">レプリケーション計画については、デスティネーションONTAPボリュームで、保護対象VMをホストしているソースONTAPボリュームと同じプロトコルを使用する必要があります。たとえば、ソースでFCプロトコルを使用している場合は、デスティネーションでもFCを使用する必要があります。</block>
+  <block id="3baff38a392d31950fc8d4d62ea2adc0" category="list-text">[vCenter Server]を選択します。</block>
+  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">レプリケートするVMを選択し、グループを割り当てます。</block>
+  <block id="8e635b1aadad234871ba0e012309361f" category="list-text">繰り返し発生する問題を特定し、ゲストホストスクリプトを実行し、ブート順序を設定して、目標復旧時点を選択します。</block>
+  <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">計画をレビューします。</block>
+  <block id="054b753af44fc4eeee43c9ba6037caaa" category="doc">ディザスタリカバリレポートの作成</block>
+  <block id="282dfbc5927b79619ad76e7f3cbfe3c6" category="paragraph">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去1年間のジョブの詳細が含まれます。カスタムレポートを作成することもできます。</block>
+  <block id="08efd64e87408e4769275d6a11482ddf" category="paragraph">レポートはPDF形式でダウンロードできます。</block>
+  <block id="b775ae7fb34855ffeede56666da9a15c" category="list-text">トップメニューから*[レポート]*を選択します。</block>
+  <block id="44f0d43cd92781ec793d9ba50c2d422e" category="inline-image-macro">[レポート]ページ</block>
+  <block id="a73757daae33bff01ded292e39f3ddaf" category="paragraph"><block ref="a73757daae33bff01ded292e39f3ddaf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3ccbbafbdd477e2f028bfd34e03f436b" category="list-text">レポートを作成またはダウンロードする前に、*[更新]*オプションをクリックしてデータを更新します。</block>
+  <block id="c83e2a522238e98593e337bd5a7311b5" category="list-text">* Ready-Made *タブからレポートを選択するか、* Custom *タブで独自のレポートを作成します。</block>
+  <block id="70db9063910acf1265d5a518168c69cd" category="list-text">[ダウンロード]*をクリックしてレポートをダウンロードします。</block>
+  <block id="0656a1b7f286656b2fc85b91fe54f0dd" category="section-title">ディザスタリカバリレポートを独自に作成</block>
+  <block id="8eaafa07b3ff6e9aa5dbe62e7cc8c77c" category="paragraph">カスタムレポートを作成して、サイト、レプリケーションプラン、およびデータを指定できます。過去1年間のフェイルオーバーとフェイルバックの概要、各レプリケーションプランのVMの詳細、および過去1年間の各レプリケーションプランのジョブの詳細を含めるかどうかを指定できます。</block>
+  <block id="036f7e4b10d318ae312cdfbb79a225fe" category="list-text">レポートを作成する前に、*[更新]*オプションをクリックしてデータを更新します。</block>
+  <block id="27c38bec0a8c0321e9a3236a8a9d4e76" category="list-text">[カスタム]タブを選択します。</block>
+  <block id="c3c616a8c2970d4d1156559952705700" category="list-text">[追加]*を選択して、新しいレポートを追加します。</block>
+  <block id="402199b58c216d8c9be526288150639b" category="inline-image-macro">[Add Custom Report]ダイアログ</block>
+  <block id="8224443416aacfdb9c8d006355a8489a" category="paragraph"><block ref="8224443416aacfdb9c8d006355a8489a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d6c444c23609646be63340436709d5f" category="list-text">レポートをカスタマイズするオプションを選択します。</block>
+  <block id="f6068daa29dbb05a7ead1e3b5a48bbee" category="list-text">データ</block>
+  <block id="478109b22c544f0e3bed80d9622cc572" category="list-text">過去1年間のフェイルオーバーとフェイルバックの概要</block>
+  <block id="d9848020098abdd6a6adf5b664e0a02c" category="list-text">各レプリケーションプランのVMの詳細</block>
+  <block id="2eac16c021d7f4e2d342be672e454649" category="list-text">過去1年間の各レプリケーション計画のジョブの詳細</block>
+  <block id="65db0a5300ccaa6099d24aaf16150200" category="paragraph">カスタムレポートがカスタムレポートのリストに表示されます。</block>
+  <block id="b7a41431aa1eee1607db390ac47d2a65" category="admonition">レポートに含まれているすべてのサイトまたは計画を表示するには、レポート名または計画名の右側にある番号をクリックします。</block>
+  <block id="a99780537c030fe162f59c129be8e471" category="list-text">[ダウンロード]*をクリックして、カスタムレポートをダウンロードします。</block>
 </blocks>
