@@ -61,20 +61,20 @@ NOTE: デスティネーションSVMにディザスタリカバリボリュー�
 
 
 
+=== BlueXPの使用を開始しましょう
+
+まだ行っていない場合は、 https://docs.netapp.com/us-en/bluexp-setup-admin/task-sign-up-saas.html["BlueXP  にサインアップして組織を作成する"^]
+
+
+
 === ONTAPとVMwareのクレデンシャルを収集する
 
-* Amazon FSx for ONTAPとAWSのクレデンシャルは、BlueXPのディザスタリカバリの管理に使用するBlueXPワークスペース内の作業環境に追加する必要があります。
+* BlueXP  ディザスタリカバリの管理に使用するBlueXP  プロジェクト内の作業環境に、Amazon FSx for ONTAPとAWSのクレデンシャルを追加する必要があります。
 * BlueXPディザスタリカバリにはvCenterクレデンシャルが必要です。BlueXPディザスタリカバリでサイトを追加するときにvCenterクレデンシャルを入力します。
 +
 必要なvCenter権限の一覧については、を参照してください link:../reference/vcenter-privileges.html["BlueXPのディザスタリカバリに必要なvCenter権限"]。サイトの追加方法については、を参照してください link:../use/sites-add.html["サイトの追加"]。
 
 
-
-
-
-=== BlueXPアカウントを追加
-
-BlueXPでアカウントをまだお持ちでない場合は、アカウントを追加する必要があります。を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-netapp-accounts.html["アカウントの追加方法に関するBlueXPドキュメント"^]。
 
 
 
@@ -94,7 +94,7 @@ TIP: オンプレミスからオンプレミスへの移行には、BlueXPのオ
 ** インストールされているBlueXP Connectorから、BlueXPディザスタリカバリで管理するすべてのVMwareクラスタにアクセスできる必要があります。
 
 
-* BlueXPディザスタリカバリで管理するすべてのONTAPアレイを、BlueXPディザスタリカバリの管理に使用するBlueXPワークスペース内の作業環境に追加する必要があります。
+* BlueXP  ディザスタリカバリで管理するすべてのONTAPアレイを、BlueXP  ディザスタリカバリの管理に使用するBlueXP  プロジェクト内の作業環境に追加する必要があります。
 +
 を参照して https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAP クラスタを検出"^]
 
