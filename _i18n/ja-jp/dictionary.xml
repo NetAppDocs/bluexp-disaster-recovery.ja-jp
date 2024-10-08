@@ -185,8 +185,6 @@
   <block id="942a771213d3b59ba27960f61d97b1ac" category="inline-link"><block ref="942a771213d3b59ba27960f61d97b1ac" category="inline-link-rx"></block></block>
   <block id="6a203fd0003e1b252502653eca1a6c02" category="paragraph">* BlueXPのディザスタリカバリURLとは？*
 URLの場合は、ブラウザで次のように入力します。<block ref="6db7b50bf17b27cbede9f07c4fbc973e" category="inline-link-rx"></block> をクリックしてBlueXPコンソールにアクセスします。</block>
-  <block id="1510b9c9694467bb88815a127c906757" category="paragraph">* BlueXPを使用するには、どうすればよいですか？*
-BlueXPのディザスタリカバリを有効にする必要はありません。ディザスタリカバリオプションは、BlueXPの左側のナビゲーションに自動的に表示されます。</block>
   <block id="89f19c30a67510e64ff4f90eede35bff" category="summary">BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してセットアップします。</block>
   <block id="7b6761de8fbe584a66fa50ad6fa3dd19" category="doc">BlueXPディザスタリカバリのセットアップ</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
@@ -690,7 +688,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">BlueXPディザスタリカバリサービス入門ラボオンデマンド</block>
-  <block id="439704735653d5132727cb9c21bc97c8" category="paragraph">BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。当初は、BlueXPディザスタリカバリサービスを使用すると、オンプレミスのNFSベースのワークロードと、NetAppストレージを実行するVMware vSphere仮想マシンファイルシステム（VMFS）データストアを次のいずれかで保護できます。</block>
   <block id="d5368fed025a9875e8a424b419508bef" category="admonition">このリリースでは、オンプレミスのVMwareワークロードからVMware vSphere Virtual Machine File System（VMFS）データストアを使用するオンプレミスのVMware環境へのディザスタリカバリがテクノロジプレビューでサポートされます。NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。</block>
   <block id="0dc4a26bb39078be4974284a72d54f64" category="paragraph">BlueXPディザスタリカバリサービスは、NetAppライセンスがあれば使用することも、Amazon Web Servicesを通じてサブスクリプションベースの年間契約で利用することもできます。</block>
   <block id="66a7384fcc7d6c71e8da6dc152b82593" category="admonition">一部のリリースにはテクノロジプレビューが含まれています。NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。最新のテクノロジプレビューの詳細については、を参照してください <block ref="431ce6b88c6d5399033553c1891688aa" category="inline-link-macro-rx"></block> 。</block>
@@ -709,7 +706,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="f5091f12fda6dcb8b160780e3352bbd5" category="list-text">BlueXPディザスタリカバリで管理するすべてのVMwareクラスタがONTAPボリュームでホストされている必要があります。</block>
   <block id="a103c229873d833279c49def9ebe9fc3" category="list-text">BlueXPのディザスタリカバリで管理するすべてのVMwareデータストアでは、次のいずれかのプロトコルを使用する必要があります。</block>
   <block id="1d1a594959ec615f56516f5d0f5e8ddb" category="list-text">NFS</block>
-  <block id="47e0fa80d3fa1add35dfaada74c496e9" category="list-text">iSCSIプロトコルを使用するVMFS（現在テクノロジプレビュー中）</block>
   <block id="b48bd09b37dbbe2233bba9ccc258e634" category="list-text">VMware Cloud SDDCを使用している場合は、次の前提条件が適用されます。</block>
   <block id="7fc6ed2196514db323edb5f8ee464448" category="inline-link">ドキュメント『Using VMware Cloud Foundations with AWS FSx for NetApp ONTAP』</block>
   <block id="f2fc5fa158eeee58eae505a362a866b3" category="list-text">VMware Cloud Consoleで、管理者とNSXクラウド管理者のサービスロールを使用します。また、組織ロールに組織オーナーを使用します。を参照してください<block ref="87df9e87408172a2291d5738f3ae5f4f" category="inline-link-rx"></block>。</block>
@@ -967,4 +963,7 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">Cloud Volumes ONTAPで次の主要なワークフローを有効にするには、NetAppサポートサイトのクレデンシャルをBlueXP  組織に関連付ける必要があります。</block>
   <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">NSSクレデンシャルとBlueXP  組織の関連付けは、BlueXP  ユーザログインに関連付けられたNSSアカウントとは異なります。</block>
   <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">これらのNSSクレデンシャルは、特定のBlueXP  組織IDに関連付けられています。BlueXP  組織に属するユーザは、*[サポート]&gt;[NSS管理]*からこれらのクレデンシャルにアクセスできます。</block>
+  <block id="d4f0533448e4984685ae016d36dba83a" category="paragraph">* BlueXP  ディザスタリカバリにはどのようにアクセスしていますか*BlueXPのディザスタリカバリを有効にする必要はありません。ディザスタリカバリオプションは、BlueXPの左側のナビゲーションに自動的に表示されます。</block>
+  <block id="bc483ba843f73e5d609495aa94d035b9" category="paragraph">BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。BlueXP  ディザスタリカバリサービスを使用すると、NetAppストレージを実行するiSCSIおよびFC用のオンプレミスのNFSベースのワークロードとVMware vSphere Virtual Machine File System（VMFS）データストアを次のいずれかで保護できます。</block>
+  <block id="412e382a6d6d3bd8a3bfd94b856f9f4e" category="list-text">iSCSIプロトコルまたはFCプロトコルを使用するVMFS</block>
 </blocks>
