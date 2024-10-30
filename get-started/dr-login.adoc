@@ -27,7 +27,7 @@ NetApp BlueXPのログインページが表示されます。
 このサービスに初めてログインする場合は、ランディングページが表示され、無料トライアルにサインアップできます。
 
 +
-image:draas-landing3-free-trial.png["BlueXPディザスタリカバリのランディングページのスクリーンショット"]
+image:draas-landing4-free-trial.png["BlueXPディザスタリカバリのランディングページのスクリーンショット"]
 
 +
 それ以外の場合は、BlueXPディザスタリカバリのダッシュボードが表示されます。

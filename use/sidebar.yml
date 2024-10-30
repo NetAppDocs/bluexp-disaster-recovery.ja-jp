@@ -22,3 +22,5 @@ entries:
   url: "/use/manage.html"
 - title: ディザスタリカバリジョブを監視する
   url: "/use/monitor-jobs.html"
+- title: ディザスタリカバリレポートの作成
+  url: "/use/reports.html"

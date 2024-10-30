@@ -157,7 +157,6 @@
   <block id="72c3ee7ae5024979fb220d6277567140" category="inline-image-macro">BlueXPディザスタリカバリサービスの[Actions]メニューアイコン</block>
   <block id="4d77d74745ed3cdc84af5ddf8b6f4a2e" category="list-text">BlueXPディザスタリカバリで*[Sites]*を選択し、[vCenter]行で*[Actions]*オプションを選択します。 <block ref="e282bbe0f95615c6416d0f1c92efdcdd" category="inline-image-macro-rx" type="image"></block>をクリックし、[Actions]メニューから*[Refresh]*を選択して、BlueXPディザスタリカバリでのFSx検出を更新します。</block>
   <block id="97f038e2f4284e7bd85ce8986351f37a" category="paragraph">これにより、データストア、その仮想マシン、およびデスティネーション関係が再検出されます。</block>
-  <block id="490414e0366b091220802d406e52c076" category="doc">新機能</block>
   <block id="ca8395d0f02816c74d48e7e263466096" category="section-title">2023年8月1日</block>
   <block id="08e4438284e48b3ad77e9a0d04037ea7" category="inline-link-macro">レプリケートするアプリケーションの選択とリソースグループの割り当て</block>
   <block id="847c11e2bf47a2c63ba2cf24f4cfa928" category="inline-link-macro">アプリケーションを別のサイトにレプリケート</block>
@@ -186,7 +185,6 @@
   <block id="6a203fd0003e1b252502653eca1a6c02" category="paragraph">* BlueXPのディザスタリカバリURLとは？*
 URLの場合は、ブラウザで次のように入力します。<block ref="6db7b50bf17b27cbede9f07c4fbc973e" category="inline-link-rx"></block> をクリックしてBlueXPコンソールにアクセスします。</block>
   <block id="89f19c30a67510e64ff4f90eede35bff" category="summary">BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してセットアップします。</block>
-  <block id="7b6761de8fbe584a66fa50ad6fa3dd19" category="doc">BlueXPディザスタリカバリのセットアップ</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="12e2dc5fcef627451410583ca25001f8" category="list-text">レビュー <block ref="92ab8b24e9e19913fbd62d38b5e3558b" category="inline-link-macro-rx"></block> 環境の準備が整っていることを確認します。</block>
   <block id="5ca24c4b6c87e148e5e8719ec8dd13ee" category="list-text">VMware Cloud on AWSを導入して設定</block>
@@ -328,19 +326,10 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="466ea193e548e9ef8d853f2da4829a3e" category="list-text">レプリケーションプランの名前を作成します。</block>
   <block id="ad05d9be76290e8ea731306ed4911c41" category="list-text">ソースvCenterとターゲットvCenterのリストから、ソースvCenterとターゲットvCenterを選択します。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">「 * 次へ * 」を選択します。</block>
-  <block id="e8116ba94e27bac1f555b5e19aa9832f" category="admonition">各リソースグループには、1つ以上の仮想マシンを含めることができます。ここで指定した順序に基づいて、仮想マシンの電源がオンになります。</block>
-  <block id="c34daecc192d502d04e27e0d11bc8acd" category="list-text">[Applications]ページの左側で、複製して選択したグループに割り当てる仮想マシンを選択します。</block>
-  <block id="deea58ba2c2a385f7b93c144b2d694e1" category="paragraph">選択した仮想マシンが自動的にグループ1に追加され、新しいグループ2が開始されます。仮想マシンを最後のグループに追加するたびに、別のグループが追加されます。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">[Add replication plan &amp; gt; Applications to replicate]ページのスクリーンショット</block>
   <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">必要に応じて、次のいずれかを実行します。</block>
-  <block id="20b76027356378e48612a50cf35cca8a" category="list-text">グループから仮想マシンを削除するには、* X *を選択します。</block>
-  <block id="d2423d65cf9bb1427253eab5f5a436be" category="list-text">仮想マシンを別のグループに移動するには、その仮想マシンを新しいグループにドラッグアンドドロップします。</block>
   <block id="84ffccfa6f5368695a086e51333e6494" category="list-text">複数のリソースグループがある場合は、グループのシーケンスが発生する操作シーケンスと一致していることを確認してください。</block>
-  <block id="878f58d3a7fbed70b83e44701e315e44" category="paragraph">グループ内の各仮想マシンは、ここでの順序に基づいて順番に起動されます。2つのグループが並行して開始されます。</block>
-  <block id="6dbf7ac6599ff616bd2b944224978963" category="list-text">必要に応じて、*[編集]*アイコンをクリックしてグループの名前を変更します。</block>
   <block id="94884044f731a17cf6d266f3acc71d30" category="section-title">ソースリソースをターゲットにマッピング</block>
-  <block id="3fcacb0423fe728907bf295cee2250ca" category="paragraph">リソースマッピングステップで、ソース環境のリソースをターゲットにマッピングする方法を指定します。</block>
-  <block id="cb095b2d36014cd7a8ae2363f8694981" category="admonition">SnapMirrorはボリュームレベルです。そのため、すべての仮想マシンがレプリケーションターゲットにレプリケートされます。データストアに含まれているすべての仮想マシンを選択してください。選択されていない場合は、レプリケーションプランの一部である仮想マシンのみが処理されます。</block>
   <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">[Resource mapping]ページで、フェールオーバー操作とテスト操作の両方に同じマッピングを使用するには、チェックボックスをオンにします。</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">仮想マシン</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">データストア</block>
@@ -352,8 +341,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="061664c141fcaa8d32bae574640392e5" category="list-text">*Replicate*:繰り返しのレプリケーションでは'ソース・コピーからの変更を反映して'ターゲット・コピーを最新の状態に維持します</block>
   <block id="a807f56da9b717d84bb632ebfde49e6e" category="inline-image-macro">[Add replication plan &amp; gt; Recurrence]のスクリーンショット</block>
   <block id="b6b37c618f509f4cd72b3116ce0f0a69" category="paragraph"><block ref="b647bf0b099c797a2c2c6a3a40882045" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e0623856c2a2db53c0560ff5b20115df" category="section-title">レプリケーション計画の確認</block>
-  <block id="a879d1d71a73bdb6127bcb571303177d" category="paragraph">最後に、レプリケーション計画を確認します。</block>
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">レプリケーションプランは、あとで無効にしたり削除したりできます。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">[プランの追加]*を選択します。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">計画が計画のリストに追加されます。</block>
@@ -452,7 +439,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">災害が発生した場合は、プライマリオンプレミスVMwareサイトをオンデマンドで別のオンプレミスVMwareサイトにフェイルオーバーするか、FSx for NetApp ONTAPを使用してVMware Cloud on AWSにフェイルオーバーします。</block>
   <block id="0e4406e2f319d2b24ab99a69613fbf47" category="list-text">レプリケーション計画でキャプチャされた情報に基づいて、データストアが作成され、VMwareまたはVMCのクラスタまたはホストにマウントされます。</block>
   <block id="48b7a229446624a8bba6bae8e801d0ab" category="list-text">左上のブレッドクラムで[Replication plans]を選択して、計画のリストに戻ります。</block>
-  <block id="2ebea8fe68e78bc0ff591a0dfab2033d" category="list-text">プランでアクションを実行するには、レプリケーションプランのリストから* Actions *オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  をクリックし、*スケジュールの編集*、*テストフェイルオーバー*、*フェイルオーバー*、*フェイルバック*、*無効*などのオプションを選択します。 *有効*または*削除*。</block>
   <block id="8fcc9f88ea38569445e7602709323556" category="summary">NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。</block>
   <block id="6c7035d9b69fd476492cd72377f29453" category="paragraph">BlueXPディザスタリカバリダッシュボードを使用して、ディザスタリカバリサイトとレプリケーション計画の健全性を確認できます。健全なサイトとプラン、切断されているサイト、またはデグレード状態のサイトとプランを簡単に確認できます。</block>
   <block id="deddd86c6a5897bccccb85b43b4b28da" category="list-text">BlueXPディザスタリカバリのトップメニューで、*[ダッシュボード]*を選択します。</block>
@@ -516,9 +502,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="17c3c89f25f7684516a883f30f10b747" category="section-title">2024年1月11日</block>
   <block id="77a292951e2cd7ee0d1bc7d3db0020ec" category="list-text">このリリースでは、ダッシュボードから他のページの情報にすばやくアクセスできます。</block>
   <block id="0f354958858456370fa7b64c5f2a913c" category="paragraph"><block ref="929628a652068d14da23775529f8803b" category="inline-link-rx"></block>。</block>
-  <block id="2c1f345ff21d3c1b339c0919d325adfc" category="paragraph">次の手順では、必要な仮想マシンを機能リソースグループにグループ化します。リソースグループを使用すると、依存する仮想マシンのセットを、要件を満たす論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
-  <block id="dc304d3d6524acb70870c5c55a21ebb9" category="list-text">* DHCP *：このオプションを選択した場合は、VMのクレデンシャルのみを指定します。</block>
-  <block id="13c796f8f63d49fc45ecbb42db3b6868" category="list-text">*静的IP *：ソースVMと同じ情報または異なる情報を選択できます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、VMのIPアドレス、サブネットマスク、DNS、およびゲートウェイ情報を指定できます。VMゲストOSのクレデンシャルは、グローバルレベルまたは各VMレベルで指定する必要があります。</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">レプリケーションプランの追加&amp;gt;リソースマッピング&amp;gt;仮想マシンを示すスクリーンショット</block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">これは、大規模な環境を小規模なターゲットクラスタにリカバリする場合や、1対1の物理VMwareインフラストラクチャをプロビジョニングせずにディザスタリカバリテストを実行する場合に非常に役立ちます。</block>
   <block id="4c77d41c045300d2cacb091f19b6d9a5" category="list-text">*整合グループ*：レプリケーション計画を作成する際に、異なるボリュームや異なるSVMのVMを含めることができます。BlueXPディザスタリカバリで整合グループSnapshotが作成されます。</block>
@@ -530,11 +513,8 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetAppでは、サポートとライセンスに固有の認証サービスのIDプロバイダとしてMicrosoftエントラIDを使用します。</block>
   <block id="7fda53563ff8ebfe855a3a79f568f396" category="summary">BlueXPディザスタリカバリでは、無償トライアル、従量課金制サブスクリプション、お客様所有のライセンスを使用するなど、さまざまなライセンスプランを使用できます。</block>
   <block id="a7193edb26a4b1bca4b7b82254e6dd4b" category="doc">BlueXPディザスタリカバリのライセンスを設定</block>
-  <block id="06cda8527230b64a09b1c568fbd2a80e" category="list-text">90日間の無償トライアルにサインアップしてください。</block>
   <block id="9a0514da0283645471837a7dd9cdd00a" category="list-text">ワークロードやレプリケーション計画などのリソースを表示します。</block>
   <block id="1868701c43ed8ccfa46dc8fe93f4252f" category="list-text">ワークロードやレプリケーション計画などのリソースを削除します。</block>
-  <block id="d687b9bb1fc0385150b07b1a9aaae7d3" category="section-title">90日間の無償トライアルでお試しください</block>
-  <block id="1863514dc4e2f913207e4b5eacc1a0a8" category="paragraph">BlueXPのディザスタリカバリは、90日間の無償トライアルでお試しいただけます。</block>
   <block id="88c474e49a0cbbc7ef17d052040cd008" category="admonition">試用期間中は容量制限は適用されません。</block>
   <block id="f37d436fdc8600ce24709a8f4435ec79" category="paragraph">試用期間中は、すべての機能を利用できます。</block>
   <block id="39c87728ab108f5ab751a40319f03bc8" category="list-text">にアクセスします<block ref="4d9841a08a6f1c082f5ba73c5d87fcc1" category="inline-link-rx"></block>。</block>
@@ -571,13 +551,10 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="3a46f989d3db91bd2030de32947cd608" category="section-title">VMwareにBlueXPディザスタリカバリを使用するメリット</block>
   <block id="cce8630c08ede8fc88504929ae963b37" category="paragraph">BlueXPのディザスタリカバリには、次のようなメリットがあります。</block>
   <block id="208ae1835c38717d827d78f2184f1eb8" category="paragraph">BlueXPディザスタリカバリの試用版を使用した場合、NetAppから料金が請求されることはありません。</block>
-  <block id="81a21047304ceb1b7bc762627cb29998" category="section-title">90日間の無償トライアル</block>
-  <block id="c26aa1f4734bee87e527e8b6fd399ff1" category="paragraph">BlueXPのディザスタリカバリは、90日間の無償トライアルでお試しいただけます。</block>
   <block id="49cc6e59fe89d60aa8a69d475908ad17" category="section-title">BlueXPディザスタリカバリの仕組み</block>
   <block id="53bb415fa5ffe0063bff5bf128aceea8" category="paragraph">BlueXPのディザスタリカバリでは、オンプレミスサイトからAmazon FSx for ONTAP、または別のオンプレミスサイトにレプリケートされたワークロードをリカバリできます。SnapMirrorレベルからのリカバリ、仮想マシンのVirtual Machine Cloud（VMC）への登録、およびVMwareのネットワーク仮想化およびセキュリティプラットフォームであるNSX-T上のネットワークマッピングを自動化します。この機能は、すべてのVirtual Machine Cloud環境に含まれています。</block>
   <block id="79121a92993faaa181b6eb7b104f73ea" category="paragraph">BlueXPのディザスタリカバリには、ONTAP SnapMirrorテクノロジが使用されています。このテクノロジは、効率性に優れたレプリケーションを提供し、ONTAPの永久増分バックアップによるSnapshotの効率性を維持します。SnapMirrorレプリケーションにより、アプリケーションと整合性のあるSnapshotコピーが常に同期され、フェイルオーバー後すぐにデータを使用できるようになります。</block>
   <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="section-title">ライセンスをセットアップする</block>
-  <block id="64f8f55f5eb85f10374cb9251379aa7d" category="paragraph">BlueXPディザスタリカバリでは、90日間の無償トライアルに登録できます。</block>
   <block id="db9425c5e893fb09212aa796b71ab4ff" category="paragraph"><block ref="db9425c5e893fb09212aa796b71ab4ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9aea41391b3a188365a351addd6cf6fc" category="list-text">既存のコネクタを使用しているBlueXPユーザは、[ディザスタリカバリ]を選択すると、サインアップに関するメッセージが表示されます。</block>
   <block id="cbef5af23561d0ec620e5d275e7c8eb5" category="inline-image-macro">BlueXPディザスタリカバリダッシュボード</block>
@@ -641,12 +618,10 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">お客様所有のライセンスを使用（BYOL）：NetApp営業担当から入手するNetAppライセンスファイル（NLF）です。ライセンスのシリアル番号を使用して、BlueXPデジタルウォレットでBYOLをアクティブ化できます。</block>
   <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">すべてのBlueXPサービスのライセンスは、BlueXPデジタルウォレットサービスで管理されます。BYOLを設定すると、BlueXPのデジタルウォレットでサービスのアクティブなライセンスを確認できます。</block>
   <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">BlueXPディザスタリカバリの料金は、レプリケーション計画のあるVMが1つ以上ある場合にソースサイトでプロビジョニングされたデータストアの容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするまで、サービスの処理が制限されます。</block>
-  <block id="27be91c80d5e97799bb6e73e37370e5d" category="paragraph">ライセンスはいつでも購入でき、90日間の試用期間が終了するまで請求されることはありません。</block>
   <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">保護対象のVMでVMwareツール（またはOpen VMツール）が実行されていることを確認します。</block>
   <block id="af77ac64a97a80925dee7dc916344004" category="list-text">Linuxオペレーティングシステムで実行されているOracleデータベースでは、OracleデータベースSYSDBAロールに対してオペレーティングシステムユーザ認証を有効にする必要があります。</block>
   <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">無償トライアルが終了した後、またはライセンスの有効期限が切れた後も、サービスで次の操作を実行できます。</block>
   <block id="1594f78ebbb281f7b5359eb6d2b89912" category="list-text">試用期間中またはライセンスの下で作成されたすべてのスケジュール済み操作を実行します。</block>
-  <block id="a14b332e4d6b9ee17b484a7fb805179f" category="paragraph">ライセンスはいつでも取得でき、90日間の試用期間が終了するまで請求されることはありません。90日間の試用期間の終了後も継続するには、BYOLライセンスを購入する必要があります。</block>
   <block id="01c014f2e37e5bf6d3ce893bea0197cb" category="list-text">コネクタのセットアップが完了すると、BlueXPディザスタリカバリランディングページで、コネクタを追加するボタンが無償トライアルを開始するためのボタンに変わります。[Start free trial]*を選択します。</block>
   <block id="b9ef842238fa8d82db6b7559f33adc6c" category="paragraph">試用版の終了後は、NetApp営業担当からライセンスを購入できます。</block>
   <block id="9bdfa376bcb2fa79aff92c39d0b24fcd" category="list-text">ライセンスを取得したら、BlueXPディザスタリカバリに戻ります。右上の*支払い方法を表示*オプションを選択します。または、無料トライアルの有効期限が近づいているというメッセージで、*[ライセンスの登録または購入]*を選択します。</block>
@@ -662,7 +637,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="b7005516f0c1f875afae2146a2fb3617" category="list-text">*ライセンスの更新*： BlueXPディザスタリカバリでは、90日間の無償トライアルに登録するか、Amazon Marketplaceで従量課金制（PAYGO）サブスクリプションを購入するか、NetApp営業担当またはNetApp Support Site（NSS）から取得したNetAppライセンスファイル（NLF）であるお客様所有のライセンスを使用（BYOL）することができます。</block>
   <block id="eb9506998f4dca4bcb82fe962448b79b" category="paragraph">BlueXPディザスタリカバリ用のライセンスのセットアップの詳細については、を参照してください。 <block ref="eaa54a57026891d12cbf928afd176564" category="inline-link-macro-rx"></block>。</block>
   <block id="8deb19747c06e3643bab5716cb645635" category="paragraph">このサービスに初めてログインする場合は、ランディングページが表示され、無料トライアルにサインアップできます。</block>
-  <block id="ac3c6e071ee2b6acd7920433ae08c475" category="paragraph"><block ref="ac3c6e071ee2b6acd7920433ae08c475" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd1ef091f49695b9c14e0e34da748ab7" category="list-text">BlueXPコネクタをまだ追加していない場合は、コネクタを追加する必要があります。コネクタを追加するには、を参照してください。<block ref="d6df7dcc2fc3105e10967a9194806ce5" category="inline-link-rx"></block>。</block>
   <block id="e2066cd1f4f96874fad4da9c48f8715b" category="list-text">すでにサービスを使用している場合は、[ディザスタリカバリ]を選択すると、ダッシュボードが表示されます。</block>
   <block id="7cc1b1d71d565ea421a16ed9422fe6c2" category="list-text">Amazon Web Services（AWS）Marketplaceで従量課金制（PAYGO）サブスクリプションを購入</block>
@@ -684,7 +658,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="595da0c0edf936a84fa3d6a69bbbb4e5" category="paragraph"><block ref="595da0c0edf936a84fa3d6a69bbbb4e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5d50de45dd75ac0ea74e9c427687d113" category="list-text">BlueXPデジタルウォレットで、*[データサービスライセンス]*タブで*[ライセンスの追加]*を選択します。</block>
   <block id="7744384d0e7b78819bc53ca36ef36369" category="list-text">[データサービスライセンス]*タブを選択し、更新するサービスシリアル番号の*[アクション...]*アイコンを選択して、*[ライセンスの更新]*を選択します。</block>
-  <block id="577219605d1e6146de9dc5b1e218ce65" category="paragraph">90日間の試用期間の終了後も継続するには、クラウドプロバイダから従量課金制（PAYGO）サブスクリプションを取得するか、NetAppからBYOLライセンスを購入する必要があります。</block>
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">BlueXPディザスタリカバリサービス入門ラボオンデマンド</block>
@@ -760,10 +733,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="ef30511465fed8e5a5b5c3a9aae4795a" category="list-text">こちらとこちらの手順に従って、<block ref="551566e1b64bc66251dbfe6d546a4bef" category="inline-link-rx"></block><block ref="594efabf60d7236eeecf072ead1cf02b" category="inline-link-rx"></block> FSx for NetApp ONTAPのプロビジョニングと設定を行います。</block>
   <block id="e65c19fddc907d69ae5172a0084b710b" category="list-text">作業環境にAmazon FSx for NetApp ONTAPを追加し、FSx for ONTAPのAWSクレデンシャルを追加します。</block>
   <block id="95e1164f78d2b6799a19e13081137cbd" category="list-text">VMwareアカウントを使用してSDDCをプロビジョニングします。SDDCがFSx for ONTAPに接続されていることを確認します。</block>
-  <block id="23b186d0b29dfdb5e0e175ad6de4147e" category="paragraph">次のいずれかを購入できます。</block>
-  <block id="e5cadf619f38981c2b6059a9e6577ec3" category="list-text">AWS Marketplaceの従量課金制（PAYGO）サブスクリプション</block>
-  <block id="90d5e71753c6b7ee358df340daa5fe4c" category="list-text">お客様所有のライセンスを使用（BYOL）。NetAppライセンスファイル（NLF）です。</block>
-  <block id="8e794011cc1f1c5c04b70473672767c4" category="paragraph">を参照してください <block ref="0ba47d7cccc1dc28f47670d48274167c" category="inline-link-macro-rx"></block>。</block>
   <block id="b63b041aeb212763ffab8f16313f009d" category="inline-link-macro">BlueXPディザスタリカバリに関する通知</block>
   <block id="54ad6e999d021c5f10d0b688267e8d17" category="paragraph"><block ref="54ad6e999d021c5f10d0b688267e8d17" category="inline-link-macro-rx"></block></block>
   <block id="30bc3f8ec3b5e171c9e8c063eec0ebce" category="summary">BlueXPのディザスタリカバリでvCenterアカウントのサービス（データストアの登録と登録解除、VMの起動と停止、仮想マシン（VM）の再設定など）を実行するには、vCenterアカウントに最小限のvCenter権限が必要です。次の表に、BlueXPディザスタリカバリをvCenterクラスタと連携させるために必要なすべての権限を示します。</block>
@@ -829,11 +798,9 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="66dacd6d538323484187ed3f8c9ef650" category="list-text">*フェイルオーバーテストスケジュール*：フェイルオーバーテストを編集し、フェイルオーバーテストの日次、週次、月次スケジュールを設定できるようになりました。</block>
   <block id="42b40c3ce2e25adae8327795c655116d" category="list-text">*前提条件情報の更新*：BlueXPディザスタリカバリの前提条件情報が更新されました。</block>
   <block id="8a62eb7f743049ce2523fe7eb67fb48f" category="paragraph">を参照してください<block ref="dfd63f4ad4adb15a66b44e212e2488b7" category="inline-link-rx"></block>。</block>
-  <block id="2e57ab34890abd985ae5cff7c16db6f6" category="list-text">[Applications]ページの左側で、必要に応じてデータストアを検索します。</block>
   <block id="8020af4fa709c3156161baa6bf00e88a" category="inline-image-macro">レプリケーションプランの[リソースマッピング]タブ</block>
   <block id="210dfd955522333f74e13d0843ab02ff" category="paragraph">このセクションは、選択内容に応じて有効または無効にすることができます。</block>
   <block id="30cb4638cdd1e514eba27473e745afb4" category="paragraph">[Test mappings]タブで、[Virtual Machines]と[Datastores]のマッピングが無効になります。</block>
-  <block id="ebcc6bc6ad0c177b30c661fc23c0f951" category="list-text">[Plan Details]、[Failover Mapping]、[VMs]の各タブで情報を確認します。</block>
   <block id="711c35de4b0430b043159f5d91f6752f" category="inline-image-macro">フェイルオーバーページ</block>
   <block id="418818fc05931805b481fbdf48b3a075" category="list-text">[フェイルオーバー]ページで、Snapshotを今すぐ開始するか、リカバリ元のデータストアのSnapshotを選択します。デフォルトは最新です。</block>
   <block id="51d5fa513676d68f3e574487650b021d" category="paragraph">フェイルオーバーが発生する前に、現在のソースのスナップショットが作成され、現在のデスティネーションにレプリケートされます。</block>
@@ -862,7 +829,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="3d3e2652059a9417e7a9b8801e83b99d" category="list-text">レプリケーション計画を選択し、*[フェイルオーバーマッピング]*タブをクリックし、*[編集]*鉛筆アイコンをクリックします。</block>
   <block id="f05351f8a712da4ff1e724d342c4670b" category="list-text">[Datastores]*の矢印をクリックして展開します。</block>
   <block id="ee9e0fb0a09a468f33fa6f2dabc4ff49" category="inline-image-macro">[Edit failover mappings]ページ</block>
-  <block id="7cbc4647aa042fa4dbc711ee9aa94612" category="paragraph"><block ref="7cbc4647aa042fa4dbc711ee9aa94612" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0d59b78804ed5feec9399254629a60f1" category="list-text">レプリケーション計画の保持数の値をメモします。これらの手順が完了したら、この元の値を元に戻す必要があります。</block>
   <block id="e9c686cd7f0fc0f9a24375142cf2639b" category="list-text">カウントを1に減らします。</block>
   <block id="94eec0eecc897e0613b4dca05f1db3b5" category="list-text">オンデマンドのスナップショットを開始します。これを行うには、[Replication plan]ページでプランを選択し、[Actions]アイコンをクリックして*[Take snapshot now]*を選択します。</block>
@@ -885,20 +851,14 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="fa463eaf10ea5f2243e402c5c574ce96" category="list-text">[アクション]列で、*[ジョブのキャンセル]*を選択します。</block>
   <block id="348a99edae23b1f4e21c5ce75d209a50" category="paragraph">詳細を確認するには、それぞれの下の*[表示]*リンクを選択します。</block>
   <block id="116910f73246efc93a920caaa2ef1743" category="list-text">BlueXP  ディザスタリカバリのトップメニューで、*[レプリケーションプラン]*を選択し、*[追加]*を選択します。または、サービスの使用を開始したばかりの場合は、ダッシュボードで*[レプリケーションプランの追加]*を選択します。</block>
-  <block id="eb77d8ecba8e316a4e630e7bf375a3a8" category="paragraph"><block ref="5e75e554f1dcac67727f8f9c18b64267" category="inline-image-macro-rx" type="image"></block></block>
   <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">鉛筆のアイコン</block>
-  <block id="5b7027891924f15fc8ce9c7972c44183" category="list-text">グループを変更するには、グループ*編集*アイコンをクリックします <block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block> 。</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">[Failover mappings]タブで、各リソースの右側にある下向き矢印を選択し、それぞれのリソースをマッピングします。</block>
   <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*リソースを計算*：*リソースを計算*の横にある下向き矢印を選択します。</block>
-  <block id="5bfe17be68350c18dc777bcfabdd7a8f" category="list-text">*仮想ネットワーク*：フェイルオーバーマッピングタブで、*仮想ネットワーク*の横にある下向き矢印を選択します。ソース仮想LANとターゲットセグメントを入力または選択します。</block>
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*仮想マシン*：[フェイルオーバーマッピング]タブで、*[仮想マシン]*の横にある下向き矢印を選択します。</block>
   <block id="909f84e264f0200a692127b28fbdbaaf" category="paragraph">適切なセグメントへのネットワークマッピングを選択します。セグメントはすでにプロビジョニングされているので、仮想マシンをマッピングする適切なセグメントを選択してください。</block>
   <block id="298abc17ab4bb709de80b68dc38dde2a" category="list-text">* IPアドレスタイプ*：レプリケーション計画の仮想マシンセクションでソースとターゲットの場所間のネットワークをマッピングする場合、BlueXP  ディザスタリカバリにはDHCPまたは静的IPの2つのオプションがあります。静的IPの場合は、サブネット、ゲートウェイ、およびDNSサーバを設定します。さらに、仮想マシンのクレデンシャルを入力します。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3512b090e0a9611bcc510311033bd346" category="list-text">*ソースVMのCPUとRAM *：[仮想マシンの詳細]で、必要に応じてVMのCPUとRAMのパラメータのサイズを変更できます。</block>
-  <block id="f11e7e84949ffa34e841d9d0b17d1d5d" category="list-text">*起動遅延*：リソースグループ全体で選択したすべての仮想マシンの起動順序を変更できます。デフォルトでは、リソースグループの選択時に選択された起動順序が使用されますが、この段階で変更を加えることができます。このフィールドを使用すると、起動アクションの遅延を分単位で調整できます。</block>
-  <block id="c9d8e0d238ab275582f95ccf81088af0" category="list-text">*アプリケーションと整合性のあるレプリカを作成*：アプリケーションと整合性のあるSnapshotコピーを作成するかどうかを指定します。サービスはアプリケーションを休止し、Snapshotを作成してアプリケーションの整合性のある状態を取得します。</block>
   <block id="453e68e2eb0de34242ac9895a818d82a" category="list-text">*データストア*：[フェイルオーバーマッピング]タブで、*[データストア]*の横にある下矢印を選択します。選択した仮想マシンに基づいて、データストアマッピングが自動的に選択されます。</block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保持数*：保持するSnapshotの数を入力します。</block>
   <block id="b23c862689b973964a4b79af3d87b2de" category="list-text">*ソースとターゲットのデータストア*：ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアを選択できます。SnapMirror関係のないボリュームを選択した場合は、作業環境とそのピアSVMを選択して作成できます。</block>
@@ -919,33 +879,9 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="cf1967c6d778937fae37b9e43582b1b6" category="list-text">BlueXP  ディザスタリカバリでは、各ONTAPでサポートされるLUNは1つだけです。ボリュームに複数のLUNを含めることはできません。</block>
   <block id="f3a37c3560d0027bc0f49abfab4ab0e3" category="list-text">レプリケーション計画については、デスティネーションONTAPボリュームで、保護対象VMをホストしているソースONTAPボリュームと同じプロトコルを使用する必要があります。たとえば、ソースでFCプロトコルを使用している場合は、デスティネーションでもFCを使用する必要があります。</block>
   <block id="3baff38a392d31950fc8d4d62ea2adc0" category="list-text">[vCenter Server]を選択します。</block>
-  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">レプリケートするVMを選択し、グループを割り当てます。</block>
   <block id="8e635b1aadad234871ba0e012309361f" category="list-text">繰り返し発生する問題を特定し、ゲストホストスクリプトを実行し、ブート順序を設定して、目標復旧時点を選択します。</block>
   <block id="1c10305a999dce53cb52dd4f6b8d89ff" category="list-text">計画をレビューします。</block>
   <block id="054b753af44fc4eeee43c9ba6037caaa" category="doc">ディザスタリカバリレポートの作成</block>
-  <block id="282dfbc5927b79619ad76e7f3cbfe3c6" category="paragraph">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去1年間のジョブの詳細が含まれます。カスタムレポートを作成することもできます。</block>
-  <block id="08efd64e87408e4769275d6a11482ddf" category="paragraph">レポートはPDF形式でダウンロードできます。</block>
-  <block id="b775ae7fb34855ffeede56666da9a15c" category="list-text">トップメニューから*[レポート]*を選択します。</block>
-  <block id="44f0d43cd92781ec793d9ba50c2d422e" category="inline-image-macro">[レポート]ページ</block>
-  <block id="a73757daae33bff01ded292e39f3ddaf" category="paragraph"><block ref="a73757daae33bff01ded292e39f3ddaf" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3ccbbafbdd477e2f028bfd34e03f436b" category="list-text">レポートを作成またはダウンロードする前に、*[更新]*オプションをクリックしてデータを更新します。</block>
-  <block id="c83e2a522238e98593e337bd5a7311b5" category="list-text">* Ready-Made *タブからレポートを選択するか、* Custom *タブで独自のレポートを作成します。</block>
-  <block id="70db9063910acf1265d5a518168c69cd" category="list-text">[ダウンロード]*をクリックしてレポートをダウンロードします。</block>
-  <block id="0656a1b7f286656b2fc85b91fe54f0dd" category="section-title">ディザスタリカバリレポートを独自に作成</block>
-  <block id="8eaafa07b3ff6e9aa5dbe62e7cc8c77c" category="paragraph">カスタムレポートを作成して、サイト、レプリケーションプラン、およびデータを指定できます。過去1年間のフェイルオーバーとフェイルバックの概要、各レプリケーションプランのVMの詳細、および過去1年間の各レプリケーションプランのジョブの詳細を含めるかどうかを指定できます。</block>
-  <block id="036f7e4b10d318ae312cdfbb79a225fe" category="list-text">レポートを作成する前に、*[更新]*オプションをクリックしてデータを更新します。</block>
-  <block id="27c38bec0a8c0321e9a3236a8a9d4e76" category="list-text">[カスタム]タブを選択します。</block>
-  <block id="c3c616a8c2970d4d1156559952705700" category="list-text">[追加]*を選択して、新しいレポートを追加します。</block>
-  <block id="402199b58c216d8c9be526288150639b" category="inline-image-macro">[Add Custom Report]ダイアログ</block>
-  <block id="8224443416aacfdb9c8d006355a8489a" category="paragraph"><block ref="8224443416aacfdb9c8d006355a8489a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4d6c444c23609646be63340436709d5f" category="list-text">レポートをカスタマイズするオプションを選択します。</block>
-  <block id="f6068daa29dbb05a7ead1e3b5a48bbee" category="list-text">データ</block>
-  <block id="478109b22c544f0e3bed80d9622cc572" category="list-text">過去1年間のフェイルオーバーとフェイルバックの概要</block>
-  <block id="d9848020098abdd6a6adf5b664e0a02c" category="list-text">各レプリケーションプランのVMの詳細</block>
-  <block id="2eac16c021d7f4e2d342be672e454649" category="list-text">過去1年間の各レプリケーション計画のジョブの詳細</block>
-  <block id="65db0a5300ccaa6099d24aaf16150200" category="paragraph">カスタムレポートがカスタムレポートのリストに表示されます。</block>
-  <block id="b7a41431aa1eee1607db390ac47d2a65" category="admonition">レポートに含まれているすべてのサイトまたは計画を表示するには、レポート名または計画名の右側にある番号をクリックします。</block>
-  <block id="a99780537c030fe162f59c129be8e471" category="list-text">[ダウンロード]*をクリックして、カスタムレポートをダウンロードします。</block>
   <block id="fca90381d84b0e9a022fdeac2012d4ab" category="paragraph">BlueXP  ディザスタリカバリのシリアル番号が必要です。この番号は、SOから確認するか、アカウントチームにお問い合わせください。</block>
   <block id="20efb062527877ed8fd82ba191b8951b" category="paragraph">* BlueXP  デジタルウォレットにライセンスを追加する* BlueXP  ディザスタリカバリライセンスを購入したら、BlueXP  デジタルウォレットにライセンスを追加する必要があります。</block>
   <block id="61b173efd5c260fd3e3f446d9d4b37e7" category="section-title">BlueXPの使用を開始しましょう</block>
@@ -966,4 +902,91 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="d4f0533448e4984685ae016d36dba83a" category="paragraph">* BlueXP  ディザスタリカバリにはどのようにアクセスしていますか*BlueXPのディザスタリカバリを有効にする必要はありません。ディザスタリカバリオプションは、BlueXPの左側のナビゲーションに自動的に表示されます。</block>
   <block id="bc483ba843f73e5d609495aa94d035b9" category="paragraph">BlueXPのディザスタリカバリは、ディザスタリカバリのワークフローを自動化する、クラウドベースのディザスタリカバリサービスです。BlueXP  ディザスタリカバリサービスを使用すると、NetAppストレージを実行するiSCSIおよびFC用のオンプレミスのNFSベースのワークロードとVMware vSphere Virtual Machine File System（VMFS）データストアを次のいずれかで保護できます。</block>
   <block id="412e382a6d6d3bd8a3bfd94b856f9f4e" category="list-text">iSCSIプロトコルまたはFCプロトコルを使用するVMFS</block>
+  <block id="63f202b7fcd80e9277a9e585cd35c7ae" category="list-text">30日間の無償トライアルにサインアップしてください。</block>
+  <block id="5ef05167488611c5bd4ff0f410595ce4" category="section-title">30日間の無償トライアル</block>
+  <block id="fcb9470411433141a8e2828e6e6743a1" category="paragraph">BlueXPのディザスタリカバリは、30日間の無償トライアルでお試しいただけます。</block>
+  <block id="2653bc3ce497c58d463194da74daede0" category="paragraph">30日間の試用期間の終了後も継続するには、クラウドプロバイダから従量課金制（PAYGO）サブスクリプションを取得するか、NetAppからBYOLライセンスを購入する必要があります。</block>
+  <block id="5ea3b0a3d2edc96d5ac390dd8d481432" category="paragraph">ライセンスはいつでも購入でき、30日間の試用期間が終了するまで請求されることはありません。</block>
+  <block id="b22e0a0c145eff4bd34bc6c46894b2a1" category="section-title">30日間の無償トライアルでお試しください</block>
+  <block id="039ed52e082d57c29ee6dcf82a85a0e7" category="paragraph">BlueXPのディザスタリカバリは、30日間の無償トライアルでお試しいただけます。</block>
+  <block id="dd8751ceddb247aced4307ca6fddff51" category="paragraph">試用期間の終了後も継続するには、BYOLライセンスまたはPAYGO AWSサブスクリプションを購入する必要があります。ライセンスはいつでも取得でき、試用期間が終了するまで請求されることはありません。</block>
+  <block id="58e6ab5634cec392e37e4f0d5f8f8db8" category="paragraph"><block ref="58e6ab5634cec392e37e4f0d5f8f8db8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6339437d88aaa794dbaa48ee62597c24" category="doc">BlueXP  ディザスタリカバリの新機能</block>
+  <block id="1992f2f9fa5c0cbd3b61255b9dd507bd" category="section-title">2024年10月30日</block>
+  <block id="51ca1579fc5d4f066bdbf640a4814d76" category="list-text">*レポート*:このリリースでは、環境の分析に役立つレポートを生成およびダウンロードできるようになりました。事前設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去7日間のジョブの詳細が表示されます。</block>
+  <block id="023cf8170104660fc796a64fdad98afa" category="paragraph">を参照してください<block ref="cca93cc3cfc082fe882eefc731706487" category="inline-link-rx"></block>。</block>
+  <block id="978337672bd8dff65bfbecb42cf21f9d" category="list-text">*30日間の無償トライアル*:今回のリリースでは、BlueXP  ディザスタリカバリの30日間無償トライアルにサインアップできるようになりました。以前は、無料トライアルは90日間でした。</block>
+  <block id="1cb57fbf1f1452e87f62dd668ea03759" category="paragraph">を参照してください<block ref="7585b54fad00f1219b8233730153156f" category="inline-link-rx"></block>。</block>
+  <block id="7c63c33c2146d3ce95c7487c1ebbe27e" category="list-text">*レプリケーション計画の無効化と有効化*:以前のリリースには、毎日および毎週のスケジュールをサポートするために必要なフェイルオーバーテストスケジュール構造の更新が含まれていました。この更新では、新しい日次および週次フェイルオーバーテストスケジュールを使用できるように、既存のレプリケーションプランをすべて無効にして再度有効にする必要がありました。これは1回限りの要件です。</block>
+  <block id="128ecd2ba12e92192724c8e3ed360ffc" category="list-text">*フォルダマッピング*：レプリケーション計画を作成してコンピューティングリソースをマッピングするときに、フォルダをマッピングして、データセンター、クラスタ、およびホスト用に指定したフォルダにVMをリカバリできるようになりました。</block>
+  <block id="b7d245c9fa7100d1b04bb8e37530f630" category="list-text">*フェイルオーバー、フェイルバック、およびテストフェイルオーバーに使用できるVMの詳細*：障害が発生し、フェイルオーバーの開始、フェイルバックの実行、またはフェイルオーバーのテストを行う場合、VMの詳細を確認して、再起動しなかったVMを特定できるようになりました。</block>
+  <block id="5b7e4b08598b495e5e802015cfda0817" category="list-text">*順序付けられたブートシーケンスによるVMブート遅延*:レプリケーションプランを作成するときに、プラン内の各VMにブート遅延を設定できるようになりました。これにより、優先順位の高いすべてのVMが実行されてから、以降の優先順位の高いVMが起動されるように、VMの起動順序を設定できます。</block>
+  <block id="6bf75b2b973c4e4b2e97cb286b4a0b22" category="list-text">* VMオペレーティング・システム情報*:レプリケーション・プランを作成すると、プラン内の各VMのオペレーティング・システムが表示されるようになります。これは、VMを1つのリソースグループにグループ化する方法を決定する際に役立ちます。</block>
+  <block id="c216ae779db45238ce5f187a4e9efc0e" category="list-text">* VM名のエイリアス*：レプリケーションプランを作成するときに、ディザスタリカバリSITのVM名にプレフィックスとサフィックスを追加できるようになりました。これにより、プラン内のVMにわかりやすい名前を付けることができます。</block>
+  <block id="0b0c4a58a22974b8eb46383cdfabf354" category="list-text">*古いスナップショットのクリーンアップ*：このリリースでは、指定した保持数を超えて不要になったスナップショットを削除できます。Snapshotの保持数を減らすと、時間の経過とともにSnapshotが蓄積される可能性があります。削除してスペースを解放できるようになりました。これは、オンデマンドで、またはレプリケーションプランを削除するときにいつでも実行できます。</block>
+  <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">サイト、リソースグループ、レプリケーションプラン、データストア、仮想マシンの情報を管理します。</block>
+  <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">詳細については、を参照してください<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
+  <block id="718c1087c683dccc1ea79ed6fa0fd10b" category="list-text">*スナップショットの調整*:このリリースでは、ソースとターゲットの間で同期されていないスナップショットを調整できるようになりました。これは、BlueXP  ディザスタリカバリ以外のターゲットでSnapshotが削除された場合に発生することがあります。サービスは、ソース上のスナップショットを24時間ごとに自動的に削除します。ただし、これはオンデマンドで実行できます。この機能を使用すると、すべてのサイトでSnapshotの整合性を確保できます。</block>
+  <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">詳細については、を参照してください<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
+  <block id="21045c570180940ef07c18bb23d0427d" category="list-text">レプリケートする仮想マシン（VM）を選択し、グループを割り当てます。</block>
+  <block id="220cf85b4d919dc13e0c6317aa2e2b17" category="list-text">ファンアウトアーキテクチャで1対多</block>
+  <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">次の手順では、必要なVMを機能リソースグループにグループ化します。リソースグループを使用すると、一連の依存VMを要件に合わせて論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
+  <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">レプリケーションプランでアプリケーションを選択すると、プラン内の各VMのオペレーティングシステムが表示されます。これは、VMを1つのリソースグループにグループ化する方法を決定する際に役立ちます。</block>
+  <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">各リソースグループには1つ以上のVMを含めることができます。ここで指定した順序に基づいて、VMの電源がオンになります。</block>
+  <block id="236861b5b0d7380c86b58343dda04a42" category="list-text">必要に応じて、[Applications]ページの左側で、VMをデータストアでフィルタします。</block>
+  <block id="794c0f8f77c0af0e4613492580e6d7ab" category="list-text">[Applications]ページの左側で、保護するVMを選択し、選択したグループに割り当てます。</block>
+  <block id="87661bcc452e9da5afed70a3b9cf3e39" category="paragraph">選択したVMが自動的にグループ1に追加され、新しいグループ2が開始されます。VMを最後のグループに追加するたびに、別のグループが追加されます。</block>
+  <block id="81c61db52db9a56a1819f55910f10afa" category="paragraph"><block ref="37056fc036b85c73069e7f1371212abb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">グループ名を変更するには、グループ*[編集]*アイコンをクリックし<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>ます。</block>
+  <block id="a218e8ce5f9879c5e643831c2aa0e36a" category="list-text">グループからVMを削除するには、VMの横にある* X *を選択します。</block>
+  <block id="a63398300e6fbe20dc11a32121bd6bfa" category="list-text">VMを別のグループに移動するには、VMを新しいグループにドラッグアンドドロップします。</block>
+  <block id="86cbb58fb6d06cab306fbf4379c5c40e" category="paragraph">グループ内の各VMは、ここでの順序に基づいて順番に起動されます。</block>
+  <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">リソースマッピングステップで、ソース環境のリソースをターゲットにマッピングする方法を指定します。レプリケーションプランを作成するときに、プラン内のVMごとにブート遅延と順序を設定できます。これにより、VMの起動順序を設定できます。</block>
+  <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*ソースとターゲットのデータセンター*</block>
+  <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*ターゲットクラスタ*</block>
+  <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*ターゲットホスト*（オプション）：クラスタを選択したら、この情報を設定できます。</block>
+  <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">vCenterでクラスタ内の複数のホストを管理するようにDistributed Resource Scheduler（DRS；分散リソーススケジューラ）が設定されている場合は、ホストを選択する必要はありません。ホストを選択すると、BlueXP  ディザスタリカバリによって、選択したホストにすべてのVMが配置されます。</block>
+  <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*ターゲットVMフォルダ*（オプション）：選択したVMを格納する新しいルートフォルダを作成します。</block>
+  <block id="b309697bdbe88c0e59d4f6201fe75801" category="list-text">*仮想ネットワーク*：フェイルオーバーマッピングタブで、*仮想ネットワーク*の横にある下向き矢印を選択します。ソース仮想LANとターゲットセグメントを選択します。</block>
+  <block id="59b1abd434d2a560773c9f089cc8679a" category="paragraph">デフォルト設定から変更を加える場合は、クレデンシャルを入力する必要があります。</block>
+  <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">このセクションには、選択内容によって異なるフィールドが表示される場合があります。</block>
+  <block id="25f9829876988ad5a8f8d2b64655ff19" category="list-text">* DHCP *：VMでDHCPサーバからネットワーク構成情報を取得する場合は、この設定を選択します。このオプションを選択する場合は、VMのクレデンシャルだけを指定します。</block>
+  <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*静的IP *：IP構成情報を手動で指定する場合は、この設定を選択します。ソースVMと同じ情報を選択することも別の情報を選択することもできます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、VMのIPアドレス、サブネットマスク、DNS、およびゲートウェイ情報を指定できます。VMゲストOSのクレデンシャルは、グローバルレベルまたは各VMレベルで指定する必要があります。</block>
+  <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*ターゲットVMのプレフィックスとサフィックス*：仮想マシンの詳細で、必要に応じてVM名にプレフィックスとサフィックスを追加できます。</block>
+  <block id="230dc85a08275a2466390ae799703f92" category="list-text">*ソースVMのCPUとRAM *：仮想マシンの詳細で、必要に応じてVMのCPUとRAMのパラメータのサイズを変更できます。</block>
+  <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="77506f26f3b4a989168bfd6da6435808" category="list-text">*起動順序*：リソースグループ全体で選択したすべての仮想マシンのフェイルオーバー後に起動順序を変更できます。デフォルトでは、リソースグループの選択時に選択された起動順序が使用されますが、この段階で変更を加えることができます。これは、優先順位の高いすべてのVMが実行されてから、優先順位の高いVMが起動されるようにするのに役立ちます。</block>
+  <block id="f4acab8352ab5ba21dd2d6ce32fc9f2a" category="paragraph">起動順序番号は、リソースグループ内でのみ適用されます。あるグループに「2」があり、別のグループに「2」がある場合、最初のグループのVMは順番に起動し、2番目のグループのVMは順番に起動します。</block>
+  <block id="8cad29fca944093d9257fcd28c5a17d5" category="list-text">シーケンシャルブート：各VMに一意の番号を割り当てて、割り当てられた順序でをブートします（例：1、2、3、4、5）。</block>
+  <block id="8043065a3a1affdc7e75a0083d3349b1" category="list-text">同時起動：すべてのVMに同じ番号を割り当てて、同時に起動します（例：1、1、1、2、3、4、4）。</block>
+  <block id="aa54fb3621577f63cab9b508032a995d" category="list-text">*起動遅延*：起動動作の遅延を分単位で調整します。</block>
+  <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">起動順序をデフォルトにリセットするには、* VM設定をデフォルトにリセット*を選択し、どの設定をデフォルトに戻すかを選択します。</block>
+  <block id="739e8f4c4549d6d4a7768c6850d47495" category="list-text">*アプリケーションと整合性のあるレプリカを作成*：アプリケーションと整合性のあるSnapshotコピーを作成するかどうかを指定します。サービスはアプリケーションを休止し、スナップショットを作成してアプリケーションの整合性のある状態を取得します。この機能は、WindowsおよびLinuxで実行されているOracleおよびWindowsで実行されているSQL Serverでサポートされています。</block>
+  <block id="2a4ddf396205dca12c00a6eb7e16285a" category="section-title">レプリケーション計画のレビュー</block>
+  <block id="f7056dbdafc88dd1c68fb0eec6b47aac" category="paragraph">最後に、レプリケーション計画を確認します。</block>
+  <block id="6662bb47d30d156ce5604e1d8adf7ae1" category="list-text">[Plan Details]、[Failover Mapping]、[VMs]の各タブで情報を確認します。</block>
+  <block id="09ae37e8df35c2c5f71701a8407cc944" category="list-text">プランでアクションを実行するには、レプリケーションプランのリストから、プランの右側にある* Actions *オプションを選択し<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>、* Edit schedules *、* Test failover *、* Fail back *、* Migrate *、* Take snapshot now *、* Clean up old snapshots *、* Disable *、* Enable *、または* Delete *などのオプションを選択します。</block>
+  <block id="ed5712a5338a0cddb9b90afe427576e5" category="section-title">スナップショットをオンデマンドで調整</block>
+  <block id="1a9494ac0598f12cb8f1849630ab6e42" category="paragraph">ソースとターゲットの間で同期されていないスナップショットを調整できます。これは、BlueXP  ディザスタリカバリ以外のターゲットでSnapshotが削除された場合に発生することがあります。サービスは、24時間ごとにソース上のスナップショットを自動的に削除します。ただし、これはオンデマンドで実行できます。この機能を使用すると、すべてのサイトでSnapshotの整合性を確保できます。</block>
+  <block id="2cf81891cc338c800419b4136c4ad8f4" category="list-text">レプリケーション計画のリストから、計画の右側にある*[Actions]*オプションを選択し<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>、*[Reconcile snapshots]*を選択します。</block>
+  <block id="08bb8fbd3da836cf3622737c948a4ede" category="list-text">整合情報を確認します。</block>
+  <block id="571a21bebeed1a6e73b024d56871482d" category="list-text">[調整]*を選択します。</block>
+  <block id="2dcc77d52e005461a9eab86fef63c3f9" category="section-title">レプリケーション計画を削除する</block>
+  <block id="0f6c94cfa5509a16442ca505884acf3e" category="paragraph">不要になったレプリケーションプランは削除できます。レプリケーションプランを削除する場合は、プランによって作成されたプライマリスナップショットとセカンダリスナップショットも削除できます。</block>
+  <block id="f9f0145001aafc948bb966c2faef499c" category="list-text">計画の右側にある* Actions *オプションを選択し<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>、* Delete *を選択します。</block>
+  <block id="e28e746e68d02b24d2750571a0776bd0" category="list-text">プライマリSnapshot、セカンダリSnapshot、またはプランで作成されたメタデータのみを削除するかを選択します。</block>
+  <block id="90486e8ee3ac6fe6a17dab32429bf3ee" category="list-text">「delete」と入力して削除を確認します。</block>
+  <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">「 * 削除」を選択します。</block>
+  <block id="835e92deb53775d3ce75f1bab2ff7fe5" category="list-text">レプリケーションプランを選択した状態で、[Actions]メニューを選択し、* Clean up old snapshots（古いSnapshotをクリーンアップ）を選択して、新しい保持数に合わせてターゲットから古いSnapshotを削除します。</block>
+  <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去1年間のジョブの詳細が含まれます。</block>
+  <block id="8c909df77f7b5e2e6b77ff66ee6bd3e7" category="paragraph">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、過去7日間のテストフェイルオーバーの概要、レプリケーションプランの詳細、およびアカウント内のすべてのサイトのジョブの詳細が含まれます。</block>
+  <block id="50772b7f62153c22aff0a022f47038ef" category="paragraph">レポートはHTML形式またはJSON形式でダウンロードできます。</block>
+  <block id="a023ebf9b7aa4bcf4be9bcca1ad988b9" category="admonition">ブラウザのオプションを使用して、HTMLページをPDFに変換できます。</block>
+  <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">ダウンロードリンクは6時間有効です。</block>
+  <block id="5e521694fac83ef0acfcb6f722d2b3cf" category="list-text">BlueXP  の左側のナビゲーションで、*[保護]*&gt;*[ディザスタリカバリ]*&gt;*[レプリケーションプラン]*を選択します。</block>
+  <block id="40f8ac7caaab02ab3b9834517b54c7a4" category="list-text">ページの上部から、*[レポートの作成]*を選択します。</block>
+  <block id="32e3f74f58555c69fe922de2e2c5a1fb" category="list-text">ファイル形式のタイプと過去7日間の期間を選択します。</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">「 * Create * 」を選択します。</block>
+  <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">レポートの表示に数分かかることがあります。</block>
+  <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">レポートをダウンロードするには、*[Download report]*を選択し、管理者の[Download]フォルダで選択します。</block>
 </blocks>

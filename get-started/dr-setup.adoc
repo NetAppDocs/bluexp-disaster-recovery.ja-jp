@@ -59,17 +59,3 @@ VMware Cloud for AWSのSoftware-Defined Data Center（SDDC）をセットアッ�
 https://www.vmware.com/products/vmc-on-aws.html["AWS 上の VMware Cloud"^] AWSエコシステム内のVMwareベースのワークロードにクラウドネイティブなエクスペリエンスを提供します。各VMware Software-Defined Data Center（SDDC）はAmazon Virtual Private Cloud（VPC）で実行され、フルVMwareスタック（vCenter Serverを含む）、NSX-Tソフトウェア定義ネットワーク、vSANソフトウェア定義ストレージ、1つ以上のESXiホストを提供し、ワークロードにコンピューティングリソースとストレージリソースを提供します。
 
 AWSでVMC環境を設定するには、次の手順を実行します https://docs.netapp.com/us-en/netapp-solutions/ehc/aws/aws-setup.html["リンク"^]。パイロットライトクラスタは、ディザスタリカバリにも使用できます。
-
-
-
-== ライセンスをセットアップする
-
-BlueXPディザスタリカバリでは、90日間の無償トライアルに登録できます。
-
-次のいずれかを購入できます。
-
-* AWS Marketplaceの従量課金制（PAYGO）サブスクリプション
-* お客様所有のライセンスを使用（BYOL）。NetAppライセンスファイル（NLF）です。
-
-
-を参照してください link:../get-started/dr-licensing.html["BlueXPディザスタリカバリライセンスをセットアップ"]。

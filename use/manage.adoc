@@ -71,7 +71,7 @@ image:../use/dr-plan-list2.png["レプリケーションプランリスト"]
 
 
 . 左上のブレッドクラムで[Replication plans]を選択して、計画のリストに戻ります。
-. プランでアクションを実行するには、レプリケーションプランのリストから* Actions *オプションを選択します。 image:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"]  をクリックし、*スケジュールの編集*、*テストフェイルオーバー*、*フェイルオーバー*、*フェイルバック*、*無効*などのオプションを選択します。 *有効*または*削除*。
+. プランでアクションを実行するには、レプリケーションプランのリストから、プランの右側にある* Actions *オプションを選択しimage:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"]、* Edit schedules *、* Test failover *、* Fail back *、* Migrate *、* Take snapshot now *、* Clean up old snapshots *、* Disable *、* Enable *、または* Delete *などのオプションを選択します。
 . テストフェイルオーバースケジュールを設定または変更したり、準拠頻度チェックを設定したりするには、プランの右側にある*[Actions]*オプションを選択し、*[Edit schedules]*を選択 image:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"] します。
 +
 .. [Edit schedules]ページで、フェイルオーバーの準拠チェックを実行する頻度を分単位で入力します。
@@ -80,6 +80,39 @@ image:../use/dr-plan-list2.png["レプリケーションプランリスト"]
 .. [ 保存（ Save ） ] を選択します。
 
 
+
+
+
+
+=== スナップショットをオンデマンドで調整
+
+ソースとターゲットの間で同期されていないスナップショットを調整できます。これは、BlueXP  ディザスタリカバリ以外のターゲットでSnapshotが削除された場合に発生することがあります。サービスは、24時間ごとにソース上のスナップショットを自動的に削除します。ただし、これはオンデマンドで実行できます。この機能を使用すると、すべてのサイトでSnapshotの整合性を確保できます。
+
+.手順
+. トップメニューから*レプリケーションプラン*を選択します。
++
+image:../use/dr-plan-list2.png["レプリケーションプランリスト"]
+
+. レプリケーション計画のリストから、計画の右側にある*[Actions]*オプションを選択しimage:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"]、*[Reconcile snapshots]*を選択します。
+. 整合情報を確認します。
+. [調整]*を選択します。
+
+
+
+
+=== レプリケーション計画を削除する
+
+不要になったレプリケーションプランは削除できます。レプリケーションプランを削除する場合は、プランによって作成されたプライマリスナップショットとセカンダリスナップショットも削除できます。
+
+.手順
+. トップメニューから*レプリケーションプラン*を選択します。
++
+image:../use/dr-plan-list2.png["レプリケーションプランリスト"]
+
+. 計画の右側にある* Actions *オプションを選択しimage:../use/icon-horizontal-dots.png["BlueXPディザスタリカバリサービスの[Actions]メニューアイコン"]、* Delete *を選択します。
+. プライマリSnapshot、セカンダリSnapshot、またはプランで作成されたメタデータのみを削除するかを選択します。
+. 「delete」と入力して削除を確認します。
+. 「 * 削除」を選択します。
 
 
 
@@ -95,6 +128,7 @@ image:../use/dr-plan-list2.png["レプリケーションプランリスト"]
 image:../use/dr-plan-failover-edit.png["[Edit failover mappings]ページ"]
 
 . レプリケーションプランの保持数の値を変更します。
+. レプリケーションプランを選択した状態で、[Actions]メニューを選択し、* Clean up old snapshots（古いSnapshotをクリーンアップ）を選択して、新しい保持数に合わせてターゲットから古いSnapshotを削除します。
 
 
 
