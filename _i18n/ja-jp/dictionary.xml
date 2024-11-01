@@ -251,10 +251,7 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="39229a488a735eac754ba7939d38eb84" category="summary">NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。</block>
-  <block id="d34b4bcb3837c0a762467791173875e9" category="paragraph">この手順により、レプリケーション関係が解除され、vCenterソースVMがオフラインになり、ターゲットサイトで読み取り/書き込みが可能になります。</block>
-  <block id="f3fefbabf14888fe609e623e88e6d6b0" category="paragraph">フェイルオーバーを開始する前に、プロセスをテストして、必要なときに成功することを確認できます。このテストでは、仮想マシンはオフラインになりません。</block>
   <block id="ec841432c6696238519b70833f9640bb" category="section-title">フェイルオーバープロセスをテストする</block>
-  <block id="4ea0903496e6a96b4d38cbc3147c75b4" category="paragraph">実際のフェイルオーバーを開始する前に、フェイルオーバープロセスをテストする必要があります。</block>
   <block id="41d102e0aefecc8e8cf5fb028eebff10" category="paragraph">テストが終了したら、* Clean up test *オプションを使用して仮想マシンをリセットする必要があります。これは推奨されていますが、必須ではありません。</block>
   <block id="993fa63b963af23582ff24b97fea4894" category="list-text">BlueXPの左側のナビゲーションで、*[保護]*&gt;*[ディザスタリカバリ]*を選択します。</block>
   <block id="6fe8001389ba90ef56a7cfdc85d6ea94" category="list-text">BlueXPディザスタリカバリのトップメニューで、*[レプリケーションプラン]*を選択します。</block>
@@ -333,7 +330,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">[Resource mapping]ページで、フェールオーバー操作とテスト操作の両方に同じマッピングを使用するには、チェックボックスをオンにします。</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">仮想マシン</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">データストア</block>
-  <block id="4a09c644b8fb308e15cee7a781de0061" category="list-text">テスト環境に異なるマッピングを設定するには、チェックボックスをオフにして*テストマッピング*タブを選択します。前のように各タブを確認しますが、今回はテスト環境について説明します。</block>
   <block id="0516742190fe9dfeaffe988ba6abe786" category="admonition">後で計画全体をテストできます。ここでは、テスト環境用のマッピングを設定します。</block>
   <block id="3f015374311e085394976bb9595d4f23" category="section-title">再発の特定</block>
   <block id="709c15cd0537a2fac696156d542aebf9" category="list-text">[繰り返し]ページで、*[移行]*または*[レプリケート]*を選択します。</block>
@@ -432,9 +428,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">作業を開始する前に</block>
   <block id="dd6963ed0ddd7c005bc031c271ee4ef9" category="paragraph">レプリケーションを開始する前に、レプリケーション計画を作成し、アプリケーションのレプリケーションを選択しておく必要があります。次に、[アクション]メニューに*Replicate*オプションが表示されます。</block>
   <block id="e95b50cfb71995cd2a2c4c00f88795c2" category="list-text">レプリケーションプランを選択します。</block>
-  <block id="237fc1578b6bac5b1a9df1f5a0574382" category="paragraph">災害が発生した場合は、プライマリのオンプレミスVMwareサイトを別のオンプレミスVMwareサイトまたはVMware Cloud on AWSにフェイルオーバーします。</block>
-  <block id="bca7fedd313ec1ddb72ef082465dc688" category="paragraph">フェイルオーバー中は、最新のSnapMirror Snapshotコピーが使用されます。または、（SnapMirrorの保持ポリシーに基づいて）ポイントインタイムSnapshotコピーから特定のSnapshotコピーを選択することもできます。ポイントインタイムオプションは、最新のレプリカがすでに侵害または暗号化されているランサムウェアなどの破損イベントに直面している場合に役立ちます。BlueXPのディザスタリカバリでは、使用可能なすべての時点が表示されます。</block>
-  <block id="5b1fcb2efae86b8cb653fb1d94894408" category="paragraph">フェイルオーバーテストでは、仮想マシンが一時的に作成されます。BlueXPのディザスタリカバリではターゲットボリュームはマッピングされません。代わりに、選択したSnapshotから新しいFlexCloneボリュームが作成され、FlexCloneボリュームの作成元の一時的なデータストアがESXiホストにマッピングされます。</block>
   <block id="798f01bc27c71f62fd4a64e0bb155f2f" category="paragraph">このプロセスでは、オンプレミスのONTAPストレージやAWSのFSx for NetApp ONTAPストレージの物理容量が追加で消費されることはありません。元のソースボリュームは変更されず、ディザスタリカバリ中もレプリカジョブを続行できます。</block>
   <block id="fc3e06260a2d82cbcdc61d0edfe814f2" category="paragraph">災害が発生した場合は、プライマリオンプレミスVMwareサイトをオンデマンドで別のオンプレミスVMwareサイトにフェイルオーバーするか、FSx for NetApp ONTAPを使用してVMware Cloud on AWSにフェイルオーバーします。</block>
   <block id="0e4406e2f319d2b24ab99a69613fbf47" category="list-text">レプリケーション計画でキャプチャされた情報に基づいて、データストアが作成され、VMwareまたはVMCのクラスタまたはホストにマウントされます。</block>
@@ -465,7 +458,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="946772510dcd559e9d7d09458b2abd6f" category="list-text"><block ref="4c49990f7ea38fc4135c764bbfcd7786" category="inline-link-macro-rx"></block> プライマリサイトから別のサイトへ。</block>
   <block id="46da469bb05d1d3a2c620e2963f1531a" category="list-text"><block ref="698cc22cc758157d8f18359f8b528216" category="inline-link-macro-rx"></block> [Job Monitoring]ページ。</block>
   <block id="3c47c0bca0e482b13e82a95a95df0741" category="list-text">レプリケーションプラン名を入力して確認し、フェイルバックを開始します。</block>
-  <block id="fd8c5ff28502522b67b13efd7595e358" category="paragraph">vCenterサイトを追加したら、ディザスタリカバリ（_replication plan_）を作成できます。ソースvCenterとデスティネーションvCenterを選択し、リソースグループを選択して、アプリケーションのリストア方法とパワーオン方法をグループ化します。たとえば、1つのアプリケーションに関連付けられた仮想マシンをグループ化したり、同様の階層を持つアプリケーションをグループ化したりできます。</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">ソース環境のリソースをデスティネーションにマッピングします。</block>
   <block id="e1328bf0fb353d2296414458d7dbcdf0" category="paragraph">レプリケーション計画の作成時に、次のいずれかの設定でソースボリュームとターゲットボリューム間のSnapMirror関係を定義できます。</block>
   <block id="b946e483d79abae55d4acfcf242d2034" category="list-text">コンシステンシグループ内で多対1</block>
@@ -504,12 +496,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="0f354958858456370fa7b64c5f2a913c" category="paragraph"><block ref="929628a652068d14da23775529f8803b" category="inline-link-rx"></block>。</block>
   <block id="27469d5f3bff97989e2a320de315084a" category="inline-image-macro">レプリケーションプランの追加&amp;gt;リソースマッピング&amp;gt;仮想マシンを示すスクリーンショット</block>
   <block id="13f51fa84ff64a1c633957d1dcf01637" category="paragraph">これは、大規模な環境を小規模なターゲットクラスタにリカバリする場合や、1対1の物理VMwareインフラストラクチャをプロビジョニングせずにディザスタリカバリテストを実行する場合に非常に役立ちます。</block>
-  <block id="4c77d41c045300d2cacb091f19b6d9a5" category="list-text">*整合グループ*：レプリケーション計画を作成する際に、異なるボリュームや異なるSVMのVMを含めることができます。BlueXPディザスタリカバリで整合グループSnapshotが作成されます。</block>
-  <block id="436f3832b32bfb2d3cb66d6298a71245" category="list-text">Recovery Point Objective（RPO；目標復旧時点）を指定すると、RPOに基づいてプライマリバックアップがスケジュールされ、セカンダリデスティネーションが更新されます。</block>
-  <block id="db0b972911bb657f80d12b2f6b007b86" category="list-text">VMが同じボリュームと同じSVMの場合、サービスは標準のONTAP Snapshotを実行し、セカンダリデスティネーションを更新します。</block>
-  <block id="e8363aaad82f774ed9651b7f7c17c5b4" category="list-text">VMが別 々 のボリュームの同じSVMにある場合は、すべてのボリュームを含めることで整合グループSnapshotが作成され、セカンダリデスティネーションが更新されます。</block>
-  <block id="d32ce27dcbfd9839065d47ddfb554762" category="list-text">VMが別 々 のボリュームと別 々 のSVMにある場合、サービスは同じクラスタまたは別 々 のクラスタ内のすべてのボリュームを含めて、整合グループの開始フェーズとコミットフェーズのSnapshotを実行し、セカンダリデスティネーションを更新します。</block>
-  <block id="3b82d309bad3607f9368c1de90e8ea3c" category="list-text">フェイルオーバー中は任意のSnapshotを選択できます。最新のSnapshotを選択すると、オンデマンドバックアップが作成され、デスティネーションが更新され、そのSnapshotを使用してフェイルオーバーが実行されます。</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetAppでは、サポートとライセンスに固有の認証サービスのIDプロバイダとしてMicrosoftエントラIDを使用します。</block>
   <block id="7fda53563ff8ebfe855a3a79f568f396" category="summary">BlueXPディザスタリカバリでは、無償トライアル、従量課金制サブスクリプション、お客様所有のライセンスを使用するなど、さまざまなライセンスプランを使用できます。</block>
   <block id="a7193edb26a4b1bca4b7b82254e6dd4b" category="doc">BlueXPディザスタリカバリのライセンスを設定</block>
@@ -562,7 +548,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="4aca0b59a2fa7d9e86368a58f1e869c9" category="list-text">[アクション]オプションを選択します。 <block ref="e282bbe0f95615c6416d0f1c92efdcdd" category="inline-image-macro-rx" type="image"></block>  をクリックし、*[編集]*を選択します。</block>
   <block id="f2461bdb5195b41a112c405c95584734" category="inline-image-macro">レプリケーションプランリスト</block>
   <block id="cfff02ce3a45ebd0c9288d1fb7097cca" category="paragraph"><block ref="cfff02ce3a45ebd0c9288d1fb7097cca" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c68217420a685b93e20f298ae3ea72c8" category="paragraph">フェイルオーバー後のプロセスとして、.sh、.bat、または.ps1形式のカスタムスクリプトを含めることができます。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。</block>
   <block id="8b4399d7029673ba83df4f916514230b" category="paragraph">テストフェイルオーバー処理では、本番環境のワークロード、テストサイトで使用されているSnapMirror関係、および正常に動作し続ける必要がある保護対象のワークロードに_not_の影響があります。</block>
   <block id="22d1d4bc51673707e71b38cb5d9f8053" category="admonition">フェイルオーバーが開始されると、リカバリされたVMがディザスタリカバリサイトのvCenter（仮想マシン、ネットワーク、データストア）に表示されます。デフォルトでは、仮想マシンはWorkloadフォルダにリカバリされます。</block>
   <block id="7133b9cf238828da0a287b89ce855ec3" category="paragraph"><block ref="7133b9cf238828da0a287b89ce855ec3" category="inline-image-macro-rx" type="image"></block></block>
@@ -572,7 +557,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="f1b3d2c036cfab036f34533fa19f954e" category="paragraph">レプリケーション計画を作成し、コンプライアンスとテストのスケジュールを編集することもできます。</block>
   <block id="89dd75b1f79276c7e30e794e1c739f04" category="section-title">計画の作成</block>
   <block id="abe3a973462c3c328672dbc95e640218" category="paragraph">このサービスでSnapMirror関係を作成する場合は、クラスタとそのSVMピアリングがBlueXPディザスタリカバリ以外ですでにセットアップされている必要があります。</block>
-  <block id="d5033e157b5ff5f902d411ea87245351" category="list-text">* RPO *：リカバリするデータの量（時間で測定）を示す目標復旧時点（RPO）を入力します。たとえば、RPOを60分と入力した場合、常に60分以内のデータがリカバリに含まれている必要があります。災害が発生した場合は、最大60分分のデータが失われます。また、すべてのデータストアに対して保持するSnapshotコピーの数も入力します。</block>
   <block id="d97200be5ae32d344d6cc35c5789517d" category="section-title">スケジュールを編集してコンプライアンスをテストし、フェイルオーバーテストが機能することを確認</block>
   <block id="e670d26caed2e49f16fe367f74a57f21" category="paragraph">コンプライアンスおよびフェイルオーバーテストをテストするスケジュールを設定して、必要に応じて正しく動作することを確認できます。</block>
   <block id="0c9133d8bb2cba28a02319fd78380fa9" category="list-text">*コンプライアンス時間への影響*：レプリケーション計画が作成されると、サービスはデフォルトでコンプライアンススケジュールを作成します。デフォルトの準拠時間は30分です。この時間を変更するには、レプリケーションプランのスケジュールの編集を使用します。</block>
@@ -856,12 +840,8 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">[Failover mappings]タブで、各リソースの右側にある下向き矢印を選択し、それぞれのリソースをマッピングします。</block>
   <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*リソースを計算*：*リソースを計算*の横にある下向き矢印を選択します。</block>
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*仮想マシン*：[フェイルオーバーマッピング]タブで、*[仮想マシン]*の横にある下向き矢印を選択します。</block>
-  <block id="909f84e264f0200a692127b28fbdbaaf" category="paragraph">適切なセグメントへのネットワークマッピングを選択します。セグメントはすでにプロビジョニングされているので、仮想マシンをマッピングする適切なセグメントを選択してください。</block>
-  <block id="298abc17ab4bb709de80b68dc38dde2a" category="list-text">* IPアドレスタイプ*：レプリケーション計画の仮想マシンセクションでソースとターゲットの場所間のネットワークをマッピングする場合、BlueXP  ディザスタリカバリにはDHCPまたは静的IPの2つのオプションがあります。静的IPの場合は、サブネット、ゲートウェイ、およびDNSサーバを設定します。さらに、仮想マシンのクレデンシャルを入力します。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="453e68e2eb0de34242ac9895a818d82a" category="list-text">*データストア*：[フェイルオーバーマッピング]タブで、*[データストア]*の横にある下矢印を選択します。選択した仮想マシンに基づいて、データストアマッピングが自動的に選択されます。</block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保持数*：保持するSnapshotの数を入力します。</block>
-  <block id="b23c862689b973964a4b79af3d87b2de" category="list-text">*ソースとターゲットのデータストア*：ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアを選択できます。SnapMirror関係のないボリュームを選択した場合は、作業環境とそのピアSVMを選択して作成できます。</block>
   <block id="8772d236d3c62b688c3b57224d982ee1" category="paragraph"><block ref="8772d236d3c62b688c3b57224d982ee1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1267d6fc2aff2a3372b02b4d25a9f397" category="list-text">フェイルオーバーテストを実施します。仮想マシンは一時的に作成されます。BlueXP  ディザスタリカバリでは、選択したSnapshotから新しいFlexCloneが作成され、FlexCloneボリュームの基盤となる一時的なデータストアがESXiホストにマッピングされます。このプロセスでは、オンプレミスのONTAPストレージやAWSのFSx for NetApp ONTAPストレージの物理容量が追加で消費されることはありません。元のソースボリュームは変更されず、ディザスタリカバリ中もレプリカジョブを続行できます。</block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">BlueXP  ディザスタリカバリに役立つ用語</block>
@@ -928,12 +908,10 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">詳細については、を参照してください<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="718c1087c683dccc1ea79ed6fa0fd10b" category="list-text">*スナップショットの調整*:このリリースでは、ソースとターゲットの間で同期されていないスナップショットを調整できるようになりました。これは、BlueXP  ディザスタリカバリ以外のターゲットでSnapshotが削除された場合に発生することがあります。サービスは、ソース上のスナップショットを24時間ごとに自動的に削除します。ただし、これはオンデマンドで実行できます。この機能を使用すると、すべてのサイトでSnapshotの整合性を確保できます。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">詳細については、を参照してください<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
-  <block id="21045c570180940ef07c18bb23d0427d" category="list-text">レプリケートする仮想マシン（VM）を選択し、グループを割り当てます。</block>
   <block id="220cf85b4d919dc13e0c6317aa2e2b17" category="list-text">ファンアウトアーキテクチャで1対多</block>
   <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">次の手順では、必要なVMを機能リソースグループにグループ化します。リソースグループを使用すると、一連の依存VMを要件に合わせて論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
   <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">レプリケーションプランでアプリケーションを選択すると、プラン内の各VMのオペレーティングシステムが表示されます。これは、VMを1つのリソースグループにグループ化する方法を決定する際に役立ちます。</block>
   <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">各リソースグループには1つ以上のVMを含めることができます。ここで指定した順序に基づいて、VMの電源がオンになります。</block>
-  <block id="236861b5b0d7380c86b58343dda04a42" category="list-text">必要に応じて、[Applications]ページの左側で、VMをデータストアでフィルタします。</block>
   <block id="794c0f8f77c0af0e4613492580e6d7ab" category="list-text">[Applications]ページの左側で、保護するVMを選択し、選択したグループに割り当てます。</block>
   <block id="87661bcc452e9da5afed70a3b9cf3e39" category="paragraph">選択したVMが自動的にグループ1に追加され、新しいグループ2が開始されます。VMを最後のグループに追加するたびに、別のグループが追加されます。</block>
   <block id="81c61db52db9a56a1819f55910f10afa" category="paragraph"><block ref="37056fc036b85c73069e7f1371212abb" category="inline-image-macro-rx" type="image"></block></block>
@@ -950,7 +928,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="b309697bdbe88c0e59d4f6201fe75801" category="list-text">*仮想ネットワーク*：フェイルオーバーマッピングタブで、*仮想ネットワーク*の横にある下向き矢印を選択します。ソース仮想LANとターゲットセグメントを選択します。</block>
   <block id="59b1abd434d2a560773c9f089cc8679a" category="paragraph">デフォルト設定から変更を加える場合は、クレデンシャルを入力する必要があります。</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">このセクションには、選択内容によって異なるフィールドが表示される場合があります。</block>
-  <block id="25f9829876988ad5a8f8d2b64655ff19" category="list-text">* DHCP *：VMでDHCPサーバからネットワーク構成情報を取得する場合は、この設定を選択します。このオプションを選択する場合は、VMのクレデンシャルだけを指定します。</block>
   <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*静的IP *：IP構成情報を手動で指定する場合は、この設定を選択します。ソースVMと同じ情報を選択することも別の情報を選択することもできます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、VMのIPアドレス、サブネットマスク、DNS、およびゲートウェイ情報を指定できます。VMゲストOSのクレデンシャルは、グローバルレベルまたは各VMレベルで指定する必要があります。</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*ターゲットVMのプレフィックスとサフィックス*：仮想マシンの詳細で、必要に応じてVM名にプレフィックスとサフィックスを追加できます。</block>
   <block id="230dc85a08275a2466390ae799703f92" category="list-text">*ソースVMのCPUとRAM *：仮想マシンの詳細で、必要に応じてVMのCPUとRAMのパラメータのサイズを変更できます。</block>
@@ -961,7 +938,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="8043065a3a1affdc7e75a0083d3349b1" category="list-text">同時起動：すべてのVMに同じ番号を割り当てて、同時に起動します（例：1、1、1、2、3、4、4）。</block>
   <block id="aa54fb3621577f63cab9b508032a995d" category="list-text">*起動遅延*：起動動作の遅延を分単位で調整します。</block>
   <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">起動順序をデフォルトにリセットするには、* VM設定をデフォルトにリセット*を選択し、どの設定をデフォルトに戻すかを選択します。</block>
-  <block id="739e8f4c4549d6d4a7768c6850d47495" category="list-text">*アプリケーションと整合性のあるレプリカを作成*：アプリケーションと整合性のあるSnapshotコピーを作成するかどうかを指定します。サービスはアプリケーションを休止し、スナップショットを作成してアプリケーションの整合性のある状態を取得します。この機能は、WindowsおよびLinuxで実行されているOracleおよびWindowsで実行されているSQL Serverでサポートされています。</block>
   <block id="2a4ddf396205dca12c00a6eb7e16285a" category="section-title">レプリケーション計画のレビュー</block>
   <block id="f7056dbdafc88dd1c68fb0eec6b47aac" category="paragraph">最後に、レプリケーション計画を確認します。</block>
   <block id="6662bb47d30d156ce5604e1d8adf7ae1" category="list-text">[Plan Details]、[Failover Mapping]、[VMs]の各タブで情報を確認します。</block>
@@ -989,4 +965,36 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">「 * Create * 」を選択します。</block>
   <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">レポートの表示に数分かかることがあります。</block>
   <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">レポートをダウンロードするには、*[Download report]*を選択し、管理者の[Download]フォルダで選択します。</block>
+  <block id="fa9f16c02f8fd7bab6992dec65c5838d" category="paragraph">vCenterサイトを追加したら、ディザスタリカバリ（_replication plan_）を作成できます。ソースvCenterとデスティネーションvCenterを選択し、リソースグループを選択して、アプリケーションのリストア方法とパワーオン方法をグループ化します。たとえば、1つのアプリケーションに関連付けられた仮想マシン（VM）をグループ化したり、同様の階層を持つアプリケーションをグループ化したりできます。</block>
+  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">レプリケートするVMを選択し、グループを割り当てます。</block>
+  <block id="50e34508d81a64564e31500b942aef1c" category="paragraph">計画を作成するときは、次のガイドラインに従ってください。</block>
+  <block id="05bbe166de3c0c72c8dde33285c35767" category="list-text">プラン内のすべてのVMに同じクレデンシャルを使用します。</block>
+  <block id="98ce844145386e78d8c9d936d1b8591b" category="list-text">計画内のすべてのVMに同じスクリプトを使用します。</block>
+  <block id="970b99aab999d5cc3afca09ebfb3ae92" category="list-text">計画内のすべてのVMに同じサブネット、DNS、およびゲートウェイを使用します。</block>
+  <block id="7168b459722d34d971b0a9d5df12edfd" category="list-text">必要に応じて、[Applications]ページの左側で、VMをデータストアでフィルタします。特定のVMを名前で検索することもできます。</block>
+  <block id="279787f60e646efb226912fa8f3b8402" category="paragraph">VMのデフォルトはマッピングされています。マッピングでは、VMが本番環境で使用する設定と同じ設定（同じIPアドレス、サブネットマスク、およびゲートウェイ）が使用されます。</block>
+  <block id="09c449fd502e27ce701683f14fc1207c" category="paragraph">適切なセグメントへのネットワークマッピングを選択します。セグメントはすでにプロビジョニングされているので、適切なセグメントを選択してVMをマッピングします。</block>
+  <block id="3380eb8d26d8e7c43e790421698a18a1" category="list-text">* IPアドレスタイプ*：ターゲットの仮想ネットワーク要件に合わせて、VMS構成を再設定します。BlueXP  ディザスタリカバリには、DHCPと静的IPの2つのオプションがあります。スタティックIPの場合は、サブネットマスク、ゲートウェイ、およびDNSサーバを設定します。さらに、VMのクレデンシャルを入力します。</block>
+  <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">* DHCP *：VMがDHCPサーバからネットワーク構成情報を取得するようにする場合は、この設定を選択します。このオプションを選択する場合は、VMのクレデンシャルだけを指定します。</block>
+  <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*スクリプト*:フェイルオーバー後のプロセスとして、.sh、.bat、または.ps1形式のカスタムスクリプトを含めることができます。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。</block>
+  <block id="df6b8c791e4694210c8862ed040048ef" category="list-text">*アプリケーションと整合性のあるレプリカを作成*：アプリケーションと整合性のあるSnapshotコピーを作成するかどうかを指定します。サービスはアプリケーションを休止し、スナップショットを作成してアプリケーションの整合性のある状態を取得します。この機能は、WindowsおよびLinuxで実行されているOracleおよびWindowsで実行されているSQL Serverでサポートされています。</block>
+  <block id="708b68cf49e909f729ce67863a2f6de3" category="list-text">* Datastores *：* Datastores *の横にある下矢印を選択します。VMを選択すると、データストアマッピングが自動的に選択されます。</block>
+  <block id="c5bb1e7845a8d9ffe23d02cceec9e4bf" category="list-text">* RPO *：リカバリするデータの量（時間で測定）を示す目標復旧時点（RPO）を入力します。たとえば、RPOを60分と入力した場合、常に60分以内のデータがリカバリに含まれている必要があります。災害が発生した場合は、最大60分分のデータが失われます。また、すべてのデータストアに対して保持するSnapshotコピーの数も入力します。</block>
+  <block id="27ee5986957f012b4e37ee29afe29c7f" category="list-text">*ソースデータストアとターゲットデータストア*：（ファンアウト）SnapMirror関係が複数ある場合は、使用するデスティネーションを選択できます。ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアが表示されます。SnapMirror関係がないボリュームの場合は、ターゲットクラスタとターゲットSVMを選択し、ボリューム名を指定して作成できます。ボリュームとSnapMirrorの関係が作成されます。</block>
+  <block id="3c65044e501ce692cb21ad3d837dab25" category="list-text">目標復旧時点（RPO）を指定すると、RPOに基づいてプライマリバックアップがスケジュールされ、セカンダリデスティネーションが更新されます。</block>
+  <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">VMが同じボリュームと同じSVMの場合、サービスは標準のONTAPスナップショットを実行し、セカンダリデスティネーションを更新します。</block>
+  <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">VMが別 々 のボリュームと同じSVMの場合は、すべてのボリュームを含めることで整合性グループSnapshotが作成され、セカンダリデスティネーションが更新されます。</block>
+  <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">VMが別 々 のボリュームと別 々 のSVMにある場合、サービスは整合性グループの開始フェーズとコミットフェーズのSnapshotを実行します。これには、同じクラスタまたは別 々 のクラスタ内のすべてのボリュームが含まれ、セカンダリデスティネーションが更新されます。</block>
+  <block id="0657f436653f92c50e703ca7f83a706d" category="list-text">フェイルオーバー中は任意のSnapshotを選択できます。最新のSnapshotを選択すると、オンデマンドバックアップが作成され、デスティネーションが更新され、そのSnapshotを使用してフェイルオーバーが実行されます。</block>
+  <block id="e829ce8109ca652cb970cd9d2014a52e" category="section-title">マッピングをテストする</block>
+  <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">テスト環境に異なるマッピングを設定するには、チェックボックスをオフにして*テストマッピング*タブを選択します。</block>
+  <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">前のように各タブを確認しますが、今回はテスト環境について説明します。</block>
+  <block id="74ba4c0b5e2da8a64b8dee1c0d8ba2eb" category="paragraph">災害が発生した場合は、プライマリのオンプレミスVMwareサイトを別のオンプレミスVMwareサイトまたはVMware Cloud on AWSにフェイルオーバーします。フェイルオーバープロセスをテストして、必要なときに正常に実行されることを確認できます。</block>
+  <block id="0c872b5a115ced9be728f92faac40bc4" category="paragraph">フェイルオーバー中は、最新のSnapMirror Snapshotコピーが使用されます。または、（SnapMirrorの保持ポリシーに基づいて）ポイントインタイムSnapshotから特定のSnapshotを選択することもできます。ポイントインタイムオプションは、最新のレプリカがすでに侵害または暗号化されているランサムウェアなどの破損イベントに直面している場合に役立ちます。BlueXPのディザスタリカバリでは、使用可能なすべての時点が表示されます。</block>
+  <block id="1770bdbefb7e2bbdf6308648d1575a65" category="paragraph">このプロセスは、業務用サイトが正常かどうか、および重要なインフラ障害以外の理由でディザスタリカバリサイトへのフェイルオーバーを実行しているかどうかによって異なります。</block>
+  <block id="8c071d3171ba12aa39f1703883b86a42" category="list-text">ソースvCenterまたはONTAPクラスタにアクセスできない本番サイトの重大な障害：BlueXP  ディザスタリカバリでは、リストア元となる使用可能なSnapshotを選択できます。</block>
+  <block id="5c23500391ed1ff22df3528a468b5a9e" category="list-text">本番環境が正常に稼働している場合：「今すぐスナップショットを作成」するか、以前に作成したスナップショットを選択できます。</block>
+  <block id="45412678755135d74955408e5c42d8aa" category="paragraph">この手順では、レプリケーション関係を解除し、vCenterソースVMをオフラインにし、ボリュームをディザスタリカバリvCenterにデータストアとして登録し、プランのフェイルオーバールールを使用して保護対象VMを再起動し、ターゲットサイトで読み取り/書き込みを有効にします。</block>
+  <block id="386733f1fba6df33919f466a94320062" category="paragraph">フェイルオーバーを開始する前に、プロセスをテストできます。このテストでは、仮想マシンはオフラインになりません。</block>
+  <block id="fcdc7ca99a3d01f2be061a078a0a8c1b" category="paragraph">フェイルオーバーテストでは、仮想マシンが一時的に作成されます。BlueXPのディザスタリカバリではターゲットボリュームはマッピングされません。代わりに、選択したSnapshotから新しいFlexCloneボリュームが作成され、FlexCloneボリュームのバックアップとなる一時的なデータストアがESXiホストにマッピングされます。</block>
 </blocks>
