@@ -1,0 +1,20 @@
+= FCに対応したオンプレミスからオンプレミスのVMware VMFSデータストアのサポート
+:allow-uri-read: 
+
+
+
+
+=== FCに対応したオンプレミスからオンプレミスのVMware VMFSデータストアのサポート
+
+このリリースには、FCをオンプレミスストレージに保護するために、VMware vSphere Virtual Machine File System（VMFS）データストアにマウントされたVMの_ technology preview_ofのサポートが含まれています。以前は、iSCSI用のVMFSデータストアをサポートするテクノロジプレビューを提供していました。
+
+
+NOTE: NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。
+
+
+
+=== ジョブのキャンセル
+
+このリリースでは、Job Monitor UIでジョブをキャンセルできるようになりました。
+
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/use/monitor-jobs.html["ジョブの監視"]。
