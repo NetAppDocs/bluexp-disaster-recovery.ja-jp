@@ -187,13 +187,8 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="89f19c30a67510e64ff4f90eede35bff" category="summary">BlueXPディザスタリカバリを使用するには、いくつかの手順を実行してセットアップします。</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="12e2dc5fcef627451410583ca25001f8" category="list-text">レビュー <block ref="92ab8b24e9e19913fbd62d38b5e3558b" category="inline-link-macro-rx"></block> 環境の準備が整っていることを確認します。</block>
-  <block id="5ca24c4b6c87e148e5e8719ec8dd13ee" category="list-text">VMware Cloud on AWSを導入して設定</block>
-  <block id="832d5bf67a66aafc3f8182b31c2c8086" category="paragraph">AWSでは、次の手順を実行する必要があります。</block>
-  <block id="824ad2eb4e12f7e91aa345fe67fa3e20" category="list-text">VMware Cloudの導入</block>
   <block id="4dab2f9796b0af6304d00e21e2b9dfb4" category="inline-link">AWS 上の VMware Cloud</block>
   <block id="1b38656c5ec12ea70e00624b8b3d9551" category="paragraph"><block ref="aa736dbc3fc450bce1fb1f5726a687eb" category="inline-link-rx"></block> AWSエコシステム内のVMwareベースのワークロードにクラウドネイティブなエクスペリエンスを提供します。各VMware Software-Defined Data Center（SDDC）はAmazon Virtual Private Cloud（VPC）で実行され、フルVMwareスタック（vCenter Serverを含む）、NSX-Tソフトウェア定義ネットワーク、vSANソフトウェア定義ストレージ、1つ以上のESXiホストを提供し、ワークロードにコンピューティングリソースとストレージリソースを提供します。</block>
-  <block id="2a304a1348456ccd2234cd71a81bd338" category="inline-link">リンク</block>
-  <block id="fd14ed73e21c2af5ff119a635c30df95" category="paragraph">AWSでVMC環境を設定するには、次の手順を実行します<block ref="2482e32457e6109d0aff0016bbcce7d1" category="inline-link-rx"></block>。パイロットライトクラスタは、ディザスタリカバリにも使用できます。</block>
   <block id="ee21d19e70e4611d4c782f9439377ba0" category="summary">NetApp BlueXPディザスタリカバリサービスは、わずかなステップで開始できます。</block>
   <block id="6923c085091f4d4b0d464355d7771240" category="doc">BlueXPディザスタリカバリのクイックスタートガイド</block>
   <block id="917c67acabedb60df299e96c679e04f8" category="paragraph">ここでは、BlueXPのディザスタリカバリを開始するために必要な手順の概要を示します。各ステップ内のリンクから、詳細が記載されたページに移動できます。</block>
@@ -453,8 +448,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="46da469bb05d1d3a2c620e2963f1531a" category="list-text"><block ref="698cc22cc758157d8f18359f8b528216" category="inline-link-macro-rx"></block> [Job Monitoring]ページ。</block>
   <block id="3c47c0bca0e482b13e82a95a95df0741" category="list-text">レプリケーションプラン名を入力して確認し、フェイルバックを開始します。</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">ソース環境のリソースをデスティネーションにマッピングします。</block>
-  <block id="e1328bf0fb353d2296414458d7dbcdf0" category="paragraph">レプリケーション計画の作成時に、次のいずれかの設定でソースボリュームとターゲットボリューム間のSnapMirror関係を定義できます。</block>
-  <block id="b946e483d79abae55d4acfcf242d2034" category="list-text">コンシステンシグループ内で多対1</block>
   <block id="c456b58190fd5c21d84750f126197baf" category="paragraph">最初にソースvCenterを選択し、次にデスティネーションvCenterを選択します。</block>
   <block id="7fceed43db5d7f111f8ef8f9351ffecd" category="paragraph">データを別のターゲットに移行する（1回限りの移動）か、SnapMirror頻度でレプリケートするかを選択します。</block>
   <block id="a6263fdec62a2bd89f463f2208f79331" category="paragraph">レプリケートする場合は、データをミラーリングする頻度を特定します。</block>
@@ -687,20 +680,8 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="e111b7436e71ef6b7b99d4ab60693716" category="inline-link-macro">サイト'リソース・グループ'レプリケーション・プランの管理</block>
   <block id="9c0c127bbcf25422e200cf3bf5c94728" category="list-text"><block ref="b808936e11943a7ce505d2bf605d808d" category="inline-link-macro-rx"></block>です。</block>
   <block id="7297a33a5c9a50db535ceb180e4e6c29" category="doc">BlueXPディザスタリカバリのためのインフラのセットアップ</block>
-  <block id="fc75fa7bbac9e87518d6f17a91cfce8b" category="section-title">BlueXPのディザスタリカバリに備えましょう</block>
-  <block id="1c1d912a4b5c8c14cabacde67a6ba702" category="list-text">本番環境を確認します。</block>
-  <block id="23c17aafeb6f23d40515eff8b860e5f4" category="list-text">保護するVMがNFSデータストア（ONTAP NFSボリュームを使用）またはVMFSデータストア（NetApp iSCSI LUNを使用）でホストされていることを確認します。</block>
-  <block id="179525e812f4f22c9d701388e129164d" category="list-text">オンプレミスのONTAPアレイ、vCenter、AWSでホストされるVMwareクラウドインスタンスのクレデンシャルとアクセスキーがあることを確認します。</block>
   <block id="013c9bec06c7786c33c0cfb5f4a32bcf" category="list-text">ディザスタリカバリサイトを作成または検証します。</block>
-  <block id="6d269e8a65127766658cd3b13af2c081" category="list-text">Amazon FSxファイルシステムの準備が完了していることを作成または確認します。</block>
-  <block id="d7398479ae0f9ae38ae2ed32d89ad5a7" category="list-text">ソースVMとデスティネーションVMがピア関係にあることを確認します。</block>
-  <block id="c279ea5c4d51358b229e0e39c4308144" category="section-title">VMware Cloud for AWS SDDCのセットアップ</block>
-  <block id="fd087c8a3a1df61c75b0ddc129a87874" category="paragraph">VMware Cloud for AWSのSoftware-Defined Data Center（SDDC）をセットアップ</block>
-  <block id="b667fcb6ff2b158ecaa3e62d1e56452e" category="list-text">Amazon FSx for ONTAPファイルシステムを作成FSx for ONTAPをプロビジョニング、設定Amazon FSX for NetApp ONTAP はフルマネージドサービスで、広く普及しているNetApp ONTAP ファイルシステムを基盤に、信頼性、拡張性、パフォーマンス、機能豊富なファイルストレージを提供します。</block>
   <block id="c2ca61cdaafcad548af5836df039fcb3" category="inline-link">Amazon FSx for NetApp ONTAP のクイックスタートガイド</block>
-  <block id="ef30511465fed8e5a5b5c3a9aae4795a" category="list-text">こちらとこちらの手順に従って、<block ref="551566e1b64bc66251dbfe6d546a4bef" category="inline-link-rx"></block><block ref="594efabf60d7236eeecf072ead1cf02b" category="inline-link-rx"></block> FSx for NetApp ONTAPのプロビジョニングと設定を行います。</block>
-  <block id="e65c19fddc907d69ae5172a0084b710b" category="list-text">作業環境にAmazon FSx for NetApp ONTAPを追加し、FSx for ONTAPのAWSクレデンシャルを追加します。</block>
-  <block id="95e1164f78d2b6799a19e13081137cbd" category="list-text">VMwareアカウントを使用してSDDCをプロビジョニングします。SDDCがFSx for ONTAPに接続されていることを確認します。</block>
   <block id="b63b041aeb212763ffab8f16313f009d" category="inline-link-macro">BlueXPディザスタリカバリに関する通知</block>
   <block id="54ad6e999d021c5f10d0b688267e8d17" category="paragraph"><block ref="54ad6e999d021c5f10d0b688267e8d17" category="inline-link-macro-rx"></block></block>
   <block id="30bc3f8ec3b5e171c9e8c063eec0ebce" category="summary">BlueXPのディザスタリカバリでvCenterアカウントのサービス（データストアの登録と登録解除、VMの起動と停止、仮想マシン（VM）の再設定など）を実行するには、vCenterアカウントに最小限のvCenter権限が必要です。次の表に、BlueXPディザスタリカバリをvCenterクラスタと連携させるために必要なすべての権限を示します。</block>
@@ -868,7 +849,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">サイト、リソースグループ、レプリケーションプラン、データストア、仮想マシンの情報を管理します。</block>
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">詳細については、を参照してください<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">詳細については、を参照してください<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
-  <block id="220cf85b4d919dc13e0c6317aa2e2b17" category="list-text">ファンアウトアーキテクチャで1対多</block>
   <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">次の手順では、必要なVMを機能リソースグループにグループ化します。リソースグループを使用すると、一連の依存VMを要件に合わせて論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
   <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">レプリケーションプランでアプリケーションを選択すると、プラン内の各VMのオペレーティングシステムが表示されます。これは、VMを1つのリソースグループにグループ化する方法を決定する際に役立ちます。</block>
   <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">各リソースグループには1つ以上のVMを含めることができます。ここで指定した順序に基づいて、VMの電源がオンになります。</block>
@@ -885,8 +865,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*ターゲットホスト*（オプション）：クラスタを選択したら、この情報を設定できます。</block>
   <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">vCenterでクラスタ内の複数のホストを管理するようにDistributed Resource Scheduler（DRS；分散リソーススケジューラ）が設定されている場合は、ホストを選択する必要はありません。ホストを選択すると、BlueXP  ディザスタリカバリによって、選択したホストにすべてのVMが配置されます。</block>
   <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*ターゲットVMフォルダ*（オプション）：選択したVMを格納する新しいルートフォルダを作成します。</block>
-  <block id="b309697bdbe88c0e59d4f6201fe75801" category="list-text">*仮想ネットワーク*：フェイルオーバーマッピングタブで、*仮想ネットワーク*の横にある下向き矢印を選択します。ソース仮想LANとターゲットセグメントを選択します。</block>
-  <block id="59b1abd434d2a560773c9f089cc8679a" category="paragraph">デフォルト設定から変更を加える場合は、クレデンシャルを入力する必要があります。</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">このセクションには、選択内容によって異なるフィールドが表示される場合があります。</block>
   <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*静的IP *：IP構成情報を手動で指定する場合は、この設定を選択します。ソースVMと同じ情報を選択することも別の情報を選択することもできます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、VMのIPアドレス、サブネットマスク、DNS、およびゲートウェイ情報を指定できます。VMゲストOSのクレデンシャルは、グローバルレベルまたは各VMレベルで指定する必要があります。</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*ターゲットVMのプレフィックスとサフィックス*：仮想マシンの詳細で、必要に応じてVM名にプレフィックスとサフィックスを追加できます。</block>
@@ -932,8 +910,6 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="98ce844145386e78d8c9d936d1b8591b" category="list-text">計画内のすべてのVMに同じスクリプトを使用します。</block>
   <block id="970b99aab999d5cc3afca09ebfb3ae92" category="list-text">計画内のすべてのVMに同じサブネット、DNS、およびゲートウェイを使用します。</block>
   <block id="7168b459722d34d971b0a9d5df12edfd" category="list-text">必要に応じて、[Applications]ページの左側で、VMをデータストアでフィルタします。特定のVMを名前で検索することもできます。</block>
-  <block id="279787f60e646efb226912fa8f3b8402" category="paragraph">VMのデフォルトはマッピングされています。マッピングでは、VMが本番環境で使用する設定と同じ設定（同じIPアドレス、サブネットマスク、およびゲートウェイ）が使用されます。</block>
-  <block id="09c449fd502e27ce701683f14fc1207c" category="paragraph">適切なセグメントへのネットワークマッピングを選択します。セグメントはすでにプロビジョニングされているので、適切なセグメントを選択してVMをマッピングします。</block>
   <block id="3380eb8d26d8e7c43e790421698a18a1" category="list-text">* IPアドレスタイプ*：ターゲットの仮想ネットワーク要件に合わせて、VMS構成を再設定します。BlueXP  ディザスタリカバリには、DHCPと静的IPの2つのオプションがあります。スタティックIPの場合は、サブネットマスク、ゲートウェイ、およびDNSサーバを設定します。さらに、VMのクレデンシャルを入力します。</block>
   <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">* DHCP *：VMがDHCPサーバからネットワーク構成情報を取得するようにする場合は、この設定を選択します。このオプションを選択する場合は、VMのクレデンシャルだけを指定します。</block>
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*スクリプト*:フェイルオーバー後のプロセスとして、.sh、.bat、または.ps1形式のカスタムスクリプトを含めることができます。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。</block>
@@ -1032,4 +1008,36 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="f0d8fca280d8272d1fbf03bd197dc6c6" category="section-title">ジョブモニタの更新</block>
   <block id="aee89117776781844e5694928335b749" category="paragraph">[Job Monitor]ページに[Refresh]オプションが追加され、処理の最新ステータスを確認できるようになりました。を参照してください <block ref="701085704c7bdf4268d7fbe3111fe8b9" category="inline-link-rx"></block>。</block>
   <block id="2f2414748c5c55333b00da7bf5d583fc" category="section-title">クラウドベースのディザスタリカバリサービス</block>
+  <block id="1d0b99c5fda833966fdc7026d20b7123" category="section-title">オンプレミスからオンプレミスへの保護のためのBlueXP  ディザスタリカバリに備えましょう</block>
+  <block id="e4329ef06606311ac88747208a3fa442" category="paragraph">オンプレミスからオンプレミスへの保護のためにBlueXP  ディザスタリカバリを設定する前に、次の要件を満たしていることを確認してください。</block>
+  <block id="b2deae88b1a0357caaa51258ab1694e1" category="list-text">ONTAPストレージ</block>
+  <block id="24ce04d9d885f21cf716792277112054" category="list-text">ONTAPクレデンシャルがあることを確認します。</block>
+  <block id="5ef5765a529fdbd040918aaaf2a72135" category="list-text">デスティネーションONTAP SVMを作成または確認します。</block>
+  <block id="a6e36c3bb4ce219a3d2fbdda646b56db" category="list-text">ソースとデスティネーションのONTAP SVMにピア関係が設定されていることを確認します。</block>
+  <block id="882800713682b16ddfc95357a3e667d3" category="list-text">vCenterクラスタ</block>
+  <block id="08eb00d7000c65df49987d57e76011e4" category="list-text">保護するVMがNFSデータストア（ONTAP NFSボリュームを使用）またはVMFSデータストア（NetApp iSCSI LUNを使用）でホストされていることを確認します。</block>
+  <block id="4fb2c1490deb1111ddde75358c461f13" category="inline-link-macro">vCenter Privileges</block>
+  <block id="64666500d9b76ceaf678eb0440295eab" category="list-text">BlueXP  DRの確認<block ref="e2308177194cd3965bd843f87b9fd0f9" category="inline-link-macro-rx"></block>が必要です。</block>
+  <block id="b5e6ca8741e28b4e3f18f0795523c378" category="list-text">ディザスタリカバリユーザアカウント（デフォルトのvCenter管理者アカウントではない）を作成し、そのアカウントにvCenter Privilegesを割り当てます。</block>
+  <block id="e8eaefc2cdd37d92731a9dd3c2597d49" category="section-title">AWSを使用したオンプレミスからクラウドへの保護のためのBlueXP  ディザスタリカバリに備えましょう</block>
+  <block id="1c5a70208dfb59c7daee329e4f890183" category="paragraph">AWSを使用してオンプレミスからクラウドへの保護を実現するBlueXP  ディザスタリカバリを設定するには、以下を設定する必要があります。</block>
+  <block id="cb4828f2166a0e0fbb0063d86b777b73" category="list-text">AWS FSx for NetApp ONTAPのセットアップ</block>
+  <block id="1bf292172997585d461ef76d9e13b2bf" category="list-text">VMware Cloud on AWS SDDCのセットアップ</block>
+  <block id="e9effe43d3905cd2f8c08db3128541e4" category="list-text">Amazon FSx for NetApp ONTAPファイルシステムを作成</block>
+  <block id="f83af651f99faebce61bfdb7abb0dbf5" category="list-text">FSx for ONTAPをプロビジョニング、設定Amazon FSx for NetApp ONTAPは、NetApp ONTAPファイルシステム上に構築された、信頼性、拡張性、パフォーマンス、機能豊富なファイルストレージを提供するフルマネージドサービスです。</block>
+  <block id="ecd0c703f047cbcdb8259fca7001cb0a" category="inline-link">テクニカルレポート4938：『Mount Amazon FSx ONTAP as an NFS datastore with VMware Cloud on AWS』</block>
+  <block id="a692fa8adfb1c24fd08861d585caf255" category="list-text">との<block ref="594efabf60d7236eeecf072ead1cf02b" category="inline-link-rx"></block>手順に従って、<block ref="69ac71aae3c3019102e9a90ab4fd3799" category="inline-link-rx"></block>FSx for ONTAPのプロビジョニングと設定を行います。</block>
+  <block id="b13f2cf8c7a839a79a2cf386ac76b44d" category="list-text">作業環境にAmazon FSx for ONTAPを追加し、FSx for ONTAPのAWSクレデンシャルを追加します。</block>
+  <block id="45e9eff03edaa58cd4676220141041d3" category="list-text">AWS FSx for ONTAPインスタンスでデスティネーションONTAP SVMを作成または確認します。</block>
+  <block id="38f9e2b8188ba1a2325d7ac2eb911273" category="list-text">ソースのオンプレミスONTAPクラスタとBlueXP  のFSx for ONTAPインスタンスの間でレプリケーションを設定</block>
+  <block id="7d7445247cf277d14bdf223b814aef8a" category="inline-link">FSx for ONTAP作業環境の設定方法</block>
+  <block id="fc18e0c7e34ed6bfd5e41adee94a7128" category="paragraph">詳細な手順については、を参照してください<block ref="196f9f190bce8cf361111930a46ad787" category="inline-link-rx"></block>。</block>
+  <block id="07b0eade4402d209b5dbe587a8ad3f6f" category="inline-link">AWS に仮想化環境を導入して設定</block>
+  <block id="2eccc2b2612ae991619a18b34919d843" category="paragraph">AWSでVMware Cloud環境を構成するには、の手順に従い<block ref="0faddedbfeb6e9d451b742468dbfc158" category="inline-link-rx"></block>ます。パイロットライトクラスタはディザスタリカバリにも使用できます。</block>
+  <block id="8c587749bc8bd978d85704d9a142b7a6" category="paragraph">複数のデータストア上の複数のVMを保護できます。BlueXP  ディザスタリカバリでは、保護対象のVMデータストアをホストするすべてのONTAPボリュームに対してONTAP整合性グループが作成されます。</block>
+  <block id="345f26a72f023b2055826859eb701ceb" category="list-text">*仮想ネットワーク*：フェイルオーバーマッピングタブで、*仮想ネットワーク*の横にある下向き矢印を選択します。ソース仮想LANとターゲット仮想LANを選択します。</block>
+  <block id="02453bc953d0b6e10f85235da7a8cca7" category="paragraph">適切な仮想LANへのネットワークマッピングを選択します。仮想LANはすでにプロビジョニングされているので、適切な仮想LANを選択してVMをマッピングします。</block>
+  <block id="c71c9ca45b74f3ddf3435fee65f93cfc" category="paragraph">VMのデフォルトはマッピングされています。デフォルトのマッピングでは、VMが本番環境で使用するのと同じ設定（同じIPアドレス、サブネットマスク、およびゲートウェイ）が使用されます。</block>
+  <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">デフォルト設定から変更を加えた場合は、[Target IP]フィールドを[different from source]に変更する必要があります。</block>
+  <block id="04b2f4a0441b492909bf4cd55502f663" category="admonition">設定を「ソースと異なる」に変更する場合は、VMゲストOSのクレデンシャルを指定する必要があります。</block>
 </blocks>
