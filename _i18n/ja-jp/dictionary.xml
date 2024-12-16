@@ -580,7 +580,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="924cc6eaf82618251de609e2689ed733" category="paragraph">次のライセンスタイプを使用できます。</block>
   <block id="2caf85d76a31b7bef7132937ff28e9dc" category="list-text">お客様所有のライセンスを使用（BYOL）：NetApp営業担当から入手するNetAppライセンスファイル（NLF）です。ライセンスのシリアル番号を使用して、BlueXPデジタルウォレットでBYOLをアクティブ化できます。</block>
   <block id="c809a23426c6fb72cef75816c461ade9" category="paragraph">すべてのBlueXPサービスのライセンスは、BlueXPデジタルウォレットサービスで管理されます。BYOLを設定すると、BlueXPのデジタルウォレットでサービスのアクティブなライセンスを確認できます。</block>
-  <block id="8eb586b1b79ddd3ae7c3123b39d4420e" category="admonition">BlueXPディザスタリカバリの料金は、レプリケーション計画のあるVMが1つ以上ある場合にソースサイトでプロビジョニングされたデータストアの容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするまで、サービスの処理が制限されます。</block>
   <block id="7033a5d3e074f0c7401499ee4e48f38a" category="list-text">保護対象のVMでVMwareツール（またはOpen VMツール）が実行されていることを確認します。</block>
   <block id="af77ac64a97a80925dee7dc916344004" category="list-text">Linuxオペレーティングシステムで実行されているOracleデータベースでは、OracleデータベースSYSDBAロールに対してオペレーティングシステムユーザ認証を有効にする必要があります。</block>
   <block id="e23539b066371b4dcfdd50b7d80417d8" category="paragraph">無償トライアルが終了した後、またはライセンスの有効期限が切れた後も、サービスで次の操作を実行できます。</block>
@@ -1040,4 +1039,5 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="c71c9ca45b74f3ddf3435fee65f93cfc" category="paragraph">VMのデフォルトはマッピングされています。デフォルトのマッピングでは、VMが本番環境で使用するのと同じ設定（同じIPアドレス、サブネットマスク、およびゲートウェイ）が使用されます。</block>
   <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">デフォルト設定から変更を加えた場合は、[Target IP]フィールドを[different from source]に変更する必要があります。</block>
   <block id="04b2f4a0441b492909bf4cd55502f663" category="admonition">設定を「ソースと異なる」に変更する場合は、VMゲストOSのクレデンシャルを指定する必要があります。</block>
+  <block id="935b6ea2b85c115a6475786fc3f54c7b" category="admonition">BlueXP  ディザスタリカバリの料金は、レプリケーション計画があるVMが少なくとも1つある場合、ソースサイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするまで、サービスの処理が制限されます。</block>
 </blocks>
