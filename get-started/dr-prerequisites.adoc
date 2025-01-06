@@ -47,6 +47,7 @@ NOTE: デスティネーションSVMにディザスタリカバリボリュー�
 ** iSCSIプロトコルまたはFCプロトコルを使用するVMFS
 
 
+* VMware vSphereバージョン7.0 Update 3（7.0v3）以降
 * VMware Cloud SDDCを使用している場合は、次の前提条件が適用されます。
 +
 ** VMware Cloud Consoleで、管理者とNSXクラウド管理者のサービスロールを使用します。また、組織ロールに組織オーナーを使用します。を参照してください https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/vmware-cloud-ontap.html["ドキュメント『Using VMware Cloud Foundations with AWS FSx for NetApp ONTAP』"^]。

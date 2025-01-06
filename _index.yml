@@ -23,7 +23,7 @@ indexpage:
       url: "/get-started/dr-faq.html"
   - title: BlueXPディザスタリカバリの活用
     links:
-    - title: vCenterサイトを追加
+    - title: サイトへのvCenterの追加
       url: "/use/sites-add.html"
     - title: ディザスタリカバリ計画の作成
       url: "/use/drplan-create.html"

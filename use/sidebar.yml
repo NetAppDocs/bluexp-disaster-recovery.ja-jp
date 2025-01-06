@@ -6,7 +6,7 @@ entries:
   url: "/use/use-overview.html"
 - title: ダッシュボードでディザスタリカバリプランの健全性を表示する
   url: "/use/dashboard-view.html"
-- title: vCenterサイトを追加
+- title: サイトへのvCenterの追加
   url: "/use/sites-add.html"
 - title: レプリケーション計画の作成
   url: "/use/drplan-create.html"

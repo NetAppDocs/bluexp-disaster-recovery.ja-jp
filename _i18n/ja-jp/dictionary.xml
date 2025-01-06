@@ -335,7 +335,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">レプリケーションプランは、あとで無効にしたり削除したりできます。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">[プランの追加]*を選択します。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">計画が計画のリストに追加されます。</block>
-  <block id="a9233ff25d3c8ffa3e005e6e453381fc" category="paragraph">ディザスタリカバリプランを作成する前に、プライマリvCenterサイトとターゲットのvCenterディザスタリカバリサイトをBlueXPで追加する必要があります。</block>
   <block id="9809a26603cc2fbdd8049c848bf77835" category="paragraph">BlueXPディザスタリカバリでは、vCenterクラスタ、ESXiホスト、データストア、ストレージフットプリント、 仮想マシンの詳細、SnapMirrorレプリカ、および仮想マシンネットワーク。</block>
   <block id="6df4f43f22118c6a361990f481e6ed83" category="list-text">BlueXPにログインし、左側のナビゲーションで*[保護]*&gt;*[ディザスタリカバリ]*を選択します。</block>
   <block id="2f11fab4722695438910176065d838b4" category="paragraph">BlueXPディザスタリカバリのダッシュボードページが表示されます。サービスを最初に開始するときは、vCenter情報を追加する必要があります。後で、ダッシュボードにサイトとレプリケーションプランに関するデータが表示されます。</block>
@@ -343,7 +342,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="5a05572673bc07b0b94f07c482a67d13" category="inline-image-macro">[vCenter Serverを追加]のスクリーンショット </block>
   <block id="c65c0c2ea94db5e745008fb8af0f7f2e" category="paragraph"><block ref="c65c0c2ea94db5e745008fb8af0f7f2e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0eb5074333c815ccb54d1f6917e8d217" category="list-text">サイトを追加し、BlueXP Connectorを選択し、vCenterクレデンシャルを指定します。</block>
-  <block id="50a0d7853565af772351213d1b833aa4" category="list-text">ソースvCenterの自己署名証明書を受け入れる場合は、チェックボックスをオンにします。</block>
   <block id="1909b7ffbea69e2cc7b387ed9d255c18" category="admonition">自己署名証明書は、他の証明書ほどセキュアではありません。vCenterに認証局（CA）証明書が設定されていない場合は、このチェックボックスをオンにします。設定されていないと、vCenterへの接続は機能しません。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">「 * 追加」を選択します。</block>
   <block id="a0fa7543e8627767b57d6c2797fbbda9" category="paragraph">次に、ターゲットvCenterを追加します。</block>
@@ -1040,4 +1038,12 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">デフォルト設定から変更を加えた場合は、[Target IP]フィールドを[different from source]に変更する必要があります。</block>
   <block id="04b2f4a0441b492909bf4cd55502f663" category="admonition">設定を「ソースと異なる」に変更する場合は、VMゲストOSのクレデンシャルを指定する必要があります。</block>
   <block id="935b6ea2b85c115a6475786fc3f54c7b" category="admonition">BlueXP  ディザスタリカバリの料金は、レプリケーション計画があるVMが少なくとも1つある場合、ソースサイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするまで、サービスの処理が制限されます。</block>
+  <block id="6264bc70be3baed8dcf906aafe1dfe41" category="list-text">VMware vSphereバージョン7.0 Update 3（7.0v3）以降</block>
+  <block id="cbbec7a47b1589919d37bd2c9f68a2dd" category="summary">ディザスタリカバリプランを作成する前に、BlueXP  ディザスタリカバリでプライマリvCenterサイトとターゲットのvCenterディザスタリカバリサイトを追加する必要があります。</block>
+  <block id="7f7acb13c0fa74ab37cf6b6545c8b18a" category="doc">サイトへのvCenterの追加</block>
+  <block id="d7004fe84ddef44ffb8f6fd482ea7b17" category="paragraph">ディザスタリカバリプランを作成するには、プライマリvCenterサーバをBlueXP  内のサイトおよびターゲットのvCenterディザスタリカバリサイトに追加する必要があります。</block>
+  <block id="1a575de6e97bed53905ae3b55c22dd29" category="admonition">追加するサイトのタイプに応じて、さまざまなフィールドが表示されます。</block>
+  <block id="7dbf01d6d33098287eb82c71ea10ea1e" category="list-text">（オンプレミスサイトにのみ適用）ソースvCenterの自己署名証明書を受け入れるには、チェックボックスをオンにします。</block>
+  <block id="c2a573f83674b01d424b4f0c10fdc5f1" category="list-text">(クラウドサイトのみ)* APIトークン*:組織のサービスアクセスを許可するAPIトークンを入力します。特定の組織ロールとサービスロールを指定してAPIトークンを作成します。</block>
+  <block id="92d0331e97c92cd07178f7a7c2ab56da" category="list-text">(クラウドサイトのみ)*長い組織ID *:組織の一意のIDを入力します。このIDを識別するには、BlueXP  コンソールの[Account]セクションでユーザ名をクリックします。</block>
 </blocks>
