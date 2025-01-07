@@ -452,7 +452,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="901540dd7e45eaf2226327527c8d78b4" category="list-text">*ソース*：*[Discover vCenter servers（vCenterサーバーの検出）]*を選択して、ソースvCenterサイトに関する情報を入力します。</block>
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*ターゲット*：</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">[Sites]ページのスクリーンショット</block>
-  <block id="28f8c0c78028f2e899f7af50ce138e1b" category="paragraph"><block ref="28f8c0c78028f2e899f7af50ce138e1b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">AWS上のVMware Cloud（VMC）とAmazon FSx for NetApp ONTAPまたは</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">ONTAPストレージを使用した、もう1つのオンプレミスNFSベースのVMware環境</block>
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
@@ -1046,4 +1045,5 @@ NetApp営業担当からBlueXPディザスタリカバリライセンスを購�
   <block id="7dbf01d6d33098287eb82c71ea10ea1e" category="list-text">（オンプレミスサイトにのみ適用）ソースvCenterの自己署名証明書を受け入れるには、チェックボックスをオンにします。</block>
   <block id="c2a573f83674b01d424b4f0c10fdc5f1" category="list-text">(クラウドサイトのみ)* APIトークン*:組織のサービスアクセスを許可するAPIトークンを入力します。特定の組織ロールとサービスロールを指定してAPIトークンを作成します。</block>
   <block id="92d0331e97c92cd07178f7a7c2ab56da" category="list-text">(クラウドサイトのみ)*長い組織ID *:組織の一意のIDを入力します。このIDを識別するには、BlueXP  コンソールの[Account]セクションでユーザ名をクリックします。</block>
+  <block id="15a58a3d11cafa89812a0ab9b55e93b0" category="paragraph"><block ref="15a58a3d11cafa89812a0ab9b55e93b0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
