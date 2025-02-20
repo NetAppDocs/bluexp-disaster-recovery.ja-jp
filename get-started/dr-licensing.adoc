@@ -24,7 +24,7 @@ BlueXPディザスタリカバリでは、無償トライアル、従量課金�
 
 NOTE: BlueXP  ディザスタリカバリの料金は、レプリケーション計画があるVMが少なくとも1つある場合、ソースサイトのデータストアの使用済み容量に基づいて計算されます。フェイルオーバーされたデータストアの容量は、許容される容量に含まれません。BYOLの場合、データが許容される容量を超えた場合、追加の容量ライセンスを取得するか、BlueXPデジタルウォレットでライセンスをアップグレードするまで、サービスの処理が制限されます。
 
-BYOLをセットアップすると、BlueXPデジタルウォレット*[Data service licenses]タブでライセンスを確認できます。
+link:https://docs.netapp.com/us-en/bluexp-digital-wallet/concept-digital-wallet.html["デジタルウォレットの詳細"^]です。
 
 無償トライアルが終了した後、またはライセンスの有効期限が切れた後も、サービスで次の操作を実行できます。
 
@@ -79,10 +79,7 @@ image:draas-landing2.png["BlueXPディザスタリカバリのランディング
 . AWS Marketplaceで、*購入オプションを表示*を選択します。AWS Marketplaceを使用して、BlueXPディザスタリカバリにサブスクライブします。
 . BlueXPディザスタリカバリに戻ると、登録したことを示すメッセージが表示されます。
 +
-BlueXPデジタルウォレットでサブスクリプションの詳細を表示するには、*[サブスクリプションの詳細を表示]*を選択し、*[サブスクリプション]*ページでアクティブなサブスクリプションを確認します。
-
-+
-image:digital-wallet-subscriptions2.png["BlueXPのデジタルウォレットサブスクリプションタブ"]
+サブスクリプションの詳細は、BlueXP  デジタルウォレットで確認できます。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["詳細はこちらデジタルウォレットによるサブスクリプションの管理"^]です。
 
 
 
@@ -94,33 +91,9 @@ image:digital-wallet-subscriptions2.png["BlueXPのデジタルウォレットサ
 
 お客様所有のライセンスを使用（BYOL）する場合は、ライセンスの購入、NetAppライセンスファイル（NLF）の取得、BlueXPデジタルウォレットへのライセンスの追加が含まれます。
 
-*ライセンスの有効化*
-NetApp営業担当からBlueXPディザスタリカバリライセンスを購入したら、BlueXPディザスタリカバリのシリアル番号とNetApp Support Site（NSS）アカウント情報を入力してライセンスをアクティブ化します。
+* BlueXP  デジタルウォレットにライセンスを追加する** NetApp営業担当からBlueXP  ディザスタリカバリライセンスを購入すると、デジタルウォレットでライセンスを管理できます。
 
-BlueXP  ディザスタリカバリのシリアル番号が必要です。この番号は、SOから確認するか、アカウントチームにお問い合わせください。
-
-* BlueXP  デジタルウォレットにライセンスを追加する* BlueXP  ディザスタリカバリライセンスを購入したら、BlueXP  デジタルウォレットにライセンスを追加する必要があります。
-
-. ライセンスを取得したら、BlueXPディザスタリカバリに戻ります。右上の*支払い方法を表示*オプションを選択します。または、無料トライアルの有効期限が近づいているというメッセージで、*[ライセンスの登録または購入]*を選択します。
-+
-image:draas-license-subscribe2.png["BlueXPディザスタリカバリの[Payment Metnods]ページ"]
-
-. [ライセンスをBlueXPに追加]*を選択します。BlueXPのデジタルウォレットが表示されます。
-+
-image:digital-wallet-data-services-licenses-tab3.png["BlueXPデジタルウォレットの[Data Services Licenses]タブ"]
-
-. BlueXPデジタルウォレットで、*[データサービスライセンス]*タブで*[ライセンスの追加]*を選択します。
-. [Add License]ページで、シリアル番号とNetApp Support Siteアカウント情報を入力します。
-+
-image:byol-digital-wallet-license-add2.png["BlueXPデジタルウォレットの[Add License]ページ"]
-
-. 「 * ライセンスの追加 * 」を選択します。
-
-
-.結果
-BlueXPデジタルウォレットに、ライセンスがあればディザスタリカバリが表示されるようになりました。
-
-image:byol-digital-wallet-licenses-added.png["NetApp BlueXPデジタルウォレット"]
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["デジタルウォレットでライセンスを追加する方法"^]です。
 
 
 
@@ -131,19 +104,7 @@ image:byol-digital-wallet-licenses-added.png["NetApp BlueXPデジタルウォレ
 
 TIP: このメッセージは、BlueXPのデジタルウォレットと https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#monitoring-operations-status-using-the-notification-center["通知"]。
 
-.手順
-. BlueXPの右下にあるチャットアイコンを選択して、特定のシリアル番号について契約期間の延長やライセンスの容量の追加をリクエストします。また、電子メールを送信して、ライセンスの更新をリクエストすることもできます。
-+
-ライセンスの料金を支払ってNetApp Support Site に登録すると、BlueXPデジタルウォレット内のライセンスが自動的に更新され、[Data Services Licenses]ページに5~10分後に変更が反映されます。
-
-. BlueXPがライセンスを自動的に更新できない場合(たとえば、ダークサイトにインストールされている場合)、ライセンスファイルを手動でアップロードする必要があります。
-+
-.. ライセンスファイルはNetApp Support Siteから取得できます。
-.. BlueXPのデジタルウォレットにアクセスします。
-.. [データサービスライセンス]*タブを選択し、更新するサービスシリアル番号の*[アクション...]*アイコンを選択して、*[ライセンスの更新]*を選択します。
-
-
-
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["デジタルウォレットによるライセンスの更新について"^]です。
 
 
 
