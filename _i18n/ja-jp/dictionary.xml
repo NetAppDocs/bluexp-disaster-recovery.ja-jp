@@ -435,7 +435,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="c7e296ab461bd699a5d9cbf0801b389c" category="paragraph">移行を開始する前に、レプリケーション計画を作成し、アプリケーションの移行を選択しておく必要があります。次に、[アクション]メニューに*[移行]*オプションが表示されます。</block>
   <block id="4b832a5ef0d288f92d7b413054dc905f" category="list-text">右側で、*アクション*オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> をクリックし、*[移行]*を選択します。</block>
   <block id="9d8650f8b712e42ae65b817a2d362674" category="inline-link-macro">ディザスタリカバリ計画の健全性の表示</block>
-  <block id="baed892bed9a88570cd5a5931581b00c" category="list-text"><block ref="baed892bed9a88570cd5a5931581b00c" category="inline-link-macro-rx"></block></block>
   <block id="15d1e8fd5353c6a7e30202b501b639c3" category="inline-link-macro">VMwareアプリケーションの移行</block>
   <block id="946772510dcd559e9d7d09458b2abd6f" category="list-text"><block ref="4c49990f7ea38fc4135c764bbfcd7786" category="inline-link-macro-rx"></block> プライマリサイトから別のサイトへ。</block>
   <block id="46da469bb05d1d3a2c620e2963f1531a" category="list-text"><block ref="698cc22cc758157d8f18359f8b528216" category="inline-link-macro-rx"></block> [Job Monitoring]ページ。</block>
@@ -1035,4 +1034,44 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="e2a36029181f04d6208811edf66b0c62" category="paragraph"><block ref="039fd09b60dad6f86188402eac2ef738" category="inline-link-rx"></block>です。</block>
   <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">デジタルウォレットによるライセンスの更新について</block>
   <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>です。</block>
+  <block id="4f65b71af0098f41a96bfdb343f2f325" category="doc">リソースグループを作成してVMをまとめます。</block>
+  <block id="37c560d4a7e5a6e37f98651719bd2745" category="paragraph">vCenterサイトを追加したら、VMをグループ化するリソースグループを作成できます。リソースグループを使用すると、一連の依存VMを要件に合わせて論理グループに編成できます。たとえば、1つのアプリケーションに関連付けられたVMをグループ化したり、同様の階層を持つアプリケーションをグループ化したりできます。別の例として、グループにはリカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
+  <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">リソースグループは、次の方法で作成できます。</block>
+  <block id="ad2f31d93207199cb75dd53824344fab" category="list-text">[Resource groups]タフヲシヨウ</block>
+  <block id="0d87bb4775c6c24807b2e814da0b9ca1" category="list-text">ディザスタリカバリまたは_レプリケーション計画_を作成しているとき。ソースvCenterクラスタでホストされているVMが多数ある場合は、レプリケーション計画の作成中にリソースグループを作成する方が簡単な場合があります。レプリケーション計画の作成中にリソースグループを作成する手順については'を参照してください<block ref="ea54fcb5e693965efa13773dde42c832" category="inline-link-macro-rx"></block></block>
+  <block id="47debb7f83ae8dcccb80828c89238e3a" category="admonition">各リソースグループには1つ以上のVMを含めることができます。VMの電源は、レプリケーション計画にVMを含める順序に基づいてオンになります。リソースグループリストでVMを上下にドラッグすると、順序を変更できます。</block>
+  <block id="ae21aa75d137aec3ba200318a51f9166" category="paragraph-title">リソースグループについて</block>
+  <block id="f957d687562e057bff825e71ab7e802e" category="paragraph">リソースグループを使用すると、運用上関連があり、単一のユニットとして保護する必要があるVMを組み合わせることができます。</block>
+  <block id="b945eb631601c78c15db23da09ea1c09" category="paragraph">たとえば、POSアプリケーションは、データベースをホストする複数のVM、ビジネスロジックルール管理をホストする複数のVM、Webサーバベースのストアフロントとして機能する複数のVMで構成されます。これらのVMを単一のリソースグループに配置することで、アプリケーション全体の可用性を単一の保護プロセスで管理できます。</block>
+  <block id="97f2b89685ef06c98b9ff744b4147e33" category="paragraph">リソースグループを設定すると、VMの起動順序やネットワーク接続などのレプリケーションプランルールを適用して、アプリケーションに必要なすべてのVMを適切にリカバリすることができます。</block>
+  <block id="359f9e79e746fa9f684e5cda9e60ca2e" category="paragraph-title">どのように機能しますか？</block>
+  <block id="99cdeb2169c5824046ba94f263a554c7" category="paragraph">BlueXP  ディザスタリカバリは、基盤となるONTAPボリュームと、リソースグループ内のVMをホストしているLUNをレプリケートすることでVMを保護します。そのため、リソースグループ内のVMをホストしている各データストアの名前がvCenterに照会されます。次に、BlueXP  ディザスタリカバリによって、そのデータストアをホストしているソースONTAPボリュームまたはLUNが特定されます。すべての保護は、SnapMirrorレプリケーションを使用してONTAPボリュームレベルで実行されます。</block>
+  <block id="6004bd2544cbcf534e33d76e01ce9721" category="paragraph">リソースグループ内のVMが異なるデータストアでホストされている場合、BlueXP  ディザスタリカバリでは、次のいずれかの方法を使用して、ONTAPボリュームまたはLUNのデータ整合性スナップショットを作成します。</block>
+  <block id="4c97b19bdb39e81e1e7c0c1a8b6222c5" category="cell">FlexVolボリュームの相対的な場所</block>
+  <block id="ddbeb84a2d597ac93e26f8e4ccfed259" category="cell">スナップショットレプリカプロセス</block>
+  <block id="6d01f51b0e5a556d95395c7f71ed087e" category="cell">複数のデータストア-同じSVM内のFlexVolボリューム*</block>
+  <block id="1431ebf6966cf7875d79c646755a0ac4" category="list-text">ONTAP整合グループが作成されました</block>
+  <block id="244e1723989c81e9a2ce04f721a2db41" category="list-text">作成された整合グループのSnapshot</block>
+  <block id="b73116544f9b4e58ae13b79847ef2c41" category="list-text">ボリュームを対象としたSnapMirrorレプリケーションの実行</block>
+  <block id="afb49150087c45237455b2d82f867be8" category="cell">複数のデータストア-複数のSVMにFlexVolボリュームを配置*</block>
+  <block id="669001397154a9e2d2d9e8a107cb041d" category="list-text">ONTAP API:。<block ref="b5ab07cdecf9303ff94db49578282528" prefix=" " category="inline-code"></block>すべてのボリュームを休止してSnapshotを作成し、すべてのリソースグループボリュームのボリュームを対象としたSnapshotを開始します。</block>
+  <block id="87f2c3aeec6e1ba638ce1869ba610ea4" category="list-text">ONTAP API:。<block ref="393c6bdee070ba1b7e80e63101108f36" prefix=" " category="inline-code"></block>すべてのボリュームでI/Oを再開し、Snapshotの作成後にボリュームを対象としたSnapMirrorレプリケーションを有効にします。</block>
+  <block id="8633fcc27ccd2122fe46b210f44553cf" category="paragraph">リソースグループを作成するときは、次の問題を考慮してください。</block>
+  <block id="8892a1b3251335ec20c65f05270cae24" category="list-text">1つのデータストアで複数のレプリケーションプランで保護されているVMをホストしないでください。</block>
+  <block id="85d8f006f7e8ceeb46f30e2eba810828" category="list-text">保護されているVMと保護されていないVMを同じデータストアでホストしないでください。保護されているVMと保護されていないVMが同じデータストアでホストされている場合、次の問題が発生する可能性があります。</block>
+  <block id="01c88b8825d68ac74c4f3a900e529850" category="list-text">BlueXP  ディザスタリカバリではSnapMirrorを使用し、システムはONTAPボリューム全体をレプリケートするため、そのボリュームの使用容量はライセンスに関する考慮事項として使用されます。この場合、保護されているVMと保護されていないVMの両方で消費されるボリュームスペースがこの計算に含まれます。</block>
+  <block id="fd30c9137bf3e65eb4cbb0b3b65c45d8" category="list-text">リソースグループとその関連データストアをディザスタリカバリサイトにフェイルオーバーする必要がある場合は、フェイルオーバープロセスによって保護されていないVM（リソースグループに含まれていないがONTAPボリュームでホストされているVM）がソースサイトに存在しなくなり、ソースサイトで保護されていないVMが障害されます。また、BlueXP  ディザスタリカバリでは、保護されていないVMはフェイルオーバーvCenterサイトで開始されません。</block>
+  <block id="8a63c65b056310ba2a8c9f7b25cb1011" category="list-text">VMを保護するには、そのVMをリソースグループに含める必要があります。</block>
+  <block id="4314245dac1433ba0b4e2677f01da1cf" category="paragraph">*ベストプラクティス*：BlueXP  ディザスタリカバリを導入する前にVMを整理し、「データストアの無秩序な増加」を最小限に抑えます。保護が必要なVMはデータストアのサブセットに配置し、保護されないVMは別のデータストアに配置します。特定のデータストア上のVMが異なるレプリケーションプランで保護されていないことを確認します。</block>
+  <block id="b0111a1bb823a7c75cdcdc06c66703ca" category="list-text">BlueXP  のディザスタリカバリメニューで、*[リソースグループ]*を選択します。</block>
+  <block id="fa4d1c967d467deb12174bc6b1b3355b" category="list-text">リソースグループの名前を入力します。</block>
+  <block id="23a0cad5b0151418367a15f201a54ad3" category="list-text">VMが配置されているソースvCenterクラスタを選択します。</block>
+  <block id="dca4029f87bca2c081e4f75bba3b9b28" category="list-text">[Add resource groups]ページの左側で、保護するVMを選択します。</block>
+  <block id="38b6edfcfacd5ae9860834f850083003" category="inline-image-macro">[Add resource groups]ページのスクリーンショット</block>
+  <block id="1a4be911d3882d1b3762fb71915599c8" category="paragraph"><block ref="1a4be911d3882d1b3762fb71915599c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c021ba8d319c1c5278738c67a531bc28" category="list-text">必要に応じて、各VMをリストの上または下にドラッグして、右側のVMの順序を変更します。VMを含める順序に基づいて、VMの電源がオンになります。</block>
+  <block id="ee3e1a92f28abbcd26a1a39655c0465a" category="list-text"><block ref="baed892bed9a88570cd5a5931581b00c" category="inline-link-macro-rx"></block>です。</block>
+  <block id="1b98100fdedab345bec758f9fe534c9b" category="inline-link-macro">リソースグループを作成してVMをまとめます</block>
+  <block id="7d1ee868f80080dd430c4c762c071750" category="list-text"><block ref="7d1ee868f80080dd430c4c762c071750" category="inline-link-macro-rx"></block></block>
+  <block id="548b49f4267cb06525a994818f01fc03" category="sidebar">リソースグループを作成する</block>
 </blocks>

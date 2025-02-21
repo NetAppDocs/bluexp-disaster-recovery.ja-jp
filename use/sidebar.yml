@@ -8,6 +8,8 @@ entries:
   url: "/use/dashboard-view.html"
 - title: サイトへのvCenterの追加
   url: "/use/sites-add.html"
+- title: リソースグループを作成する
+  url: "/use/resource-group.html"
 - title: レプリケーション計画の作成
   url: "/use/drplan-create.html"
 - title: 別のサイトへの複製
