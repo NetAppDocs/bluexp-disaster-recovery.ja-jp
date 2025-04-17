@@ -172,7 +172,6 @@
   <block id="2b62fc3f49aa92691e24ff085ed87ebe" category="list-text">運用コストを削減し、最小限のリソースでディザスタリカバリ計画を作成および調整できるため、総所有コストを削減できます。</block>
   <block id="fdc22ef10c3a7384ef6c52b17d799754" category="list-text">継続的なディザスタリカバリの準備：運用を中断せずに仮想フェイルオーバーテストを実施</block>
   <block id="06c4e885d0b84b88cbc1cfc207ec029b" category="list-text">IT環境の動的な変化とディザスタリカバリ計画への対応力により、価値創出までの時間を短縮</block>
-  <block id="665fccb70331e8dfa8afd40c0bbb51f0" category="list-text">災害が解決されたら、ディザスタリカバリサイトからプライマリサイトにオンデマンドでフェイルバックします。</block>
   <block id="da43ae6496f10d6bfd475400915e2865" category="admonition">vSphereサーバの設定は、vSphere ServerのBlueXPディザスタリカバリの外部で行います。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">コスト</block>
   <block id="d244f191aaddadced4c31b2f67d06c9c" category="inline-image-macro">VMwareサービスインフラ向けBlueXPディザスタリカバリのアーキテクチャを示す図</block>
@@ -291,7 +290,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="3849da8702f93c4c73b8b2d18d7d3b4d" category="list-text">[仮想マシン]*を選択します。</block>
   <block id="2e91c6382e139b4d3b0307917725df9c" category="list-text">仮想マシンの情報を表示します。</block>
   <block id="ec972bce7640d5d440d3549702031815" category="section-title">リソースグループの管理</block>
-  <block id="eb0ce25134b7ddab2efc8b2970a1fd4f" category="paragraph">レプリケーション計画の作成の一部としてリソースグループを追加することもできますが、グループを個別に追加し、後でそれらのグループを計画で使用する方が便利な場合があります。</block>
   <block id="21b6410f349f79c305b5485d62f171ca" category="paragraph">また、リソースグループを編集および削除することもできます。</block>
   <block id="b1190a0ce1a0e51d67d2bdd169a714b0" category="list-text">トップメニューから*[リソースグループ]*を選択します。</block>
   <block id="fb64cb9f2eb5e660830a8f202d12f794" category="list-text">リソースグループを追加するには、*[グループの追加]*を選択します。</block>
@@ -330,7 +328,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">レプリケーションプランは、あとで無効にしたり削除したりできます。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">[プランの追加]*を選択します。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">計画が計画のリストに追加されます。</block>
-  <block id="9809a26603cc2fbdd8049c848bf77835" category="paragraph">BlueXPディザスタリカバリでは、vCenterクラスタ、ESXiホスト、データストア、ストレージフットプリント、 仮想マシンの詳細、SnapMirrorレプリカ、および仮想マシンネットワーク。</block>
   <block id="6df4f43f22118c6a361990f481e6ed83" category="list-text">BlueXPにログインし、左側のナビゲーションで*[保護]*&gt;*[ディザスタリカバリ]*を選択します。</block>
   <block id="2f11fab4722695438910176065d838b4" category="paragraph">BlueXPディザスタリカバリのダッシュボードページが表示されます。サービスを最初に開始するときは、vCenter情報を追加する必要があります。後で、ダッシュボードにサイトとレプリケーションプランに関するデータが表示されます。</block>
   <block id="6b3b905a38750ec7a08fa2e97d6315bf" category="admonition">vCenterサイトがすでに存在し、さらに追加する場合は、トップメニューで*[サイト]*を選択し、*[追加]*を選択します。</block>
@@ -451,7 +448,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
   <block id="add8d69a5f7975ffd43124657fc5030d" category="list-text">SnapMirrorレプリケーションを使用して、オンプレミスの本番用サイト上のVMwareアプリケーションをクラウドまたはオンプレミスのディザスタリカバリリモートサイトにレプリケートします。</block>
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">VMwareワークロードを元のサイトから別のサイトに移行します。</block>
-  <block id="2aefc74ac286c583100431f62049590d" category="list-text">災害が発生した場合は、プライマリサイトをオンデマンドでディザスタリカバリサイトにフェイルオーバーします。このサイトには、VMware Cloud on AWSとFSx for NetApp ONTAP、またはONTAPを使用したオンプレミスのVMware環境があります。</block>
   <block id="a6a42e8e3070730d19bfd86d6a1d66fe" category="paragraph">次の図は、オンプレミスからオンプレミスへのディザスタリカバリ計画のアーキテクチャを示しています。</block>
   <block id="20099229ad21726312a6ff50740b0b57" category="paragraph">災害が発生した場合にこのサービスを使用すると、SnapMirror関係を解除してデスティネーションサイトをアクティブにすることで、他のオンプレミスのVMware環境またはVMCの仮想マシンをリカバリできます。</block>
   <block id="96ed64c294e585324853f8f980f9d78e" category="sidebar">アプリケーションを別のサイトに移行</block>
@@ -485,9 +481,7 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="d940bc2868fa1d10a5c804aa0df8fd1b" category="list-text">BlueXPのディザスタリカバリで、右上の*無償トライアル-詳細を表示*を選択します。</block>
   <block id="2c6b9011807f7d1e8a37a31be26bb7c0" category="list-text">ドロップダウンの詳細で*[End free trial]*を選択します。</block>
   <block id="fc145d0284ba4e60c3b5f315355ac505" category="inline-image-macro">無償トライアルの終了ページ</block>
-  <block id="3c90e08e219b34e50a8fec5640b6f2e8" category="list-text">すべてのデータを削除する場合は、[試用期間終了時にすべてのデータを削除する]をオンにします。</block>
   <block id="cb4cbd8ce32849060814e41e57e5db7f" category="paragraph">これにより、すべてのスケジュール、レプリケーションプラン、リソースグループ、vCenter、およびサイトが削除されます。監査データ、処理ログ、およびジョブ履歴は、製品の寿命が終わるまで保持されます。</block>
-  <block id="fd4452ba53d2010757fb183f23851efd" category="admonition">無償トライアルを終了してもデータの削除を求められず、ライセンスやサブスクリプションを購入していない場合、無償トライアルの終了から60日後にBlueXPディザスタリカバリによってすべてのデータが削除されます。</block>
   <block id="c3964fe08c9dd95815cc67d8aaee9323" category="list-text">テキストボックスに「end trial」と入力します。</block>
   <block id="44a320573c319d1f30b840c2d11a4e26" category="list-text">[終了]*を選択します。</block>
   <block id="3906249fde1cef9339402436007bb4f7" category="paragraph">お客様所有のライセンスを使用（BYOL）する場合は、ライセンスの購入、NetAppライセンスファイル（NLF）の取得、BlueXPデジタルウォレットへのライセンスの追加が含まれます。</block>
@@ -807,15 +801,7 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="3eddfb488d257605e7713c24d210beee" category="inline-link">サイト、リソースグループ、レプリケーションプラン、データストア、仮想マシンの情報を管理します。</block>
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">詳細については、を参照してください<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">詳細については、を参照してください<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
-  <block id="f2cdd0bbe9f89ecac35fe20b5c70e9fb" category="paragraph">次の手順では、必要なVMを機能リソースグループにグループ化します。リソースグループを使用すると、一連の依存VMを要件に合わせて論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
-  <block id="4d179ba15a8047d595a41bbd6175c3be" category="paragraph">レプリケーションプランでアプリケーションを選択すると、プラン内の各VMのオペレーティングシステムが表示されます。これは、VMを1つのリソースグループにグループ化する方法を決定する際に役立ちます。</block>
-  <block id="7eb18c1801bc45dc00317e09e6cc2211" category="admonition">各リソースグループには1つ以上のVMを含めることができます。ここで指定した順序に基づいて、VMの電源がオンになります。</block>
-  <block id="794c0f8f77c0af0e4613492580e6d7ab" category="list-text">[Applications]ページの左側で、保護するVMを選択し、選択したグループに割り当てます。</block>
-  <block id="87661bcc452e9da5afed70a3b9cf3e39" category="paragraph">選択したVMが自動的にグループ1に追加され、新しいグループ2が開始されます。VMを最後のグループに追加するたびに、別のグループが追加されます。</block>
-  <block id="81c61db52db9a56a1819f55910f10afa" category="paragraph"><block ref="37056fc036b85c73069e7f1371212abb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">グループ名を変更するには、グループ*[編集]*アイコンをクリックし<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>ます。</block>
-  <block id="a218e8ce5f9879c5e643831c2aa0e36a" category="list-text">グループからVMを削除するには、VMの横にある* X *を選択します。</block>
-  <block id="a63398300e6fbe20dc11a32121bd6bfa" category="list-text">VMを別のグループに移動するには、VMを新しいグループにドラッグアンドドロップします。</block>
   <block id="86cbb58fb6d06cab306fbf4379c5c40e" category="paragraph">グループ内の各VMは、ここでの順序に基づいて順番に起動されます。</block>
   <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">リソースマッピングステップで、ソース環境のリソースをターゲットにマッピングする方法を指定します。レプリケーションプランを作成するときに、プラン内のVMごとにブート遅延と順序を設定できます。これにより、VMの起動順序を設定できます。</block>
   <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*ソースとターゲットのデータセンター*</block>
@@ -852,8 +838,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="835e92deb53775d3ce75f1bab2ff7fe5" category="list-text">レプリケーションプランを選択した状態で、[Actions]メニューを選択し、* Clean up old snapshots（古いSnapshotをクリーンアップ）を選択して、新しい保持数に合わせてターゲットから古いSnapshotを削除します。</block>
   <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去1年間のジョブの詳細が含まれます。</block>
   <block id="8c909df77f7b5e2e6b77ff66ee6bd3e7" category="paragraph">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、過去7日間のテストフェイルオーバーの概要、レプリケーションプランの詳細、およびアカウント内のすべてのサイトのジョブの詳細が含まれます。</block>
-  <block id="50772b7f62153c22aff0a022f47038ef" category="paragraph">レポートはHTML形式またはJSON形式でダウンロードできます。</block>
-  <block id="a023ebf9b7aa4bcf4be9bcca1ad988b9" category="admonition">ブラウザのオプションを使用して、HTMLページをPDFに変換できます。</block>
   <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">ダウンロードリンクは6時間有効です。</block>
   <block id="5e521694fac83ef0acfcb6f722d2b3cf" category="list-text">BlueXP  の左側のナビゲーションで、*[保護]*&gt;*[ディザスタリカバリ]*&gt;*[レプリケーションプラン]*を選択します。</block>
   <block id="40f8ac7caaab02ab3b9834517b54c7a4" category="list-text">ページの上部から、*[レポートの作成]*を選択します。</block>
@@ -862,12 +846,10 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="5da6bcdd6ceb1c5910fb17277177402d" category="admonition">レポートの表示に数分かかることがあります。</block>
   <block id="ab6b0c72784c216662673e59f1357cc1" category="list-text">レポートをダウンロードするには、*[Download report]*を選択し、管理者の[Download]フォルダで選択します。</block>
   <block id="fa9f16c02f8fd7bab6992dec65c5838d" category="paragraph">vCenterサイトを追加したら、ディザスタリカバリ（_replication plan_）を作成できます。ソースvCenterとデスティネーションvCenterを選択し、リソースグループを選択して、アプリケーションのリストア方法とパワーオン方法をグループ化します。たとえば、1つのアプリケーションに関連付けられた仮想マシン（VM）をグループ化したり、同様の階層を持つアプリケーションをグループ化したりできます。</block>
-  <block id="cfb3b856fe141dd537038393a8052d33" category="list-text">レプリケートするVMを選択し、グループを割り当てます。</block>
   <block id="50e34508d81a64564e31500b942aef1c" category="paragraph">計画を作成するときは、次のガイドラインに従ってください。</block>
   <block id="05bbe166de3c0c72c8dde33285c35767" category="list-text">プラン内のすべてのVMに同じクレデンシャルを使用します。</block>
   <block id="98ce844145386e78d8c9d936d1b8591b" category="list-text">計画内のすべてのVMに同じスクリプトを使用します。</block>
   <block id="970b99aab999d5cc3afca09ebfb3ae92" category="list-text">計画内のすべてのVMに同じサブネット、DNS、およびゲートウェイを使用します。</block>
-  <block id="7168b459722d34d971b0a9d5df12edfd" category="list-text">必要に応じて、[Applications]ページの左側で、VMをデータストアでフィルタします。特定のVMを名前で検索することもできます。</block>
   <block id="3380eb8d26d8e7c43e790421698a18a1" category="list-text">* IPアドレスタイプ*：ターゲットの仮想ネットワーク要件に合わせて、VMS構成を再設定します。BlueXP  ディザスタリカバリには、DHCPと静的IPの2つのオプションがあります。スタティックIPの場合は、サブネットマスク、ゲートウェイ、およびDNSサーバを設定します。さらに、VMのクレデンシャルを入力します。</block>
   <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">* DHCP *：VMがDHCPサーバからネットワーク構成情報を取得するようにする場合は、この設定を選択します。このオプションを選択する場合は、VMのクレデンシャルだけを指定します。</block>
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*スクリプト*:フェイルオーバー後のプロセスとして、.sh、.bat、または.ps1形式のカスタムスクリプトを含めることができます。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。</block>
@@ -1035,13 +1017,9 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">デジタルウォレットによるライセンスの更新について</block>
   <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>です。</block>
   <block id="4f65b71af0098f41a96bfdb343f2f325" category="doc">リソースグループを作成してVMをまとめます。</block>
-  <block id="37c560d4a7e5a6e37f98651719bd2745" category="paragraph">vCenterサイトを追加したら、VMをグループ化するリソースグループを作成できます。リソースグループを使用すると、一連の依存VMを要件に合わせて論理グループに編成できます。たとえば、1つのアプリケーションに関連付けられたVMをグループ化したり、同様の階層を持つアプリケーションをグループ化したりできます。別の例として、グループにはリカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
   <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">リソースグループは、次の方法で作成できます。</block>
   <block id="ad2f31d93207199cb75dd53824344fab" category="list-text">[Resource groups]タフヲシヨウ</block>
-  <block id="0d87bb4775c6c24807b2e814da0b9ca1" category="list-text">ディザスタリカバリまたは_レプリケーション計画_を作成しているとき。ソースvCenterクラスタでホストされているVMが多数ある場合は、レプリケーション計画の作成中にリソースグループを作成する方が簡単な場合があります。レプリケーション計画の作成中にリソースグループを作成する手順については'を参照してください<block ref="ea54fcb5e693965efa13773dde42c832" category="inline-link-macro-rx"></block></block>
-  <block id="47debb7f83ae8dcccb80828c89238e3a" category="admonition">各リソースグループには1つ以上のVMを含めることができます。VMの電源は、レプリケーション計画にVMを含める順序に基づいてオンになります。リソースグループリストでVMを上下にドラッグすると、順序を変更できます。</block>
   <block id="ae21aa75d137aec3ba200318a51f9166" category="paragraph-title">リソースグループについて</block>
-  <block id="f957d687562e057bff825e71ab7e802e" category="paragraph">リソースグループを使用すると、運用上関連があり、単一のユニットとして保護する必要があるVMを組み合わせることができます。</block>
   <block id="b945eb631601c78c15db23da09ea1c09" category="paragraph">たとえば、POSアプリケーションは、データベースをホストする複数のVM、ビジネスロジックルール管理をホストする複数のVM、Webサーバベースのストアフロントとして機能する複数のVMで構成されます。これらのVMを単一のリソースグループに配置することで、アプリケーション全体の可用性を単一の保護プロセスで管理できます。</block>
   <block id="97f2b89685ef06c98b9ff744b4147e33" category="paragraph">リソースグループを設定すると、VMの起動順序やネットワーク接続などのレプリケーションプランルールを適用して、アプリケーションに必要なすべてのVMを適切にリカバリすることができます。</block>
   <block id="359f9e79e746fa9f684e5cda9e60ca2e" category="paragraph-title">どのように機能しますか？</block>
@@ -1056,13 +1034,8 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="afb49150087c45237455b2d82f867be8" category="cell">複数のデータストア-複数のSVMにFlexVolボリュームを配置*</block>
   <block id="669001397154a9e2d2d9e8a107cb041d" category="list-text">ONTAP API:。<block ref="b5ab07cdecf9303ff94db49578282528" prefix=" " category="inline-code"></block>すべてのボリュームを休止してSnapshotを作成し、すべてのリソースグループボリュームのボリュームを対象としたSnapshotを開始します。</block>
   <block id="87f2c3aeec6e1ba638ce1869ba610ea4" category="list-text">ONTAP API:。<block ref="393c6bdee070ba1b7e80e63101108f36" prefix=" " category="inline-code"></block>すべてのボリュームでI/Oを再開し、Snapshotの作成後にボリュームを対象としたSnapMirrorレプリケーションを有効にします。</block>
-  <block id="8633fcc27ccd2122fe46b210f44553cf" category="paragraph">リソースグループを作成するときは、次の問題を考慮してください。</block>
-  <block id="8892a1b3251335ec20c65f05270cae24" category="list-text">1つのデータストアで複数のレプリケーションプランで保護されているVMをホストしないでください。</block>
-  <block id="85d8f006f7e8ceeb46f30e2eba810828" category="list-text">保護されているVMと保護されていないVMを同じデータストアでホストしないでください。保護されているVMと保護されていないVMが同じデータストアでホストされている場合、次の問題が発生する可能性があります。</block>
   <block id="01c88b8825d68ac74c4f3a900e529850" category="list-text">BlueXP  ディザスタリカバリではSnapMirrorを使用し、システムはONTAPボリューム全体をレプリケートするため、そのボリュームの使用容量はライセンスに関する考慮事項として使用されます。この場合、保護されているVMと保護されていないVMの両方で消費されるボリュームスペースがこの計算に含まれます。</block>
-  <block id="fd30c9137bf3e65eb4cbb0b3b65c45d8" category="list-text">リソースグループとその関連データストアをディザスタリカバリサイトにフェイルオーバーする必要がある場合は、フェイルオーバープロセスによって保護されていないVM（リソースグループに含まれていないがONTAPボリュームでホストされているVM）がソースサイトに存在しなくなり、ソースサイトで保護されていないVMが障害されます。また、BlueXP  ディザスタリカバリでは、保護されていないVMはフェイルオーバーvCenterサイトで開始されません。</block>
   <block id="8a63c65b056310ba2a8c9f7b25cb1011" category="list-text">VMを保護するには、そのVMをリソースグループに含める必要があります。</block>
-  <block id="4314245dac1433ba0b4e2677f01da1cf" category="paragraph">*ベストプラクティス*：BlueXP  ディザスタリカバリを導入する前にVMを整理し、「データストアの無秩序な増加」を最小限に抑えます。保護が必要なVMはデータストアのサブセットに配置し、保護されないVMは別のデータストアに配置します。特定のデータストア上のVMが異なるレプリケーションプランで保護されていないことを確認します。</block>
   <block id="b0111a1bb823a7c75cdcdc06c66703ca" category="list-text">BlueXP  のディザスタリカバリメニューで、*[リソースグループ]*を選択します。</block>
   <block id="fa4d1c967d467deb12174bc6b1b3355b" category="list-text">リソースグループの名前を入力します。</block>
   <block id="23a0cad5b0151418367a15f201a54ad3" category="list-text">VMが配置されているソースvCenterクラスタを選択します。</block>
@@ -1074,4 +1047,81 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="1b98100fdedab345bec758f9fe534c9b" category="inline-link-macro">リソースグループを作成してVMをまとめます</block>
   <block id="7d1ee868f80080dd430c4c762c071750" category="list-text"><block ref="7d1ee868f80080dd430c4c762c071750" category="inline-link-macro-rx"></block></block>
   <block id="548b49f4267cb06525a994818f01fc03" category="sidebar">リソースグループを作成する</block>
+  <block id="f2265cb494c0b6dc346cf3703718b766" category="doc">VMのスケジュールされた検出</block>
+  <block id="a1cc1dbaf027adca720112f5a8c48e4d" category="paragraph">BlueXP  ディザスタリカバリでは、24時間に1回検出が実行されます。このリリースでは、ニーズに合わせて調査スケジュールをカスタマイズし、必要なときにパフォーマンスへの影響を軽減できるようになりました。たとえば、VMの数が多い場合は、検出スケジュールを48時間ごとに実行するように設定できます。VMの数が少ない場合は、検出スケジュールを12時間ごとに実行するように設定できます。</block>
+  <block id="7e2d4377602fe8c7a718d5ef8759c008" category="paragraph">検出をスケジュールしない場合は、スケジュールされた検出オプションを無効にして、いつでも手動で検出を更新できます。</block>
+  <block id="d04fa3ae362a3ea46fde26bdba81b204" category="inline-link">vCenterサーバサイトを追加</block>
+  <block id="0002b275859484d6cdca867fbab8e165" category="paragraph">詳細については、を参照してください<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block>。</block>
+  <block id="84307a139104b06aba6c6de9c728b2ff" category="section-title">リソースグループデータストアのサポート</block>
+  <block id="ed0d134f0d7b751b80633ad848722c7a" category="paragraph">これまでは、VMごとにのみリソースグループを作成できました。このリリースでは、データストア別にリソースグループを作成できます。レプリケーション計画を作成し、その計画のリソースグループを作成すると、データストア内のすべてのVMが一覧表示されます。これは、多数のVMがあり、それらをデータストアでグループ化する場合に便利です。</block>
+  <block id="84ae8aaf40a4b59fed9a4fa741ccf225" category="paragraph">データストアを含むリソースグループは、次の方法で作成できます。</block>
+  <block id="ee64b17e5379b689c5eb4ab50027f625" category="list-text">データストアを使用してリソースグループを追加する場合は、データストアのリストが表示されます。1つ以上のデータストアを選択してリソースグループを作成できます。</block>
+  <block id="3043e1ee38988e4248b9d1966e6dd1a4" category="list-text">レプリケーション計画を作成し、その計画内にリソースグループを作成すると、データストア内のVMが表示されます。</block>
+  <block id="f7a1d657a7b8993c917f63602c0774a1" category="section-title">無償トライアルまたはライセンスの有効期限に関する通知</block>
+  <block id="38a9b45e86982c8330edcb875da55284" category="paragraph">このリリースでは、ライセンスを取得する時間を確保するために、無料トライアルが60日後に期限切れになることを通知します。また、このリリースでは、ライセンスの有効期限が切れる日に通知が送信されます。</block>
+  <block id="5d940e67e8d433508306c751ff0ea678" category="section-title">サービス更新の通知</block>
+  <block id="9bdd52eb995b6f47a02ffa6aa4318399" category="paragraph">このリリースでは、サービスがアップグレードされ、サービスがメンテナンスモードになったことを示すバナーが上部に表示されます。バナーはサービスのアップグレード中に表示され、アップグレードが完了すると消えます。アップグレードの進行中もUIで作業を続行できますが、新しいジョブを送信することはできません。スケジュールされたジョブは、更新が完了してサービスが本番モードに戻ると実行されます。</block>
+  <block id="6bed87054cd375e075020297134f5ec2" category="paragraph">クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。VMware向けのBlueXP  ディザスタリカバリを使用すると、ONTAPストレージを実行するオンプレミスのVMware VMまたはデータストアのワークロードを、NetAppクラウドストレージを使用してパブリッククラウド内のVMware Software-Defined Data Centerにレプリケートしたり、ONTAPストレージをディザスタリカバリサイトとして使用するオンプレミスの別のVMware環境にレプリケートしたりできます。</block>
+  <block id="ece6a9df8de79d152a543985204b6221" category="list-text">災害が発生した場合は、プライマリサイトをオンデマンドでディザスタリカバリサイトにフェイルオーバーします。このサイトには、VMware Cloud on AWSとAmazon FSx for NetApp ONTAP、またはONTAPを使用したオンプレミスのVMware環境があります。</block>
+  <block id="75bb2df7399afeb7147c24fce3704107" category="list-text">災害が解決されたら、ディザスタリカバリサイトからプライマリサイトにオンデマンドでフェイルバックします。*効率的な管理のために、VMまたはデータストアを論理リソースグループにグループ化します。</block>
+  <block id="70fdbb4fe1ac448b07e3ab48c5bd8bb1" category="list-text">すべてのデータを削除したい場合は、[無料トライアルを終了した直後にデータを削除する]をオンにします。</block>
+  <block id="ba1769c41cb5cf97045fc108e9213d38" category="admonition">無料トライアルを終了し、データの削除を要求せず、ライセンスやサブスクリプションを購入しなかった場合、BlueXP  のディザスタリカバリは、無料トライアルの終了から60日後にすべてのデータを削除します。</block>
+  <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">2025年4月16日</block>
+  <block id="e1b61136672bccd13e6828fe7987e4f6" category="paragraph">バージョン4.3</block>
+  <block id="61e45ffabe7cc2e3542ca9a55a1a53bf" category="paragraph">VMを保護できるのは、レプリケーションプランが次のいずれかの状態にある場合のみです。</block>
+  <block id="e7d31fc0602fb2ede144d18cdffd816b" category="list-text">準備完了</block>
+  <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">フェイルバックコミット済み</block>
+  <block id="55af57d923ed95c2495c25a0e4762077" category="list-text">テストフェイルオーバーコミット済み</block>
+  <block id="cffe0c1b9d43854c0d95a5d592e6102c" category="list-text">レプリケートするVMまたはデータストアを選択し、リソースグループを割り当てます。</block>
+  <block id="335e98e9e03c56f037d977ec4b92f533" category="paragraph">次の手順では、必要なVMまたはデータストアを機能するリソースグループにグループ化します。リソースグループを使用すると、一連の従属VMまたはデータストアを、要件に合わせて論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
+  <block id="418330af51c4a26653da43f1476e3d4f" category="paragraph">レプリケーションプランでアプリケーションを選択すると、プラン内の各VMまたはデータストアのオペレーティングシステムが表示されます。これは、VMまたはデータストアを1つのリソースグループにグループ化する方法を決定する際に役立ちます。</block>
+  <block id="f8842a88bb1ca78d43e06472d4679889" category="admonition">各リソースグループには1つ以上のVMまたはデータストアを含めることができます。ここで指定した順序に基づいて、VMの電源がオンになります。</block>
+  <block id="5e90d93870eb5779de0b40ced0f92445" category="paragraph">リソースグループを作成するときは、次の点を考慮してください。</block>
+  <block id="de634b3bd311c5e5e1c0b9d53d9d242f" category="list-text">リソースグループにデータストアを追加する前に、最初にVMの手動検出またはスケジュールされた検出を開始してください。これにより、VMが検出されてリソースグループにリストされます。手動検出をトリガーしないと、VMがリソースグループに表示されない可能性があります。</block>
+  <block id="312258bdb1152123e04c06cf90952de2" category="list-text">データストアにVMが少なくとも1つあることを確認します。データストアにVMがない場合、データストアは検出されません。</block>
+  <block id="9fa2d89f680762c7614753f04e0aad6b" category="list-text">1つのデータストアで複数のレプリケーションプランで保護されているVMをホストしないでください。</block>
+  <block id="dfbb0d3c710884104551edbd929afe76" category="list-text">保護されているVMと保護されていないVMを同じデータストアでホストしないでください。保護されているVMと保護されていないVMが同じデータストアでホストされている場合、次の問題が発生する可能性があります。</block>
+  <block id="2ec187db789cd0f14313072722cd5c3d" category="list-text">リソースグループと関連するデータストアをディザスタリカバリサイトにフェイルオーバーする必要がある場合は、フェイルオーバープロセスによって保護されていないVM（リソースグループに含まれていないがONTAPボリュームでホストされているVM）がソースサイトに存在しなくなり、ソースサイトで保護されていないVMで障害が発生します。また、BlueXP  ディザスタリカバリでは、保護されていないVMはフェイルオーバーvCenterサイトで開始されません。</block>
+  <block id="2ff74859cf5b70036f96d6c35b5ac3f0" category="paragraph">*ベストプラクティス*：BlueXP  ディザスタリカバリを導入する前にVMを整理し、「データストアの無秩序な増加」を最小限に抑えます。保護が必要なVMは一部のデータストアに配置し、保護されないVMは別のデータストアに配置します。データストア上のVMが別のレプリケーションプランで保護されていないことを確認します。</block>
+  <block id="6f9c40e36ae73e33332b46ebad53611b" category="list-text">[仮想マシン]または*[データストア]*を選択します。</block>
+  <block id="1e37304672f6f6f473c93804e891eacb" category="list-text">必要に応じて、特定のVMまたはデータストアを名前で検索します。</block>
+  <block id="b3736de6232ff120d2109e988d051825" category="list-text">[Applications]ページの左側で、保護するVMまたはデータストアを選択し、選択したグループに割り当てます。</block>
+  <block id="08c396946743aa0cf55cd76038c264b7" category="paragraph">選択したリソースが自動的にグループ1に追加され、新しいグループ2が開始されます。最後のグループにリソースを追加するたびに、別のグループが追加されます。</block>
+  <block id="0f71807fe3313792a56d8deaefc042cd" category="paragraph"><block ref="fe2b15a06d13ce51dd26ce76b278185c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9614731ca9a6da0007a983f0a2437843" category="paragraph">または、データストアの場合：</block>
+  <block id="07445ca0ae375259d669e5ff34c73c99" category="paragraph"><block ref="0900e5e3c0a693c1efb9cc1c9f020053" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d2514ca702dd19c69d05151f9ca0dde" category="list-text">グループからリソースを削除するには、リソースの横にある* X *を選択します。</block>
+  <block id="f0a0692b11f1b8e73cde7a3fa59cce87" category="list-text">リソースを別のグループに移動するには、新しいグループにドラッグアンドドロップします。</block>
+  <block id="d92fbdb4e21242a727db9edab622f2e7" category="admonition">データストアを別のリソースグループに移動するには、不要なデータストアの選択を解除し、レプリケーション計画を送信します。次に、他のレプリケーションプランを作成または編集し、データストアを再度選択します。</block>
+  <block id="df5bd7f92bf7a899cafe7f5f4cede250" category="paragraph">レプリケーション計画の作成の一部としてリソースグループを追加することもできますが、グループを個別に追加し、後でそれらのグループを計画で使用する方が便利な場合があります。リソースグループは、VMまたはデータストア別に作成します。</block>
+  <block id="f14421e984d67b669d82e97c5f322ee1" category="paragraph">データストア別にリソースグループを作成するには、次の方法があります。</block>
+  <block id="8c0063a0e5fb937e4b6c45cefbf9765b" category="paragraph">レポートはPDF、HTML、またはJSON形式でダウンロードできます。</block>
+  <block id="4f3a59f3915b8beff0db268e9200f32d" category="paragraph">vCenterサイトを追加したら、VMまたはデータストア別にVMをグループ化するリソースグループを作成できます。リソースグループを使用すると、一連の依存VMを要件に合わせて論理グループに編成できます。たとえば、1つのアプリケーションに関連付けられたVMをグループ化したり、同様の階層を持つアプリケーションをグループ化したりできます。別の例として、グループにはリカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
+  <block id="68924c47e2eb51445ff8e93c1ce1bbc2" category="paragraph">VM自体またはデータストア内のVMをグループ化できます。</block>
+  <block id="29a34a7d63a066ce71bffd4a4d5c57dd" category="list-text">ディザスタリカバリまたは_レプリケーション計画_を作成しているとき。ソースvCenterクラスタでホストされているVMが多数ある場合は、レプリケーション計画の作成中にリソースグループを作成する方が簡単な場合があります。レプリケーション計画の作成中にリソースグループを作成する手順については'を参照してください<block ref="808c9323236f2ed48bff12970a5f1c49" category="inline-link-macro-rx"></block></block>
+  <block id="d9d4ae88e38b24479af2edb7b1d29c42" category="admonition">各リソースグループには1つ以上のVMまたはデータストアを含めることができます。VMの電源は、レプリケーション計画にVMを含める順序に基づいてオンになります。順序を変更するには、VMまたはデータストアをリソースグループリストで上下にドラッグします。</block>
+  <block id="335cb5cb2353aeb9863b45bfe205a67d" category="paragraph">リソースグループを使用すると、運用上関連があり、単一のユニットとして保護する必要があるVMを含むVMまたはデータストアを組み合わせることができます。</block>
+  <block id="1525aedb2680936263642e1258b66620" category="list-text">検索方法に応じて、*[仮想マシン]*または*[データストア]*を選択します。</block>
+  <block id="6bc8606bc16628bb91d45fae4e7a2398" category="list-text">[リソースグループの追加]*タブを選択します。選択したvCenterクラスタ内のすべてのデータストアまたはVMが表示されます。[データストア]*を選択すると、選択したvCenterクラスタ内のすべてのデータストアがリストされます。[仮想マシン]*を選択すると、選択したvCenterクラスタ内のすべてのVMがリストされます。</block>
+  <block id="20391328f727df103455848410020c4e" category="paragraph"><block ref="20391328f727df103455848410020c4e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d4621be8c4e595ac641222751fcbbd4b" category="paragraph">vCenterが追加されると、BlueXP  ディザスタリカバリによって、vCenterクラスタ、ESXiホスト、データストア、ストレージフットプリント、仮想マシンの詳細、SnapMirrorレプリカ、仮想マシンネットワークなど、vCenter環境の詳細な検出が実行されます。</block>
+  <block id="fc548d74f5fe5eda5c2ac1776a3251d8" category="paragraph">以前のリリースでvCenterを追加し、検出スケジュールをカスタマイズする場合は、vCenter Serverサイトを編集してスケジュールを設定する必要があります。</block>
+  <block id="63645e7c57622b218c40eb8c4228f755" category="admonition">BlueXP  ディザスタリカバリでは、24時間に1回検出が実行されます。サイトのセットアップが完了したら、あとでvCenterを編集して、ニーズに合わせて検出スケジュールをカスタマイズできます。たとえば、VMの数が多い場合は、検出スケジュールを23時間59分ごとに実行するように設定できます。VMの数が少ない場合は、検出スケジュールを12時間ごとに実行するように設定できます。最小間隔は30分、最大間隔は24時間です。</block>
+  <block id="f77a5149ff25436d00205500f56a3671" category="paragraph">最初にいくつかの手動検出を実行して、環境に関する最新の情報を取得する必要があります。その後、自動的に実行されるようにスケジュールを設定できます。</block>
+  <block id="89f2a6d4b35cc4d13e0976279d928bd2" category="paragraph">新しく追加または削除されたVMは、次回のスケジュールされた検出時、または手動による検出時に認識されます。</block>
+  <block id="478565a725726768e967dd6c2076bfe8" category="section-title">vCenter Serverサイトを編集し、検出スケジュールをカスタマイズする</block>
+  <block id="c170e69d4eaf4587e77f4ee6b622167a" category="paragraph">vCenter Serverサイトを編集して検出スケジュールをカスタマイズできます。たとえば、VMの数が多い場合は、検出スケジュールを23時間59分ごとに実行するように設定できます。VMの数が少ない場合は、検出スケジュールを12時間ごとに実行するように設定できます。</block>
+  <block id="edb77224438876f48ac2411fc9d426ee" category="paragraph">検出のスケジュールを設定しない場合は、スケジュールされた検出オプションを無効にして、いつでも手動で検出を更新できます。</block>
+  <block id="9dbde0ef17659bc614c76bb72c33cd6a" category="list-text">BlueXP  のディザスタリカバリメニューで、*[サイト]*を選択します。</block>
+  <block id="f656f053f38993274db0418e245cdf05" category="list-text">編集するサイトを選択します。</block>
+  <block id="5ad3e303fff11348579be9fa7186a3bf" category="inline-image-macro">アクションアイコン</block>
+  <block id="51acadcc6b05f2ea7857f94de518b41c" category="list-text">右側の[Actions]アイコンを選択し<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>、*[Edit]*を選択します。</block>
+  <block id="a352c615ea385a6739b336754188419a" category="list-text">[vCenterサーバの編集]ページで、必要に応じてフィールドを編集します。</block>
+  <block id="61704e16fae21afe2e06c2208fb7d289" category="list-text">検出スケジュールをカスタマイズするには、*[スケジュールされた検出を有効にする]*ボックスをオンにして、必要な日時間隔を選択します。</block>
+  <block id="56b0e91275c81a9a7d2c23d702bfd24f" category="inline-image-macro">検出スケジュール編集のスクリーンショット</block>
+  <block id="11db3dad3390f21a6a077fc4dce96388" category="paragraph"><block ref="11db3dad3390f21a6a077fc4dce96388" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7eceff55f91319d0902ed1cce46f6389" category="section-title">検出を手動で更新する</block>
+  <block id="c2104ad12897a5730ad3b288494cdd97" category="paragraph">検出はいつでも手動で更新できます。これは、VMを追加または削除したあとに、BlueXP  ディザスタリカバリの情報を更新する場合に便利です。</block>
+  <block id="5196afaaa8fb34fc7153a30daf14514e" category="list-text">更新するサイトを選択します。</block>
+  <block id="c87fc74cb4f8f9196e191287a96f80dd" category="list-text">右側の[Actions]アイコンを選択し<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>、*[Refresh]*を選択します。</block>
 </blocks>
