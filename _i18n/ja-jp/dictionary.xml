@@ -1067,7 +1067,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="70fdbb4fe1ac448b07e3ab48c5bd8bb1" category="list-text">すべてのデータを削除したい場合は、[無料トライアルを終了した直後にデータを削除する]をオンにします。</block>
   <block id="ba1769c41cb5cf97045fc108e9213d38" category="admonition">無料トライアルを終了し、データの削除を要求せず、ライセンスやサブスクリプションを購入しなかった場合、BlueXP  のディザスタリカバリは、無料トライアルの終了から60日後にすべてのデータを削除します。</block>
   <block id="801c0fa0d304ca22d8afec06189bcf93" category="section-title">2025年4月16日</block>
-  <block id="e1b61136672bccd13e6828fe7987e4f6" category="paragraph">バージョン4.3</block>
   <block id="61e45ffabe7cc2e3542ca9a55a1a53bf" category="paragraph">VMを保護できるのは、レプリケーションプランが次のいずれかの状態にある場合のみです。</block>
   <block id="e7d31fc0602fb2ede144d18cdffd816b" category="list-text">準備完了</block>
   <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">フェイルバックコミット済み</block>
@@ -1124,4 +1123,18 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="c2104ad12897a5730ad3b288494cdd97" category="paragraph">検出はいつでも手動で更新できます。これは、VMを追加または削除したあとに、BlueXP  ディザスタリカバリの情報を更新する場合に便利です。</block>
   <block id="5196afaaa8fb34fc7153a30daf14514e" category="list-text">更新するサイトを選択します。</block>
   <block id="c87fc74cb4f8f9196e191287a96f80dd" category="list-text">右側の[Actions]アイコンを選択し<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>、*[Refresh]*を選択します。</block>
+  <block id="78e5de64c036a105265b3f447a5fbbca" category="doc">インテリジェントなプロキシサポート</block>
+  <block id="12430fc7d9e2c156fb2dc1af2bf60126" category="paragraph">BlueXP  Connectorはインテリジェントプロキシをサポートしています。インテリジェントプロキシは、オンプレミス環境をBlueXP  サービスに接続するための、軽量で安全で効率的な方法です。VPNや直接インターネットアクセスを必要とせずに、環境とBlueXP  サービスの間に安全な接続を提供します。この最適化されたプロキシ実装により、ローカルネットワーク内のAPIトラフィックがオフロードされます。</block>
+  <block id="2baae43f4fa62104c66585e956c51e1e" category="paragraph">プロキシが設定されている場合、BlueXP  ディザスタリカバリはVMwareまたはONTAPとの直接通信を試み、直接通信に失敗した場合は設定されたプロキシを使用します。</block>
+  <block id="a115e6ab8acfcda534f22a18d1d6940d" category="paragraph">BlueXP  ディザスタリカバリプロキシを実装するには、HTTPSプロトコルを使用してコネクタとvCenter ServerおよびONTAPアレイをポート443で通信する必要があります。コネクタ内のBlueXP  ディザスタリカバリエージェントは、アクションの実行時にVMware vSphere、VC、またはONTAPと直接通信します。</block>
+  <block id="a7a0475144b255eccfff4d2ee3e7a5c4" category="paragraph">BlueXP  ディザスタリカバリ用のインテリジェントプロキシの詳細については、を参照してください<block ref="bf1bf7a536149f2406a2eab17db3a297" category="inline-link-rx"></block>。</block>
+  <block id="146adb7944757e88795676b780c31811" category="inline-link">プロキシサーバを使用するようにコネクタを設定します</block>
+  <block id="635abfb2f80497d39998f2a81dfecd7e" category="paragraph">BlueXP  で設定される一般的なプロキシの詳細については、を参照してください<block ref="4d83a369cd8d5456206d71335578eaaa" category="inline-link-rx"></block>。</block>
+  <block id="7469dc0d82ce9411c03b852f2163d515" category="section-title">無償トライアルをいつでも終了</block>
+  <block id="38567a6024618c3687de90b3e2cff86e" category="paragraph">無料トライアルはいつでも停止することも、期限が切れるまで待つこともできます。</block>
+  <block id="b618f30aeca114d464120de119b19ced" category="paragraph">を参照してください<block ref="5f37f8bd4230e4b629c60b7dc23a5850" category="inline-link-rx"></block></block>
+  <block id="74027f9fc959ea61e0fe4228f42245b9" category="list-text">BlueXP  ディザスタリカバリ用のインテリジェントプロキシの設定については、を参照してください<block ref="b42f106c81bf8d9365b4d08b31fa2987" category="inline-link-macro-rx"></block>。</block>
+  <block id="848964f0743e2416b5d061a5e088ca73" category="paragraph">バージョン4.2.2</block>
+  <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">2025年3月10日</block>
+  <block id="ae493f6fb938d3c8c6db8b5a9e623794" category="paragraph">バージョン4.2.1</block>
 </blocks>

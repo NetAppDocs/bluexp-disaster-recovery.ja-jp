@@ -1,0 +1,25 @@
+= インテリジェントなプロキシサポート
+:allow-uri-read: 
+
+
+
+
+=== インテリジェントなプロキシサポート
+
+BlueXP  Connectorはインテリジェントプロキシをサポートしています。インテリジェントプロキシは、オンプレミス環境をBlueXP  サービスに接続するための、軽量で安全で効率的な方法です。VPNや直接インターネットアクセスを必要とせずに、環境とBlueXP  サービスの間に安全な接続を提供します。この最適化されたプロキシ実装により、ローカルネットワーク内のAPIトラフィックがオフロードされます。
+
+プロキシが設定されている場合、BlueXP  ディザスタリカバリはVMwareまたはONTAPとの直接通信を試み、直接通信に失敗した場合は設定されたプロキシを使用します。
+
+BlueXP  ディザスタリカバリプロキシを実装するには、HTTPSプロトコルを使用してコネクタとvCenter ServerおよびONTAPアレイをポート443で通信する必要があります。コネクタ内のBlueXP  ディザスタリカバリエージェントは、アクションの実行時にVMware vSphere、VC、またはONTAPと直接通信します。
+
+BlueXP  ディザスタリカバリ用のインテリジェントプロキシの詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-setup.html["BlueXPディザスタリカバリのためのインフラのセットアップ"]。
+
+BlueXP  で設定される一般的なプロキシの詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["プロキシサーバを使用するようにコネクタを設定します"^]。
+
+
+
+=== 無償トライアルをいつでも終了
+
+無料トライアルはいつでも停止することも、期限が切れるまで待つこともできます。
+
+を参照してください https://docs.netapp.com/us-en/bluexp-disaster-recovery/get-started/dr-licensing.html#end-the-free-trial["無償トライアルを終了する"]

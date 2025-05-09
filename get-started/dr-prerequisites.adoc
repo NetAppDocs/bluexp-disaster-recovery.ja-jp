@@ -99,6 +99,7 @@ TIP: オンプレミスからオンプレミスへの移行には、BlueXPのオ
 +
 を参照して https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["オンプレミスのONTAP クラスタを検出"^]
 
+* BlueXP  ディザスタリカバリ用のインテリジェントプロキシの設定については、を参照してくださいlink:../get-started/dr-setup.html["BlueXPディザスタリカバリのためのインフラのセットアップ"]。
 
 
 
