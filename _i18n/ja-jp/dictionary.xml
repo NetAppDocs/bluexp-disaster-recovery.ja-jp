@@ -313,22 +313,14 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">「 * 次へ * 」を選択します。</block>
   <block id="4039eb9aa82f9a49f8096e652825e9c9" category="inline-image-macro">[Add replication plan &amp; gt; Applications to replicate]ページのスクリーンショット</block>
   <block id="f60de6a7e37982bbcf6e675308bbbeb8" category="list-text">必要に応じて、次のいずれかを実行します。</block>
-  <block id="84ffccfa6f5368695a086e51333e6494" category="list-text">複数のリソースグループがある場合は、グループのシーケンスが発生する操作シーケンスと一致していることを確認してください。</block>
   <block id="94884044f731a17cf6d266f3acc71d30" category="section-title">ソースリソースをターゲットにマッピング</block>
   <block id="15be2bc9d482c70a11a63e89eada5ce4" category="list-text">[Resource mapping]ページで、フェールオーバー操作とテスト操作の両方に同じマッピングを使用するには、チェックボックスをオンにします。</block>
   <block id="137f19e6e2dc1219f33553b812627bc2" category="list-text">仮想マシン</block>
   <block id="eff845e03ea7f765e5646b3de0aa3188" category="list-text">データストア</block>
   <block id="0516742190fe9dfeaffe988ba6abe786" category="admonition">後で計画全体をテストできます。ここでは、テスト環境用のマッピングを設定します。</block>
-  <block id="3f015374311e085394976bb9595d4f23" category="section-title">再発の特定</block>
-  <block id="709c15cd0537a2fac696156d542aebf9" category="list-text">[繰り返し]ページで、*[移行]*または*[レプリケート]*を選択します。</block>
-  <block id="b6f87dbacc6d25d61a3ccb8d788eee83" category="list-text">*移行*：アプリケーションをターゲットの場所に移動する場合に選択します。</block>
-  <block id="061664c141fcaa8d32bae574640392e5" category="list-text">*Replicate*:繰り返しのレプリケーションでは'ソース・コピーからの変更を反映して'ターゲット・コピーを最新の状態に維持します</block>
-  <block id="a807f56da9b717d84bb632ebfde49e6e" category="inline-image-macro">[Add replication plan &amp; gt; Recurrence]のスクリーンショット</block>
-  <block id="b6b37c618f509f4cd72b3116ce0f0a69" category="paragraph"><block ref="b647bf0b099c797a2c2c6a3a40882045" category="inline-image-macro-rx" type="image"></block></block>
   <block id="26ff2655fb5643a3e76370d9248a31df" category="admonition">レプリケーションプランは、あとで無効にしたり削除したりできます。</block>
   <block id="47324a4e5509aeccc192aa7b07cbcac7" category="list-text">[プランの追加]*を選択します。</block>
   <block id="a9980df200522b9bbaa257521bc396fe" category="paragraph">計画が計画のリストに追加されます。</block>
-  <block id="6df4f43f22118c6a361990f481e6ed83" category="list-text">BlueXPにログインし、左側のナビゲーションで*[保護]*&gt;*[ディザスタリカバリ]*を選択します。</block>
   <block id="2f11fab4722695438910176065d838b4" category="paragraph">BlueXPディザスタリカバリのダッシュボードページが表示されます。サービスを最初に開始するときは、vCenter情報を追加する必要があります。後で、ダッシュボードにサイトとレプリケーションプランに関するデータが表示されます。</block>
   <block id="6b3b905a38750ec7a08fa2e97d6315bf" category="admonition">vCenterサイトがすでに存在し、さらに追加する場合は、トップメニューで*[サイト]*を選択し、*[追加]*を選択します。</block>
   <block id="5a05572673bc07b0b94f07c482a67d13" category="inline-image-macro">[vCenter Serverを追加]のスクリーンショット </block>
@@ -438,8 +430,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="3c47c0bca0e482b13e82a95a95df0741" category="list-text">レプリケーションプラン名を入力して確認し、フェイルバックを開始します。</block>
   <block id="d813bc25d25a7f816dde51c17f6c6ba0" category="list-text">ソース環境のリソースをデスティネーションにマッピングします。</block>
   <block id="c456b58190fd5c21d84750f126197baf" category="paragraph">最初にソースvCenterを選択し、次にデスティネーションvCenterを選択します。</block>
-  <block id="7fceed43db5d7f111f8ef8f9351ffecd" category="paragraph">データを別のターゲットに移行する（1回限りの移動）か、SnapMirror頻度でレプリケートするかを選択します。</block>
-  <block id="a6263fdec62a2bd89f463f2208f79331" category="paragraph">レプリケートする場合は、データをミラーリングする頻度を特定します。</block>
   <block id="901540dd7e45eaf2226327527c8d78b4" category="list-text">*ソース*：*[Discover vCenter servers（vCenterサーバーの検出）]*を選択して、ソースvCenterサイトに関する情報を入力します。</block>
   <block id="bc7f3cb185f48d451eb5ef976e8ad82d" category="list-text">*ターゲット*：</block>
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">[Sites]ページのスクリーンショット</block>
@@ -526,8 +516,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="4e305fe14ce90c5da1d1d11ea08f5fe4" category="list-text">テストを実行する日にちと時刻を選択します。</block>
   <block id="294642716409ca930af5721f2db940c1" category="list-text">テストを開始する日付をyyyy-mm-dd形式で入力します。</block>
   <block id="e3afddca17ec740a7556918c2bbdc013" category="inline-image-macro">スケジュールを編集できる場所を示すスクリーンショット</block>
-  <block id="380f2a79a88b8118529d87c864cff3d8" category="paragraph"><block ref="380f2a79a88b8118529d87c864cff3d8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0a003809d85acf4d6a198955e5780ac3" category="list-text">フェイルオーバーテスト終了後にテスト環境をクリーンアップするには、*[Automatically clean up after test failover]*をオンにします。</block>
   <block id="20ace5d6661ce95df08950b97c500ddc" category="admonition">このプロセスでは、テスト用の場所から一時VMの登録が解除され、作成されたFlexCloneボリュームが削除され、一時データストアがアンマウントされます。</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">[ 保存（ Save ） ] を選択します。</block>
   <block id="4d519f9cb24d082270f8f88ccccd42e3" category="paragraph">BlueXPディザスタリカバリの新機能をご紹介します。</block>
@@ -750,7 +738,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*仮想マシン*：[フェイルオーバーマッピング]タブで、*[仮想マシン]*の横にある下向き矢印を選択します。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保持数*：保持するSnapshotの数を入力します。</block>
-  <block id="8772d236d3c62b688c3b57224d982ee1" category="paragraph"><block ref="8772d236d3c62b688c3b57224d982ee1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">BlueXP  ディザスタリカバリに役立つ用語</block>
   <block id="b7b26d16c3d1d84d3872afa1f04c92d6" category="paragraph">ディザスタリカバリに関連する用語を理解しておくと便利です。</block>
   <block id="7f800e59a5bd3f98ce900fa6e543f67d" category="list-text">*サイト*：通常、物理データセンターまたはクラウドプロバイダに関連付けられた論理コンテナ。</block>
@@ -802,7 +789,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="310c40c0ef022c90f1370d1fe91ca720" category="paragraph">詳細については、を参照してください<block ref="db7c318fcbcad8cfb9a44ac897b870b2" category="inline-link-rx"></block>。</block>
   <block id="9a3a6422d384602f3e19e123263dc99f" category="paragraph">詳細については、を参照してください<block ref="59c3623215c45197e971057378c86d42" category="inline-link-rx"></block>。</block>
   <block id="bcc94af8bc9c7e6ef8fd57214884e7f1" category="list-text">グループ名を変更するには、グループ*[編集]*アイコンをクリックし<block ref="8254d7ced29032ec76a59e7648759881" category="inline-image-macro-rx" type="image"></block>ます。</block>
-  <block id="86cbb58fb6d06cab306fbf4379c5c40e" category="paragraph">グループ内の各VMは、ここでの順序に基づいて順番に起動されます。</block>
   <block id="b09b7f24f5b2d0187b19263b47fb2cdf" category="paragraph">リソースマッピングステップで、ソース環境のリソースをターゲットにマッピングする方法を指定します。レプリケーションプランを作成するときに、プラン内のVMごとにブート遅延と順序を設定できます。これにより、VMの起動順序を設定できます。</block>
   <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*ソースとターゲットのデータセンター*</block>
   <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*ターゲットクラスタ*</block>
@@ -810,14 +796,9 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">vCenterでクラスタ内の複数のホストを管理するようにDistributed Resource Scheduler（DRS；分散リソーススケジューラ）が設定されている場合は、ホストを選択する必要はありません。ホストを選択すると、BlueXP  ディザスタリカバリによって、選択したホストにすべてのVMが配置されます。</block>
   <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*ターゲットVMフォルダ*（オプション）：選択したVMを格納する新しいルートフォルダを作成します。</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">このセクションには、選択内容によって異なるフィールドが表示される場合があります。</block>
-  <block id="16bd7bddefb51b87ff4fbcf4c8831a1d" category="list-text">*静的IP *：IP構成情報を手動で指定する場合は、この設定を選択します。ソースVMと同じ情報を選択することも別の情報を選択することもできます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、VMのIPアドレス、サブネットマスク、DNS、およびゲートウェイ情報を指定できます。VMゲストOSのクレデンシャルは、グローバルレベルまたは各VMレベルで指定する必要があります。</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*ターゲットVMのプレフィックスとサフィックス*：仮想マシンの詳細で、必要に応じてVM名にプレフィックスとサフィックスを追加できます。</block>
   <block id="230dc85a08275a2466390ae799703f92" category="list-text">*ソースVMのCPUとRAM *：仮想マシンの詳細で、必要に応じてVMのCPUとRAMのパラメータのサイズを変更できます。</block>
   <block id="97bbe2658500151382594a4fae0afc57" category="paragraph"><block ref="1dcb46a6f5cf6fb93122072f061a9e9e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="77506f26f3b4a989168bfd6da6435808" category="list-text">*起動順序*：リソースグループ全体で選択したすべての仮想マシンのフェイルオーバー後に起動順序を変更できます。デフォルトでは、リソースグループの選択時に選択された起動順序が使用されますが、この段階で変更を加えることができます。これは、優先順位の高いすべてのVMが実行されてから、優先順位の高いVMが起動されるようにするのに役立ちます。</block>
-  <block id="f4acab8352ab5ba21dd2d6ce32fc9f2a" category="paragraph">起動順序番号は、リソースグループ内でのみ適用されます。あるグループに「2」があり、別のグループに「2」がある場合、最初のグループのVMは順番に起動し、2番目のグループのVMは順番に起動します。</block>
-  <block id="8cad29fca944093d9257fcd28c5a17d5" category="list-text">シーケンシャルブート：各VMに一意の番号を割り当てて、割り当てられた順序でをブートします（例：1、2、3、4、5）。</block>
-  <block id="8043065a3a1affdc7e75a0083d3349b1" category="list-text">同時起動：すべてのVMに同じ番号を割り当てて、同時に起動します（例：1、1、1、2、3、4、4）。</block>
   <block id="aa54fb3621577f63cab9b508032a995d" category="list-text">*起動遅延*：起動動作の遅延を分単位で調整します。</block>
   <block id="517ed43dc67f057cadcb1c29ecbd75ef" category="admonition">起動順序をデフォルトにリセットするには、* VM設定をデフォルトにリセット*を選択し、どの設定をデフォルトに戻すかを選択します。</block>
   <block id="2a4ddf396205dca12c00a6eb7e16285a" category="section-title">レプリケーション計画のレビュー</block>
@@ -855,13 +836,10 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*スクリプト*:フェイルオーバー後のプロセスとして、.sh、.bat、または.ps1形式のカスタムスクリプトを含めることができます。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。</block>
   <block id="df6b8c791e4694210c8862ed040048ef" category="list-text">*アプリケーションと整合性のあるレプリカを作成*：アプリケーションと整合性のあるSnapshotコピーを作成するかどうかを指定します。サービスはアプリケーションを休止し、スナップショットを作成してアプリケーションの整合性のある状態を取得します。この機能は、WindowsおよびLinuxで実行されているOracleおよびWindowsで実行されているSQL Serverでサポートされています。</block>
   <block id="708b68cf49e909f729ce67863a2f6de3" category="list-text">* Datastores *：* Datastores *の横にある下矢印を選択します。VMを選択すると、データストアマッピングが自動的に選択されます。</block>
-  <block id="c5bb1e7845a8d9ffe23d02cceec9e4bf" category="list-text">* RPO *：リカバリするデータの量（時間で測定）を示す目標復旧時点（RPO）を入力します。たとえば、RPOを60分と入力した場合、常に60分以内のデータがリカバリに含まれている必要があります。災害が発生した場合は、最大60分分のデータが失われます。また、すべてのデータストアに対して保持するSnapshotコピーの数も入力します。</block>
   <block id="27ee5986957f012b4e37ee29afe29c7f" category="list-text">*ソースデータストアとターゲットデータストア*：（ファンアウト）SnapMirror関係が複数ある場合は、使用するデスティネーションを選択できます。ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアが表示されます。SnapMirror関係がないボリュームの場合は、ターゲットクラスタとターゲットSVMを選択し、ボリューム名を指定して作成できます。ボリュームとSnapMirrorの関係が作成されます。</block>
-  <block id="3c65044e501ce692cb21ad3d837dab25" category="list-text">目標復旧時点（RPO）を指定すると、RPOに基づいてプライマリバックアップがスケジュールされ、セカンダリデスティネーションが更新されます。</block>
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">VMが同じボリュームと同じSVMの場合、サービスは標準のONTAPスナップショットを実行し、セカンダリデスティネーションを更新します。</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">VMが別 々 のボリュームと同じSVMの場合は、すべてのボリュームを含めることで整合性グループSnapshotが作成され、セカンダリデスティネーションが更新されます。</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">VMが別 々 のボリュームと別 々 のSVMにある場合、サービスは整合性グループの開始フェーズとコミットフェーズのSnapshotを実行します。これには、同じクラスタまたは別 々 のクラスタ内のすべてのボリュームが含まれ、セカンダリデスティネーションが更新されます。</block>
-  <block id="e829ce8109ca652cb970cd9d2014a52e" category="section-title">マッピングをテストする</block>
   <block id="a8c55ad0456d667323e1ede0b2d4845d" category="list-text">テスト環境に異なるマッピングを設定するには、チェックボックスをオフにして*テストマッピング*タブを選択します。</block>
   <block id="3d2d89948829d5041f9ae015297d638b" category="list-text">前のように各タブを確認しますが、今回はテスト環境について説明します。</block>
   <block id="74ba4c0b5e2da8a64b8dee1c0d8ba2eb" category="paragraph">災害が発生した場合は、プライマリのオンプレミスVMwareサイトを別のオンプレミスVMwareサイトまたはVMware Cloud on AWSにフェイルオーバーします。フェイルオーバープロセスをテストして、必要なときに正常に実行されることを確認できます。</block>
@@ -1072,9 +1050,7 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="eca4b06cc957b067c25916bf563bfcb1" category="list-text">フェイルバックコミット済み</block>
   <block id="55af57d923ed95c2495c25a0e4762077" category="list-text">テストフェイルオーバーコミット済み</block>
   <block id="cffe0c1b9d43854c0d95a5d592e6102c" category="list-text">レプリケートするVMまたはデータストアを選択し、リソースグループを割り当てます。</block>
-  <block id="335e98e9e03c56f037d977ec4b92f533" category="paragraph">次の手順では、必要なVMまたはデータストアを機能するリソースグループにグループ化します。リソースグループを使用すると、一連の従属VMまたはデータストアを、要件に合わせて論理グループにグループ化できます。たとえば、グループには、リカバリ時に実行できる遅延ブート順序が含まれている可能性があります。</block>
   <block id="418330af51c4a26653da43f1476e3d4f" category="paragraph">レプリケーションプランでアプリケーションを選択すると、プラン内の各VMまたはデータストアのオペレーティングシステムが表示されます。これは、VMまたはデータストアを1つのリソースグループにグループ化する方法を決定する際に役立ちます。</block>
-  <block id="f8842a88bb1ca78d43e06472d4679889" category="admonition">各リソースグループには1つ以上のVMまたはデータストアを含めることができます。ここで指定した順序に基づいて、VMの電源がオンになります。</block>
   <block id="5e90d93870eb5779de0b40ced0f92445" category="paragraph">リソースグループを作成するときは、次の点を考慮してください。</block>
   <block id="de634b3bd311c5e5e1c0b9d53d9d242f" category="list-text">リソースグループにデータストアを追加する前に、最初にVMの手動検出またはスケジュールされた検出を開始してください。これにより、VMが検出されてリソースグループにリストされます。手動検出をトリガーしないと、VMがリソースグループに表示されない可能性があります。</block>
   <block id="312258bdb1152123e04c06cf90952de2" category="list-text">データストアにVMが少なくとも1つあることを確認します。データストアにVMがない場合、データストアは検出されません。</block>
@@ -1137,4 +1113,71 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="848964f0743e2416b5d061a5e088ca73" category="paragraph">バージョン4.2.2</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">2025年3月10日</block>
   <block id="ae493f6fb938d3c8c6db8b5a9e623794" category="paragraph">バージョン4.2.1</block>
+  <block id="c362166d3b35c5afaa0ddfbe7e69494b" category="doc">サブネットマッピング</block>
+  <block id="2418e16fab8ca1ca0d50d0811f88b6eb" category="paragraph">このリリースでは、サブネットマッピングを使用してフェイルオーバー時のIPアドレスを新しい方法で管理できます。これにより、各vCenterにサブネットを追加できます。その場合は、IPv4 CIDR、デフォルトゲートウェイ、および各仮想ネットワークのDNSを定義します。</block>
+  <block id="eb784040bffb80024e0c56694e09283d" category="paragraph">フェイルオーバー時に、BlueXP  ディザスタリカバリは、マッピングされた仮想ネットワーク用に提供されたCIDRを参照して、各vNICの適切なIPアドレスを決定し、それを使用して新しいIPアドレスを取得します。</block>
+  <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例：</block>
+  <block id="7f1dd179b7af043e895b4af287c713da" category="list-text">networkA = 10.1.1.0/24</block>
+  <block id="130ee01552bdfbbae122682d96ada96f" category="list-text">ネットワークB = 192.168.1.0/24</block>
+  <block id="c8512209d54525f96f71aef40bda4d89" category="paragraph">VM1には、NetworkAに接続されたvNIC（10.1.1.50）があります。NetworkAは、レプリケーションプラン設定でNetworkBにマッピングされます。</block>
+  <block id="54f173771463f16f3b7367756ee8a6df" category="paragraph">フェイルオーバー時、BlueXP  ディザスタリカバリは元のIPアドレス（10.1.1）のネットワーク部分を置き換え、元のIPアドレス（10.1.1.50）のホストアドレス（.50）を維持します。VM1の場合、BlueXP  ディザスタリカバリは、NetworkBのCIDR設定を確認し、ホスト部分（.50）を維持しながら、NetworkBネットワーク部分192.168.1を使用してVM1の新しいIPアドレスを作成します。新しいIPは192.168.1.50になります。</block>
+  <block id="726a53952ba1f868d3ec9d1d32a62b2e" category="paragraph">つまり、ホストアドレスは同じままですが、ネットワークアドレスはサイトサブネットマッピングで設定されているものに置き換えられます。これにより、フェイルオーバー時のIPアドレスの再割り当てをより簡単に管理できます。特に、数百のネットワークと数千のVMを管理する必要がある場合に便利です。</block>
+  <block id="774b32328f5b31268d0c32cb8b2b7cba" category="paragraph">サイトにサブネットマッピングを含める方法の詳細については、を参照してください<block ref="2646d8ece134cab5b4abb346406774b7" category="inline-link-macro-rx"></block>。</block>
+  <block id="a16eb72c6e9708bc4bdfd310db9a1760" category="section-title">保護をスキップ</block>
+  <block id="18a26d8a69342321f82f23b0b9667a2b" category="paragraph">レプリケーションプランのフェイルオーバー後にサービスが逆保護関係を自動的に作成しないように、保護をスキップできるようになりました。これは、BlueXP  ディザスタリカバリでリストアしたサイトをオンラインに戻す前に、そのサイトで追加の処理を実行する場合に便利です。</block>
+  <block id="83f2c5047d69bb49c6372714354b223e" category="paragraph">フェイルオーバーを開始すると、デフォルトでは、元のソースサイトがオンラインの場合、レプリケーションプランの各ボリュームに対して逆保護関係が自動的に作成されます。これは、サービスがターゲットサイトからソースサイトへのSnapMirror関係を作成することを意味します。フェイルバックを開始すると、SnapMirror関係も自動的に反転されます。</block>
+  <block id="39adaab4c8da99c378ac7814cd837b82" category="paragraph">フェイルオーバーを開始するときに、*[Skip protection]*オプションを選択できるようになりました。これにより、サービスはSnapMirror関係を自動的に反転しません。代わりに、書き込み可能なボリュームはレプリケーション計画の両側に残ります。</block>
+  <block id="0ed1a7f2cfa308cb3f608d5a24b47b8f" category="paragraph">元のソースサイトがオンラインに戻ったら、レプリケーションプランの[アクション]メニューから*[リソースの保護]*を選択して、逆保護を設定できます。これにより、プラン内の各ボリュームに対して逆レプリケーション関係の作成が試行されます。保護が回復するまで、このジョブを繰り返し実行できます。保護が復元されたら、通常の方法でフェイルバックを開始できます。</block>
+  <block id="f53838e4f91966e1f320316dc6686a4a" category="paragraph">保護のスキップの詳細については、を参照してください<block ref="524f5a32773e3e832b74877ecf58916f" category="inline-link-macro-rx"></block>。</block>
+  <block id="bc1bbd522e7b060cf5530955a21a60e0" category="section-title">SnapMirrorスケジュールによるレプリケーション計画の更新</block>
+  <block id="c8c9a99c726a6f5a1158a1753fb72b2a" category="paragraph">BlueXP  ディザスタリカバリでは、標準のONTAP SnapMirrorポリシースケジューラやONTAPとのサードパーティ統合など、外部のSnapshot管理ソリューションの使用がサポートされるようになりました。レプリケーションプラン内のすべてのデータストア（ボリューム）にすでに別の場所で管理されているSnapMirror関係がある場合は、それらのSnapshotをBlueXP  ディザスタリカバリのリカバリポイントとして使用できます。</block>
+  <block id="51b94dd4c3836facc3789590ed219960" category="paragraph">設定するには、[Replication plan]&gt;[Resource mapping]セクションで、データストアマッピングの設定時に*[Use platform managed backups and retention schedules]*チェックボックスをオンにします。</block>
+  <block id="c837cc2aab74d32ef3dcbbce527bd24b" category="paragraph">このオプションを選択すると、BlueXP  ディザスタリカバリでバックアップスケジュールが設定されません。ただし、テスト、フェイルオーバー、フェイルバック操作のためにスナップショットが作成される可能性があるため、保持スケジュールを設定する必要があります。</block>
+  <block id="84c71600543673f6d7dd403d3e7a164a" category="paragraph">この設定後、サービスは定期的にスケジュールされたスナップショットを作成せず、代わりに外部エンティティに依存してこれらのスナップショットを作成および更新します。</block>
+  <block id="e70edcdb01d149c4328ebb491c2aa090" category="paragraph">レプリケーションプランでの外部スナップショットソリューションの使用の詳細については、を参照してください<block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。</block>
+  <block id="e48502083eb8949c8f65b2ccddd5adec" category="section-title">2025年5月12日</block>
+  <block id="5a31c17caa12408e3b6093ed864c9821" category="paragraph">バージョン4.2.3</block>
+  <block id="f17de33c8bac2ab69dd89149aac16c6c" category="paragraph">次の手順では、必要なVMまたはデータストアを機能するリソースグループにグループ化します。リソースグループを使用すると、共通のSnapshotで一連のVMまたはデータストアを保護できます。</block>
+  <block id="516dbf8e2c43d00664357bb38d1575a6" category="admonition">各リソースグループには1つ以上のVMまたはデータストアを含めることができます。</block>
+  <block id="93e9f135ef101bbb0b9a89e0d337eed7" category="paragraph">*ベストプラクティス*：BlueXP  ディザスタリカバリを導入する前にVMを整理し、「データストアの無秩序な増加」を最小限に抑えます。保護が必要なVMは一部のデータストアに配置し、保護されないVMは別のデータストアに配置します。データストアベースの保護を使用して、特定のデータストア上のVMを確実に保護します。</block>
+  <block id="666631afadc4073ef682cc54bda0a691" category="list-text">*静的IP *：IP構成情報を手動で指定する場合は、この設定を選択します。ソースと同じ、ソースと異なる、またはサブネットマッピングのいずれかを選択できます。ソースと同じを選択した場合は、クレデンシャルを入力する必要はありません。一方、ソースと異なる情報を使用する場合は、クレデンシャル、VMのIPアドレス、サブネットマスク、DNS、およびゲートウェイ情報を指定できます。VMゲストOSのクレデンシャルは、グローバルレベルまたは各VMレベルで指定する必要があります。</block>
+  <block id="983a4203041e2ae3715f09be44011da8" category="list-text">*起動順序*：リソースグループ全体で選択したすべての仮想マシンのフェイルオーバー後に起動順序を変更できます。デフォルトでは、すべてのVMが同時に並行して起動されますが、この段階で変更を加えることができます。これは、優先順位の高いすべてのVMが実行されてから、優先順位の高いVMが起動されるようにするのに役立ちます。</block>
+  <block id="bf14a1ee6deee051f47c837ed6d22140" category="paragraph">同じブート順序番号のVMは、並行してブートされます。</block>
+  <block id="354a69710d188806a2240038216a8fe4" category="list-text">シーケンシャルブート：各VMに一意の番号を割り当てて、割り当てられた順序でをブートします（例：1、2、3、4、5）。</block>
+  <block id="917743345c16934d4f46d0d5f7c82682" category="list-text">同時起動：1、1、1、1、2、3、4など、すべてのVMに同じ番号を割り当てて同時に起動します。</block>
+  <block id="42c98bfa79541df9e68d059bf2193bb0" category="list-text">*プラットフォームで管理されるバックアップと保持スケジュールを使用*：外部スナップショット管理ソリューションを使用している場合は、このチェックボックスをオンにします。BlueXP  のディザスタリカバリでは、標準のONTAP SnapMirrorポリシースケジューラやサードパーティの統合など、外部のSnapshot管理ソリューションを使用できます。レプリケーションプラン内のすべてのデータストア（ボリューム）にすでに別の場所で管理されているSnapMirror関係がある場合は、それらのSnapshotをBlueXP  ディザスタリカバリのリカバリポイントとして使用できます。</block>
+  <block id="23c4ec9f7f759cf6773cc360abd2a7ec" category="list-text">*開始時刻*：バックアップと保持の実行を開始する日時を入力します。</block>
+  <block id="7a565b2606e153ac342f6305eef26c26" category="list-text">*実行間隔*：時間間隔を時間と分で入力します。たとえば、1時間と入力すると、サービスは1時間ごとにスナップショットを作成します。</block>
+  <block id="49511806f0e60c638845968f2dbb17f7" category="section-title">テストフェイルオーバーマッピングを追加します。</block>
+  <block id="bb9d0bc96dc8ebc0c65b92fdd57252dc" category="paragraph"><block ref="bb9d0bc96dc8ebc0c65b92fdd57252dc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="02e6e8fc80c61f6b451734eea7a7f500" category="list-text">*スケジュールされたテストフェイルオーバーにオンデマンドスナップショットを使用*：自動テストフェイルオーバーを開始する前に新しいスナップショットを作成するには、このチェックボックスをオンにします。</block>
+  <block id="e2b5a46119afa4b27f999635653125bc" category="list-text">フェイルオーバーテストの完了後にテスト環境をクリーンアップするには、*[Automatically clean up after test failover]*をオンにし、クリーンアップを開始するまでの待機時間（分）を入力します。</block>
+  <block id="746c84b1b109b4fcfeb29ff36be21f14" category="paragraph"><block ref="746c84b1b109b4fcfeb29ff36be21f14" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="98641f673a386c741c6b574c2680a3b0" category="list-text">レプリケーション計画のフェイルオーバー後にサービスでリバースSnapMirror保護関係が自動的に作成されないようにするには、*[Skip protection（保護のスキップ）]*を選択します。これは、BlueXP  ディザスタリカバリでリストアしたサイトをオンラインに戻す前に、そのサイトで追加の処理を実行する場合に便利です。</block>
+  <block id="c446892b6c8669077c04a02123055cec" category="admonition">レプリケーションプランの[アクション]メニューから*[リソースの保護]*を選択すると、逆保護を設定できます。これにより、プラン内の各ボリュームに対して逆レプリケーション関係の作成が試行されます。保護が回復するまで、このジョブを繰り返し実行できます。保護が復元されたら、通常の方法でフェイルバックを開始できます。</block>
+  <block id="739e15bc616753303863f1d41c4f1dc8" category="list-text">BlueXP  にログインし、左側のナビゲーションメニューから*[保護]*&gt;*[ディザスタリカバリ]*を選択します。</block>
+  <block id="cd2cbb6fc58931677c030707b031e23e" category="section-title">vCenterサイトのサブネットマッピングを追加します。</block>
+  <block id="81d27c563cf029b3cbc2c174dbb30b80" category="paragraph">サブネットマッピングを使用してフェイルオーバー時に新しい方法でIPアドレスを管理します。サブネットマッピングを使用すると、vCenterごとにサブネットを追加できます。その場合は、IPv4 CIDR、デフォルトゲートウェイ、および各仮想ネットワークのDNSを定義します。</block>
+  <block id="a1a6715a7937fe9363315624c6ceaadb" category="paragraph">サブネットマッピングの使用は、オプションの2つの手順で行います。</block>
+  <block id="6590c0edd1a0a382e900baf3a1f8a010" category="list-text">最初に、各vCenterサイトのサブネットマッピングを追加します。</block>
+  <block id="e4732c2c80313e687a43461e8ec657b5" category="list-text">次に、レプリケーション計画でサブネットマッピングを使用することを指定します。</block>
+  <block id="4d77e4e4a55e61e8953b736cb501c2ba" category="list-text">BlueXP  の上部のディザスタリカバリメニューで、*[サイト]*を選択します。</block>
+  <block id="b042826a9a8b22d6bf6c06fc590b4075" category="list-text">右側の[操作]アイコンから<block ref="145ad72607e9a3c177918d31007a191e" category="inline-image-macro-rx" type="image"></block>、*[サブネットの追加]*を選択します。</block>
+  <block id="326afcda8f54b18d75e38743a0369422" category="inline-image-macro">[Add subnet mapping]のスクリーンショット</block>
+  <block id="d585acea0a85edac2c9d2026c5f9248c" category="paragraph"><block ref="d585acea0a85edac2c9d2026c5f9248c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ff511fb5d23236d5840c75032b0fbb69" category="list-text">[Configure subnet]ページで、次の情報を入力します。</block>
+  <block id="7a0a9fd1dad462e95d3a0078043e2446" category="list-text">Subnet：サブネットのIPv4 CIDR（/32まで）を入力します。</block>
+  <block id="0d9abd8b694d3e4ae8a94e1a0a0b18bb" category="admonition">CIDR表記は、IPアドレスとそのネットワークマスクを指定する方法です。/24はネットマスクを示します。この番号はIPアドレスで構成され、「/」の後の番号は、ネットワークを表すIPアドレスのビット数を示します。たとえば、192.168.0.50/24、IPアドレスは192.168.0.50、ネットワークアドレスの合計ビット数は24です。192.168.0.50 255.255.255.0は192.168.0.0/24になります。</block>
+  <block id="6e97137634986390ce97649599f559fd" category="list-text">Gateway：サブネットのデフォルトゲートウェイを入力します。</block>
+  <block id="63ce92a4f80f0a4537b368a9328864ae" category="list-text">DNS：サブネットのDNSを入力します。</block>
+  <block id="dfe0c1da4b3edcbe4d22c95489f82cd4" category="list-text">[サブネットマッピングの追加]*を選択します。</block>
+  <block id="38fa2ee831111000771942f096ee8f7f" category="section-title">レプリケーション計画のサブネットマッピングの選択</block>
+  <block id="44adc79b2aa170c08a741f65097ea642" category="paragraph">レプリケーション計画を作成するときに、レプリケーション計画のサブネットマッピングを選択できます。</block>
+  <block id="0a9e3f0ed6f4b452c344fdb924016695" category="list-text">レプリケーションプランを追加するには、*[追加]*を選択します。</block>
+  <block id="807059f044473e420c53e102505d49cf" category="list-text">vCenterサーバを追加し、リソースグループまたはアプリケーションを選択し、マッピングを完了して、通常の方法でフィールドに入力します。</block>
+  <block id="6a1727ba4109844c2f1bf48438eb19f5" category="list-text">[Replication plan]&gt;[Resource mapping]ページで、*[Virtual Machines]*セクションを選択します。</block>
+  <block id="b743f75136ce51e05e36623ebf8d0373" category="inline-image-macro">サブネットマッピングの選択のスクリーンショット</block>
+  <block id="d56562607152896b0efda703821ab816" category="paragraph"><block ref="d56562607152896b0efda703821ab816" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a60af3ebe60a5e3cebadd89e2c407a9c" category="list-text">[ターゲットIP ]*フィールドで、ドロップダウンリストから*[サブネットマッピングを使用]*を選択します。</block>
+  <block id="88497a7ce9c844d7b07cc838ad7754d6" category="list-text">レプリケーション計画の作成に進みます。</block>
 </blocks>
