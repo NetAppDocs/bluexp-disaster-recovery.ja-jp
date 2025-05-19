@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/dr-intro.html 
-keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud 
+keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud, netapp intelligent services 
 summary: クラウドへのディザスタリカバリは、耐障害性に優れた対費用効果の高い方法で、サイトの停止やデータ破損からワークロードを保護します。VMware向けのBlueXPディザスタリカバリを使用すると、ONTAPストレージを実行するオンプレミスのVMwareワークロードを、NetAppクラウドストレージを使用してパブリッククラウドのVMware Software-Defined Data Centerにレプリケートしたり、ONTAPストレージを使用した別のオンプレミスのVMware環境をディザスタリカバリサイトとしてレプリケートしたりできます。 
 ---
 = VMware向けBlueXPディザスタリカバリの詳細
@@ -73,7 +73,7 @@ IMPORTANT: 一部のリリースにはテクノロジプレビューが含まれ
 次のライセンスタイプを使用できます。
 
 * 30日間の無償トライアルにサインアップしてください。
-* Amazon Web Services（AWS）Marketplaceで従量課金制（PAYGO）サブスクリプションを購入
+* Amazon Web Services(AWS) Marketplaceで、NetAppインテリジェントサービス*の従量課金制（PAYGO）サブスクリプションを購入します。
 * お客様所有のライセンスを使用（BYOL）：NetApp営業担当から入手するNetAppライセンスファイル（NLF）です。ライセンスのシリアル番号を使用して、BlueXPデジタルウォレットでBYOLをアクティブ化できます。
 
 

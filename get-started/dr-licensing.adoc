@@ -17,7 +17,7 @@ BlueXPディザスタリカバリでは、無償トライアル、従量課金�
 次のライセンスタイプを使用できます。
 
 * 30日間の無償トライアルにサインアップしてください。
-* Amazon Web Services（AWS）Marketplaceで従量課金制（PAYGO）サブスクリプションを購入
+* Amazon Web Services（AWS）Marketplaceで* NetAppインテリジェントサービス*の従量課金制（PAYGO）サブスクリプションを購入します。
 * お客様所有のライセンスを使用（BYOL）：NetApp営業担当から入手するNetAppライセンスファイル（NLF）です。ライセンスのシリアル番号を使用して、BlueXPデジタルウォレットでBYOLをアクティブ化できます。
 
 
@@ -71,12 +71,12 @@ image:draas-landing2.png["BlueXPディザスタリカバリのランディング
 
 == トライアル期間が終了したら、AWS Marketplaceでサブスクライブ
 
-無償トライアルの終了後は、NetAppからライセンスを購入するか、AWS Marketplaceで登録できます。この手順では、AWS Marketplaceで直接サブスクライブする方法の概要を説明します。
+無償トライアルの終了後は、NetAppからライセンスを購入するか、AWS Marketplaceから* NetApp Intelligent Services *に登録できます。この手順では、AWS Marketplaceで直接サブスクライブする方法の概要を説明します。
 
 .手順
 . BlueXPディザスタリカバリに、無償トライアルの有効期限が近づいていることを示すメッセージが表示されます。メッセージで、*[ライセンスの購読または購入]*を選択します。
 . [AWS Marketplaceでサブスクライブ]*を選択します。
-. AWS Marketplaceで、*購入オプションを表示*を選択します。AWS Marketplaceを使用して、BlueXPディザスタリカバリにサブスクライブします。
+. AWS Marketplaceを使用して、* NetAppインテリジェントサービス*と* BlueXP  ディザスタリカバリ*にサブスクライブします。
 . BlueXPディザスタリカバリに戻ると、登録したことを示すメッセージが表示されます。
 +
 サブスクリプションの詳細は、BlueXP  デジタルウォレットで確認できます。link:https://docs.netapp.com/us-en/bluexp-digital-wallet/task-homepage.html["詳細はこちらデジタルウォレットによるサブスクリプションの管理"^]です。
