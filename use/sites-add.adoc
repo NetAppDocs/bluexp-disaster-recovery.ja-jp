@@ -112,6 +112,12 @@ VM1には、NetworkAに接続されたvNIC（10.1.1.50）があります。Netwo
 . BlueXP  の上部のディザスタリカバリメニューで、*[サイト]*を選択します。
 . 右側の[操作]アイコンからimage:icon-vertical-dots.png["アクションアイコン"]、*[サブネットの追加]*を選択します。
 +
+image:dr-sites-subnet-menu.png["[Add subnet]メニューのスクリーンショット"]
+
++
+[Configure subnet]ページが表示されます。
+
++
 image:sites-subnet-add.png["[Add subnet mapping]のスクリーンショット"]
 
 . [Configure subnet]ページで、次の情報を入力します。
@@ -140,9 +146,13 @@ TIP: CIDR表記は、IPアドレスとそのネットワークマスクを指定
 . vCenterサーバを追加し、リソースグループまたはアプリケーションを選択し、マッピングを完了して、通常の方法でフィールドに入力します。
 . [Replication plan]>[Resource mapping]ページで、*[Virtual Machines]*セクションを選択します。
 +
-image:dr-plan-create-subnet-mapping.png["サブネットマッピングの選択のスクリーンショット"]
+image:dr-plan-vm-subnet-option.png["サブネットマッピングの選択のスクリーンショット"]
 
 . [ターゲットIP ]*フィールドで、ドロップダウンリストから*[サブネットマッピングを使用]*を選択します。
++
+
+NOTE: VMが2つある場合（1つがLinux、もう1つがWindowsなど）、クレデンシャルはWindowsの場合にのみ必要です。
+
 . レプリケーション計画の作成に進みます。
 
 

@@ -731,8 +731,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">鉛筆のアイコン</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">[Failover mappings]タブで、各リソースの右側にある下向き矢印を選択し、それぞれのリソースをマッピングします。</block>
-  <block id="022ab008c31f5588f9d15da4dc3439fb" category="list-text">*リソースを計算*：*リソースを計算*の横にある下向き矢印を選択します。</block>
-  <block id="a358a5c755a9f869690207e2a0726737" category="list-text">*仮想マシン*：[フェイルオーバーマッピング]タブで、*[仮想マシン]*の横にある下向き矢印を選択します。</block>
   <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保持数*：保持するSnapshotの数を入力します。</block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">BlueXP  ディザスタリカバリに役立つ用語</block>
@@ -790,8 +788,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="da06c5c1d28e308403236438dda209dc" category="list-text">*ソースとターゲットのデータセンター*</block>
   <block id="7067fdfe055fabd950bd45a1a17e1642" category="list-text">*ターゲットクラスタ*</block>
   <block id="2c0a2cae30cf923c64bbed704e923521" category="list-text">*ターゲットホスト*（オプション）：クラスタを選択したら、この情報を設定できます。</block>
-  <block id="6d9f48430941cb04802ac18d9c695e65" category="admonition">vCenterでクラスタ内の複数のホストを管理するようにDistributed Resource Scheduler（DRS；分散リソーススケジューラ）が設定されている場合は、ホストを選択する必要はありません。ホストを選択すると、BlueXP  ディザスタリカバリによって、選択したホストにすべてのVMが配置されます。</block>
-  <block id="999becf997185f87ea1b5bd029bf5b34" category="list-text">*ターゲットVMフォルダ*（オプション）：選択したVMを格納する新しいルートフォルダを作成します。</block>
   <block id="0a8bc9b2bb8f581fa27738fc437d64b3" category="paragraph">このセクションには、選択内容によって異なるフィールドが表示される場合があります。</block>
   <block id="7b2b025be41dbbc4cda9601c1b5523a5" category="list-text">*ターゲットVMのプレフィックスとサフィックス*：仮想マシンの詳細で、必要に応じてVM名にプレフィックスとサフィックスを追加できます。</block>
   <block id="230dc85a08275a2466390ae799703f92" category="list-text">*ソースVMのCPUとRAM *：仮想マシンの詳細で、必要に応じてVMのCPUとRAMのパラメータのサイズを変更できます。</block>
@@ -832,8 +828,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="8914a354aeff1b07a47e178ccae21e27" category="list-text">* DHCP *：VMがDHCPサーバからネットワーク構成情報を取得するようにする場合は、この設定を選択します。このオプションを選択する場合は、VMのクレデンシャルだけを指定します。</block>
   <block id="fac29f06ba242d5478f84ec94ec5b901" category="list-text">*スクリプト*:フェイルオーバー後のプロセスとして、.sh、.bat、または.ps1形式のカスタムスクリプトを含めることができます。カスタムスクリプトを使用すると、フェイルオーバープロセスのあとにBlueXPディザスタリカバリでスクリプトを実行できます。たとえば、フェイルオーバーの完了後にすべてのデータベーストランザクションを再開するカスタムスクリプトを使用できます。</block>
   <block id="df6b8c791e4694210c8862ed040048ef" category="list-text">*アプリケーションと整合性のあるレプリカを作成*：アプリケーションと整合性のあるSnapshotコピーを作成するかどうかを指定します。サービスはアプリケーションを休止し、スナップショットを作成してアプリケーションの整合性のある状態を取得します。この機能は、WindowsおよびLinuxで実行されているOracleおよびWindowsで実行されているSQL Serverでサポートされています。</block>
-  <block id="708b68cf49e909f729ce67863a2f6de3" category="list-text">* Datastores *：* Datastores *の横にある下矢印を選択します。VMを選択すると、データストアマッピングが自動的に選択されます。</block>
-  <block id="27ee5986957f012b4e37ee29afe29c7f" category="list-text">*ソースデータストアとターゲットデータストア*：（ファンアウト）SnapMirror関係が複数ある場合は、使用するデスティネーションを選択できます。ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアが表示されます。SnapMirror関係がないボリュームの場合は、ターゲットクラスタとターゲットSVMを選択し、ボリューム名を指定して作成できます。ボリュームとSnapMirrorの関係が作成されます。</block>
   <block id="950fa88679103c3c7c4e449423d8bfcc" category="list-text">VMが同じボリュームと同じSVMの場合、サービスは標準のONTAPスナップショットを実行し、セカンダリデスティネーションを更新します。</block>
   <block id="a47d6910008cc9bb73921a36d6609a08" category="list-text">VMが別 々 のボリュームと同じSVMの場合は、すべてのボリュームを含めることで整合性グループSnapshotが作成され、セカンダリデスティネーションが更新されます。</block>
   <block id="3cc1e8e247fa51b1c7d6f2a7c029a515" category="list-text">VMが別 々 のボリュームと別 々 のSVMにある場合、サービスは整合性グループの開始フェーズとコミットフェーズのSnapshotを実行します。これには、同じクラスタまたは別 々 のクラスタ内のすべてのボリュームが含まれ、セカンダリデスティネーションが更新されます。</block>
@@ -949,7 +943,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="07b0eade4402d209b5dbe587a8ad3f6f" category="inline-link">AWS に仮想化環境を導入して設定</block>
   <block id="2eccc2b2612ae991619a18b34919d843" category="paragraph">AWSでVMware Cloud環境を構成するには、の手順に従い<block ref="0faddedbfeb6e9d451b742468dbfc158" category="inline-link-rx"></block>ます。パイロットライトクラスタはディザスタリカバリにも使用できます。</block>
   <block id="8c587749bc8bd978d85704d9a142b7a6" category="paragraph">複数のデータストア上の複数のVMを保護できます。BlueXP  ディザスタリカバリでは、保護対象のVMデータストアをホストするすべてのONTAPボリュームに対してONTAP整合性グループが作成されます。</block>
-  <block id="345f26a72f023b2055826859eb701ceb" category="list-text">*仮想ネットワーク*：フェイルオーバーマッピングタブで、*仮想ネットワーク*の横にある下向き矢印を選択します。ソース仮想LANとターゲット仮想LANを選択します。</block>
   <block id="02453bc953d0b6e10f85235da7a8cca7" category="paragraph">適切な仮想LANへのネットワークマッピングを選択します。仮想LANはすでにプロビジョニングされているので、適切な仮想LANを選択してVMをマッピングします。</block>
   <block id="c71c9ca45b74f3ddf3435fee65f93cfc" category="paragraph">VMのデフォルトはマッピングされています。デフォルトのマッピングでは、VMが本番環境で使用するのと同じ設定（同じIPアドレス、サブネットマスク、およびゲートウェイ）が使用されます。</block>
   <block id="a82971318b0c070daea6677a10d3473c" category="paragraph">デフォルト設定から変更を加えた場合は、[Target IP]フィールドを[different from source]に変更する必要があります。</block>
@@ -1170,7 +1163,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="807059f044473e420c53e102505d49cf" category="list-text">vCenterサーバを追加し、リソースグループまたはアプリケーションを選択し、マッピングを完了して、通常の方法でフィールドに入力します。</block>
   <block id="6a1727ba4109844c2f1bf48438eb19f5" category="list-text">[Replication plan]&gt;[Resource mapping]ページで、*[Virtual Machines]*セクションを選択します。</block>
   <block id="b743f75136ce51e05e36623ebf8d0373" category="inline-image-macro">サブネットマッピングの選択のスクリーンショット</block>
-  <block id="d56562607152896b0efda703821ab816" category="paragraph"><block ref="d56562607152896b0efda703821ab816" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a60af3ebe60a5e3cebadd89e2c407a9c" category="list-text">[ターゲットIP ]*フィールドで、ドロップダウンリストから*[サブネットマッピングを使用]*を選択します。</block>
   <block id="88497a7ce9c844d7b07cc838ad7754d6" category="list-text">レプリケーション計画の作成に進みます。</block>
   <block id="e28871dd1f9f31bb54d653e42ab61487" category="paragraph">サイトにサブネットマッピングを含める方法の詳細については、を参照してください<block ref="54555db921feb31b73553520fa282341" category="inline-link-rx"></block>。</block>
@@ -1182,4 +1174,21 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="c14eff79606049ee3db744788f842d7d" category="list-text">Amazon Web Services（AWS）Marketplaceで* NetAppインテリジェントサービス*の従量課金制（PAYGO）サブスクリプションを購入します。</block>
   <block id="cbb303696e69ece252e4279cf7e650f4" category="paragraph">無償トライアルの終了後は、NetAppからライセンスを購入するか、AWS Marketplaceから* NetApp Intelligent Services *に登録できます。この手順では、AWS Marketplaceで直接サブスクライブする方法の概要を説明します。</block>
   <block id="05d7d2c6dcb40b2ad3598ed40596c890" category="list-text">AWS Marketplaceを使用して、* NetAppインテリジェントサービス*と* BlueXP  ディザスタリカバリ*にサブスクライブします。</block>
+  <block id="ddbdc0fdada8e6466e651115cefbafee" category="section-title">リソースをマッピング&gt;[Compute resources]セクション</block>
+  <block id="c74f8b35838f9f38552c33a8c05ad01a" category="paragraph">[Compute resources]*の横にある下矢印を選択します。</block>
+  <block id="5044b19178ff5f8de4c9c0246fe12b78" category="admonition">vCenterでクラスタ内の複数のホストを管理するようにDistributed Resource Scheduler（DRS；分散リソーススケジューラ）が設定されている場合は、ホストを選択する必要はありません。ホストを選択すると、BlueXP  ディザスタリカバリによって、選択したホストにすべてのVMが配置されます。**ターゲットVMフォルダ*（オプション）：選択したVMを格納する新しいルートフォルダを作成します。</block>
+  <block id="74b0088eeb9a4fc43afd0ad0e9f1ef57" category="section-title">[リソースのマッピング]&gt;[仮想ネットワーク]セクション</block>
+  <block id="21538d8465027f7c4a2d65593552875c" category="paragraph">[フェイルオーバーマッピング]タブで、*[仮想ネットワーク]*の横にある下矢印を選択します。ソース仮想LANとターゲット仮想LANを選択します。</block>
+  <block id="d43d5aee258367a26705d2e855068453" category="section-title">[リソースのマッピング]&gt;[仮想マシン]セクション</block>
+  <block id="27d300eb526c12800753bbfacfc390b6" category="paragraph">[フェイルオーバーマッピング]タブで、*[仮想マシン]*の横にある下矢印を選択します。</block>
+  <block id="64a2a2b78e563e79f2c42c8e9d160e0e" category="section-title">リソースのマッピング&gt;[Datastores]セクション</block>
+  <block id="923805befcdde4aa8fa4752b9e9a277f" category="paragraph">[データストア]*の横にある下矢印を選択します。VMを選択すると、データストアマッピングが自動的に選択されます。</block>
+  <block id="c4c09b507b4da4a281d7ce6c068b6a88" category="inline-image-macro">レプリケーションプランの追加&amp;gt;リソースマッピング&amp;gt;データストアのスクリーンショット</block>
+  <block id="7b6735057ec599457ce14b0629d098bf" category="paragraph"><block ref="383fd741f178abe8be4920d498113a6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63882377431b20b814641f0190aa1986" category="list-text">*ソースデータストアとターゲットデータストア*：（ファンアウト）SnapMirror関係が複数ある場合は、使用するデスティネーションを選択できます。ボリュームでSnapMirror関係がすでに確立されている場合は、対応するソースとターゲットのデータストアが表示されます。SnapMirror関係がないボリュームの場合は、ターゲットクラスタを選択し、ターゲットSVMを選択し、ボリューム名を指定して作成できます。ボリュームとSnapMirrorの関係が作成されます。</block>
+  <block id="d3d01ba34a902e9e5d7cb703c2b96a65" category="inline-image-macro">[Add subnet]メニューのスクリーンショット</block>
+  <block id="6f7c69118d430fce089e3f0f18aba2c5" category="paragraph"><block ref="6f7c69118d430fce089e3f0f18aba2c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e7be7bda88531d046e21401efd5bd9d5" category="paragraph">[Configure subnet]ページが表示されます。</block>
+  <block id="aaaeb2ea35c55b4a37b25b328a34587c" category="paragraph"><block ref="aaaeb2ea35c55b4a37b25b328a34587c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58091bb6c8793ca7ad7178167e36010f" category="admonition">VMが2つある場合（1つがLinux、もう1つがWindowsなど）、クレデンシャルはWindowsの場合にのみ必要です。</block>
 </blocks>
