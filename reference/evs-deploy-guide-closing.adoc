@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-closing.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: Amazon EVS と Amazon FSxN を使用した BlueXP 災害復旧の紹介。 
+---
+= まとめ
+:allow-uri-read: 
+
+
+[role="lead"]
+BlueXP ディザスタリカバリは、Amazon EVS と Amazon FSx for NetApp ONTAP を DR ターゲットとして使用するように設定することで、オンプレミスの VMware インフラストラクチャにコスト効率の高いハイブリッドクラウド DR ソリューションを提供します。これにより、ミッションクリティカルなインフラストラクチャに堅牢な DR ターゲットを提供できます。BlueXPディザスタリカバリは、数十年にわたるデータ保護の経験に裏打ちされた ONTAP ネイティブのデータ保護機能を活用し、徹底的なテストを実施することで、お客様のデータを完全に保護します。
+
+詳細情報：
+
+* https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/getting-started.html["Amazon FSX for NetApp ONTAP の利用を開始する"^]
+* https://docs.netapp.com/us-en/bluexp-disaster-recovery/index.html["NetApp BlueXP 災害復旧ドキュメント"]
+

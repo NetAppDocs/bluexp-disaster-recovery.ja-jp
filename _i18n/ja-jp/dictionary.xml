@@ -431,7 +431,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="d23a9d83c87c6eacef309f00a2beb5d3" category="inline-image-macro">[Sites]ページのスクリーンショット</block>
   <block id="6f5e3fdfa73285ac2283ba492cf2d47b" category="list-text">AWS上のVMware Cloud（VMC）とAmazon FSx for NetApp ONTAPまたは</block>
   <block id="b374472b15e644f23d1e6b059b5216b9" category="list-text">ONTAPストレージを使用した、もう1つのオンプレミスNFSベースのVMware環境</block>
-  <block id="53c1c0c22e2a647591a0b52427852850" category="paragraph"><block ref="53c1c0c22e2a647591a0b52427852850" category="inline-image-macro-rx" type="image"></block></block>
   <block id="add8d69a5f7975ffd43124657fc5030d" category="list-text">SnapMirrorレプリケーションを使用して、オンプレミスの本番用サイト上のVMwareアプリケーションをクラウドまたはオンプレミスのディザスタリカバリリモートサイトにレプリケートします。</block>
   <block id="dcc9d99320099ed731ca2f05b3e501a7" category="list-text">VMwareワークロードを元のサイトから別のサイトに移行します。</block>
   <block id="a6a42e8e3070730d19bfd86d6a1d66fe" category="paragraph">次の図は、オンプレミスからオンプレミスへのディザスタリカバリ計画のアーキテクチャを示しています。</block>
@@ -1211,4 +1210,434 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="b12e5762638e8dca606f02345a47867a" category="paragraph">BlueXP 災害復旧レポートを確認すると、災害復旧への備えを分析するのに役立ちます。事前設計されたレポートには、過去7日間のテストフェイルオーバーの概要、レプリケーションプランの詳細、およびアカウント内のすべてのサイトのジョブの詳細が含まれます。</block>
   <block id="b3d496fccdf5d0b52dd71622cd01ca4c" category="doc">BlueXP 災害復旧で VM をまとめて整理するためのリソース グループを作成する</block>
   <block id="4931eee83a268b667e0c868104ec1e32" category="doc">BlueXP 災害復旧のサイトに vCenter を追加する</block>
+  <block id="4fdc7ce994e20231977a950f50d2bd8c" category="inline-link-macro">Amazon Elastic VMware Service と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧の紹介</block>
+  <block id="23c676c1e2805ccfa79b1d5b119b359b" category="admonition">AWS EVS に関するこのドキュメントは、テクノロジープレビューとして提供されています。このプレビューサービスでは、NetAppは、一般提供前にサービスの詳細、内容、スケジュールを変更する権利を留保します。詳細については、を参照してください <block ref="cdad8a3d7f20169c4ae7abb02cbfb952" category="inline-link-macro-rx"></block>。</block>
+  <block id="307333c16acf811cbdcbc49b7e1ffe0c" category="paragraph"><block ref="307333c16acf811cbdcbc49b7e1ffe0c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="820dcf757b538e0c3906feee7e248e9b" category="inline-image-macro">VMware 向け BlueXP 災害復旧のユースケースを示す図</block>
+  <block id="0730a606f26806e8598f89fee000aa77" category="paragraph"><block ref="0730a606f26806e8598f89fee000aa77" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ce42bd6214051346d73d33c0caeff3ad" category="summary">VMインフラストラクチャを保護する前に、BlueXPディザスタリカバリサービスは、保護対象のVMをホストしているVMware vCenterクラスタと、それらのvCenterの所在地を認識する必要があります。最初のステップは、ソースデータセンターとターゲットデータセンターを表すサイトを作成することです。サイトとは、障害ドメインまたはリカバリドメインのことです。</block>
+  <block id="df43b28c9b444f6234798d82beab12eb" category="doc">Amazon EVS の BlueXP 災害復旧にサイトを追加する</block>
+  <block id="59cabc3db90da0724955c7298ca562a1" category="paragraph">VMインフラストラクチャを保護する前に、保護対象のVMをホストしているVMware vCenterクラスタと、それらのvCenterが配置されている場所を特定する必要があります。最初のステップは、ソースデータセンターとターゲットデータセンターを表すサイトを作成することです。サイトとは、障害ドメインまたはリカバリドメインのことです。</block>
+  <block id="45dca8e7e249dec0e75baf3601093792" category="paragraph">以下を作成する必要があります。</block>
+  <block id="d9c29ccbb6b2d06447761e6cf0756684" category="list-text">実稼働 vCenter クラスタが存在する各実稼働データセンターを表すサイト</block>
+  <block id="394c227a36683c802c819b3f34846545" category="list-text">Amazon EVS/Amazon FSx for NetApp ONTAP クラウドデータセンターのサイト</block>
+  <block id="f45637027169066618b4feb69cd78735" category="section-title">オンプレミスサイトを作成する</block>
+  <block id="0b865754d79945616dd5a93fa7db75ee" category="paragraph">本番環境の vCenter サイトを作成します。</block>
+  <block id="dd1d9dbb557d73a1fd153af81b0bcd7b" category="list-text">BlueXP の左側のナビゲーションから、*保護* &gt; *災害復旧* を選択します。</block>
+  <block id="3655395c09d80221e5f491b2eb9dcc2f" category="list-text">BlueXP 災害復旧の任意のページから、[*サイト*] タブを選択します。</block>
+  <block id="d0310d41f74b1c1cdc6c79c71a025b7f" category="inline-image-macro">サイトタブ</block>
+  <block id="50c021e4f2a31fdef8036a8dba8a16b8" category="paragraph"><block ref="50c021e4f2a31fdef8036a8dba8a16b8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="935bee5f068d88e60f2dea6bf673db0a" category="list-text">[サイト] タブから [追加] を選択します。</block>
+  <block id="5df91129083187f72c022108dc40019a" category="inline-image-macro">サイトタブのオプションを追加</block>
+  <block id="f39c93b508f63c5847ca27a8a58d4063" category="paragraph"><block ref="f39c93b508f63c5847ca27a8a58d4063" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="800da9fc10adce98d89711c116529b76" category="list-text">[サイトの追加] ダイアログ ボックスで、サイト名を入力します。</block>
+  <block id="308b16c04c14fc9c7831597351d20046" category="list-text">場所として「オンプレミス」を選択します。</block>
+  <block id="b2fc60f51b5a0628891f2dc6ca9c3dc9" category="inline-image-macro">サイト作成ダイアログボックス</block>
+  <block id="b4775672cce6d5c4397de54127eb400c" category="paragraph"><block ref="b4775672cce6d5c4397de54127eb400c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f07f3f9af6f682449f80e9bbf3ca8c3" category="paragraph">他に本番環境の vCenter サイトがある場合は、同じ手順で追加できます。</block>
+  <block id="548c9c96147a0426f260364305e15190" category="section-title">Amazonクラウドサイトを作成する</block>
+  <block id="ddbae8bd4240ed180de1f145025881e2" category="paragraph">Amazon FSx for NetApp ONTAP ストレージを使用して Amazon EVS の DR サイトを作成します。</block>
+  <block id="92904974c00ca9b28d9ec7f0efadbe4a" category="inline-image-macro">サイトページのオプションの追加</block>
+  <block id="07ff11e38338c53ad9f51049256db866" category="paragraph"><block ref="07ff11e38338c53ad9f51049256db866" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b0497cc454b3915328ab40ece8c6cc62" category="list-text">場所として「AWS-EVS」を選択します。</block>
+  <block id="f4c51cf5363b5651017e61e046acbe01" category="inline-image-macro">ダイアログボックスの追加</block>
+  <block id="20320c5a5509e9d8a3970bb66e3976b5" category="paragraph"><block ref="20320c5a5509e9d8a3970bb66e3976b5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
+  <block id="0da98ea5899daa91a1bbac1ea476d6cf" category="paragraph">これで、本番 (ソース) サイトと DR (宛先) サイトが作成されました。</block>
+  <block id="669ca9c2ff6e928c4aff69471cec6d12" category="summary">Amazon EVS と Amazon FSxN を使用した BlueXP 災害復旧の概要。サイトを作成したら、BlueXP 災害復旧の各サイトに vCenter クラスターを追加します。各サイトの作成時に、それぞれのサイトタイプを指定しました。これにより、BlueXP 災害復旧は、各サイトタイプでホストされている vCenter に必要なアクセスタイプを認識できます。AmazonEVS の利点の 1 つは、Amazon EVS vCenter とオンプレミスの vCenter の間に実質的な違いがないことです。どちらも同じ接続情報と認証情報が必要です。</block>
+  <block id="7d189e80ea869464c06f8e85295498f7" category="doc">BlueXP 災害復旧にオンプレミスと Amazon EVS vCenter クラスターを追加する</block>
+  <block id="1460c23a88ded3dce057fa4478405940" category="paragraph">サイトを作成したら、BlueXP ディザスタリカバリの各サイトに vCenter クラスターを追加します。各サイトの作成時に、サイトのタイプを指定しました。これにより、BlueXP ディザスタリカバリは、各サイトタイプでホストされている vCenter に必要なアクセスタイプを認識できます。AmazonEVS の利点の一つは、Amazon EVS vCenter とオンプレミスの vCenter の間に実質的な違いがないことです。どちらも同じ接続情報と認証情報が必要です。</block>
+  <block id="3ac596c5aa435dd12f683335e2d27760" category="list-title">各サイトにvCenterを追加する手順</block>
+  <block id="0b6924fcba425d50ef4e409dab53b25f" category="list-text">*サイト* タブから、必要なサイトの *vCenter の追加* を選択します。</block>
+  <block id="59662aacba84700bcc666a989987c405" category="inline-image-macro">vCenterオプションの追加</block>
+  <block id="11c7214c26259f50d59799950f134613" category="paragraph"><block ref="11c7214c26259f50d59799950f134613" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="744f4f3b56736e13f1a146b4bfbfbd67" category="list-text">[vCenter サーバーの追加] ダイアログ ボックスで、次の情報を選択または入力します。</block>
+  <block id="9f64cafc10d07a328fe9975be672e3fc" category="list-text">AWS VPC 内でホストされる BlueXP コネクタ。</block>
+  <block id="8bf4e0d4e225ffb8df46f2ccff910a1e" category="list-text">追加する vCenter の IP アドレスまたは FQDN。</block>
+  <block id="5b89f24b8876b95ec77cbbec46ac7f03" category="list-text">異なる場合は、ポート値を vCenter クラスタ マネージャが使用する TCP ポートに変更します。</block>
+  <block id="80f8a73ad31bbfe56cc8ab47d411f0a0" category="list-text">以前に作成したアカウントの vCenter ユーザー名。BlueXP 災害復旧によって vCenter を管理するために使用されます。</block>
+  <block id="dcbbf9ae46e44ee95b9d29aafbb41fec" category="list-text">指定されたユーザー名の vCenter パスワード。</block>
+  <block id="090ccdeb67b025c4f8b7081fde3f9701" category="list-text">社内で外部の証明機関（CA）またはvCenterエンドポイント証明書ストアを使用してvCenterにアクセスする場合は、「*自己署名証明書を使用する*」チェックボックスをオフにしてください。それ以外の場合は、チェックボックスをオンのままにしてください。</block>
+  <block id="b3a5c8845f853fe3c75c53b6ba4b310a" category="inline-image-macro">vCenter の追加ダイアログボックス</block>
+  <block id="34fdfb7ad906ce66a12a8da2c109d447" category="paragraph"><block ref="34fdfb7ad906ce66a12a8da2c109d447" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3c22eda98eb023fc784b057b8ec04c3" category="summary">Amazon EVS と Amazon FSxN を使用した BlueXP 災害復旧の紹介。</block>
+  <block id="6f8b794f3246b0c1e1780bb4d4d5dc53" category="doc">まとめ</block>
+  <block id="eed7fbcbb7e8c74c99d0ddc3abdfe7cf" category="paragraph">BlueXP ディザスタリカバリは、Amazon EVS と Amazon FSx for NetApp ONTAP を DR ターゲットとして使用するように設定することで、オンプレミスの VMware インフラストラクチャにコスト効率の高いハイブリッドクラウド DR ソリューションを提供します。これにより、ミッションクリティカルなインフラストラクチャに堅牢な DR ターゲットを提供できます。BlueXPディザスタリカバリは、数十年にわたるデータ保護の経験に裏打ちされた ONTAP ネイティブのデータ保護機能を活用し、徹底的なテストを実施することで、お客様のデータを完全に保護します。</block>
+  <block id="55707b4848b3a26a39057e3af6948b43" category="paragraph">詳細情報：</block>
+  <block id="0f5cc47067a5c4b536ab91f1a843de82" category="inline-link">Amazon FSX for NetApp ONTAP の利用を開始する</block>
+  <block id="6c289628dee43319166eea9002566c44" category="list-text"><block ref="6c289628dee43319166eea9002566c44" category="inline-link-rx"></block></block>
+  <block id="419107ae99e5cc9fd7d65d66f41050c1" category="inline-link">NetApp BlueXP 災害復旧ドキュメント</block>
+  <block id="a2c58b1632d6fbf942b246bd8c002cc2" category="list-text"><block ref="a2c58b1632d6fbf942b246bd8c002cc2" category="inline-link-rx"></block></block>
+  <block id="8e7c387f461b2ac490bda493fdceda5f" category="summary">BlueXP ディザスタリカバリを使用する前に、オンプレミスおよびクラウドホストのストレージインスタンスを BlueXP 作業環境に追加する必要があります。</block>
+  <block id="e68cb1824e09c8e066467d97cdb1991f" category="doc">BlueXP 災害復旧機能を備えた Amazon EVS の BlueXP 作業環境にオンプレミスのアレイを追加する</block>
+  <block id="110cf9f49141b2330ac27d9a9baedd2f" category="paragraph">次のことを行う必要があります。</block>
+  <block id="79b0e4663ef0a0fffd9246da087a5308" category="list-text">オンプレミスのアレイを BlueXP 作業環境に追加します。</block>
+  <block id="52aceff615a8a353fa689f93ef3614ef" category="list-text">Amazon FSx for NetApp ONTAP (FSx for ONTAP) インスタンスを BlueXP 作業環境に追加します。</block>
+  <block id="1914a92b9fef7e409053598090207e08" category="section-title">BlueXP作業環境にオンプレミスのストレージアレイを追加する</block>
+  <block id="e21237ad7d28d5241dd6cdcffc9c2a00" category="paragraph">オンプレミスの ONTAP ストレージ リソースを BlueXP 作業環境に追加します。</block>
+  <block id="b14257c652d14d8515d271f0212bd2ce" category="list-text">BlueXP キャンバスから、「*作業環境の追加*」を選択します。</block>
+  <block id="ddf0d84991cb06158f6eca119f5aa89c" category="inline-image-macro">作業環境の追加</block>
+  <block id="349b2d7a1ca6eac6636f21a00ce0501d" category="paragraph"><block ref="349b2d7a1ca6eac6636f21a00ce0501d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="71fc6ede309a71bb3c4f28f1d6d83a62" category="list-text">[作業環境の追加] ページで、[*オンプレミス*] カードを選択します。</block>
+  <block id="4a31ad94d282b19a1c5f3be4e28ec3c8" category="inline-image-macro">作業環境画像を追加</block>
+  <block id="59018ab7657eb07f7057ada9d34538f1" category="paragraph"><block ref="59018ab7657eb07f7057ada9d34538f1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7804069ae091dd822cf8b497e221fdb2" category="list-text">On-Premises ONTAP カードで *Discover* を選択します。</block>
+  <block id="149ae88688585ac8b68e0c2f04f70fe0" category="paragraph"><block ref="149ae88688585ac8b68e0c2f04f70fe0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d326900fbed47108b04e2c8cee7b6041" category="list-text">「クラスターの検出」ページで、次の情報を入力します。</block>
+  <block id="843fd4d49aab9b9f4784cd919767936c" category="list-text">ONTAPアレイクラスタ管理ポートのIPアドレス</block>
+  <block id="91c00f03a2fb5b93f522598c117611c6" category="list-text">管理者のユーザー名</block>
+  <block id="8aa764ffa66fb398df5f40185e9f98ac" category="list-text">管理者パスワード</block>
+  <block id="8189eb9cbf13731a1a9d4488541f2942" category="list-text">ページの下部にある*Discover*を選択します。</block>
+  <block id="e693301ddfb0ef44a5b2b45d11ae3467" category="paragraph"><block ref="e693301ddfb0ef44a5b2b45d11ae3467" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="39097babd0c6218dcf46c3ecd7d97c32" category="list-text">vCenter データストアをホストする各 ONTAP アレイに対して手順 1 ～ 5 を繰り返します。</block>
+  <block id="7602a1228d8b945d5cf0149d28c82adb" category="section-title">BlueXP 作業環境に Amazon FSx for NetApp ONTAP ストレージインスタンスを追加する</block>
+  <block id="4d8658bf6b366b5551718e0a00428893" category="paragraph">次に、Amazon FSx for NetApp ONTAP ストレージリソースを BlueXP 作業環境に追加します。</block>
+  <block id="483ca1341a0e86a331b54f24705ed59e" category="paragraph"><block ref="483ca1341a0e86a331b54f24705ed59e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="191b215e1bafcf454d046bf2a04ebe00" category="list-text">「作業環境の追加」ページから、*Amazon Web Services* カードを選択します。</block>
+  <block id="9c84afb7256f6d1b08c629cfe97393c3" category="paragraph"><block ref="9c84afb7256f6d1b08c629cfe97393c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="60307118e9d612ff41db44d4ac4a8b91" category="list-text">Amazon FSx for ONTAP カードの *Discover Existing* リンクを選択します。</block>
+  <block id="beea635ab0d5488f092f8b6d53762427" category="paragraph"><block ref="beea635ab0d5488f092f8b6d53762427" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d0606ca8000d6887d04df726f54bb08" category="list-text">FSx for ONTAP インスタンスをホストしている認証情報と AWS リージョンを選択します。</block>
+  <block id="8d4ff1357f113705b6f30662ff7b14aa" category="list-text">追加する FSx for ONTAP ファイル システムを 1 つ以上選択します。</block>
+  <block id="d6d547f4a67e7da1e6a84ec13d6fd5c6" category="paragraph"><block ref="d6d547f4a67e7da1e6a84ec13d6fd5c6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7de461c253e2cd429a574e5ca48a6fa4" category="list-text">vCenter データストアをホストする各 FSx for ONTAP インスタンスに対して手順 1 ～ 6 を繰り返します。</block>
+  <block id="04eb0ac30625c6312809ae3605f0b08f" category="summary">BlueXP コネクタをインストールした後、DR プロセスに参加するすべての ONTAP ストレージと VMware vCenter リソースを統合する必要があります。</block>
+  <block id="5ddf5a2becf40d46416c1ecf397acead" category="doc">Amazon EVS 向け BlueXP 災害復旧の設定の概要</block>
+  <block id="8b9d6b5951a36c9d339854816f5a2864" category="paragraph">BlueXP コネクタをインストールした後、災害復旧プロセスに参加するすべての ONTAP ストレージと VMware vCenter リソースを BlueXP 災害復旧と統合する必要があります。</block>
+  <block id="300a6a9739ccd40ce80dbf01d1f81a3d" category="inline-link-macro">BlueXP 災害復旧機能を備えた Amazon EVS の前提条件</block>
+  <block id="1196a09d760180a49604d32a98c45733" category="list-text"><block ref="1196a09d760180a49604d32a98c45733" category="inline-link-macro-rx"></block></block>
+  <block id="b90bda5398de68e1d85b7a6c119bd42b" category="inline-link-macro">BlueXPディザスタリカバリにONTAPストレージアレイを追加する</block>
+  <block id="74037e15fb74898fc2741e1fd0de2c1b" category="list-text"><block ref="74037e15fb74898fc2741e1fd0de2c1b" category="inline-link-macro-rx"></block></block>
+  <block id="948fdcd481f1b60f64cd0a1415b8772c" category="inline-link-macro">Amazon EVS の BlueXP 災害復旧を有効にする</block>
+  <block id="3b4041796a7d19952ce4f05d7ac1296e" category="list-text"><block ref="3b4041796a7d19952ce4f05d7ac1296e" category="inline-link-macro-rx"></block></block>
+  <block id="48640808aa8de0e397783c9f0bf7d38c" category="inline-link-macro">BlueXP 災害復旧に vCenter サイトを追加する</block>
+  <block id="b1a91a36f01e2b398842c4fafba5b827" category="list-text"><block ref="b1a91a36f01e2b398842c4fafba5b827" category="inline-link-macro-rx"></block></block>
+  <block id="4870ca95287127b763711668002ae46a" category="inline-link-macro">BlueXP 災害復旧に vCenter クラスタを追加する</block>
+  <block id="b58a5282def19b2cfa0d6a21a2fb1873" category="list-text"><block ref="b58a5282def19b2cfa0d6a21a2fb1873" category="inline-link-macro-rx"></block></block>
+  <block id="77b6a574c8fd563a40ba5d3ced2f6995" category="summary">BlueXP 災害復旧を使用して Amazon EVS の設定を続行する前に、いくつかの前提条件が満たされていることを確認する必要があります。</block>
+  <block id="3cfd631225e4a5cd11bb7f070aa490d3" category="paragraph">具体的には、次の操作を実行します。</block>
+  <block id="0c16cce0fa7cbfe2c47b9b35b500ef09" category="list-text">必要な操作を実行するために、BlueXP 災害復旧に必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。</block>
+  <block id="f1b035e723ce8afdf6da2bf6a610f72a" category="admonition">デフォルトの管理者アカウント「administrator@vsphere.com」の使用は推奨されません。代わりに、DRプロセスに参加するすべてのvCenterクラスタにBlueXPディザスタリカバリ専用のユーザーアカウントを作成する必要があります。必要な権限の一覧については、以下をご覧ください。 <block ref="81359e3dc28c5def835ffa82482dcdcf" category="inline-link-macro-rx"></block> 。</block>
+  <block id="99c420b6898c190b219ba1e25a1f737e" category="list-text">BlueXP ディザスタ リカバリによって保護される VM をホストするすべての vCenter データストアが、NetApp ONTAP ストレージ リソース上に配置されていることを確認します。</block>
+  <block id="8fc09ae0803e50a45a94b04ffd9379bf" category="paragraph">Amazon FSx on NetApp ONTAP をご利用の場合、本サービスは iSCSI 上の NFS および VMFS をサポートします（FC はサポートしません）。本サービスは FC をサポートしますが、Amazon FSx for NetApp ONTAP は FC をサポートしません。</block>
+  <block id="aaa40fdffdb9b8b6db1fa18723bcd15b" category="list-text">Amazon EVS vCenter が Amazon FSx for NetApp ONTAP ストレージクラスターに接続されていることを確認します。</block>
+  <block id="9709c4e90ccd66fb37391b201a587f74" category="list-text">保護されているすべての VM に VMware ツールがインストールされていることを確認します。</block>
+  <block id="77bc05bf2afea788cd5090d62741ed3d" category="list-text">オンプレミスネットワークがAmazon承認済みの接続方法を使用してAWS VPCネットワークに接続されていることを確認してください。AWSDirect Connect、AWS Private Link、またはAWSサイト間VPNのご利用をお勧めします。</block>
+  <block id="8629f12efbc40885b1243e421cd3c4e5" category="summary">まず、BlueXP ディザスタ リカバリを使用してレプリケーション プラン名を指定し、レプリケーションのソース vCenter と宛先 vCenter を選択します。</block>
+  <block id="ea588d0f7f6f9983920d0d0e39b7f7d4" category="doc">レプリケーションプランを作成する: ステップ 1 - BlueXP 災害復旧で vCenter を選択する</block>
+  <block id="88e5c616aef10d1e25cd80753b2956cb" category="paragraph">まず、BlueXP ディザスタ リカバリを使用して、レプリケーション プラン名を指定し、レプリケーションのソース vCenter と宛先 vCenter を選択します。</block>
+  <block id="3d5a9945f1a8ed1fc9f6c0e5c4eee4f6" category="list-text">レプリケーション プランの一意の名前を入力します。</block>
+  <block id="31e93095cb1f78296c5a4bfdd4647cd5" category="paragraph">レプリケーション プラン名には、英数字とアンダースコア (_) のみを使用できます。</block>
+  <block id="431ee8ca0b3802786f62aed1da9220ed" category="list-text">ソース vCenter クラスタを選択します。</block>
+  <block id="eb1e43df314e70cda644140a164ce3c9" category="list-text">宛先の vCenter クラスタを選択します。</block>
+  <block id="ecced8ecd9dc616f00d9f567714d6265" category="inline-image-macro">レプリケーションプランを作成し、vCentersを選択します</block>
+  <block id="d35b9c993df2e12890476ca19b659441" category="paragraph"><block ref="d35b9c993df2e12890476ca19b659441" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b191b6f49b0765d360681184e8222444" category="inline-link-macro">レプリケーションプラン作成ウィザード ステップ 2</block>
+  <block id="5003f822127ac9a9c7547da6e214573c" category="paragraph">続ける<block ref="517e532aa0c56fe7f6a8ea55b263a992" category="inline-link-macro-rx"></block> 。</block>
+  <block id="4114dbae62a1d9485e06d7737e06fb0e" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP ディザスタリカバリの紹介。BlueXPディザスタリカバリを使用して保護する仮想マシンを選択します。</block>
+  <block id="2819f8d1ba00dd72cf62a7b3471938cb" category="doc">レプリケーションプランの作成: ステップ 2 - BlueXP 災害復旧で VM リソースを選択する</block>
+  <block id="6e842216ff79e66b8c0032bbe5e0bb9b" category="paragraph">BlueXP ディザスタリカバリを使用して保護する仮想マシンを選択します。</block>
+  <block id="610fc4dc6e77d6a138be8851cd39ce5a" category="paragraph">保護する VM を選択する方法はいくつかあります。</block>
+  <block id="ce621c7003512f5ad0a4858f15d9be63" category="list-text">*個々のVMを選択*：*仮想マシン*ボタンをクリックすると、保護するVMを個別に選択できます。選択したVMは、画面右側にあるデフォルトのリソースグループに追加されます。</block>
+  <block id="b4a2c2844cd161d3c25a32cbc39d36d8" category="list-text">*以前に作成したリソースグループを選択*：BlueXPディザスタリカバリUI上部の「リソースグループ」タブを使用して、事前にカスタムリソースグループを作成できます。これは必須ではありません。他の2つの方法でも、レプリケーションプラン作成プロセスの一環としてリソースグループを作成できます。詳細については、を参照してください <block ref="8aa3c94c171b2c9d7252afb28ee019a7" category="inline-link-macro-rx"></block>。</block>
+  <block id="3a9512d2d8c9e9f0f69ee9b535c77a83" category="list-text">*vCenterデータストア全体を選択*：このレプリケーションプランで保護するVMが多数ある場合、個々のVMを選択するのは効率的ではない可能性があります。BlueXPディザスタリカバリはボリュームベースのSnapMirrorレプリケーションを使用してVMを保護するため、データストア上のすべてのVMがボリュームの一部としてレプリケートされます。ほとんどの場合、データストア上のすべてのVMをBlueXPディザスタリカバリで保護し、再起動する必要があります。このオプションを使用すると、選択したデータストアでホストされているすべてのVMを保護対象VMのリストに追加できます。</block>
+  <block id="28da8b5b38656ce6567ddf373453c269" category="paragraph">このガイド付きの手順では、vCenter データストア全体を選択します。</block>
+  <block id="7b9830c740b374eb20e5c17ea81bb1ab" category="list-title">このページにアクセスする手順</block>
+  <block id="fc85d703602655afa214ccfc6b2ef4af" category="list-text">*レプリケーション プラン* ページから、*アプリケーション* セクションに進みます。</block>
+  <block id="32f270bdb81f946e928264e11584d291" category="list-text">開いた*アプリケーション*ページの情報を確認します。</block>
+  <block id="adea8c3ade175d7b99a99a269bb1b136" category="inline-image-macro">レプリケーションプラン、アプリケーションページ</block>
+  <block id="a66155ae2edcdc831993816e795e2cb4" category="paragraph"><block ref="a66155ae2edcdc831993816e795e2cb4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a538750f5afffe988fa99e8ccc24c31a" category="list-title">データストアを選択する手順:</block>
+  <block id="950f1daebd3c43f88a40dc7c475d8bf9" category="list-text">保護する各データストアの横にあるチェックボックスをオンにします。</block>
+  <block id="256c31a6dcdbd7ede927d725d062abd1" category="list-text">(オプション) リソース グループ名の横にある鉛筆アイコンを選択して、リソース グループの名前を適切な名前に変更します。</block>
+  <block id="5cdb6865395a5a7c648eec3a4bfdc0cf" category="inline-link-macro">レプリケーションプラン作成ウィザード ステップ 3</block>
+  <block id="97ff8b16c5655b92ed53df0dd71843fa" category="paragraph">続ける<block ref="adffaab82c54ec90442b4418979dfb11" category="inline-link-macro-rx"></block> 。</block>
+  <block id="0a6ee28fe0af80a5803af0f506660dca" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP ディザスタリカバリの導入。保護対象の VM のリストを取得したら、BlueXP ディザスタリカバリでは、フェイルオーバー時に使用するフェイルオーバーマッピングと VM 構成情報を提供する必要があります。</block>
+  <block id="843027f2f65b4fc9479458b57fe23e59" category="doc">レプリケーションプランの作成: ステップ 3 - BlueXP 災害復旧でリソースをマップする</block>
+  <block id="68630913837d4522c0b315316fa20616" category="paragraph">BlueXP ディザスタリカバリを使用して保護する VM のリストを作成したら、フェールオーバー中に使用するフェールオーバー マッピングと VM 構成情報を提供します。</block>
+  <block id="d2ff096b4d4a2f5f4848cf23e9c25e0d" category="paragraph">次の 4 つの主要な種類の情報をマッピングする必要があります。</block>
+  <block id="9cdd09a5b2d217b34fdab06b6438a3ea" category="list-text">コンピューティングリソース</block>
+  <block id="30c53d4188dc7e116970e74000c9c914" category="list-text">仮想ネットワーク</block>
+  <block id="99060ab16c8117b10834f3ad1dd732c8" category="list-text">VM再設定</block>
+  <block id="f443508dbf8673a0459dd93afb702a1c" category="list-text">データストアのマッピング</block>
+  <block id="76e8c836ee964f4fa864d6333268999a" category="paragraph">各VMには最初の3種類の情報が必要です。保護対象のVMをホストする各データストアには、データストアマッピングが必要です。</block>
+  <block id="daa6be73716dc44624a55224ae2ed0af" category="inline-image-macro">25.25</block>
+  <block id="35939d9e04d73376eda45b2b13922f28" category="list-text">注意アイコン（ <block ref="8bb617320337469159947c2ee9a52889" category="inline-image-macro-rx" type="image"></block> ) では、マッピング情報を提供する必要があります。</block>
+  <block id="5574c8f31b4cf0921b32111194d0542a" category="list-text">チェックアイコン（ <block ref="61783be3aca45cad43d97d02f3268d3c" category="inline-image-macro-rx" type="image"></block> ）はマッピング済み、またはデフォルトのマッピングが設定されています。これらを確認し、現在の構成が要件を満たしていることを確認してください。</block>
+  <block id="6028265a3b574aed8497e66443fac28c" category="list-text">*レプリケーション プラン* ページから、*リソース マッピング* セクションに進みます。</block>
+  <block id="c983acef9845cc75bd306109d8a52c00" category="list-text">開いた*リソース マッピング* ページの情報を確認します。</block>
+  <block id="fa1610ddfa2152b9e8f5778144e74473" category="inline-image-macro">レプリケーションプランの作成、リソースマッピングページ</block>
+  <block id="fe4f9d685407c3d061ae56d4bb07c056" category="paragraph"><block ref="fe4f9d685407c3d061ae56d4bb07c056" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="740199b79705af0b0465a7ac59ab8f62" category="list-text">必要なマッピングの各カテゴリを開くには、セクションの横にある下矢印 (*v*) を選択します。</block>
+  <block id="1d695da8be5a808b287d79de335b03ee" category="section-title">コンピューティングリソースのマッピング</block>
+  <block id="0a235ac401a30cfb7078a7aa681d6763" category="paragraph">サイトは複数の仮想データセンターと複数の vCenter クラスターをホストする可能性があるため、フェイルオーバーが発生した場合に VM を回復する vCenter クラスターを特定する必要があります。</block>
+  <block id="bf6fa7ffbe6eb7d1755d6cbf9113608e" category="list-title">コンピューティングリソースをマップする手順</block>
+  <block id="5f284173a4e05543b1d3f4f96396fe44" category="list-text">DR サイトにあるデータセンターのリストから仮想データセンターを選択します。</block>
+  <block id="98b8fc331440708a4300daf2feca158c" category="list-text">選択した仮想データセンター内のクラスターのリストから、データストアと VM をホストするクラスターを選択します。</block>
+  <block id="26101477fa982299ccdcb9317d953d1f" category="list-text">(オプション) ターゲット クラスター内のターゲット ホストを選択します。</block>
+  <block id="8203a86e2a380c7c9948059ac5bafea4" category="paragraph">BlueXPディザスタリカバリはvCenterでクラスタに追加された最初のホストを選択するため、この手順は不要です。この時点で、VMは引き続きそのESXiホスト上で実行されるか、VMware DRSによって、設定されたDRSルールに基づいて必要に応じてVMが別のESXiホストに移動されます。</block>
+  <block id="6604b6a796234e71213e8532c2e0ac4d" category="list-text">(オプション) VM 登録を配置する最上位の vCenter フォルダの名前を指定します。</block>
+  <block id="19ec7913efad483c20da5162901ba76d" category="paragraph">これは組織のニーズを満たすものであり、必須ではありません。</block>
+  <block id="b98800e8cefd33a1732635723a78893e" category="inline-image-macro">レプリケーションプランの作成、リソースの計算</block>
+  <block id="7e7f922d36944c2c720506b1664eb3a6" category="paragraph"><block ref="7e7f922d36944c2c720506b1664eb3a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5bb09905caece74967f31a8b9acdfec6" category="section-title">仮想ネットワークリソースをマップする</block>
+  <block id="735422ecadbce7a10ea51451e2684498" category="paragraph">各VMは、vCenterネットワークインフラストラクチャ内の仮想ネットワークに接続された1つ以上の仮想NICを持つことができます。DRサイトでの再起動時に各VMが適切なネットワークに正しく接続されるようにするには、これらのVMを接続するDRサイトの仮想ネットワークを特定します。これは、オンプレミスサイトの各仮想ネットワークをDRサイトの関連ネットワークにマッピングすることで行います。</block>
+  <block id="8a498354f2b10b57cd6a21abef44b84b" category="list-title">各ソース仮想ネットワークをマップする宛先仮想ネットワークを選択します</block>
+  <block id="be8a0f52b3f89ec52898a687a46d98d3" category="list-text">ドロップダウン リストからターゲット セグメントを選択します。</block>
+  <block id="ffbce16aa92393c36f22c436fb54ba16" category="list-text">リストされているソース仮想ネットワークごとに前の手順を繰り返します。</block>
+  <block id="579a4f796bf2b17e04e79c92ced90e7c" category="inline-image-macro">レプリケーションプラン、ネットワークリソースの作成</block>
+  <block id="b7e6f42742ecf3f82ee5efd7c340a0c4" category="paragraph"><block ref="b7e6f42742ecf3f82ee5efd7c340a0c4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="101a1653e9b88e3b9342a8d62b2a73b7" category="section-title">フェイルオーバー中のVM再構成のオプションを定義する</block>
+  <block id="6d53be845ac6f380dbbdf61cb744f18f" category="paragraph">各VMは、DR vCenterサイトで正常に動作するために変更が必要になる場合があります。「仮想マシン」セクションでは、必要な変更を行うことができます。</block>
+  <block id="727a4cbcb1c8c2a574698ac39f8a0e01" category="paragraph">BlueXP ディザスタリカバリは、デフォルトでは、各VMに対して、ソースオンプレミスサイトで使用されているものと同じ設定を使用します。これは、VMが同じIPアドレス、仮想CPU、仮想DRAM構成を使用することを前提としています。</block>
+  <block id="50fca5dd60bc7595c14d877fcc09a35b" category="section-title">ネットワークの再構成</block>
+  <block id="7e7f909a784ac97b548d1c0c896ffda7" category="paragraph">サポートされているIPアドレスの種類は、静的とDHCPです。静的IPアドレスの場合、ターゲットIPの設定は以下のとおりです。</block>
+  <block id="7ab1e4417fd162d1f894cc7ff7d92781" category="list-text">*ソースと同じ*: 名前の通り、このサービスはソースサイトのVMで使用されていたIPアドレスと同じIPアドレスをターゲットVMでも使用します。そのため、前の手順でマッピングした仮想ネットワークを同じサブネット設定にする必要があります。</block>
+  <block id="f8711a934a3ad5b6455a62a3295f6b92" category="list-text">*ソースと異なる*: サービスでは、各VMに対してIPアドレスフィールドのセットが提供されます。これらのフィールドは、前のセクションでマッピングした宛先仮想ネットワークで使用される適切なサブネットに合わせて構成する必要があります。各VMについて、IPアドレス、サブネットマスク、DNS、およびデフォルトゲートウェイの値を指定する必要があります。必要に応じて、すべてのVMで同じサブネットマスク、DNS、およびゲートウェイ設定を使用することで、すべてのVMが同じサブネットに接続される際のプロセスを簡素化できます。</block>
+  <block id="4542f9e955c7d2139505f9e26a9ba8c7" category="list-text">*サブネットマッピング*: このオプションは、宛先仮想ネットワークのCIDR設定に基づいて各VMのIPアドレスを再構成します。この機能を使用するには、各vCenterの仮想ネットワークに、サービス内で定義されたCIDR設定（[サイト]タブのvCenter情報で変更）が定義されていることを確認してください。</block>
+  <block id="9878b8f9706d43985e2e2c7735cc56d9" category="paragraph">サブネットを構成すると、サブネットマッピングは、送信元と送信先のVM構成の両方で同じIPアドレスのユニットコンポーネントを使用しますが、IPアドレスのサブネットコンポーネントは、指定されたCIDR情報に基づいて置き換えられます。。これにより、保護されているすべての VM をホストするのに十分な IP アドレスが宛先サイトで使用可能になります</block>
+  <block id="ae5627da5802cb3e1a62f67e6b52b520" category="paragraph">この EVS セットアップでは、送信元と宛先の IP 構成が同じであり、追加の再構成は必要ないと想定しています。</block>
+  <block id="7df032e1e3b26bcc6394803e16ee36e3" category="list-title">ネットワーク設定の再構成を変更する</block>
+  <block id="8faacc5c62c7b4f41379c86745cf1320" category="list-text">フェールオーバーされた VM に使用する IP アドレスの種類を選択します。</block>
+  <block id="bd65c978b90114c74862fa1e6c2fb3a0" category="list-text">(オプション) オプションのプレフィックスとサフィックスの値を指定して、再起動された VM の VM 名変更スキームを指定します。</block>
+  <block id="ee8fa5ed67895f2bd56b15818f6ba9db" category="paragraph"><block ref="ee8fa5ed67895f2bd56b15818f6ba9db" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a31bffcdbc06bba08556f1bcdb9efd4e" category="section-title">VMコンピューティングリソースの再構成</block>
+  <block id="ac267974fdea0c3212164d8a231aa92a" category="paragraph">VMコンピューティングリソースを再構成するには、いくつかのオプションがあります。BlueXPディザスタリカバリは、仮想CPUの数、仮想DRAMの容量、およびVM名の変更をサポートしています。</block>
+  <block id="b84568179180e997fe88daef837b9e44" category="list-title">VM構成の変更を指定する</block>
+  <block id="cbcc2cf21c1cabd12aef3bdc6989b58a" category="list-text">（オプション）各VMが使用する仮想CPUの数を変更します。DRvCenterクラスタホストのCPUコア数がソースvCenterクラスタのCPUコア数と一致しない場合、この変更が必要になることがあります。</block>
+  <block id="f99ff1887350d7bcdc532d81459bbcba" category="list-text">（オプション）各仮想マシンが使用する仮想DRAMの量を変更します。DRvCenterクラスタホストの物理DRAM容量がソースvCenterクラスタホストの物理DRAM容量に満たない場合、この変更が必要になることがあります。</block>
+  <block id="cb1cacde7ecdf6468ab80da9dc29aeaf" category="inline-image-macro">レプリケーションプラン、VMリソースの作成</block>
+  <block id="b7de53c41bbac8d240c11204a8336fe6" category="paragraph"><block ref="b7de53c41bbac8d240c11204a8336fe6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="41500e64be223d1286ec9ed56e434a6b" category="section-title">起動順序</block>
+  <block id="a4e6ee2bbdad3a4d8407b47d0c2282dd" category="paragraph">BlueXPのディザスタリカバリは、ブート順序フィールドに基づいてVMの順序付けされた再起動をサポートします。ブート順序フィールドは、各リソースグループ内のVMの起動方法を示します。ブート順序フィールドの値が同じVMは、同時に起動します。</block>
+  <block id="c2aa8df176e82c22e3798ddeaf162829" category="list-title">起動順序設定を変更する</block>
+  <block id="b092f60611c99cfbfadc573fde035e2b" category="list-text">（オプション）VMの再起動順序を変更します。このフィールドには任意の数値を指定できます。BlueXPディザスタリカバリは、同じ数値を持つVMを並列で再起動しようとします。</block>
+  <block id="c6abc4f53ac73ee608655639d83b459e" category="list-text">（オプション）各VMの再起動間隔を指定します。この時間は、このVMの再起動が完了してから、次に高いブート順序番号を持つVMが再起動されるまでの時間です。この値は分単位で指定します。</block>
+  <block id="146293c3e8323d5de7fab758380284c9" category="inline-image-macro">レプリケーションプラン、ブート順序の作成</block>
+  <block id="2285aa38909854998b9c1f6afd655df5" category="paragraph"><block ref="2285aa38909854998b9c1f6afd655df5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e1dc360c00065acba449e872783c58c4" category="section-title">カスタムゲストOS操作</block>
+  <block id="95ab07a7c85a76ed75c195f0f531e106" category="paragraph">BlueXP ディザスタリカバリは、各 VM に対していくつかのゲスト OS 操作の実行をサポートします。</block>
+  <block id="f19c5dbfcb41e02dccb768d27c27e533" category="list-text">BlueXP ディザスタリカバリでは、Oracle データベースおよび Microsoft SQL Server データベースを実行している VM のアプリケーション整合性のあるバックアップを取得できます。</block>
+  <block id="357207d20bb8864f20f28c1189fce357" category="list-text">BlueXP ディザスタリカバリは、各仮想マシンのゲストOSに適したカスタム定義スクリプトを実行できます。このようなスクリプトを実行するには、スクリプトにリストされている操作を実行するための十分な権限を持つ、ゲストOSで利用可能なユーザー資格情報が必要です。</block>
+  <block id="abe3fe6dfef4ae381fe90e2ed48d5c00" category="list-title">各VMのカスタムゲストOS操作を変更する</block>
+  <block id="014767c5a4f585d6656d983919cb2c72" category="list-text">(オプション) VM が Oracle または SQL Server データベースをホストしている場合は、[アプリケーション整合性レプリカを作成する] チェックボックスをオンにします。</block>
+  <block id="763e27fb652b34b1adbac7f8f2a991a8" category="list-text">（オプション）ゲストOS内で起動プロセスの一環としてカスタムアクションを実行するには、任意のVM用のスクリプトをアップロードします。すべてのVMで単一のスクリプトを実行するには、ハイライト表示されているチェックボックスをオンにし、フィールドに入力します。</block>
+  <block id="52e6c6e94ae36e19143bcae9a858c5f5" category="list-text">特定の構成変更には、操作を実行するための適切な権限を持つユーザー資格情報が必要です。以下の場合には資格情報を入力してください。</block>
+  <block id="4527e376733ff2c1c7e7ff3c53308fea" category="list-text">スクリプトはゲスト OS によって VM 内で実行されます。</block>
+  <block id="b81b7d3cf119376fc1e91c8228a69fc7" category="list-text">アプリケーション整合性スナップショットを実行する必要があります。</block>
+  <block id="035c4fd259e9e7ca1c071c63887a2ee9" category="inline-image-macro">レプリケーションプランの作成、カスタムゲストOS操作</block>
+  <block id="7535f841f34db2e7c20c7c0a70d45f9d" category="paragraph"><block ref="7535f841f34db2e7c20c7c0a70d45f9d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bde5353b2d9b0eb001221c6d160f86dd" category="section-title">マップデータストア</block>
+  <block id="d22d2b8c7fff83090c0de04eabc1fd68" category="paragraph">レプリケーションプラン作成の最終ステップは、ONTAP がデータストアをどのように保護するかを決定することです。これらの設定により、レプリケーションプランの RPO（目標復旧時点）、維持するバックアップの数、そして各 vCenter データストアをホストする ONTAP ボリュームのレプリケーション先が定義されます。</block>
+  <block id="ae2e5a024e6dfc76cacf68c5a3c12f2c" category="paragraph">デフォルトでは、BlueXP ディザスタリカバリは独自のスナップショットレプリケーションスケジュールを管理しますが、オプションで、データストアの保護に既存の SnapMirror レプリケーションポリシースケジュールを使用するように指定できます。</block>
+  <block id="69368a9520c0c7af90c332022566762a" category="paragraph">さらに、オプションで、使用するデータLIF（論理インターフェース）とエクスポートポリシーをカスタマイズできます。これらの設定を指定しない場合、BlueXPディザスタリカバリは、適切なプロトコル（NFS、iSCSI、またはFC）に関連付けられたすべてのデータLIFを使用し、NFSボリュームにはデフォルトのエクスポートポリシーを使用します。</block>
+  <block id="000dc760e354ae9b58065262bae7e919" category="list-title">データストア（ボリューム）マッピングを構成するには</block>
+  <block id="dd4695a3f0c9a5b23084d00c405cdb48" category="list-text">(オプション) 既存の ONTAP SnapMirror レプリケーション スケジュールを使用するか、BlueXP ディザスタ リカバリで VM の保護を管理するか (デフォルト) を決定します。</block>
+  <block id="eb315e77d04175ba27a28688bbf3625b" category="list-text">サービスがバックアップを開始するタイミングの開始点を指定します。</block>
+  <block id="2f8abd67ba85ff243c7fd1a96e395c01" category="list-text">サービスがバックアップを取得し、それを DR 宛先の Amazon FSx for NetApp ONTAP クラスターに複製する頻度を指定します。</block>
+  <block id="fe0f24f024a5d540c8832cca7b543154" category="list-text">保持する履歴バックアップの数を指定します。サービスは、ソースとターゲットのストレージクラスターで同じ数のバックアップを維持します。</block>
+  <block id="b9ddc614a5fc5a45bff5e0c4ae6d66f8" category="list-text">（オプション）各ボリュームのデフォルトの論理インタフェース（データLIF）を選択します。何も選択されていない場合は、ボリューム・アクセス・プロトコルをサポートするデスティネーションSVM内のすべてのデータLIFが設定されます。</block>
+  <block id="a367507541752e287e151e706fb73880" category="list-text">（オプション）NFSボリュームのエクスポートポリシーを選択します。選択しない場合は、デフォルトのエクスポートポリシーが使用されます。</block>
+  <block id="0aca0237d66ff2a0ecd9688925663da8" category="inline-image-macro">レプリケーションプラン、データストアマッピングの作成</block>
+  <block id="3e9f2fba72a59f060462aaf417bde827" category="paragraph"><block ref="3e9f2fba72a59f060462aaf417bde827" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4f3c7993b4a0eec366f6c0122e605a04" category="inline-link-macro">レプリケーションプラン作成ウィザード ステップ 4</block>
+  <block id="850540557deea1ebe75231ef329e63e0" category="paragraph">続ける<block ref="63ce8d54120138184ac6b85905fdfc39" category="inline-link-macro-rx"></block> 。</block>
+  <block id="9727ae43ed1ad8fcdb2151f2520082bb" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧の概要。BlueXP災害復旧にすべてのレプリケーションプラン情報を追加したら、入力した情報が正しいことを確認してください。</block>
+  <block id="9f98a6c7b0522caaf62dfb7dc693692b" category="doc">レプリケーションプランの作成: ステップ4 - BlueXP災害復旧の設定を確認する</block>
+  <block id="7cdc68d83dd3fc1f7568e8b25da420ff" category="paragraph">BlueXP 災害復旧でレプリケーション プラン情報を追加した後、入力した情報が正しいことを確認します。</block>
+  <block id="1ec333fbe816bd59b32c3043688dce3a" category="list-text">レプリケーション プランをアクティブ化する前に、[*保存*] を選択して設定を確認します。</block>
+  <block id="eaf1d2a5a85db51c895eec091024fcdb" category="paragraph">各タブを選択して設定を確認したり、鉛筆アイコンを選択して任意のタブで変更を加えたりすることができます。</block>
+  <block id="02a14a8411578842546f29f1aa48aa03" category="inline-image-macro">レプリケーションプラン設定の確認</block>
+  <block id="a6028cc77f12edef30126bf564d7e12c" category="paragraph">レプリケーションプラン設定の確認<block ref="039af1de0de6af1a755c0ff0c52a0bf3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b25ad10e439d0b73b0ace76c8b82f32e" category="list-text">すべての設定が正しいことを確認したら、画面下部の*プランの追加*を選択します。</block>
+  <block id="5b8fe5ae3c38b512fafe1a0eda3235b7" category="inline-link-macro">レプリケーションプランを確認する</block>
+  <block id="d3137afd2501d96b6f91fb0cd319a97e" category="paragraph">続ける<block ref="9b042902ca8b7f8d8a3f6659df0dd9bf" category="inline-link-macro-rx"></block> 。</block>
+  <block id="c12bcbed25714ea7a70d91fad1a8f2ed" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害対策のご紹介。オンプレミスサイトで保護する vCenter を用意し、DR の宛先として使用できる Amazon FSx for NetApp ONTAP を使用するように Amazon EVS サイトを設定したら、オンプレミスサイト内の vCenter クラスターでホストされている任意の VM セットを保護するためのレプリケーションプラン (RP) を作成できるようになりました。</block>
+  <block id="99424dc3dfb90e3bb1d8e290464f7a16" category="doc">BlueXP 災害復旧の概要でレプリケーション プランを作成する</block>
+  <block id="fef9019000b5b750b8ceb6b358e2b27d" category="paragraph">オンプレミスサイトで保護する vCenter があり、DR の宛先として使用できる Amazon FSx for NetApp ONTAP を使用するように設定された Amazon EVS サイトがある場合は、オンプレミスサイト内の vCenter クラスターでホストされている VM のセットを保護するためのレプリケーションプラン (RP) を作成できます。</block>
+  <block id="70d88db53e9d0a0893575ab9645014d9" category="list-title">レプリケーション プランの作成プロセスを開始するには:</block>
+  <block id="659f5306fff0dcab09d03ea0979acdac" category="list-text">任意の BlueXP 災害復旧画面から、[レプリケーション プラン] タブを選択します。</block>
+  <block id="4a43d8d7de6e2a08eef995c648a14226" category="inline-image-macro">レプリケーションプランタブ</block>
+  <block id="8ee3fdc5b8caacff3838ba90f649b7ec" category="paragraph"><block ref="8ee3fdc5b8caacff3838ba90f649b7ec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="76e3d410eb73bcf4af10532c24c11b70" category="list-text">レプリケーション プラン画面から、[*追加*] を選択します。</block>
+  <block id="990690bbac7cce3d6ec74f7ad2092ce9" category="inline-image-macro">レプリケーションプラン画面</block>
+  <block id="6304a64bfb4ed5a846d90fa245489b8b" category="paragraph"><block ref="6304a64bfb4ed5a846d90fa245489b8b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="001c8602fd8350b7fdcf0372ede572df" category="paragraph">これにより、レプリケーション プランの作成ウィザードが開きます。</block>
+  <block id="172e660321773233c788b5ea98a12f2b" category="inline-link-macro">レプリケーションプラン作成ウィザード ステップ 1</block>
+  <block id="16a01d811080f0448945a1a3745c6964" category="paragraph">続ける<block ref="2602b8e50a671483fcbb79c7b3fae673" category="inline-link-macro-rx"></block> 。</block>
+  <block id="ad8d7b3f0324f4490bc3ec526980cf93" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP ディザスタリカバリのご紹介。BlueXPディザスタリカバリはライセンス製品であり、ご利用いただくにはご購入が必要です。ライセンスには複数の種類があり、購入方法も複数あります。</block>
+  <block id="4f51d56e1adc27bcb44a867549b62db2" category="doc">Amazon EVS の BlueXP アカウントに BlueXP 災害復旧サービスを追加します</block>
+  <block id="c0f1e0513a47504d43666dd3be27308f" category="paragraph">BlueXP ディザスタリカバリはライセンス製品であり、ご利用いただくにはご購入が必要です。ライセンスには複数の種類があり、購入方法も複数あります。ライセンスにより、一定期間、一定量のデータを保護できます。</block>
+  <block id="a7c3607166959d0e07d06ffbc46756b3" category="paragraph">BlueXP災害復旧ライセンスの詳細については、以下を参照してください。 <block ref="04fbd25a14ae34b1a7095776d7fb43d8" category="inline-link-macro-rx"></block> 。</block>
+  <block id="2b2fba693aacdb90002ef3efdb1f458b" category="section-title">ライセンスの種類</block>
+  <block id="04a3ac6103cdf5bc7a2c80f16be09f23" category="paragraph">ライセンスには主に 2 つの種類があります。</block>
+  <block id="e817fd3836b1cf9d7c7644535354e579" category="inline-link-macro">30日間試用ライセンス</block>
+  <block id="6b3361f01e2e64455153a1af81df53b0" category="list-text">NetAppは<block ref="0502060ba4bb25d46a7cc9c87b10aae3" category="inline-link-macro-rx"></block> ONTAPおよびVMwareリソースを使用してBlueXPのディザスタリカバリを評価するために使用できます。このライセンスでは、保護された容量を無制限に30日間ご利用いただけます。</block>
+  <block id="286857925b326719163f0acf5623cc04" category="inline-link-macro">AWS Marketplaceでサブスクライブ</block>
+  <block id="203aa85007f6906e905fdfd138ee68e7" category="list-text">30日間の試用期間後もDR保護をご利用になる場合は、本番環境向けライセンスをご購入ください。このライセンスは、NetAppのクラウドパートナーのマーケットプレイスからご購入いただけますが、このガイドでは、Amazon AWS MarketplaceからBlueXPディザスタリカバリ用の*NetApp Intelligent Services*ライセンスをご購入いただくことをお勧めします。AmazonMarketplaceでのライセンス購入の詳細については、こちらをご覧ください。 <block ref="e94dd95fc067f0bccce76d5e611ed19c" category="inline-link-macro-rx"></block> 。</block>
+  <block id="234355df259fd03a62f7b631b0fc7843" category="section-title">災害復旧能力のニーズを測る</block>
+  <block id="e4408096d206b1fb1a79ce8ad173f2fe" category="inline-link">ストレージ容量削減保証</block>
+  <block id="ac10f87078fcd040a1c080e865f1e1dc" category="paragraph">ライセンスを購入する前に、保護する必要があるONTAPストレージ容量を把握しておく必要があります。NetAppONTAPストレージを使用するメリットの一つは、NetAppがデータを保存する際の効率性の高さです。VMwareデータストアをホストするVMwareなど、ONTAPボリュームに保存されるすべてのデータは、非常に効率的に保存されます。ONTAPは、物理ストレージにデータを書き込む際に、コンパクション、重複排除、圧縮の3種類のストレージ効率をデフォルトで設定します結果として、保存されるデータのタイプに応じて、1.5:1から4:1のストレージ効率が得られます。実際、NetAppは<block ref="9babe97d729d3736fdf7efb1977e157a" category="inline-link-rx"></block>特定のワークロード向け。</block>
+  <block id="7a9d562cb820239393838fa8adecaf2a" category="paragraph">BlueXPディザスタリカバリは、ONTAPのすべてのストレージ効率を適用した後に、ライセンス取得のための容量を計算するため、これは大きなメリットとなります。例えば、vCenter内で100テラバイト（TiB）のNFSデータストアをプロビジョニングし、このサービスを使用して保護する100台のVMをホストしているとします。さらに、データがONTAPボリュームに書き込まれる際に、自動的に適用されるストレージ効率化技術により、これらのVMの消費量はわずか33TiB（3:1のストレージ効率）であると仮定します。BlueXPディザスタリカバリのライセンスは100TiBではなく33TiB単位で取得できます。これは、他のDRソリューションと比較して、DRソリューションの総所有コスト（TCO）を大幅に削減できるメリットとなります。</block>
+  <block id="1cac620f7757c79970587895922abdb9" category="list-text">保護対象の VMware データストアをホストしている各ボリュームで消費されているデータ量を確認するには、各ボリュームに対して ONTAP CLI コマンドを実行して、ディスク上の容量消費量を確認します。 <block ref="5dcefe180a68e24e1f2547c10ed74406" prefix=" " category="inline-code"></block> 。</block>
+  <block id="b2c5103f5e7d26eaa7889c8f6de88694" category="list-text">各ボリュームの*Total Physical Used*の値に注意してください。これはBlueXPディザスタリカバリで保護する必要があるデータ量であり、必要なライセンス容量を決定する際に使用する値です。</block>
+  <block id="3d377102f65fdc239c428d801dacfcac" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧のご紹介。コネクタはネットワーク上の任意の場所にインストールできますが、BlueXP 災害復旧では DR サイトにインストールすることをお勧めします。これにより、プライマリサイトに障害が発生した場合でも、BlueXP のクラウドベースのコンソール UI がコネクタとの接続を維持し、DR サイト内で復旧プロセスをオーケストレーションできるようになります。</block>
+  <block id="8c802a39edfdd0b2a599284298bd56ac" category="doc">BlueXP 災害復旧用の BlueXP コネクタをインストールする</block>
+  <block id="f1844479320277fd1e46211d122dc736" category="paragraph">BlueXPコネクタは、クラウドまたはオンプレミスネットワークで実行されるNetAppソフトウェアです。BlueXPがデータインフラを管理するために実行する必要があるアクションを実行します。コネクタは、BlueXPディザスタリカバリソフトウェア（SaaS）レイヤーを継続的にポーリングし、必要なアクションの有無を確認します。</block>
+  <block id="d98ac8362ccd7255d20fdcefbdbb5187" category="paragraph">BlueXP ディザスタリカバリサービスでは、各サービスのネイティブ API を使用して VMware vCenter クラスタと ONTAP ストレージインスタンスをオーケストレーションするアクションが実行され、オンプレミス環境で稼働する本番環境の仮想マシンを保護します。コネクタはネットワーク上の任意の場所にインストールできますが、BlueXP ディザスタリカバリでは、コネクタを DR サイトにインストールすることをお勧めします。これにより、プライマリサイトに障害が発生した場合でも、BlueXP のクラウドベースのコンソール UI がコネクタとの接続を維持し、その DR サイト内でリカバリプロセスをオーケストレーションできるようになります。</block>
+  <block id="e5901be946f21587f4728e9c30f5de03" category="inline-link">BlueXP 導入モードの詳細 | NetApp ドキュメント</block>
+  <block id="7197235181daa6c664b3246064877a20" category="paragraph">サービスを利用するには、コネクタを標準モードでインストールしてください。コネクタのインストールの種類の詳細については、以下をご覧ください。 <block ref="0461f373f13493d6dbe2b5bfd88ff556" category="inline-link-rx"></block> 。</block>
+  <block id="66a46d25931269402cdb193de674535f" category="paragraph">コネクタはサービスの利用に不可欠ですが、コネクタのインストール手順はお客様のニーズとネットワーク構成によって異なります。この情報では、具体的なインストール手順については説明しておりません。</block>
+  <block id="a04a55560279e49c7d25e51d949885e0" category="inline-link">AWS Marketplace からコネクタを作成する | NetApp ドキュメント</block>
+  <block id="7e32586e492cc38625a195803b8f96f6" category="paragraph">Amazon AWSでコネクタをインストールする最も簡単な方法は、AWS Marketplaceを使用することです。AWSMarketplaceを使用したコネクタのインストールの詳細については、以下を参照してください。 <block ref="c2e19d334e5a1e3e11c5811eeb4b25db" category="inline-link-rx"></block> 。</block>
+  <block id="66390c88c62c14dc63b6422323c35074" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧の紹介。</block>
+  <block id="2062bf54e67da4951d69646f671e78dd" category="paragraph">お客様は、VMware vSphere ベースの仮想化インフラストラクチャなど、本番環境のコンピューティングワークロードにおいて、ますます仮想化インフラストラクチャへの依存度を高めています。これらの仮想マシン（VM）がビジネスにとってより重要になるにつれ、お客様はこれらのVMを物理コンピューティングリソースと同様の災害から保護する必要があります。現在提供されているディザスタリカバリ（DR）ソリューションは複雑で高価であり、多くのリソースを必要とします。仮想化インフラストラクチャ向けストレージプロバイダーとして最大手のNetAppは、ONTAPストレージでホストされるあらゆる種類のデータを保護するのと同様に、お客様のVMを確実に保護することに強い関心を持っています。この目標を達成するために、NetAppはBlueXPディザスタリカバリサービスを開発しました。</block>
+  <block id="259c572679c64fd6d53917c0e7cf4a56" category="admonition">この Amazon EVS に関するドキュメントは、テクノロジープレビューとして提供されています。このプレビューサービスでは、NetAppは、一般提供前にサービスの詳細、内容、スケジュールを変更する権利を留保します。</block>
+  <block id="a3fe2ebdabea83ec0809c3eaabe8b916" category="paragraph">あらゆるDRソリューションにおける主要な課題の一つは、DRレプリケーションおよびリカバリインフラを提供するためだけに、追加のコンピューティング、ネットワーク、ストレージリソースの購入、構成、維持にかかる増分コストを管理することです。オンプレミスの重要な仮想リソースを保護するための一般的な選択肢の一つは、クラウドホスト型の仮想リソースをDRレプリケーションおよびリカバリインフラとして使用することです。Amazonは、NetApp ONTAPホスト型VMインフラと互換性のある費用対効果の高いリソースを提供できる、こうしたソリューションの一例です。</block>
+  <block id="9139aacb33b5be42b71413b7de021e19" category="paragraph">Amazonは、仮想プライベートクラウド（VPC）内でVMware Cloud Foundationを利用できるAmazon Elastic VMware Service（Amazon EVS）を発表しました。AmazonEVSは、AWSの耐障害性とパフォーマンスに加え、使い慣れたVMwareソフトウェアとツールを提供することで、Amazon EVS vCenterをオンプレミスの仮想化インフラストラクチャの拡張機能として統合することを可能にします。</block>
+  <block id="79a48534a0ca0e870aba3fff8407f860" category="paragraph">Amazon EVS にはストレージリソースが付属していますが、ネイティブストレージを使用すると、ストレージ負荷の高いワークロードを抱える組織ではその効果が低下する可能性があります。このような場合、Amazon EVS と Amazon FSx for NetApp ONTAP ストレージ (Amazon FSxN) を組み合わせるさらに、オンプレミスで NetApp ONTAP ストレージソリューションを使用して VMware インフラストラクチャをホストしている場合、Amazon EVS と FSx for ONTAP を組み合わせることで、オンプレミスとクラウドホストのインフラストラクチャ間でクラス最高のデータ相互運用性と保護機能を実現できます。</block>
+  <block id="0f1d73d6c66361ba80e19cc22b86a1b5" category="paragraph">Amazon FSx for NetApp ONTAPの詳細については、を参照してください<block ref="ec78c81b4b092cfc0332e21528365cfc" category="inline-link-rx"></block>。</block>
+  <block id="dd7fe5a484ddce24b2554586a2d09b2e" category="summary">Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧の紹介。AmazonEVS と Amazon FSx for NetApp ONTAP で BlueXP 災害復旧を使用して、フェイルオーバーの実行、フェイルオーバーのテスト、リソースの更新、移行、スナップショットの即時作成、レプリケーションプランの無効化または有効化、古いスナップショットのクリーンアップ、スナップショットの調整、レプリケーションプランの削除、スケジュールの編集を行うことができます。</block>
+  <block id="c356b30bc347bc1eb2fe74945fbe77be" category="doc">BlueXP 災害復旧でレプリケーション プラン操作を実行する</block>
+  <block id="2732faab06b2878c1eb17b5e1b7b8db7" category="paragraph">Amazon EVS および Amazon FSx for NetApp ONTAP と BlueXP 災害復旧を併用して、フェイルオーバー、フェイルオーバーのテスト、リソースの更新、移行、今すぐスナップショットを作成する、レプリケーション プランの無効化/有効化、古いスナップショットのクリーンアップ、スナップショットの調整、レプリケーション プランの削除、スケジュールの編集などの操作を実行します。</block>
+  <block id="568e662aeb6cb5f3abafa0083f29082f" category="section-title">フェイルオーバー</block>
+  <block id="06345068bbff395a98cb1b4d92fd19f4" category="paragraph">実行する必要がある主な操作は、決して起こらないことを願う操作、つまり、オンプレミスの運用サイトで壊滅的な障害が発生した場合に DR (宛先) データセンターにフェールオーバーすることです。</block>
+  <block id="929f8200b5d5745bf0922d67a7aeb702" category="paragraph">フェイルオーバーは手動で開始されるプロセスです。</block>
+  <block id="033c7809cb7db2bd9967ed41da27d653" category="list-title">フェイルオーバー操作にアクセスする手順</block>
+  <block id="ffbbd53d5c02ce88979e91f9635fbac5" category="list-text">BlueXP 災害復旧メニューから、「レプリケーション プラン」を選択します。</block>
+  <block id="f4a6c3bf5bb7636434870ae725dace9f" category="list-title">フェイルオーバーを実行する手順</block>
+  <block id="f4881bd41f5a7647a1ad9e140812c61d" category="inline-image-macro">アクションメニューの水平ドット</block>
+  <block id="22e32b6ad42ff1fd375bc414d39ca7de" category="list-text">レプリケーションプランページで、レプリケーションプランのアクションオプションを選択します。 <block ref="35af0c4f66ae1fc18521df2bc2505df9" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="ddc60b12aae4cd21161c3a6683677d87" category="inline-image-macro">フェイルオーバーメニューオプション</block>
+  <block id="c305b5d48bfc67e6e7d94d4a83c19af7" category="paragraph"><block ref="c305b5d48bfc67e6e7d94d4a83c19af7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="20c7ba7512d44b333596e490ae04d69f" category="list-text">本番サイト（保護対象サイト）にアクセスできない場合は、以前に作成したスナップショットをリカバリイメージとして選択してください。これを行うには、「*選択*」を選択してください。</block>
+  <block id="36205d97887256b59c0bcc3691656408" category="list-text">リカバリに使用するバックアップを選択します。</block>
+  <block id="e0284ae2e32742abbe7a72ddcf9b0e50" category="list-text">（オプション）BlueXPディザスタリカバリで、レプリケーションプランの状態に関係なくフェイルオーバープロセスを強制的に実行するかどうかを選択します。これは最後の手段としてのみ実行してください。</block>
+  <block id="ab44d8018ba6f6491680d87eefee732a" category="list-text">(オプション) 実稼働サイトが復旧された後、BlueXP 災害復旧によって逆保護関係が自動的に作成されるかどうかを選択します。</block>
+  <block id="059eb5c46c8a4f2a16c9ab4f012bed54" category="list-text">続行することを確認するには、「Failover」という単語を入力します。</block>
+  <block id="c702a6b12de6915199f47fdf61c95c51" category="list-text">*フェイルオーバー*を選択します。</block>
+  <block id="4b39a048f359a09fa9de4a3100583f07" category="inline-image-macro">フェイルオーバーダイアログボックス</block>
+  <block id="e5fb7c23867a153ae9816a76aa6c1717" category="paragraph"><block ref="e5fb7c23867a153ae9816a76aa6c1717" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cebb1167d3e78885137c837f0abf8026" category="section-title">テストフェイルオーバー</block>
+  <block id="accf14ae6f3081fa79e8a9271568ea7f" category="paragraph">テスト フェイルオーバーは、2 つの違いを除いてフェイルオーバーと似ています。</block>
+  <block id="ba8a22877412b2a764fcaf1377013701" category="list-text">実稼働サイトは引き続きアクティブであり、すべての VM は引き続き期待どおりに動作しています。</block>
+  <block id="ffe3447af4d39751e653c77bef31adce" category="list-text">運用 VM の BlueXP 災害復旧保護は継続されます。</block>
+  <block id="0455e75b717d7af99d737c181265b3e7" category="inline-link-macro">リモートサイトへのアプリケーションのフェイルオーバー | NetApp ドキュメント</block>
+  <block id="eb60cd435a46cb2a72dad0bad90e83b3" category="paragraph">これは、デスティネーションサイトでネイティブのONTAP FlexCloneボリュームを使用することで実現されます。テストフェイルオーバーの詳細については、以下を参照してください。 <block ref="c5a4b51f9800467d8f72f63c8e6bec54" category="inline-link-macro-rx"></block> 。</block>
+  <block id="ac66d74de7e9b01bf8b83eda420d69b5" category="paragraph">テスト フェイルオーバーを実行する手順は、レプリケーション プランのコンテキスト メニューの [テスト フェイルオーバー] 操作を使用することを除いて、実際のフェイルオーバーを実行する手順と同じです。</block>
+  <block id="c49b8221e89f41789a2a43043e0ab7f0" category="list-text">レプリケーションプランのアクションオプションを選択します<block ref="35af0c4f66ae1fc18521df2bc2505df9" category="inline-image-macro-rx" type="image"></block> 。</block>
+  <block id="40e274aabe3c10540248c941dbd05cb8" category="list-text">メニューから*フェイルオーバーのテスト*を選択します。</block>
+  <block id="1a559345b987e0575e0a1c51e219c16d" category="inline-image-macro">テストフェイルオーバーメニューオプション</block>
+  <block id="c32e1e17085ed0ca2906e246ecc689ec" category="paragraph"><block ref="c32e1e17085ed0ca2906e246ecc689ec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3806a4f1466635f7c69ffd13c31e9dc" category="list-text">本番環境の最新の状態を取得するか（今すぐスナップショットを取得する）、以前に作成したレプリケーション プランのバックアップを使用するか（選択）を決定します。</block>
+  <block id="96f32afb6fcdd8b721d52f9a62dc7958" category="list-text">以前に作成したバックアップを選択した場合は、リカバリに使用するバックアップを選択します。</block>
+  <block id="8d7c2e2984f4134b60d86fd761b977b7" category="list-text">続行するかどうかを確認するには、「Test failwold」という単語を入力します。</block>
+  <block id="bf63515cf285de8238ef0309a2d05678" category="list-text">[Test failover]*を選択します。</block>
+  <block id="a8c93ee4438aec7783049b88778065db" category="inline-image-macro">テストフェイルオーバーダイアログボックス</block>
+  <block id="d891ef4e4be2988a8f7404e3e66a3966" category="paragraph"><block ref="d891ef4e4be2988a8f7404e3e66a3966" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4a65f707ef88c886c08d9126f6f72c65" category="section-title">コンプライアンスチェックを実行する</block>
+  <block id="6710f330c40545389369acfdd947c822" category="paragraph">コンプライアンスチェックは、デフォルトでは3時間ごとに実行されます。必要に応じて、手動でコンプライアンスチェックを実行することもできます。</block>
+  <block id="6ac022abcddbfb10ff9a36fc1114e3b4" category="list-text">*アクション*オプションを選択します<block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>レプリケーション プランの横にあります。</block>
+  <block id="324da46f7d1dc598142515e5f155488c" category="list-text">レプリケーション プランの [アクション] メニューから [コンプライアンス チェックを実行] オプションを選択します。</block>
+  <block id="f08f80a5eaf7192568c9739fc7270c46" category="inline-image-macro">コンプライアンスチェックの実行メニューオプション</block>
+  <block id="6cba37ba047ae347eaaaaf21a41e3c59" category="paragraph"><block ref="6cba37ba047ae347eaaaaf21a41e3c59" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a2599e121910c54c28626814ebb5a109" category="list-text">BlueXP 災害復旧がコンプライアンス チェックを自動的に実行する頻度を変更するには、レプリケーション プランの [アクション] メニューから [スケジュールの編集] オプションを選択します。</block>
+  <block id="5a3b6e2d03ca148a71790459c4bc4819" category="section-title">リソースを更新する</block>
+  <block id="a612a35c47d9f35be9b55995ee6cb4be" category="paragraph">仮想インフラストラクチャに変更を加えた場合（VMの追加または削除、データストアの追加または削除、VMのデータストア間の移動など）、BlueXPディザスタリカバリサービスで影響を受けるvCenterクラスタを更新する必要があります。このサービスはデフォルトで24時間ごとに自動的に更新を実行しますが、手動で更新することで、最新の仮想インフラストラクチャ情報が利用でき、ディザスタリカバリ保護に反映されます。</block>
+  <block id="2a713d2af75a9ff3c8198a63eadd3dd6" category="paragraph">更新が必要となるケースは 2 つあります。</block>
+  <block id="8f6b3dc59a290a90778b85f93d204e04" category="list-text">vCenter の更新: vCenter クラスタに VM が追加、削除、または移動されるたびに、vCenter の更新を実行します。</block>
+  <block id="bb2c5ba75ada770045e8e19979f779ff" category="list-text">レプリケーション プランの更新: 同じソース vCenter クラスタ内のデータストア間で VM が移動されるたびに、レプリケーション プランの更新を実行します。</block>
+  <block id="53172f45c3f78e0f0a061b9894edb469" category="image-alt">リソースメニューオプションの更新</block>
+  <block id="10b5b21ed1ee90eca305b558caf7d03b" category="section-title">移行</block>
+  <block id="a3e4a29e1d44dad8e2034cf381100cf8" category="paragraph">BlueXP のディザスタリカバリは主にディザスタリカバリのユースケースで使用されますが、VM セットをソースサイトからターゲットサイトへ一括移動することも可能です。これは、クラウドへの協調的な移行プロジェクトに活用できるだけでなく、悪天候、政情不安、その他の一時的な壊滅的な事象の発生といった災害の回避にも活用できます。</block>
+  <block id="36a6fe238d0277d3060c69841bde3fef" category="list-text">レプリケーション プラン内の VM を宛先の Amazon EVS クラスターに移動するには、レプリケーション プランの [アクション] メニューから [*移行*] を選択します。</block>
+  <block id="b90eea17869e8ebbc46d383dec36f3ea" category="image-alt">移行メニューオプション</block>
+  <block id="11e33978297a963679c0024ac124cb29" category="list-text">[移行] ダイアログ ボックスに情報を入力します。</block>
+  <block id="b0a94d0ad57a282321e08a6112475ed3" category="section-title">今すぐスナップショットを撮る</block>
+  <block id="3b51f6a2afb744108dc17e8832a59b3c" category="paragraph">いつでも、レプリケーションプランのスナップショットを即時に取得できます。このスナップショットは、レプリケーションプランのスナップショット保持数によって設定されたBlueXPの災害復旧に関する考慮事項に含まれます。</block>
+  <block id="3e92c173af93522420b1ed9f2a158fc5" category="list-text">レプリケーション プランのリソースのスナップショットをすぐに取得するには、レプリケーション プランの [アクション] メニューで [今すぐスナップショットを取得] を選択します。</block>
+  <block id="477b039d0d8b7335fba316394ab00728" category="image-alt">今すぐスナップショットを撮るメニューオプション</block>
+  <block id="b79fde821703aeeb373761de4bdb405a" category="section-title">レプリケーションプランを無効または有効にする</block>
+  <block id="71b68393c3d6f6b900ba97b739bc2f19" category="paragraph">レプリケーションプロセスに影響を与える可能性のある操作やメンテナンスを実行するために、レプリケーションプランを一時的に停止する必要がある場合があります。このサービスでは、レプリケーションを停止および開始する方法を提供しています。</block>
+  <block id="617b3e452b60d43e9d805106e772b377" category="list-text">レプリケーションを一時的に停止するには、レプリケーション プランの [アクション] メニューで [無効] を選択します。</block>
+  <block id="b811b71901befdd021e2e8bc473fe80d" category="list-text">レプリケーションを再開するには、レプリケーション プランの [アクション] メニューで [*有効*] を選択します。</block>
+  <block id="b63cfe13603d1211e9388962694b20b6" category="paragraph">レプリケーションプランがアクティブな場合、「*有効*」コマンドはグレー表示されます。レプリケーションプランが無効な場合、「*無効*」コマンドはグレー表示されます。</block>
+  <block id="d88986f4db78f1f6136188fe813b4670" category="image-alt">無効化/有効化メニューオプション</block>
+  <block id="fb5d4ab92a440f8da6d5245c90702cd8" category="paragraph">ソースサイトとターゲットサイトに保持されている古いスナップショットをクリーンアップする必要がある場合があります。これは、レプリケーションプランのスナップショット保持数が変更された場合に発生する可能性があります。</block>
+  <block id="9ead1435f555cbe5194ac03aa3f14153" category="list-text">これらの古いスナップショットを手動で削除するには、レプリケーション プランの [アクション] メニューから [古いスナップショットをクリーンアップ] を選択します。</block>
+  <block id="776f371e9915a30a6e7a35215c9f6a31" category="image-alt">古いスナップショットをクリーンアップするメニューオプション</block>
+  <block id="931f869d33d2ed4eb4467347cbb6c599" category="paragraph">このサービスはONTAPボリュームのスナップショットをオーケストレーションするため、ONTAPストレージ管理者は、サービスに認識されることなく、ONTAP System Manager、ONTAP CLI、またはONTAP REST APIを使用してスナップショットを直接削除できます。このサービスは、ソースクラスタ上のスナップショットのうち、デスティネーションクラスタ上に存在しないスナップショットを24時間ごとに自動的に削除します。ただし、これはオンデマンドで実行できます。この機能を使用すると、すべてのサイトでSnapshotの整合性を確保できます。</block>
+  <block id="2aea80cc7878ee06ac853bd5825acb61" category="list-text">宛先クラスターに存在しないスナップショットをソース クラスターから削除するには、レプリケーション プランの [アクション] メニューから [*スナップショットの調整*] を選択します。</block>
+  <block id="910e6231110d3f8f9c342ffd45869c29" category="image-alt">スナップショットの調整メニューオプション</block>
+  <block id="1a6a6c930de0933fd7db6de4d1dc477e" category="section-title">レプリケーションプランを削除する</block>
+  <block id="9309fcfe23272451df79fcb4773985df" category="paragraph">レプリケーション プランが不要になった場合は、削除できます。</block>
+  <block id="e241fe7ce1ba08d73054f679cb698007" category="list-text">レプリケーション プランを削除するには、レプリケーション プランのコンテキスト メニューから [削除] を選択します。</block>
+  <block id="d213af6118a6949387ba381bee0bb7f1" category="image-alt">削除メニューオプション</block>
+  <block id="846afbe1ece5e037b307cf0360a40102" category="paragraph">テストフェイルオーバーとコンプライアンス チェックの 2 つの操作が定期的に自動的に実行されます。</block>
+  <block id="96e2d810b99dbb7ce1dd1f69c7f5b3a0" category="list-text">これら 2 つの操作のいずれかのスケジュールを変更するには、レプリケーション プランの [スケジュールの編集] を選択します。</block>
+  <block id="f90ed7446ee302336082ca6e7a8728d7" category="image-alt">スケジュール編集メニューオプション</block>
+  <block id="9d74fe59f9a87947edf62917622cab78" category="section-title">コンプライアンスチェック間隔を変更する</block>
+  <block id="43ab0a50eaca605fa6eb7379ca9cd35c" category="paragraph">デフォルトでは、コンプライアンスチェックは3時間ごとに実行されます。この間隔は30分から24時間までの間で変更できます。</block>
+  <block id="711fdca29a368838868cdb8b66f5a25c" category="paragraph">この間隔を変更するには、[スケジュールの編集] ダイアログ ボックスの [頻度] フィールドを変更します。</block>
+  <block id="0ab78235e06733ff844354f29286ea23" category="image-alt">コンプライアンスチェックスケジュール</block>
+  <block id="8f5df8633aaecbef608d9f81c44f3e01" category="section-title">自動テストフェイルオーバーをスケジュールする</block>
+  <block id="5ec888c1fbbe1d4b124a9f90e95da2a9" category="paragraph">テストフェイルオーバーはデフォルトで手動で実行されます。自動テストフェイルオーバーをスケジュール設定することで、レプリケーションプランが期待どおりに実行されることを確認できます。テストフェイルオーバーのプロセスの詳細については、以下をご覧ください。 <block ref="d58fab57695dd294173a1098cf8b113b" category="inline-link-macro-rx"></block> 。</block>
+  <block id="f05be0f99c71d57183f9a4476e824824" category="list-title">テストフェイルオーバーをスケジュールする手順</block>
+  <block id="f3a1acf074fe227d89274501b493c1ab" category="list-text">*フェイルオーバーを実行*を選択します。</block>
+  <block id="fcae7526a431169e3f609e220077c278" category="list-text">*スケジュールに従ってテストフェイルオーバーを実行する*チェックボックスをオンにします。</block>
+  <block id="6826a637ec211049ebd15b1557d244cd" category="list-text">(オプション) *スケジュールされたテスト フェールオーバーにオンデマンド スナップショットを使用する* をオンにします。</block>
+  <block id="f4ed67dfc5fcda264bcb9e52308fcb69" category="list-text">「繰り返し」ドロップダウンで間隔の種類を選択します。</block>
+  <block id="2dad2f5282a0f02ee2cf3dd2668245d9" category="list-text">テストフェイルオーバーを実行するタイミングを選択する</block>
+  <block id="6466fec301c85db6711549707f814c6d" category="list-text">毎週: 曜日を選択</block>
+  <block id="9bdde146f3734db431d846a9b67c14be" category="list-text">月次: 月の日付を選択</block>
+  <block id="1a45def86f00623d408295cfcdeaf9c7" category="list-text">テストフェイルオーバーを実行する時刻を選択します</block>
+  <block id="d286831c6fab295be218cee5293be970" category="list-text">開始日を選択してください。</block>
+  <block id="9662b1330eade6367225de0265b6ab4c" category="list-text">サービスでテスト環境を自動的にクリーンアップするかどうか、またクリーンアップ プロセスを開始する前にテスト環境をどのくらいの時間実行するかを決定します。</block>
+  <block id="fd859d2ad3a0f7f4658b9ab4b3f761a3" category="image-alt">スケジュールテストフェイルオーバーの編集</block>
+  <block id="8608cf17c3f258a4509ebf3c91882d39" category="summary">Amazon EVS と Amazon FSxN を使用した BlueXP 災害復旧のソリューションの概要。</block>
+  <block id="2d12473c9d31db5d5a029ace437be2ba" category="doc">NetApp ONTAP 向け Amazon EVS と Amazon FS を使用した BlueXP 災害復旧ソリューションの概要</block>
+  <block id="827916298fcdb6ea05601d2539662179" category="paragraph">BlueXP ディザスタリカバリは、BlueXP のコアアーキテクチャを基盤とする SaaS（Software as a Service）環境内でホストされる付加価値サービスです。BlueXP内の VMware 保護のための DR サービスは、複数の主要コンポーネントで構成されています。</block>
+  <block id="fe9fdb931480bc69810bdbb893d31164" category="paragraph">BlueXP災害復旧ソリューションの完全な概要については、以下を参照してください。 <block ref="aaf343642f2ab725a2ff6fd93343dece" category="inline-link-macro-rx"></block> 。</block>
+  <block id="dcf4eaae5b7bdb68e0250499844bbcb5" category="paragraph">オンプレミスの VMware がホストする仮想マシンを Amazon AWS に保護する場合は、Amazon FSx for NetApp ONTAP ストレージがホストするデータストアを使用して Amazon EVS にバックアップするサービスを使用します。</block>
+  <block id="562f4ec7d85420cef97dbbe985cc8083" category="paragraph">次の図は、Amazon EVS を使用して VM を保護するサービスがどのように機能するかを示しています。</block>
+  <block id="beb72ff0d6394d9b5dcea1009ef441bc" category="inline-image-macro">Amazon EVS と FSx for ONTAP を使用した BlueXP 災害復旧の概要</block>
+  <block id="e7f96e3d7df592d32d84823f40e1fade" category="paragraph">Amazon EVS と FSx for ONTAP を使用した BlueXP 災害復旧の概要<block ref="ae6a61e6ad048345581bdd81689298c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="15c9bef1ed46153c52fda03a9fab4114" category="list-text">Amazon EVS は、単一のアベイラビリティーゾーン (AZ) 構成でアカウントにデプロイされ、仮想プライベートクラウド (VPC) 内にもデプロイされます。</block>
+  <block id="a11362436af6843b2406e8f85c0484cf" category="list-text">FSx for ONTAP ファイルシステムは、Amazon EVS デプロイメントと同じ AZ にデプロイされます。このファイルシステムは、Elastic Network Interface (ENI) または VPC ピア接続、あるいは AmazonTransit Gateway を介して Amazon EVS に接続します。</block>
+  <block id="f4a3a5cbc3485bfaddfa0155cb5cd3b2" category="list-text">NetApp BlueXP Connector はお客様の VPC にインストールされています。BlueXPConnector は、ローカルの物理データセンターと Amazon AWS でホストされているリソースの両方で VMware インフラストラクチャの DR を管理する BlueXP ディザスタリカバリエージェントを含む、複数のデータ管理サービス（エージェントと呼ばれる）をホストします。</block>
+  <block id="9bee8355a7cdefc29b053e9b3c88fb8b" category="list-text">BlueXP ディザスタリカバリエージェントは、BlueXP クラウドホストサービスと安全に通信してタスクを受信し、それらのタスクを適切なオンプレミスおよび AWS ホストの vCenter および ONTAP ストレージインスタンスに配布します。</block>
+  <block id="3f7c8b2439e1827cd25075624d026918" category="list-text">BlueXP クラウド ホスト UI コンソールを使用して、保護する必要がある VM、それらの VM を保護する頻度、オンプレミス サイトからのフェールオーバーが発生した場合にそれらの VM を再起動するために実行する必要がある手順を示すレプリケーション プランを作成します。</block>
+  <block id="4bac4e102e6c979bf229fc5de1c9333b" category="list-text">レプリケーションプランは、保護対象のVMをホストするvCenterデータストアと、それらのデータストアをホストするONTAPボリュームを決定します。FSxfor ONTAPクラスタにボリュームがまだ存在しない場合は、BlueXPディザスタリカバリによって自動的に作成されます。</block>
+  <block id="2b7f0130e9379c81a15287a813fe65da" category="list-text">識別されたソース ONTAP ボリュームごとに、各宛先 FSx for ONTAP がホストする ONTAP ボリュームへの SnapMirror 関係が作成され、レプリケーション プランでユーザーが指定した RPO に基づいてレプリケーション スケジュールが作成されます。</block>
+  <block id="4e87308c8d965550dc58bd69a92f3136" category="list-text">プライマリ サイトに障害が発生した場合、管理者は BlueXP コンソール内で手動のフェールオーバー プロセスを開始し、復元ポイントとして使用するバックアップを選択します。</block>
+  <block id="0849675035707d4b6e0667b3fb89d269" category="list-text">BlueXP ディザスタ リカバリ エージェントは、FSx for ONTAP でホストされるデータ保護ボリュームをアクティブ化します。</block>
+  <block id="e49a8f44b1507573b41346a957317fdc" category="list-text">エージェントは、アクティブ化された各 FSx for ONTAP ボリュームを Amazon EVS vCenter に登録し、保護された各 VM を Amazon EVS vCenter に登録し、レプリケーション プランに含まれる定義済みルールに従って各 VM を起動します。</block>
+  <block id="a75372b318b93c0a6de6b9b4b2b710ec" category="doc">BlueXP災害復旧ですべてが機能していることを確認する</block>
+  <block id="c6c4a414ae0fccd70f534087b621762b" category="paragraph">BlueXPディザスタリカバリでレプリケーションプランを追加したら、「レプリケーションプラン」ページに戻り、レプリケーションプランとそのステータスを確認します。レプリケーションプランが「正常」状態であることを確認してください。そうでない場合は、レプリケーションプランのステータスを確認し、問題があれば修正してから先へ進んでください。</block>
+  <block id="2a52c80686f82be8aa2a3e4f3ff7df31" category="inline-image-macro">レプリケーションプランページ</block>
+  <block id="d257cabecabcc55ca3f6b7a3cd75ac7b" category="paragraph">図: レプリケーション プラン ページ<block ref="de37ff63ad6c037e77db1184d40c66f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="976fd34ddaf02a83851d294cc50564d0" category="paragraph">BlueXPディザスタリカバリは、一連のテストを実行し、すべてのコンポーネント（ONTAPクラスタ、vCenterクラスタ、およびVM）がアクセス可能であり、サービスがVMを保護するのに適切な状態であることを確認します。これはコンプライアンスチェックと呼ばれ、定期的に実行されます。</block>
+  <block id="cfd75699026c8ccf116d7cc822922048" category="paragraph">レプリケーション プラン ページでは、次の情報を確認できます。</block>
+  <block id="ccb238eb4af46f131c1c95298789caf9" category="list-text">前回のコンプライアンスチェックのステータス</block>
+  <block id="ff73ef921a2595317c8ebcfd745b9525" category="list-text">レプリケーションプランのレプリケーション状態</block>
+  <block id="dae6a888dd76ab8af615bbd14bb0d970" category="list-text">保護された（ソース）サイトの名前</block>
+  <block id="faf0d22a90ba1218a90118919579cdab" category="list-text">レプリケーションプランによって保護されているリソースグループのリスト</block>
+  <block id="693eee995124fe1d32610314f6e68c30" category="list-text">フェイルオーバー（宛先）サイトの名前</block>
+  <block id="12033a3d8e0d7f3fb480fa5483fa00f3" category="sidebar">Amazon EVS で BlueXP 災害復旧を使用する</block>
+  <block id="b1334639d8bfe77d3582e2378dc38a08" category="sidebar">Amazon EVS を使用した BlueXP 災害復旧の概要</block>
+  <block id="c0c4b60d27032c028c91440e9d3be949" category="sidebar">解決策の概要</block>
+  <block id="28312bff8dd6c634a03c918b3596d5f7" category="sidebar">BlueXPコネクタを取り付けます</block>
+  <block id="c56bd649320b98b22e1f05d40935c0f6" category="sidebar">Amazon EVS 用の BlueXP 災害復旧を構成する</block>
+  <block id="4f94a228aaf45b495bf1d0a2993b0783" category="sidebar">Amazon EVS の前提条件</block>
+  <block id="d1b981f857dccafd90e2d47d3dd9b84c" category="sidebar">Amazon EVS のアレイを追加する</block>
+  <block id="429e79e40c66df3fe31a40b9087107f5" category="sidebar">Amazon EVS に BlueXP 災害復旧機能を追加</block>
+  <block id="456d07ca1e92ff93932f43241f478198" category="sidebar">Amazon EVS 用の vCenter クラスターを追加する</block>
+  <block id="ad115bee9be4ef501777f6719a0fe513" category="sidebar">Amazon EVS のレプリケーション プランを作成する</block>
+  <block id="46942b0e0b0069545de09c85b8d0a7fb" category="sidebar">Amazon EVS のレプリケーション プランの作成の概要</block>
+  <block id="7b797e6e5b968f50231b064bf226a71c" category="sidebar">Amazon EVSのレプリケーションプランを作成する手順1</block>
+  <block id="c881eec8e2a2e7f61032f79bd49b2dce" category="sidebar">Amazon EVS のレプリケーション プランを作成する手順 2</block>
+  <block id="9f67090f69f4143c82e2283b43a86ad9" category="sidebar">Amazon EVSのレプリケーションプランを作成する手順3</block>
+  <block id="3a83143b77a0b90d82bf03cbf43e4443" category="sidebar">Amazon EVSのレプリケーションプランを作成する手順4</block>
+  <block id="5a72de72f8b0ba4525e25ce937621889" category="sidebar">Amazon EVSのレプリケーションプランを確認する</block>
+  <block id="f260d0f12b515f0ab789c0349e49a0fc" category="sidebar">レプリケーションプラン操作を実行する</block>
 </blocks>

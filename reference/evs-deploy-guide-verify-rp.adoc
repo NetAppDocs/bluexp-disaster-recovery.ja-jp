@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-verify-rp.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧の紹介。 
+---
+= BlueXP災害復旧ですべてが機能していることを確認する
+:allow-uri-read: 
+
+
+[role="lead"]
+BlueXPディザスタリカバリでレプリケーションプランを追加したら、「レプリケーションプラン」ページに戻り、レプリケーションプランとそのステータスを確認します。レプリケーションプランが「正常」状態であることを確認してください。そうでない場合は、レプリケーションプランのステータスを確認し、問題があれば修正してから先へ進んでください。
+
+図: レプリケーション プラン ページimage:evs-replication-plan-post-create.png["レプリケーションプランページ"]
+
+BlueXPディザスタリカバリは、一連のテストを実行し、すべてのコンポーネント（ONTAPクラスタ、vCenterクラスタ、およびVM）がアクセス可能であり、サービスがVMを保護するのに適切な状態であることを確認します。これはコンプライアンスチェックと呼ばれ、定期的に実行されます。
+
+レプリケーション プラン ページでは、次の情報を確認できます。
+
+* 前回のコンプライアンスチェックのステータス
+* レプリケーションプランのレプリケーション状態
+* 保護された（ソース）サイトの名前
+* レプリケーションプランによって保護されているリソースグループのリスト
+* フェイルオーバー（宛先）サイトの名前
+

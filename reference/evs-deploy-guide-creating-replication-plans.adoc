@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-creating-replication-plans.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: 'Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害対策のご紹介。オンプレミスサイトで保護する vCenter を用意し、DR の宛先として使用できる Amazon FSx for NetApp ONTAP を使用するように Amazon EVS サイトを設定したら、オンプレミスサイト内の vCenter クラスターでホストされている任意の VM セットを保護するためのレプリケーションプラン (RP) を作成できるようになりました。' 
+---
+= BlueXP 災害復旧の概要でレプリケーション プランを作成する
+:allow-uri-read: 
+
+
+[role="lead"]
+オンプレミスサイトで保護する vCenter があり、DR の宛先として使用できる Amazon FSx for NetApp ONTAP を使用するように設定された Amazon EVS サイトがある場合は、オンプレミスサイト内の vCenter クラスターでホストされている VM のセットを保護するためのレプリケーションプラン (RP) を作成できます。
+
+.レプリケーション プランの作成プロセスを開始するには:
+. 任意の BlueXP 災害復旧画面から、[レプリケーション プラン] タブを選択します。
++
+image:evs-create-rp-1.png["レプリケーションプランタブ"]
+
+. レプリケーション プラン画面から、[*追加*] を選択します。
++
+image:evs-create-rp-2.png["レプリケーションプラン画面"]
+
+
+
+これにより、レプリケーション プランの作成ウィザードが開きます。
+
+続けるlink:evs-deploy-guide-create-rp-wiz-01.html["レプリケーションプラン作成ウィザード ステップ 1"] 。

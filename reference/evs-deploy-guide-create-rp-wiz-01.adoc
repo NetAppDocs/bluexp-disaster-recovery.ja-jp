@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-create-rp-wiz-01.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: まず、BlueXP ディザスタ リカバリを使用してレプリケーション プラン名を指定し、レプリケーションのソース vCenter と宛先 vCenter を選択します。 
+---
+= レプリケーションプランを作成する: ステップ 1 - BlueXP 災害復旧で vCenter を選択する
+:allow-uri-read: 
+
+
+[role="lead"]
+まず、BlueXP ディザスタ リカバリを使用して、レプリケーション プラン名を指定し、レプリケーションのソース vCenter と宛先 vCenter を選択します。
+
+. レプリケーション プランの一意の名前を入力します。
++
+レプリケーション プラン名には、英数字とアンダースコア (_) のみを使用できます。
+
+. ソース vCenter クラスタを選択します。
+. 宛先の vCenter クラスタを選択します。
+. 「 * 次へ * 」を選択します。
++
+image:evs-create-rp-wiz-a-1-4.png["レプリケーションプランを作成し、vCentersを選択します"]
+
+
+
+続けるlink:evs-deploy-guide-create-rp-wiz-02.html["レプリケーションプラン作成ウィザード ステップ 2"] 。

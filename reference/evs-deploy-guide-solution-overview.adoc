@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-solution-overview.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: Amazon EVS と Amazon FSxN を使用した BlueXP 災害復旧のソリューションの概要。 
+---
+= NetApp ONTAP 向け Amazon EVS と Amazon FS を使用した BlueXP 災害復旧ソリューションの概要
+:allow-uri-read: 
+
+
+[role="lead"]
+BlueXP ディザスタリカバリは、BlueXP のコアアーキテクチャを基盤とする SaaS（Software as a Service）環境内でホストされる付加価値サービスです。BlueXP内の VMware 保護のための DR サービスは、複数の主要コンポーネントで構成されています。
+
+BlueXP災害復旧ソリューションの完全な概要については、以下を参照してください。 link:../get-started/dr-intro.html["VMware向けBlueXPディザスタリカバリの詳細"] 。
+
+オンプレミスの VMware がホストする仮想マシンを Amazon AWS に保護する場合は、Amazon FSx for NetApp ONTAP ストレージがホストするデータストアを使用して Amazon EVS にバックアップするサービスを使用します。
+
+次の図は、Amazon EVS を使用して VM を保護するサービスがどのように機能するかを示しています。
+
+Amazon EVS と FSx for ONTAP を使用した BlueXP 災害復旧の概要image:evs-soloverview-evs.png["Amazon EVS と FSx for ONTAP を使用した BlueXP 災害復旧の概要"]
+
+. Amazon EVS は、単一のアベイラビリティーゾーン (AZ) 構成でアカウントにデプロイされ、仮想プライベートクラウド (VPC) 内にもデプロイされます。
+. FSx for ONTAP ファイルシステムは、Amazon EVS デプロイメントと同じ AZ にデプロイされます。このファイルシステムは、Elastic Network Interface (ENI) または VPC ピア接続、あるいは AmazonTransit Gateway を介して Amazon EVS に接続します。
+. NetApp BlueXP Connector はお客様の VPC にインストールされています。BlueXPConnector は、ローカルの物理データセンターと Amazon AWS でホストされているリソースの両方で VMware インフラストラクチャの DR を管理する BlueXP ディザスタリカバリエージェントを含む、複数のデータ管理サービス（エージェントと呼ばれる）をホストします。
+. BlueXP ディザスタリカバリエージェントは、BlueXP クラウドホストサービスと安全に通信してタスクを受信し、それらのタスクを適切なオンプレミスおよび AWS ホストの vCenter および ONTAP ストレージインスタンスに配布します。
+. BlueXP クラウド ホスト UI コンソールを使用して、保護する必要がある VM、それらの VM を保護する頻度、オンプレミス サイトからのフェールオーバーが発生した場合にそれらの VM を再起動するために実行する必要がある手順を示すレプリケーション プランを作成します。
+. レプリケーションプランは、保護対象のVMをホストするvCenterデータストアと、それらのデータストアをホストするONTAPボリュームを決定します。FSxfor ONTAPクラスタにボリュームがまだ存在しない場合は、BlueXPディザスタリカバリによって自動的に作成されます。
+. 識別されたソース ONTAP ボリュームごとに、各宛先 FSx for ONTAP がホストする ONTAP ボリュームへの SnapMirror 関係が作成され、レプリケーション プランでユーザーが指定した RPO に基づいてレプリケーション スケジュールが作成されます。
+. プライマリ サイトに障害が発生した場合、管理者は BlueXP コンソール内で手動のフェールオーバー プロセスを開始し、復元ポイントとして使用するバックアップを選択します。
+. BlueXP ディザスタ リカバリ エージェントは、FSx for ONTAP でホストされるデータ保護ボリュームをアクティブ化します。
+. エージェントは、アクティブ化された各 FSx for ONTAP ボリュームを Amazon EVS vCenter に登録し、保護された各 VM を Amazon EVS vCenter に登録し、レプリケーション プランに含まれる定義済みルールに従って各 VM を起動します。
+

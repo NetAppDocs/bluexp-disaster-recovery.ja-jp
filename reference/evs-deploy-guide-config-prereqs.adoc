@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-config-prereqs.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: BlueXP 災害復旧を使用して Amazon EVS の設定を続行する前に、いくつかの前提条件が満たされていることを確認する必要があります。 
+---
+= BlueXP 災害復旧機能を備えた Amazon EVS の前提条件
+:allow-uri-read: 
+
+
+[role="lead"]
+BlueXP 災害復旧を使用して Amazon EVS の設定を続行する前に、いくつかの前提条件が満たされていることを確認する必要があります。
+
+具体的には、次の操作を実行します。
+
+* 必要な操作を実行するために、BlueXP 災害復旧に必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。
++
+
+NOTE: デフォルトの管理者アカウント「administrator@vsphere.com」の使用は推奨されません。代わりに、DRプロセスに参加するすべてのvCenterクラスタにBlueXPディザスタリカバリ専用のユーザーアカウントを作成する必要があります。必要な権限の一覧については、以下をご覧ください。 link:vcenter-privileges.html["BlueXPのディザスタリカバリに必要なvCenter権限"] 。
+
+* BlueXP ディザスタ リカバリによって保護される VM をホストするすべての vCenter データストアが、NetApp ONTAP ストレージ リソース上に配置されていることを確認します。
++
+Amazon FSx on NetApp ONTAP をご利用の場合、本サービスは iSCSI 上の NFS および VMFS をサポートします（FC はサポートしません）。本サービスは FC をサポートしますが、Amazon FSx for NetApp ONTAP は FC をサポートしません。
+
+* Amazon EVS vCenter が Amazon FSx for NetApp ONTAP ストレージクラスターに接続されていることを確認します。
+* 保護されているすべての VM に VMware ツールがインストールされていることを確認します。
+* オンプレミスネットワークがAmazon承認済みの接続方法を使用してAWS VPCネットワークに接続されていることを確認してください。AWSDirect Connect、AWS Private Link、またはAWSサイト間VPNのご利用をお勧めします。
+

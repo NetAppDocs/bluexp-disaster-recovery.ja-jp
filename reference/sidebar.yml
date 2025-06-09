@@ -4,3 +4,41 @@ title: 参考文献
 entries:
 - title: BlueXPのディザスタリカバリに必要なvCenter権限
   url: "/reference/vcenter-privileges.html"
+- title: Amazon EVS で BlueXP 災害復旧を使用する
+  entries:
+  - title: Amazon EVS を使用した BlueXP 災害復旧の概要
+    url: "/reference/evs-deploy-guide-introduction.html"
+  - title: 解決策の概要
+    url: "/reference/evs-deploy-guide-solution-overview.html"
+  - title: BlueXPコネクタを取り付けます
+    url: "/reference/evs-deploy-guide-install-connector.html"
+  - title: Amazon EVS 用の BlueXP 災害復旧を構成する
+    entries:
+    - title: Amazon EVS 向け BlueXP 災害復旧の設定の概要
+      url: "/reference/evs-deploy-guide-config-draas.html"
+    - title: Amazon EVS の前提条件
+      url: "/reference/evs-deploy-guide-config-prereqs.html"
+    - title: Amazon EVS のアレイを追加する
+      url: "/reference/evs-deploy-guide-config-add-arrays.html"
+    - title: Amazon EVS に BlueXP 災害復旧機能を追加
+      url: "/reference/evs-deploy-guide-enable-draas.html"
+    - title: Amazon EVS の BlueXP 災害復旧にサイトを追加する
+      url: "/reference/evs-deploy-guide-add-sites.html"
+    - title: Amazon EVS 用の vCenter クラスターを追加する
+      url: "/reference/evs-deploy-guide-add-vcenters.html"
+  - title: Amazon EVS のレプリケーション プランを作成する
+    entries:
+    - title: Amazon EVS のレプリケーション プランの作成の概要
+      url: "/reference/evs-deploy-guide-creating-replication-plans.html"
+    - title: Amazon EVSのレプリケーションプランを作成する手順1
+      url: "/reference/evs-deploy-guide-create-rp-wiz-01.html"
+    - title: Amazon EVS のレプリケーション プランを作成する手順 2
+      url: "/reference/evs-deploy-guide-create-rp-wiz-02.html"
+    - title: Amazon EVSのレプリケーションプランを作成する手順3
+      url: "/reference/evs-deploy-guide-create-rp-wiz-03.html"
+    - title: Amazon EVSのレプリケーションプランを作成する手順4
+      url: "/reference/evs-deploy-guide-create-rp-wiz-04.html"
+    - title: Amazon EVSのレプリケーションプランを確認する
+      url: "/reference/evs-deploy-guide-verify-rp.html"
+  - title: レプリケーションプラン操作を実行する
+    url: "/reference/evs-deploy-guide-rp-operations.html"

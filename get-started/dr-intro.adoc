@@ -20,9 +20,12 @@ BlueXPのディザスタリカバリは、ディザスタリカバリのワー�
 * ONTAPストレージを使用した、もう1つのオンプレミスNFSベースのVMware環境
 
 
+
+NOTE: AWS EVS に関するこのドキュメントは、テクノロジープレビューとして提供されています。このプレビューサービスでは、NetAppは、一般提供前にサービスの詳細、内容、スケジュールを変更する権利を留保します。詳細については、を参照してください link:../reference/evs-deploy-guide-introduction.html["Amazon Elastic VMware Service と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧の紹介"]。
+
 BlueXPのディザスタリカバリでは、ディザスタリカバリサイトへのレプリケーション転送にONTAP SnapMirrorテクノロジを使用します。これにより、プライマリサイトとセカンダリサイトで業界最高レベルのストレージ効率（圧縮と重複排除）を実現できます。
 
-image:draas-onprem-to-cloud-onprem.png["BlueXPのVMware向けディザスタリカバリのコンポーネントを示す図"]
+image:../use/evs-bluexp-architecture.png["BlueXPのVMware向けディザスタリカバリのコンポーネントを示す図"]
 
 
 
@@ -48,6 +51,8 @@ BlueXPのディザスタリカバリでは、複数のNetAppテクノロジを�
 * 災害が発生した場合は、プライマリサイトをオンデマンドでディザスタリカバリサイトにフェイルオーバーします。このサイトには、VMware Cloud on AWSとAmazon FSx for NetApp ONTAP、またはONTAPを使用したオンプレミスのVMware環境があります。
 * 災害が解決されたら、ディザスタリカバリサイトからプライマリサイトにオンデマンドでフェイルバックします。*効率的な管理のために、VMまたはデータストアを論理リソースグループにグループ化します。
 
+
+image:../use/evs-use-cases.png["VMware 向け BlueXP 災害復旧のユースケースを示す図"]
 
 
 NOTE: vSphereサーバの設定は、vSphere ServerのBlueXPディザスタリカバリの外部で行います。

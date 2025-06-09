@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: reference/evs-deploy-guide-install-connector.html 
+keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
+summary: Amazon EVS と Amazon FSx for NetApp ONTAP を使用した BlueXP 災害復旧のご紹介。コネクタはネットワーク上の任意の場所にインストールできますが、BlueXP 災害復旧では DR サイトにインストールすることをお勧めします。これにより、プライマリサイトに障害が発生した場合でも、BlueXP のクラウドベースのコンソール UI がコネクタとの接続を維持し、DR サイト内で復旧プロセスをオーケストレーションできるようになります。 
+---
+= BlueXP 災害復旧用の BlueXP コネクタをインストールする
+:allow-uri-read: 
+
+
+[role="lead"]
+BlueXPコネクタは、クラウドまたはオンプレミスネットワークで実行されるNetAppソフトウェアです。BlueXPがデータインフラを管理するために実行する必要があるアクションを実行します。コネクタは、BlueXPディザスタリカバリソフトウェア（SaaS）レイヤーを継続的にポーリングし、必要なアクションの有無を確認します。
+
+BlueXP ディザスタリカバリサービスでは、各サービスのネイティブ API を使用して VMware vCenter クラスタと ONTAP ストレージインスタンスをオーケストレーションするアクションが実行され、オンプレミス環境で稼働する本番環境の仮想マシンを保護します。コネクタはネットワーク上の任意の場所にインストールできますが、BlueXP ディザスタリカバリでは、コネクタを DR サイトにインストールすることをお勧めします。これにより、プライマリサイトに障害が発生した場合でも、BlueXP のクラウドベースのコンソール UI がコネクタとの接続を維持し、その DR サイト内でリカバリプロセスをオーケストレーションできるようになります。
+
+サービスを利用するには、コネクタを標準モードでインストールしてください。コネクタのインストールの種類の詳細については、以下をご覧ください。  https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["BlueXP 導入モードの詳細 | NetApp ドキュメント"^] 。
+
+コネクタはサービスの利用に不可欠ですが、コネクタのインストール手順はお客様のニーズとネットワーク構成によって異なります。この情報では、具体的なインストール手順については説明しておりません。
+
+Amazon AWSでコネクタをインストールする最も簡単な方法は、AWS Marketplaceを使用することです。AWSMarketplaceを使用したコネクタのインストールの詳細については、以下を参照してください。  https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-marketplace.html["AWS Marketplace からコネクタを作成する | NetApp ドキュメント"^] 。
