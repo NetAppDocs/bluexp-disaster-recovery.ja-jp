@@ -4,7 +4,7 @@ permalink: use/dashboard-view.html
 keywords: disaster recovery remediate, disaster recovery, failover, failback, replication 
 summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。 
 ---
-= ダッシュボードでディザスタリカバリプランの健全性を表示する
+= ダッシュボードで BlueXP 災害復旧プランの健全性を確認する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

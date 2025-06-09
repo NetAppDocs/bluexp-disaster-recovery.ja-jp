@@ -84,6 +84,7 @@ NOTE: デスティネーションSVMにディザスタリカバリボリュー�
 BlueXPでBlueXPコネクタがセットアップされている必要があります。BlueXP Connectorを使用すると、ディザスタリカバリサービスに適した機能が含まれます。
 
 * BlueXPディザスタリカバリは、Standard Mode Connector環境でのみ機能します。を参照して https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-standard-mode.html["BlueXPの標準モードでの使用"^]
+* ソース vCenter とターゲット vCenter の両方が同じ BlueXP コネクタを使用していることを確認します。
 * 必要なBlueXPコネクタのタイプ：
 +
 ** *オンプレミスからオンプレミスへのディザスタリカバリ*：ディザスタリカバリサイトにBlueXP On-Premises Connectorをインストールします。を参照してください https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["コネクタをオンプレミスにインストールしてセットアップします"^]。

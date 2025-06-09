@@ -4,7 +4,7 @@ permalink: use/failback.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
 summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。 
 ---
-= アプリケーションを元のソースにフェイルバック
+= BlueXP 災害復旧機能を使用してアプリケーションを元のソースにフェイルバックします
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

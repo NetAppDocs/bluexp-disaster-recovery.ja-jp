@@ -20,9 +20,6 @@ BlueXPのディザスタリカバリは、ディザスタリカバリのワー�
 * ONTAPストレージを使用した、もう1つのオンプレミスNFSベースのVMware環境
 
 
-
-IMPORTANT: このリリースでは、オンプレミスのVMwareワークロードからVMware vSphere Virtual Machine File System（VMFS）データストアを使用するオンプレミスのVMware環境へのディザスタリカバリがテクノロジプレビューでサポートされます。NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。
-
 BlueXPのディザスタリカバリでは、ディザスタリカバリサイトへのレプリケーション転送にONTAP SnapMirrorテクノロジを使用します。これにより、プライマリサイトとセカンダリサイトで業界最高レベルのストレージ効率（圧縮と重複排除）を実現できます。
 
 image:draas-onprem-to-cloud-onprem.png["BlueXPのVMware向けディザスタリカバリのコンポーネントを示す図"]

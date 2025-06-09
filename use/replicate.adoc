@@ -4,7 +4,7 @@ permalink: use/replicate.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
 summary: BlueXPディザスタリカバリを使用すると、SnapMirrorレプリケーションを使用して、ソースサイトのVMwareアプリケーションをクラウドのディザスタリカバリリモートサイトにレプリケートできます。 
 ---
-= アプリケーションを別のサイトにレプリケート
+= BlueXP 災害復旧機能を使用してアプリケーションを別のサイトに複製する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

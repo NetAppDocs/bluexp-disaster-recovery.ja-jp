@@ -4,7 +4,7 @@ permalink: use/sites-add.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter 
 summary: ディザスタリカバリプランを作成する前に、BlueXP  ディザスタリカバリでプライマリvCenterサイトとターゲットのvCenterディザスタリカバリサイトを追加する必要があります。 
 ---
-= サイトへのvCenterの追加
+= BlueXP 災害復旧のサイトに vCenter を追加する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -13,6 +13,9 @@ summary: ディザスタリカバリプランを作成する前に、BlueXP  �
 
 [role="lead"]
 ディザスタリカバリプランを作成するには、プライマリvCenterサーバをBlueXP  内のサイトおよびターゲットのvCenterディザスタリカバリサイトに追加する必要があります。
+
+
+TIP: ソース vCenter とターゲット vCenter の両方が同じ BlueXP コネクタを使用していることを確認します。
 
 vCenterが追加されると、BlueXP  ディザスタリカバリによって、vCenterクラスタ、ESXiホスト、データストア、ストレージフットプリント、仮想マシンの詳細、SnapMirrorレプリカ、仮想マシンネットワークなど、vCenter環境の詳細な検出が実行されます。
 
@@ -139,6 +142,12 @@ TIP: CIDR表記は、IPアドレスとそのネットワークマスクを指定
 === レプリケーション計画のサブネットマッピングの選択
 
 レプリケーション計画を作成するときに、レプリケーション計画のサブネットマッピングを選択できます。
+
+サブネットマッピングの使用は、オプションの2つの手順で行います。
+
+* 最初に、各vCenterサイトのサブネットマッピングを追加します。
+* 次に、レプリケーション計画でサブネットマッピングを使用することを指定します。
+
 
 .手順
 . BlueXPディザスタリカバリのトップメニューで、*[レプリケーションプラン]*を選択します。

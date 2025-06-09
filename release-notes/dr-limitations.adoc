@@ -4,7 +4,7 @@ permalink: release-notes/dr-limitations.html
 keywords: disaster recovery, bluexp 
 summary: ここでは、このリリースのサービスでサポートされていない、またはサービスと正常に相互運用できないプラットフォーム、デバイス、または機能について説明します。 
 ---
-= 制限
+= BlueXP 災害復旧の制限
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

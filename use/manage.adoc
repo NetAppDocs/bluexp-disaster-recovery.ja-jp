@@ -4,7 +4,7 @@ permalink: use/manage.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plans, resource groups 
 summary: BlueXPのディザスタリカバリリソースを一目で把握し、vCenterサイト、リソースグループ、レプリケーション計画を管理できます。 
 ---
-= サイト、リソースグループ、レプリケーションプラン、データストア、仮想マシンの情報を管理します。
+= BlueXPディザスタリカバリを使用して、サイト、リソースグループ、レプリケーションプラン、データストア、仮想マシン情報を管理します。
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: BlueXPのディザスタリカバリリソースを一目で把握し�
 
 
 [role="lead"]
-すべてのディザスタリカバリリソースを一目で把握したり、それぞれのリソースを詳細に確認したりできます。
+BlueXP の災害復旧リソース全体を簡単に確認したり、それぞれの詳細を確認したりすることができます。
 
 * サイト
 * リソースグループ

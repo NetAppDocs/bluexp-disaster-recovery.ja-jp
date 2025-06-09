@@ -263,7 +263,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="c1942c862f0687fdf3f5a7564e0eadfa" category="list-text">SnapMirror関係がターゲット仮想マシンからソース仮想マシンに反転されます。</block>
   <block id="d0d1a7100fd604152ac7b93eb1abc016" category="list-text">右側で、*アクション*オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> をクリックし、*[フェイルオーバー]*を選択します。</block>
   <block id="0362f1f30abcc40f31c3c6618b1a15c3" category="list-text">進捗状況を確認するには、トップメニューで*ジョブ監視*を選択します。</block>
-  <block id="ceeed92bd86d67dc2a2a6016ed40a571" category="paragraph">すべてのディザスタリカバリリソースを一目で把握したり、それぞれのリソースを詳細に確認したりできます。</block>
   <block id="3faa64303d5f5bcd043bb88f6768e603" category="list-text">サイト</block>
   <block id="a8fc43ecd23ee9eb5e9efa5c60cb20b9" category="list-text">レプリケーションプラン</block>
   <block id="769b718779fbe38c65b122b69e0271a3" category="list-text">リソースグループ</block>
@@ -295,7 +294,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="fb64cb9f2eb5e660830a8f202d12f794" category="list-text">リソースグループを追加するには、*[グループの追加]*を選択します。</block>
   <block id="c292b94d404e989038191db88d347fc7" category="list-text">リソースグループを使用して操作を実行するには、*[Actions]*オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block>  右側で、*[リソースグループの編集]*や*[リソースグループの削除]*などのいずれかのオプションを選択します。</block>
   <block id="d88f9a7fc239e91ef7446fdd0e2c26a4" category="list-text">右側で、*アクション*オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> [Replicate]*を選択します。</block>
-  <block id="4e76033871d8eb52e7a46330cc531bd8" category="doc">アプリケーションを元のソースにフェイルバック</block>
   <block id="95c065ae2a71de38942ceb973d97399b" category="paragraph">このワークフローでは、BlueXPディザスタリカバリは、レプリケーションの方向を反転する前に、変更を元のソース仮想マシンにレプリケート（再同期）します。このプロセスは、ターゲットへのフェイルオーバーが完了した関係から開始し、次の手順を実行します。</block>
   <block id="c6e71b0dcb6847124e49e97ed111f902" category="list-text">ターゲットサイトで、仮想マシンの電源がオフになり、登録が解除され、ボリュームがアンマウントされます。</block>
   <block id="187b70ae9883d244642e7af4f1b374c6" category="list-text">元のソースのSnapMirror関係は、読み取り/書き込み可能にするために解除されます。</block>
@@ -332,7 +330,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="95a18472ce7b663d2c8fc430738919b9" category="list-text">ターゲットサイトと場所を選択します。ターゲットがクラウドの場合は、* AWS *を選択します。</block>
   <block id="df06aa418d44ef8725ac68927671ed66" category="paragraph">ソースvCenterとターゲットvCenterがサイトのリストに表示されます。</block>
   <block id="70536defad0e93353b2ee45a9eba84b0" category="list-text">処理の進捗状況を確認するには、トップメニューから*ジョブ監視*を選択します。</block>
-  <block id="239ed7a0645094a000a5d286f3b2ccf2" category="paragraph">すべてのディザスタリカバリジョブを監視し、進捗状況を確認できます。</block>
   <block id="957efce312dc74d9f2981b256c11180c" category="list-text">トップメニューから*ジョブ監視*を選択します。</block>
   <block id="a658e38fe05c1b71ade8529d73e083db" category="list-text">処理に関連するすべてのジョブを確認し、タイムスタンプとステータスを確認します。</block>
   <block id="a2628e207373ba02728e8a48a677eca6" category="list-text">特定のジョブの詳細を表示するには、その行を選択します。</block>
@@ -419,7 +416,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="2ce874f5717134aa8a63e219f05d39f9" category="list-text">フェイルオーバー、テストフェイルオーバー、および移行の数。たとえば、2つのプランを作成してデスティネーションに移行した場合、移行カウントは「2」と表示されます。</block>
   <block id="d26cf1f0512a50b32d5a10b931f5fbe0" category="list-text">[Activity]ペインですべての処理を確認します。ジョブモニタですべての処理を表示するには、*[すべてのジョブを表示]*を選択します。</block>
   <block id="6bc8dd7bb67f1165364943cf065cadcf" category="summary">BlueXPディザスタリカバリを使用すると、ソースサイトのVMwareアプリケーションを別のサイトに移行できます。</block>
-  <block id="37fca13c16336a96bde58435050fff09" category="doc">別のサイトへのアプリケーションの移行</block>
   <block id="ef5012739ecaf46323c1ba893541dc15" category="admonition">レプリケーション計画を作成し、ウィザードで繰り返し実行するスケジュールを特定して移行を開始したら、30分ごとにBlueXPディザスタリカバリによって、計画に従って移行が実際に実行されているかどうかが検証されます。進捗状況は[Job Monitor]ページで監視できます。</block>
   <block id="c7e296ab461bd699a5d9cbf0801b389c" category="paragraph">移行を開始する前に、レプリケーション計画を作成し、アプリケーションの移行を選択しておく必要があります。次に、[アクション]メニューに*[移行]*オプションが表示されます。</block>
   <block id="4b832a5ef0d288f92d7b413054dc905f" category="list-text">右側で、*アクション*オプションを選択します。 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> をクリックし、*[移行]*を選択します。</block>
@@ -564,7 +560,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="d66d706cd022ab39ed6479a713135515" category="paragraph"><block ref="d66d706cd022ab39ed6479a713135515" category="inline-image-macro-rx" type="image"></block></block>
   <block id="991e816286764c3a5ea9b023c35e1d77" category="paragraph"><block ref="991e816286764c3a5ea9b023c35e1d77" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b45dfe874eaba6a97e58e0436eba2402" category="sidebar">BlueXPディザスタリカバリサービス入門ラボオンデマンド</block>
-  <block id="d5368fed025a9875e8a424b419508bef" category="admonition">このリリースでは、オンプレミスのVMwareワークロードからVMware vSphere Virtual Machine File System（VMFS）データストアを使用するオンプレミスのVMware環境へのディザスタリカバリがテクノロジプレビューでサポートされます。NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。</block>
   <block id="0dc4a26bb39078be4974284a72d54f64" category="paragraph">BlueXPディザスタリカバリサービスは、NetAppライセンスがあれば使用することも、Amazon Web Servicesを通じてサブスクリプションベースの年間契約で利用することもできます。</block>
   <block id="66a7384fcc7d6c71e8da6dc152b82593" category="admonition">一部のリリースにはテクノロジプレビューが含まれています。NetAppでは、プレビューしたワークロード容量に対して課金されることはありません。最新のテクノロジプレビューの詳細については、を参照してください <block ref="431ce6b88c6d5399033553c1891688aa" category="inline-link-macro-rx"></block> 。</block>
   <block id="82dea2c8434a1770d46c03eb8b4c2389" category="summary">BlueXPディザスタリカバリを使用する前に、ONTAPストレージ、VMware vCenterクラスタ、およびBlueXPの要件を環境が満たしていることを確認する必要があります。</block>
@@ -690,7 +685,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="544bb990c26b075198ab3593eb235cab" category="list-text">ボックスに「failover」と入力します。</block>
   <block id="d3c41fabd7d85897eb0f306101f87e33" category="list-text">[フェイルオーバー]*を選択します。</block>
   <block id="9aaabae265e2785e58b6618d73b8e267" category="summary">BlueXPのディザスタリカバリリソースを一目で把握し、vCenterサイト、リソースグループ、レプリケーション計画を管理できます。</block>
-  <block id="592189bb19e09b41686c42842ae7f60a" category="doc">サイト、リソースグループ、レプリケーションプラン、データストア、仮想マシンの情報を管理します。</block>
   <block id="88947748ef8b3b00cf2cf0c3999a702e" category="paragraph">レプリケーションプランは、無効化、有効化、および削除できます。スケジュールは変更できます。</block>
   <block id="fa62d17ad222d305b611f8c161aab288" category="list-text">仮想マシンを追加または編集するには、*[仮想マシン]*タブを選択し、*[ VMの追加]*オプションまたは*[編集]*アイコンを選択します。</block>
   <block id="714c8620cd504e0c90291fad7b5c119f" category="list-text">テストフェイルオーバースケジュールを設定または変更したり、準拠頻度チェックを設定したりするには、プランの右側にある*[Actions]*オプションを選択し、*[Edit schedules]*を選択 <block ref="2fddd650b01c7f9674be856867aae05d" category="inline-image-macro-rx" type="image"></block> します。</block>
@@ -731,7 +725,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="caa1e25984e775c1ab44cfd42620d720" category="inline-image-macro">鉛筆のアイコン</block>
   <block id="7906e2e007c3bad108fcd7ed7311a131" category="paragraph"><block ref="7906e2e007c3bad108fcd7ed7311a131" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6dbc81f47f4a822cd11ce7c8403756ed" category="list-text">[Failover mappings]タブで、各リソースの右側にある下向き矢印を選択し、それぞれのリソースをマッピングします。</block>
-  <block id="c28e8a3b83f3f2cce376fe3daa7ad95d" category="paragraph"><block ref="64eb1ec301597178e47fa7deed0121dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10936c8535aaede0ed75f5d8d4fa6aaf" category="list-text">*保持数*：保持するSnapshotの数を入力します。</block>
   <block id="76e4d72594030fca0b96279d0f8392dc" category="section-title">BlueXP  ディザスタリカバリに役立つ用語</block>
   <block id="b7b26d16c3d1d84d3872afa1f04c92d6" category="paragraph">ディザスタリカバリに関連する用語を理解しておくと便利です。</block>
@@ -811,7 +804,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">「 * 削除」を選択します。</block>
   <block id="835e92deb53775d3ce75f1bab2ff7fe5" category="list-text">レプリケーションプランを選択した状態で、[Actions]メニューを選択し、* Clean up old snapshots（古いSnapshotをクリーンアップ）を選択して、新しい保持数に合わせてターゲットから古いSnapshotを削除します。</block>
   <block id="4fcb591c27b70823ff71112c0db6af4f" category="summary">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去1年間のジョブの詳細が含まれます。</block>
-  <block id="8c909df77f7b5e2e6b77ff66ee6bd3e7" category="paragraph">ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、過去7日間のテストフェイルオーバーの概要、レプリケーションプランの詳細、およびアカウント内のすべてのサイトのジョブの詳細が含まれます。</block>
   <block id="cd463f7ca5dbc8268a82ea8d8f5e4281" category="paragraph">ダウンロードリンクは6時間有効です。</block>
   <block id="5e521694fac83ef0acfcb6f722d2b3cf" category="list-text">BlueXP  の左側のナビゲーションで、*[保護]*&gt;*[ディザスタリカバリ]*&gt;*[レプリケーションプラン]*を選択します。</block>
   <block id="40f8ac7caaab02ab3b9834517b54c7a4" category="list-text">ページの上部から、*[レポートの作成]*を選択します。</block>
@@ -984,7 +976,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="e2a36029181f04d6208811edf66b0c62" category="paragraph"><block ref="039fd09b60dad6f86188402eac2ef738" category="inline-link-rx"></block>です。</block>
   <block id="5d3579189b9441a8b42010228d169cbc" category="inline-link">デジタルウォレットによるライセンスの更新について</block>
   <block id="597c7a7ee6e647859f8aa98b20be3cb0" category="paragraph"><block ref="1180f9bbf40cd0c05f379b347ef1d8f9" category="inline-link-rx"></block>です。</block>
-  <block id="4f65b71af0098f41a96bfdb343f2f325" category="doc">リソースグループを作成してVMをまとめます。</block>
   <block id="142aa3cf2c56c4cee9658fbb7fa95634" category="paragraph">リソースグループは、次の方法で作成できます。</block>
   <block id="ad2f31d93207199cb75dd53824344fab" category="list-text">[Resource groups]タフヲシヨウ</block>
   <block id="ae21aa75d137aec3ba200318a51f9166" category="paragraph-title">リソースグループについて</block>
@@ -1191,4 +1182,33 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="e7be7bda88531d046e21401efd5bd9d5" category="paragraph">[Configure subnet]ページが表示されます。</block>
   <block id="aaaeb2ea35c55b4a37b25b328a34587c" category="paragraph"><block ref="aaaeb2ea35c55b4a37b25b328a34587c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="58091bb6c8793ca7ad7178167e36010f" category="admonition">VMが2つある場合（1つがLinux、もう1つがWindowsなど）、クレデンシャルはWindowsの場合にのみ必要です。</block>
+  <block id="97d3a415f1d32e0fd7045cf243744acd" category="doc">Windows ローカル管理者パスワードソリューション (LAPS) のサポート</block>
+  <block id="016381830d7dd927c4b8504121b26175" category="paragraph">Windows ローカル管理者パスワード ソリューション (Windows LAPS) は、Active Directory 上のローカル管理者アカウントのパスワードを自動的に管理およびバックアップする Windows 機能です。</block>
+  <block id="33e3d20ad0d71e75d746da0b85431750" category="paragraph">ドメインコントローラーの詳細を入力することで、サブネットマッピングオプションを選択し、LAPSオプションをチェックできるようになりました。このオプションを使用すると、仮想マシンごとにパスワードを入力する必要がなくなります。</block>
+  <block id="6988ffa358e4fb05fdfdb5afcd9633db" category="list-text">ソース vCenter とターゲット vCenter の両方が同じ BlueXP コネクタを使用していることを確認します。</block>
+  <block id="45d6a7a8d814b0580c86b35537ead34e" category="doc">BlueXP 災害復旧の制限</block>
+  <block id="f27f1ce6df3e2ec2518f77e8e1a4a531" category="section-title">2025年6月9日</block>
+  <block id="a5b3547213084a11aef815f04f636f42" category="paragraph">バージョン4.2.4</block>
+  <block id="ae028f4b0907152c734ed4a90acbc64b" category="doc">ダッシュボードで BlueXP 災害復旧プランの健全性を確認する</block>
+  <block id="8d653efc41b18c9a1268d3e4be0f15ca" category="doc">BlueXP災害復旧でレプリケーションプランを作成する</block>
+  <block id="1883274b7afbbc2357cb15c15a1af17e" category="paragraph"><block ref="a690938170d1fae8a1d7e7ed3a6d014f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="779cca7c4cefbaa596e10329a5e7344b" category="list-text">*ターゲット IP* フィールドで、次のいずれかを選択します。</block>
+  <block id="43c3d8ca0ff82c763dd8ba2587262ce7" category="list-text">*ソースと同じ*</block>
+  <block id="c0906c265f059cdd05a640cb10c05397" category="list-text">*ソースと異なります*</block>
+  <block id="c93cc22297f7869a2923cf4a568e3431" category="list-text">*サブネットマッピング*: ソースサブネットを別のターゲットサブネットにマッピングする場合は、このオプションを選択します。ソースサブネットを選択してから、ターゲットサブネットを選択できます。これは、ターゲット環境のVMのIPアドレスを変更する場合に便利です。</block>
+  <block id="9cdd5ce4f7751ec05ecae73c3e3d5959" category="admonition">サブネット マッピングの使用は、オプションの 2 段階のプロセスです。まず、[サイト] タブで各 vCenter サイトのサブネット マッピングを追加します。次に、レプリケーション計画でサブネットマッピングを使用することを指定します。</block>
+  <block id="6262500729b6f197aa6e4ad6b2b8e85e" category="list-text">*Windows LAPSを使用する*：Windows Local Administrator Password Solution（Windows LAPS）を使用している場合は、このチェックボックスをオンにしてください。このオプションは、*静的IP*オプションを選択した場合にのみ使用できます。このチェックボックスをオンにすると、仮想マシンごとにパスワードを入力する必要がなくなります。代わりに、ドメインコントローラの詳細を入力します。</block>
+  <block id="4fd3e179011cd215b45b25dbfb0cc8d2" category="paragraph">Windows LAPS を使用しない場合、VM は Windows VM であり、VM 行の資格情報オプションが有効になっています。VMの資格情報を指定できます。</block>
+  <block id="cf09d6f8881c452b09554e4e9dbc997e" category="doc">BlueXP 災害復旧機能を使用してアプリケーションを元のソースにフェイルバックします</block>
+  <block id="23a9c843e7c84f7ba86dd5a99ee43340" category="doc">BlueXP 災害復旧機能を使用してアプリケーションをリモート サイトにフェイルオーバーする</block>
+  <block id="2be6295929f0fec41d6014ed55de0fcb" category="doc">BlueXPディザスタリカバリを使用して、サイト、リソースグループ、レプリケーションプラン、データストア、仮想マシン情報を管理します。</block>
+  <block id="b88f2b61385be4d7b80c6f9deb44ef99" category="paragraph">BlueXP の災害復旧リソース全体を簡単に確認したり、それぞれの詳細を確認したりすることができます。</block>
+  <block id="e823ac96d622a36a3befb2adaf78dfc7" category="doc">BlueXP 災害復旧を使用してアプリケーションを別のサイトに移行する</block>
+  <block id="06db0057955b153079b2224fe8fe3fca" category="doc">BlueXP 災害復旧ジョブを監視する</block>
+  <block id="33364d8b01ea631f73ab5e07dbec17bc" category="paragraph">すべての BlueXP 災害復旧ジョブを監視し、その進行状況を確認できます。</block>
+  <block id="4c37c0f8ebfaa6ad002a3b8027540686" category="doc">BlueXP 災害復旧機能を使用してアプリケーションを別のサイトに複製する</block>
+  <block id="8402259962b0173d9712a8c8e6d195dd" category="doc">BlueXP 災害復旧レポートを作成する</block>
+  <block id="b12e5762638e8dca606f02345a47867a" category="paragraph">BlueXP 災害復旧レポートを確認すると、災害復旧への備えを分析するのに役立ちます。事前設計されたレポートには、過去7日間のテストフェイルオーバーの概要、レプリケーションプランの詳細、およびアカウント内のすべてのサイトのジョブの詳細が含まれます。</block>
+  <block id="b3d496fccdf5d0b52dd71622cd01ca4c" category="doc">BlueXP 災害復旧で VM をまとめて整理するためのリソース グループを作成する</block>
+  <block id="4931eee83a268b667e0c868104ec1e32" category="doc">BlueXP 災害復旧のサイトに vCenter を追加する</block>
 </blocks>

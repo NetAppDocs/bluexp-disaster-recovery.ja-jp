@@ -4,7 +4,7 @@ permalink: use/migrate.html
 keywords: disaster recovery, bluexp disaster recovery, migrate, vmware, vcenter 
 summary: BlueXPディザスタリカバリを使用すると、ソースサイトのVMwareアプリケーションを別のサイトに移行できます。 
 ---
-= 別のサイトへのアプリケーションの移行
+= BlueXP 災害復旧を使用してアプリケーションを別のサイトに移行する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

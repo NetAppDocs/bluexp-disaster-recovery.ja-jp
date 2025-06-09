@@ -4,7 +4,7 @@ permalink: use/resource-group.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, replication plan, protection, disaster, recovery, virtual machines, vm 
 summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバリのワークフローを自動化するクラウドベースのディザスタリカバリサービスです。vCenterサイトを追加したら、ディザスタリカバリまたはレプリケーションの計画を作成できます。 
 ---
-= リソースグループを作成してVMをまとめます。
+= BlueXP 災害復旧で VM をまとめて整理するためのリソース グループを作成する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

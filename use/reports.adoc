@@ -4,7 +4,7 @@ permalink: use/reports.html
 keywords: disaster recovery, bluexp disaster recovery, failover, failback, replicate, fail over, fail back, vmware, vcenter, monitor, bluexp, protection, reports 
 summary: ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、フェイルオーバーとフェイルバックの概要、すべてのサイトのレプリケーションの詳細、過去1年間のジョブの詳細が含まれます。 
 ---
-= ディザスタリカバリレポートの作成
+= BlueXP 災害復旧レポートを作成する
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,7 +12,7 @@ summary: ディザスタリカバリレポートを確認すると、ディザ�
 
 
 [role="lead"]
-ディザスタリカバリレポートを確認すると、ディザスタリカバリの準備状況の分析に役立ちます。事前設計されたレポートには、過去7日間のテストフェイルオーバーの概要、レプリケーションプランの詳細、およびアカウント内のすべてのサイトのジョブの詳細が含まれます。
+BlueXP 災害復旧レポートを確認すると、災害復旧への備えを分析するのに役立ちます。事前設計されたレポートには、過去7日間のテストフェイルオーバーの概要、レプリケーションプランの詳細、およびアカウント内のすべてのサイトのジョブの詳細が含まれます。
 
 レポートはPDF、HTML、またはJSON形式でダウンロードできます。
 
