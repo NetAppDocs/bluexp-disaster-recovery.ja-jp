@@ -1640,4 +1640,12 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="3a83143b77a0b90d82bf03cbf43e4443" category="sidebar">Amazon EVSのレプリケーションプランを作成する手順4</block>
   <block id="5a72de72f8b0ba4525e25ce937621889" category="sidebar">Amazon EVSのレプリケーションプランを確認する</block>
   <block id="f260d0f12b515f0ab789c0349e49a0fc" category="sidebar">レプリケーションプラン操作を実行する</block>
+  <block id="a1e044c84ca270d3adc998b256510801" category="doc">サブネットマッピングの改善</block>
+  <block id="494053c615ca0aa0debeb6eac90b3e5a" category="paragraph">このアップデートでは、「サブネットマッピングの追加と編集」ダイアログに新しい検索機能が追加されました。検索語を入力するだけで特定のサブネットを素早く見つけられるため、サブネットマッピングの管理が容易になります。</block>
+  <block id="dc729c135725ed28b09cd35258e2a28d" category="doc">発見の改善</block>
+  <block id="778d15d21e8eaffc6a6c8069d8fa5872" category="paragraph">このアップデートにより検出プロセスが改善され、検出に必要な時間が短縮されます。</block>
+  <block id="b77e8ec0a3425747f32b3dbc303adecb" category="section-title">2025年6月30日</block>
+  <block id="f5939a7e3fd75d2d5422c1d6029f44c8" category="paragraph">バージョン4.2.4P2</block>
+  <block id="1d498761d9b5afe7d166fb15809b8000" category="section-title">2025年6月23日</block>
+  <block id="c114a433f08237cc585990ed9e9e88d5" category="paragraph">バージョン4.2.4P1</block>
 </blocks>
