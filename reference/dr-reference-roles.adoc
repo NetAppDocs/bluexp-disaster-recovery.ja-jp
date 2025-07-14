@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: reference/dr-reference-roles.html 
+keywords: how bluexp disaster recovery works, what is disaster recovery, bluexp, vmware, vcenter, draas, replicate, failover, failback, fail over, fail back, vmware cloud, netapp intelligent services 
+summary: BlueXP disaster recoveryでは、ロールを使用して、各ユーザーの特定の機能およびアクションへのアクセスを制御します。 
+---
+= BlueXP disaster recovery機能へのロールベースのアクセス
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP disaster recoveryでは、ロールを使用して、各ユーザーの特定の機能およびアクションへのアクセスを制御します。
+
+このサービスは、BlueXP disaster recoveryに固有の次のロールを使用します。
+
+* *災害復旧管理者*: BlueXP disaster recoveryであらゆるアクションを実行します。
+* *災害復旧フェールオーバー管理者*: BlueXP disaster recoveryでフェールオーバーと移行アクションを実行します。
+* *災害復旧アプリケーション管理者*: レプリケーション プランを作成および変更し、テスト フェイルオーバーを開始します。
+* *災害復旧ビューア*: BlueXP disaster recoveryの情報を表示しますが、アクションを実行することはできません。
+
+
+これらのロールはBlueXP disaster recoveryに固有のものであり、 BlueXPで使用されるプラットフォーム ロールとは異なります。すべてのBlueXP  プラットフォームロールの詳細については、を参照してください https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["BlueXP  のセットアップと管理に関するドキュメント"^]。
+
+次の表は、BlueXP disaster recoveryロールが実行できるアクションを示しています。
+
+[cols="30,20a,20a,20a,20a"]
+|===
+| 特徴とアクション | 災害復旧管理者 | 災害復旧フェイルオーバー管理者 | 災害復旧アプリケーション管理者 | 災害復旧ビューア 
+
+
+| ダッシュボードとすべてのタブを表示  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+| 無償トライアルを開始  a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+| ワークロードの検出を開始  a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+| ライセンス情報を表示  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+| ライセンスを有効化  a| 
+はい
+ a| 
+いいえ
+ a| 
+はい
+ a| 
+いいえ
+
+
+
+5+| *[サイト] タブで*: 
+
+
+| サイトを表示  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+| サイトの追加、変更、削除  a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+5+| *レプリケーション プラン タブで*: 
+
+
+| レプリケーションプランの表示  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+| レプリケーションプランの詳細を表示する  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+| レプリケーションプランの作成または変更  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+いいえ
+
+
+
+| レポートを作成します  a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+| スナップショットを表示  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+| フェイルオーバーテストを実行する  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+いいえ
+
+
+
+| フェイルオーバーを実行する  a| 
+はい
+ a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+| フェイルバックを実行する  a| 
+はい
+ a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+| 移行を実行する  a| 
+はい
+ a| 
+はい
+ a| 
+いいえ
+ a| 
+いいえ
+
+
+
+5+| *[リソース グループ] タブで: 
+
+
+| リソース グループを表示する  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+はい
+
+
+
+| リソース グループの作成、変更、または削除  a| 
+はい
+ a| 
+いいえ
+ a| 
+はい
+ a| 
+いいえ
+
+
+
+5+| *ジョブ監視タブで*: 
+
+
+| 求人を見る  a| 
+はい
+ a| 
+いいえ
+ a| 
+はい
+ a| 
+はい
+
+
+
+| ジョブをキャンセルする  a| 
+はい
+ a| 
+はい
+ a| 
+はい
+ a| 
+いいえ
+
+|===

@@ -4,6 +4,8 @@ title: 参考文献
 entries:
 - title: BlueXPのディザスタリカバリに必要なvCenter権限
   url: "/reference/vcenter-privileges.html"
+- title: BlueXP disaster recoveryの役割と権限
+  url: "/reference/dr-reference-roles.html"
 - title: Amazon EVS で BlueXP 災害復旧を使用する
   entries:
   - title: Amazon EVS を使用した BlueXP 災害復旧の概要

@@ -1,0 +1,50 @@
+= BlueXP disaster recoveryにおけるユーザーの役割
+:allow-uri-read: 
+
+
+
+
+=== BlueXP disaster recoveryにおけるユーザーの役割
+
+BlueXP disaster recoveryでは、ロールを使用して、各ユーザーの特定の機能およびアクションへのアクセスを管理するようになりました。
+
+このサービスは、BlueXP disaster recoveryに固有の次のロールを使用します。
+
+* *災害復旧管理者*: BlueXP disaster recoveryであらゆるアクションを実行します。
+* *災害復旧フェールオーバー管理者*: BlueXP disaster recoveryでフェールオーバーと移行アクションを実行します。
+* *災害復旧アプリケーション管理者*: レプリケーション プランを作成および変更し、テスト フェイルオーバーを開始します。
+* *災害復旧ビューア*: BlueXP disaster recoveryの情報を表示しますが、アクションを実行することはできません。
+
+
+BlueXP disaster recoveryサービスをクリックして初めて構成する場合は、*SnapCenterAdmin* 権限または *Organization Admin* ロールが必要です。
+
+詳細については、を参照してください  https://docs.netapp.com/us-en/bluexp-disaster-recovery/reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限"]。
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
+
+
+=== BlueXP disaster recoveryのその他のアップデート
+
+* 強化されたネットワーク検出
+* スケーラビリティの改善:
++
+** すべての詳細ではなく必要なメタデータをフィルタリングする
+** VM リソースをより速く取得および更新するための検出の改善
+** データの取得と更新のためのメモリ最適化とパフォーマンス最適化
+** vCenter SDK クライアントの作成とプール管理の改善
+
+
+* 次回のスケジュールされた検出または手動検出時の古いデータの管理:
++
+** vCenter で VM が削除されると、 BlueXP disaster recoveryによってその VM がレプリケーション プランから自動的に削除されるようになりました。
+** vCenter でデータストアまたはネットワークが削除されると、 BlueXP disaster recoveryによってレプリケーション プランとリソース グループからそれが削除されるようになりました。
+** vCenter でクラスタ、ホスト、またはデータセンターが削除されると、 BlueXP disaster recoveryによって、レプリケーション プランとリソース グループからそれが削除されるようになりました。
+
+
+* ブラウザのシークレットモードでSwaggerドキュメントにアクセスできるようになりました。BlueXPBlueXP disaster recoveryの「設定」オプション > 「APIドキュメント」からアクセスするか、ブラウザのシークレットモードで以下のURLに直接アクセスしてください。  https://snapcenter.cloudmanager.cloud.netapp.com/api/api-doc/draas["Swaggerドキュメント"^] 。
+* フェイルバック操作後、状況によってはiGroupが操作完了後に残ってしまうことがあります。このアップデートにより、古いiGroupが削除されます。
+* レプリケーションプランでNFS FQDNが使用されていた場合、 BlueXP disaster recoveryはそれをIPアドレスに解決するようになりました。このアップデートは、ディザスタリカバリサイトでFQDNを解決できない場合に役立ちます。
+* UIの配置の改善
+* 検出が成功した後に vCenter のサイズ設定の詳細をキャプチャするためのログの改善
+

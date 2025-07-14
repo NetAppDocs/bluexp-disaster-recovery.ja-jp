@@ -14,6 +14,10 @@ summary: BlueXPディザスタリカバリでは、無償トライアル、従�
 [role="lead"]
 BlueXPディザスタリカバリでは、無償トライアル、従量課金制サブスクリプション、お客様所有のライセンスを使用するなど、さまざまなライセンスプランを使用できます。
 
+*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、または災害復旧アプリケーション管理者のロール。
+
+link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
 次のライセンスタイプを使用できます。
 
 * 30日間の無償トライアルにサインアップしてください。

@@ -16,6 +16,10 @@ vCenterサイトを追加したら、ディザスタリカバリ（_replication 
 
 このような計画は、_ blueprints _と呼ばれることもあります。
 
+*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧フェールオーバー管理者、または災害復旧アプリケーション管理者のロール。
+
+link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
 レプリケーション計画を作成し、コンプライアンスとテストのスケジュールを編集することもできます。
 
 複数のデータストア上の複数のVMを保護できます。BlueXP  ディザスタリカバリでは、保護対象のVMデータストアをホストするすべてのONTAPボリュームに対してONTAP整合性グループが作成されます。

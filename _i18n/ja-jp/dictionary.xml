@@ -1648,4 +1648,83 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="f5939a7e3fd75d2d5422c1d6029f44c8" category="paragraph">バージョン4.2.4P2</block>
   <block id="1d498761d9b5afe7d166fb15809b8000" category="section-title">2025年6月23日</block>
   <block id="c114a433f08237cc585990ed9e9e88d5" category="paragraph">バージョン4.2.4P1</block>
+  <block id="ef9968a47eda1ddd45a276b48c838f6f" category="doc">BlueXP disaster recoveryにおけるユーザーの役割</block>
+  <block id="bc6794f75df9889a42be39a47210963d" category="paragraph">BlueXP disaster recoveryでは、ロールを使用して、各ユーザーの特定の機能およびアクションへのアクセスを管理するようになりました。</block>
+  <block id="3136785ff416b16b75216e5331402fac" category="paragraph">このサービスは、BlueXP disaster recoveryに固有の次のロールを使用します。</block>
+  <block id="7625d6e45273de6987a1bcebc498baa7" category="list-text">*災害復旧管理者*: BlueXP disaster recoveryであらゆるアクションを実行します。</block>
+  <block id="5106b00f6760172bc5c45cb19eb9b8a5" category="list-text">*災害復旧フェールオーバー管理者*: BlueXP disaster recoveryでフェールオーバーと移行アクションを実行します。</block>
+  <block id="64fbace2c8460fced3d10cb671f24651" category="list-text">*災害復旧アプリケーション管理者*: レプリケーション プランを作成および変更し、テスト フェイルオーバーを開始します。</block>
+  <block id="8a8f884ac550044fb8c536c29fb404af" category="list-text">*災害復旧ビューア*: BlueXP disaster recoveryの情報を表示しますが、アクションを実行することはできません。</block>
+  <block id="ffabfa17d07546861da02a532a19ee4b" category="paragraph">BlueXP disaster recoveryサービスをクリックして初めて構成する場合は、*SnapCenterAdmin* 権限または *Organization Admin* ロールが必要です。</block>
+  <block id="03f7d0a81585e8c5ce1a46f9bccaab7f" category="inline-link">BlueXP disaster recoveryにおけるユーザーの役割と権限</block>
+  <block id="3a3f201899ef67ba5014b223f6b6f313" category="paragraph">詳細については、を参照してください <block ref="024c70e4d2a5dd15bc5622316cbef3ed" category="inline-link-rx"></block>。</block>
+  <block id="34397c830c77af93d96e3ed470658d45" category="inline-link">すべてのサービスに対するBlueXPのアクセスロールについて学ぶ</block>
+  <block id="0d46f65a7717513cadcb109363fb6c6d" category="paragraph"><block ref="06a5d1f4c488b014d10a11f3fe7273ba" category="inline-link-rx"></block>です。</block>
+  <block id="46204d4c84a080b8821b1d198e735e91" category="section-title">BlueXP disaster recoveryのその他のアップデート</block>
+  <block id="982f7e3070a4d65cdf30b78b12adb75b" category="list-text">強化されたネットワーク検出</block>
+  <block id="3b5745c72d48a29358cef7c9db7cd826" category="list-text">スケーラビリティの改善:</block>
+  <block id="40228eea7c6ccc9e0cb61372c49d95eb" category="list-text">すべての詳細ではなく必要なメタデータをフィルタリングする</block>
+  <block id="1ac913a5bb5ab0a16e36b313be789aac" category="list-text">VM リソースをより速く取得および更新するための検出の改善</block>
+  <block id="b5e4470910d5e523e0dc277cc4e74bb2" category="list-text">データの取得と更新のためのメモリ最適化とパフォーマンス最適化</block>
+  <block id="49b1bd71187a3dcbd19f786ef2a10764" category="list-text">vCenter SDK クライアントの作成とプール管理の改善</block>
+  <block id="7af4cddf55cbfd0c887075f4b418f072" category="list-text">次回のスケジュールされた検出または手動検出時の古いデータの管理:</block>
+  <block id="0e9f332b69353d48350244fb204bbbe1" category="list-text">vCenter で VM が削除されると、 BlueXP disaster recoveryによってその VM がレプリケーション プランから自動的に削除されるようになりました。</block>
+  <block id="20f175753c0dd9c623cb206ce579bc77" category="list-text">vCenter でデータストアまたはネットワークが削除されると、 BlueXP disaster recoveryによってレプリケーション プランとリソース グループからそれが削除されるようになりました。</block>
+  <block id="e0f19e2b15951f47dcd9ce438c5ce481" category="list-text">vCenter でクラスタ、ホスト、またはデータセンターが削除されると、 BlueXP disaster recoveryによって、レプリケーション プランとリソース グループからそれが削除されるようになりました。</block>
+  <block id="24ed933119d9ba78138d2119f9ebbdac" category="inline-link">Swaggerドキュメント</block>
+  <block id="33526279be472c4427abeef413d79850" category="list-text">ブラウザのシークレットモードでSwaggerドキュメントにアクセスできるようになりました。BlueXPBlueXP disaster recoveryの「設定」オプション &gt; 「APIドキュメント」からアクセスするか、ブラウザのシークレットモードで以下のURLに直接アクセスしてください。 <block ref="fbeb63b8afb1564cb8457db3650e3513" category="inline-link-rx"></block> 。</block>
+  <block id="07249132999164b31d31db024261d558" category="list-text">フェイルバック操作後、状況によってはiGroupが操作完了後に残ってしまうことがあります。このアップデートにより、古いiGroupが削除されます。</block>
+  <block id="3a92c0f069a6fb7a0d4811f90afdd47c" category="list-text">レプリケーションプランでNFS FQDNが使用されていた場合、 BlueXP disaster recoveryはそれをIPアドレスに解決するようになりました。このアップデートは、ディザスタリカバリサイトでFQDNを解決できない場合に役立ちます。</block>
+  <block id="bd9a0211a986e2ba720cbe54530cd5c5" category="list-text">UIの配置の改善</block>
+  <block id="5c7dbecd0837cce38502f147b31156bc" category="list-text">検出が成功した後に vCenter のサイズ設定の詳細をキャプチャするためのログの改善</block>
+  <block id="3ad337742117b782adb44bf206472563" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、または災害復旧アプリケーション管理者のロール。</block>
+  <block id="52e651c345e211fbed907df5e0e4874b" category="inline-link-macro">BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ</block>
+  <block id="fa16578488b2808cc78a58ff05428377" category="paragraph"><block ref="64edf81adeeafc23938d1322daa0551b" category="inline-link-macro-rx"></block>です。<block ref="06a5d1f4c488b014d10a11f3fe7273ba" category="inline-link-rx"></block>です。</block>
+  <block id="ff1286a383ff57eeeacc393a50dffb26" category="paragraph">特定のタスクには特定のBlueXPユーザー ロールが必要です。<block ref="64edf81adeeafc23938d1322daa0551b" category="inline-link-macro-rx"></block>です。<block ref="06a5d1f4c488b014d10a11f3fe7273ba" category="inline-link-rx"></block>です。</block>
+  <block id="16159eae464466a871889dc9e73760f7" category="summary">BlueXP disaster recoveryでは、ロールを使用して、各ユーザーの特定の機能およびアクションへのアクセスを制御します。</block>
+  <block id="4527f4e5bd21d4b07d1ddee6cc498d21" category="doc">BlueXP disaster recovery機能へのロールベースのアクセス</block>
+  <block id="201c33f8708666e946fc8a93af563122" category="inline-link">BlueXP  のセットアップと管理に関するドキュメント</block>
+  <block id="3667c1e74f9ceae7052e31f00f45e2b6" category="paragraph">これらのロールはBlueXP disaster recoveryに固有のものであり、 BlueXPで使用されるプラットフォーム ロールとは異なります。すべてのBlueXP  プラットフォームロールの詳細については、を参照してください<block ref="6bffc5f2028d38b62e8412df031cefed" category="inline-link-rx"></block>。</block>
+  <block id="ba3ab4cad00c276e16db5a087a2e3c52" category="paragraph">次の表は、BlueXP disaster recoveryロールが実行できるアクションを示しています。</block>
+  <block id="4420e7353184ac575b539cdce1b991db" category="cell">特徴とアクション</block>
+  <block id="df2d943b4d0652d322ec6b3cb52e3036" category="cell">災害復旧管理者</block>
+  <block id="71aa2505b70e192a741f69ce63677f4b" category="cell">災害復旧フェイルオーバー管理者</block>
+  <block id="49f16ca5444f519e5203bb5067957eef" category="cell">災害復旧アプリケーション管理者</block>
+  <block id="ba4b33592d18613c28d684c20110e152" category="cell">災害復旧ビューア</block>
+  <block id="b60c44c6bbbb3793d0c08c34cd6e2382" category="cell">ダッシュボードとすべてのタブを表示</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="paragraph">はい</block>
+  <block id="78c7efbfa07116553a52f59800129dde" category="cell">無償トライアルを開始</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">いいえ</block>
+  <block id="42174d568723a8694dc7e6dfd143cb12" category="cell">ワークロードの検出を開始</block>
+  <block id="666d2ef63ada639c9aafe5a0d4332126" category="cell">ライセンス情報を表示</block>
+  <block id="9ea1b41f4c4dc25b684804b2da7fcf2d" category="cell">ライセンスを有効化</block>
+  <block id="20f0d287f3a16854279c9e5960c749e1" category="cell">*[サイト] タブで*:</block>
+  <block id="24f9533e942cbf2b6f6f10572e7060a3" category="cell">サイトを表示</block>
+  <block id="3e8a9a8e5a257cee36226ed2012c6b3c" category="cell">サイトの追加、変更、削除</block>
+  <block id="0aab6b477ac055b9392a6ec5ce7034b9" category="cell">*レプリケーション プラン タブで*:</block>
+  <block id="735da8d6e9fa3b588537574c24f9dcf0" category="cell">レプリケーションプランの表示</block>
+  <block id="7b84a7ee34168bfbf6886ef0061658cc" category="cell">レプリケーションプランの詳細を表示する</block>
+  <block id="baee89c048bf90468e3ec3f5606cf60b" category="cell">レプリケーションプランの作成または変更</block>
+  <block id="ef7a7b1bec08bef324977926c1fc910c" category="cell">レポートを作成します</block>
+  <block id="d31af31443f48fa119d00d0bba8ea175" category="cell">スナップショットを表示</block>
+  <block id="db3c6b3ab5f4657dbde3dec8ccb9ecc0" category="cell">フェイルオーバーテストを実行する</block>
+  <block id="c5bcd887212759ab57c8af218b99eb31" category="cell">フェイルオーバーを実行する</block>
+  <block id="322e135616f19e459c874a724520fa1e" category="cell">フェイルバックを実行する</block>
+  <block id="8b72223aa730d2269a7ba95f83cef65e" category="cell">移行を実行する</block>
+  <block id="8370ef7559cb3ec9c98d0635143042bb" category="cell">*[リソース グループ] タブで:</block>
+  <block id="e413f3ae098a2b13a5631e34e8843bd1" category="cell">リソース グループを表示する</block>
+  <block id="007c91bf4efbb78277d4ee064ec28f3a" category="cell">リソース グループの作成、変更、または削除</block>
+  <block id="aba6939e11f2553d21fef269ecf1b46d" category="cell">*ジョブ監視タブで*:</block>
+  <block id="c6b984bc2ca856b4291f8e64fa30cd9a" category="cell">求人を見る</block>
+  <block id="295cc024728a10becfec47e1d454c4f9" category="cell">ジョブをキャンセルする</block>
+  <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">2025年7月14日</block>
+  <block id="875f73df70de111a8a6c2c5595b208a7" category="paragraph">バージョン4.2.5</block>
+  <block id="5782aeb80d08842b2f41a5e80018d6cc" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロール。</block>
+  <block id="42f3480ede6f5e3f308cb876cd8fe5eb" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧フェールオーバー管理者、または災害復旧アプリケーション管理者のロール。</block>
+  <block id="8a71d836e62144a3d59a906b2d2b19de" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、または災害復旧フェールオーバー管理者のロール。</block>
+  <block id="61af9bae769f63f74f915dc706ee6adb" category="paragraph">タスクごとに異なるBlueXPロールが必要です。詳細については、各タスクの「*必要なBlueXPロール*」セクションをご覧ください。</block>
+  <block id="403ec586e800c9ad3890a7c5cfe60988" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、または災害復旧管理者のロール。</block>
+  <block id="bdc1d9aa4d279b8a12963cdbced8ce50" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧フェールオーバー管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロール。</block>
+  <block id="c63f107526be606f4a1357ceb85fa571" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、または災害復旧管理者。</block>
+  <block id="bfc307710c1f872e4dfb6ec657573e8a" category="sidebar">BlueXP disaster recoveryの役割と権限</block>
 </blocks>

@@ -14,6 +14,10 @@ summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバ�
 [role="lead"]
 災害が発生した場合は、プライマリのオンプレミスVMwareサイトを別のオンプレミスVMwareサイトまたはVMware Cloud on AWSにフェイルオーバーします。フェイルオーバープロセスをテストして、必要なときに正常に実行されることを確認できます。
 
+*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、または災害復旧フェールオーバー管理者のロール。
+
+link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
 フェイルオーバー中は、最新のSnapMirror Snapshotコピーが使用されます。または、（SnapMirrorの保持ポリシーに基づいて）ポイントインタイムSnapshotから特定のSnapshotを選択することもできます。ポイントインタイムオプションは、最新のレプリカがすでに侵害または暗号化されているランサムウェアなどの破損イベントに直面している場合に役立ちます。BlueXPのディザスタリカバリでは、使用可能なすべての時点が表示されます。
 
 このプロセスは、業務用サイトが正常かどうか、および重要なインフラ障害以外の理由でディザスタリカバリサイトへのフェイルオーバーを実行しているかどうかによって異なります。

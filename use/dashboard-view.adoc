@@ -14,6 +14,10 @@ summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバ�
 [role="lead"]
 BlueXPディザスタリカバリダッシュボードを使用して、ディザスタリカバリサイトとレプリケーション計画の健全性を確認できます。健全なサイトとプラン、切断されているサイト、またはデグレード状態のサイトとプランを簡単に確認できます。
 
+*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロール。
+
+link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
 .手順
 . BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
 . BlueXPディザスタリカバリのトップメニューで、*[ダッシュボード]*を選択します。

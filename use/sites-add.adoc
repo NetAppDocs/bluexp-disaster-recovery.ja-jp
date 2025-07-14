@@ -19,6 +19,10 @@ TIP: ソース vCenter とターゲット vCenter の両方が同じ BlueXP コ�
 
 vCenterが追加されると、BlueXP  ディザスタリカバリによって、vCenterクラスタ、ESXiホスト、データストア、ストレージフットプリント、仮想マシンの詳細、SnapMirrorレプリカ、仮想マシンネットワークなど、vCenter環境の詳細な検出が実行されます。
 
+*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、または災害復旧管理者。
+
+link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
 以前のリリースでvCenterを追加し、検出スケジュールをカスタマイズする場合は、vCenter Serverサイトを編集してスケジュールを設定する必要があります。
 
 

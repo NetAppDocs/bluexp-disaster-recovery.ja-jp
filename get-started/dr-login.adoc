@@ -16,6 +16,8 @@ NetApp BlueXPを使用して、BlueXPディザスタリカバリサービスに�
 
 BlueXPにログインするには、NetApp Support Site のクレデンシャルを使用するか、Eメールとパスワードを使用してネットアップクラウドへのログインにサインアップします。 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["ログインの詳細については、こちらをご覧ください"^]。
 
+特定のタスクには特定のBlueXPユーザー ロールが必要です。link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
 .手順
 . Webブラウザを開き、にアクセスします https://console.bluexp.netapp.com/["BlueXPコンソール"^]。
 +

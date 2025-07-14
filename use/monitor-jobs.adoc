@@ -14,6 +14,14 @@ summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバ�
 [role="lead"]
 すべての BlueXP 災害復旧ジョブを監視し、その進行状況を確認できます。
 
+
+
+== 求人を見る
+
+*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロール。
+
+link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
+
 .手順
 . BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
 . トップメニューから*ジョブ監視*を選択します。
@@ -27,6 +35,10 @@ summary: NetApp BlueXPディザスタリカバリは、ディザスタリカバ�
 == ジョブをキャンセルします
 
 進行中またはキューに登録された状態のジョブを続行したくない場合は、キャンセルできます。ジョブが同じ状態で停止し、キュー内の次の処理を解放したい場合は、ジョブをキャンセルできます。タイムアウトになる前にジョブをキャンセルすることもできます。
+
+*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧フェールオーバー管理者、または災害復旧アプリケーション管理者のロール。
+
+link:../reference/dr-reference-roles.html["BlueXP disaster recoveryにおけるユーザーの役割と権限について学ぶ"]です。https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["すべてのサービスに対するBlueXPのアクセスロールについて学ぶ"^]です。
 
 .手順
 . BlueXPの左側のナビゲーションで、*[保護]*>*[ディザスタリカバリ]*を選択します。
