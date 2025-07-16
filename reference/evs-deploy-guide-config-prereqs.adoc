@@ -16,7 +16,7 @@ BlueXP 災害復旧を使用して Amazon EVS の設定を続行する前に、�
 * 必要な操作を実行するために、BlueXP 災害復旧に必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。
 +
 
-NOTE: デフォルトの管理者アカウント「administrator@vsphere.com」の使用は推奨されません。代わりに、DRプロセスに参加するすべてのvCenterクラスタにBlueXPディザスタリカバリ専用のユーザーアカウントを作成する必要があります。必要な権限の一覧については、以下をご覧ください。 link:vcenter-privileges.html["BlueXPのディザスタリカバリに必要なvCenter権限"] 。
+NOTE: デフォルトの「\administrator@vsphere.com」管理者アカウントの使用はお勧めしません。代わりに、DRプロセスに参加するすべてのvCenterクラスタにBlueXPディザスタリカバリ専用のユーザーアカウントを作成する必要があります。必要な権限の一覧については、以下をご覧ください。 link:vcenter-privileges.html["BlueXPのディザスタリカバリに必要なvCenter権限"] 。
 
 * BlueXP ディザスタ リカバリによって保護される VM をホストするすべての vCenter データストアが、NetApp ONTAP ストレージ リソース上に配置されていることを確認します。
 +

@@ -1317,7 +1317,6 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="77b6a574c8fd563a40ba5d3ced2f6995" category="summary">BlueXP 災害復旧を使用して Amazon EVS の設定を続行する前に、いくつかの前提条件が満たされていることを確認する必要があります。</block>
   <block id="3cfd631225e4a5cd11bb7f070aa490d3" category="paragraph">具体的には、次の操作を実行します。</block>
   <block id="0c16cce0fa7cbfe2c47b9b35b500ef09" category="list-text">必要な操作を実行するために、BlueXP 災害復旧に必要な特定の VMware 権限を持つ vCenter ユーザー アカウントを作成します。</block>
-  <block id="f1b035e723ce8afdf6da2bf6a610f72a" category="admonition">デフォルトの管理者アカウント「administrator@vsphere.com」の使用は推奨されません。代わりに、DRプロセスに参加するすべてのvCenterクラスタにBlueXPディザスタリカバリ専用のユーザーアカウントを作成する必要があります。必要な権限の一覧については、以下をご覧ください。 <block ref="81359e3dc28c5def835ffa82482dcdcf" category="inline-link-macro-rx"></block> 。</block>
   <block id="99c420b6898c190b219ba1e25a1f737e" category="list-text">BlueXP ディザスタ リカバリによって保護される VM をホストするすべての vCenter データストアが、NetApp ONTAP ストレージ リソース上に配置されていることを確認します。</block>
   <block id="8fc09ae0803e50a45a94b04ffd9379bf" category="paragraph">Amazon FSx on NetApp ONTAP をご利用の場合、本サービスは iSCSI 上の NFS および VMFS をサポートします（FC はサポートしません）。本サービスは FC をサポートしますが、Amazon FSx for NetApp ONTAP は FC をサポートしません。</block>
   <block id="aaa40fdffdb9b8b6db1fa18723bcd15b" category="list-text">Amazon EVS vCenter が Amazon FSx for NetApp ONTAP ストレージクラスターに接続されていることを確認します。</block>
@@ -1727,4 +1726,5 @@ URLの場合は、ブラウザで次のように入力します。<block ref="6d
   <block id="bdc1d9aa4d279b8a12963cdbced8ce50" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、災害復旧管理者、災害復旧フェールオーバー管理者、災害復旧アプリケーション管理者、または災害復旧ビューアーのロール。</block>
   <block id="c63f107526be606f4a1357ceb85fa571" category="paragraph">*必要なBlueXPロール* 組織管理者、フォルダーまたはプロジェクト管理者、または災害復旧管理者。</block>
   <block id="bfc307710c1f872e4dfb6ec657573e8a" category="sidebar">BlueXP disaster recoveryの役割と権限</block>
+  <block id="0b6db37b4e08c0c7d93c7363682d4617" category="admonition">デフォルトの「\administrator@vsphere.com」管理者アカウントの使用はお勧めしません。代わりに、DRプロセスに参加するすべてのvCenterクラスタにBlueXPディザスタリカバリ専用のユーザーアカウントを作成する必要があります。必要な権限の一覧については、以下をご覧ください。 <block ref="81359e3dc28c5def835ffa82482dcdcf" category="inline-link-macro-rx"></block> 。</block>
 </blocks>
