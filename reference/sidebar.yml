@@ -20,7 +20,7 @@ entries:
       url: "/reference/evs-deploy-guide-config-draas.html"
     - title: Amazon EVS の前提条件
       url: "/reference/evs-deploy-guide-config-prereqs.html"
-    - title: Amazon EVS のアレイを追加する
+    - title: Amazon EVS 用のONTAPストレージアレイを追加する
       url: "/reference/evs-deploy-guide-config-add-arrays.html"
     - title: Amazon EVS に BlueXP 災害復旧機能を追加
       url: "/reference/evs-deploy-guide-enable-draas.html"

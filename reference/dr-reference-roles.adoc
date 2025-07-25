@@ -8,7 +8,7 @@ summary: BlueXP disaster recoveryでは、ロールを使用して、各ユー�
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/use
 
 
 [role="lead"]
